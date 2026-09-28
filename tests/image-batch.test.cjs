@@ -13,12 +13,12 @@ async function run(t,fetch){
  setTimeout:(callback,delay)=>{delays.push(delay);callback();},AbortSignal,Date,console:{log:resolve,error:reject}
  }));return {result:JSON.parse(result),state:JSON.parse(fs.readFileSync(path.join(root,'.image-sync-state.json'))),delays,root};
 }
-test('batch is capped at three with 20-second gaps',async t=>{
+test('batch processes all eligible listings sequentially with one-second gaps',async t=>{
  let calls=0;const r=await run(t,async()=>{calls++;return {ok:true,status:200,url:'https://weidian.com',text:async()=>''};});
- assert.equal(calls,3);assert.deepEqual(r.delays,[20000,20000]);assert.equal(r.result.completed,3);assert.ok(r.state.nextRunAt>Date.now()+290000);assert.equal(fs.existsSync(path.join(r.root,'.image-sync.lock')),false);
+ assert.equal(calls,4);assert.deepEqual(r.delays,[1000,1000,1000]);assert.equal(r.result.completed,4);assert.ok(r.state.nextRunAt>Date.now()+290000);assert.equal(fs.existsSync(path.join(r.root,'.image-sync.lock')),false);
 });
-test('connection failure stops immediately and persists a one-hour cooldown',async t=>{
- let calls=0;const r=await run(t,async()=>{calls++;throw new Error('socket closed');});assert.equal(calls,1);assert.equal(r.state.backoffHours,1);assert.ok(r.state.nextRunAt>Date.now()+3500000);
+test('connection failure stops immediately and persists a five-minute cooldown',async t=>{
+ let calls=0;const r=await run(t,async()=>{calls++;throw new Error('socket closed');});assert.equal(calls,1);assert.equal(r.state.backoffHours,0);assert.ok(r.state.nextRunAt>Date.now()+290000);
 });
 test('access denial pauses rather than retrying',async t=>{
  const r=await run(t,async()=>({status:403}));assert.equal(r.state.paused,true);assert.equal(r.result.completed,1);

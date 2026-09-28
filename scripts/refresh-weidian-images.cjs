@@ -23,9 +23,10 @@ try { fs.writeFileSync(lockFile, String(process.pid), { flag: 'wx' }); }
 catch { console.log('Another image batch is active.'); process.exit(0); }
 const images = read(file, {});
 const ids = [...new Set(catalogue.items.map(item => weidianId(item.link)).filter(Boolean))];
-// Hard limits apply to every invocation, including automation retries.
+// Process continuously within a four-minute run; never overlap scheduled runs.
+const deadline = now + 4 * 60000;
 const pending = ids.filter(id => !images[id]?.image && (state.attempts[id]?.count || 0) < 3)
-  .sort((a,b) => (state.attempts[a]?.lastAt || 0) - (state.attempts[b]?.lastAt || 0)).slice(0, 3);
+  .sort((a,b) => (state.attempts[a]?.lastAt || 0) - (state.attempts[b]?.lastAt || 0));
 let completed = 0, stopped = false;
 const failures = [];
 const startedAt = new Date().toISOString();
@@ -41,7 +42,8 @@ function checkpoint() {
 (async () => {
   try {
     for (const id of pending) {
-      if (completed) await new Promise(resolve => setTimeout(resolve, 20000));
+      if (Date.now() >= deadline) break;
+      if (completed) await new Promise(resolve => setTimeout(resolve, 1000));
       try {
         const response = await fetch(`https://weidian.com/item.html?itemID=${id}`, { signal: AbortSignal.timeout(20000) });
         if ([401, 403].includes(response.status)) {
@@ -50,7 +52,7 @@ function checkpoint() {
         if (response.status === 429) {
           const retry = response.headers.get('retry-after');
           const delay = /^\d+$/.test(retry || '') ? Number(retry) * 1000 : Math.max(0, Date.parse(retry) - Date.now()) || 0;
-          state.nextRunAt = Date.now() + Math.max(3600000, delay);
+          state.nextRunAt = Date.now() + Math.max(300000, delay);
           throw new Error('Rate limited (429)');
         }
         if (!response.ok && response.status !== 404 && response.status !== 410) throw new Error(`HTTP ${response.status}`);
@@ -68,8 +70,8 @@ function checkpoint() {
       } catch (error) {
         const reason = error.cause?.code || error.message;
         failures.push({ id, reason });
-        state.backoffHours = Math.min(24, Math.max(1, (state.backoffHours || 0) * 2));
-        state.nextRunAt = Math.max(state.nextRunAt || 0, Date.now() + state.backoffHours * 3600000);
+        state.backoffHours = 0;
+        state.nextRunAt = Math.max(state.nextRunAt || 0, Date.now() + 5 * 60000);
         state.reason = reason;
         stopped = true;
       }
