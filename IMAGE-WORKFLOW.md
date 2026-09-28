@@ -10,3 +10,5 @@ Use this workflow for future catalogue photo requests. Do not repeat broad resea
 6. Run `coverage` for the requested category to verify exact remaining gaps. Run the existing tests once for the completed change, not after every product. For image-data-only changes a production rebuild is unnecessary. Review the diff and push only the intended data changes when authorized. Report actual coverage, never inferred completion.
 
 The CLI streamlines queueing and ingestion; rendered-page discovery still requires the supported browser tool. Do not claim this is a fully unattended Kakobuy scraper. The existing Weidian automation is separate and retains its own cooldown state.
+
+When Kakobuy cannot load a listing, inspect its exact original Weidian URL in the same supported browser. Accept only its rendered main product image, never a placeholder or shop logo, and record the original URL as the evidence source. The validator accepts matching HTTPS Weidian sources as well. For All and Main photo requests, follow catalogue order from top to bottom and save unresolved IDs so completed or repeatedly unavailable listings are not revisited.

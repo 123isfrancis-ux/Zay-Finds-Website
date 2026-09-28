@@ -16,7 +16,7 @@ function validate(row) {
   if (!/^\d+$/.test(row.id || '')) throw Error('Missing numeric product ID');
   const image = new URL(row.image), source = new URL(row.source);
   if (image.protocol !== 'https:' || image.hostname !== 'si.geilicdn.com') throw Error('Unexpected image host');
-  if (!/(^|\.)kakobuy\.com$/.test(source.hostname) || source.protocol !== 'https:' || weidianId(row.source)!==row.id) throw Error('Source must resolve to the same product ID');
+  if (!/(^|\.)(kakobuy|weidian)\.com$/.test(source.hostname) || source.protocol !== 'https:' || weidianId(row.source)!==row.id) throw Error('Source must resolve to the same product ID');
   if (row.shortLink) { const short = new URL(row.shortLink); if(short.protocol!=='https:'||short.hostname!=='ikako.vip'||short.search||short.hash)throw Error('Unexpected short link'); }
   return row;
 }
