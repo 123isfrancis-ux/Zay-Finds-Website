@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:50:10.042Z",
+  "checkedAt": "2026-09-28T04:51:33.185Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -217,11 +217,17 @@
     "7636725604",
     "7626466527",
     "7636690012",
-    "7636626580"
+    "7636626580",
+    "7751245619",
+    "7703384942",
+    "7694278883",
+    "7692859892",
+    "7684597459",
+    "7687828160"
   ],
   "productCards": 3387,
-  "cardsWithImages": 662,
-  "cardsMissingImages": 2725,
+  "cardsWithImages": 668,
+  "cardsMissingImages": 2719,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -357,8 +363,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 219,
-      "missingCount": 1621
+      "withImages": 225,
+      "missingCount": 1615
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1516,14 +1522,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 403,
-      "missingCount": 2053
+      "withImages": 409,
+      "missingCount": 2047
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 183,
+    "withImages": 189,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1531,35 +1537,11 @@
       },
       {
         "name": "Balenciaga Jacket",
-        "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7751245619&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Jacket",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7700373459&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7703384942&affcode=ecdru"
-      },
-      {
-        "name": "Fashion Trend Long-Sleeve Top",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694278883&affcode=ecdru"
       },
       {
         "name": "Loose circular knit long-sleeved T-shirt",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695398264&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7692859892&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7684597459&affcode=ecdru"
-      },
-      {
-        "name": "Protocol Index Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7687828160&affcode=ecdru"
       },
       {
         "name": "Loose Spring-Summer Men's Long-Sleeved Sweatshirt",
