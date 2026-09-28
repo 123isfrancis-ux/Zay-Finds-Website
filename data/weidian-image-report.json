@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:21:26.310Z",
+  "checkedAt": "2026-09-28T05:22:35.682Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -394,11 +394,23 @@
     "7629985296",
     "7629985298",
     "7629976842",
-    "7626085989"
+    "7626085989",
+    "7626027063",
+    "7627019093",
+    "7630087620",
+    "7626468433",
+    "7625987537",
+    "7626087961",
+    "7626097827",
+    "7628993204",
+    "7628985394",
+    "7625993449",
+    "7626025059",
+    "7626107721"
   ],
   "productCards": 3387,
-  "cardsWithImages": 840,
-  "cardsMissingImages": 2547,
+  "cardsWithImages": 852,
+  "cardsMissingImages": 2535,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -534,8 +546,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 347,
-      "missingCount": 1493
+      "withImages": 359,
+      "missingCount": 1481
     },
     "ROOM DECOR": {
       "total": 141,
@@ -561,8 +573,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 30,
-      "missingCount": 63,
+      "withImages": 42,
+      "missingCount": 51,
       "missing": [
         {
           "id": "7629016744",
@@ -578,66 +590,6 @@
           "id": "7626091839",
           "name": "Dior Perfume",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626091839&affcode=ecdru"
-        },
-        {
-          "id": "7626027063",
-          "name": "Creed Perfume",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626027063&affcode=ecdru"
-        },
-        {
-          "id": "7627019093",
-          "name": "NIKE \nFootball Training Uniforms",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627019093&affcode=ecdru"
-        },
-        {
-          "id": "7630087620",
-          "name": "Football Training Uniforms",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630087620&affcode=ecdru"
-        },
-        {
-          "id": "7626468433",
-          "name": "Adidas Football Training Uniforms",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626468433&affcode=ecdru"
-        },
-        {
-          "id": "7625987537",
-          "name": "Rick Owens Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625987537&affcode=ecdru"
-        },
-        {
-          "id": "7626087961",
-          "name": "UGG Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626087961&affcode=ecdru"
-        },
-        {
-          "id": "7626097827",
-          "name": "Flea Air Force 1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626097827&affcode=ecdru"
-        },
-        {
-          "id": "7628993204",
-          "name": "UGG",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628993204&affcode=ecdru"
-        },
-        {
-          "id": "7628985394",
-          "name": "Dior B30",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628985394&affcode=ecdru"
-        },
-        {
-          "id": "7625993449",
-          "name": "Air Force 1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625993449&affcode=ecdru"
-        },
-        {
-          "id": "7626025059",
-          "name": "Ralph Lauren Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626025059&affcode=ecdru"
-        },
-        {
-          "id": "7626107721",
-          "name": "Ralph Lauren Sweater",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626107721&affcode=ecdru"
         },
         {
           "id": "7628965548",
@@ -883,8 +835,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 537,
-      "missingCount": 1919
+      "withImages": 549,
+      "missingCount": 1907
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
