@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:01:50.590Z",
+  "checkedAt": "2026-09-28T07:03:03.757Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1056,11 +1056,22 @@
     "7629092156",
     "7629046720",
     "7629056556",
-    "7626133937"
+    "7626133937",
+    "7626155643",
+    "7629113910",
+    "7626149813",
+    "7626058849",
+    "7626100223",
+    "7626139919",
+    "7626135915",
+    "7629056564",
+    "7630017046",
+    "7627025167",
+    "7626101971"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1503,
-  "cardsMissingImages": 1884,
+  "cardsWithImages": 1514,
+  "cardsMissingImages": 1873,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1196,8 +1207,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 590,
-      "missingCount": 1250
+      "withImages": 601,
+      "missingCount": 1239
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1240,8 +1251,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1200,
-      "missingCount": 1256
+      "withImages": 1211,
+      "missingCount": 1245
     },
     "OLD MONEY": {
       "total": 100,
@@ -1257,64 +1268,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 56,
-      "missingCount": 107,
+      "withImages": 67,
+      "missingCount": 96,
       "missing": [
-        {
-          "id": "7626155643",
-          "name": "New Balance 327",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626155643&affcode=ecdru"
-        },
-        {
-          "id": "7629113910",
-          "name": "Tiger",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629113910&affcode=ecdru"
-        },
-        {
-          "id": "7626149813",
-          "name": "Nike slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626149813&affcode=ecdru"
-        },
-        {
-          "id": "7626058849",
-          "name": "LOEWE",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626058849&affcode=ecdru"
-        },
-        {
-          "id": "7626100223",
-          "name": "Best\n [LR/0G Batch]\nJordan 13\n29 Colorways",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626100223&affcode=ecdru"
-        },
-        {
-          "id": "7626139919",
-          "name": "Louis Vuitton \nFootprint Soccer",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626139919&affcode=ecdru"
-        },
-        {
-          "id": "7626135915",
-          "name": "Dolce & Gabbana",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626135915&affcode=ecdru"
-        },
-        {
-          "id": "7629056564",
-          "name": "Air Jordan x Travis Scotts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629056564&affcode=ecdru"
-        },
-        {
-          "id": "7630017046",
-          "name": "Hermes 25ss",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630017046&affcode=ecdru"
-        },
-        {
-          "id": "7627025167",
-          "name": "Maison Margelia Gats\nTop Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627025167&affcode=ecdru"
-        },
-        {
-          "id": "7626101971",
-          "name": "Karllagerfeld",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626101971&affcode=ecdru"
-        },
         {
           "id": "7626106171",
           "name": "New Balance 2002r",
