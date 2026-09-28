@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:14:20.341Z",
+  "checkedAt": "2026-09-28T05:14:59.165Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -329,11 +329,17 @@
     "7743652990",
     "7740641079",
     "7743563508",
-    "7743629080"
+    "7743629080",
+    "7743451124",
+    "7740692097",
+    "7743674492",
+    "7740666847",
+    "7740613149",
+    "7740645049"
   ],
   "productCards": 3387,
-  "cardsWithImages": 775,
-  "cardsMissingImages": 2612,
+  "cardsWithImages": 781,
+  "cardsMissingImages": 2606,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -474,8 +480,8 @@
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 102,
-      "missingCount": 39,
+      "withImages": 108,
+      "missingCount": 33,
       "missing": [
         {
           "id": "7813441799",
@@ -596,36 +602,6 @@
           "id": "7740617119",
           "name": "ins Mushroom PC Desk Lamp",
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740617119&affcode=ecdru"
-        },
-        {
-          "id": "7743451124",
-          "name": "Rolls-Royce Ashtray",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743451124&affcode=ecdru"
-        },
-        {
-          "id": "7740692097",
-          "name": "Chrome Hearts Ashtray",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740692097&affcode=ecdru"
-        },
-        {
-          "id": "7743674492",
-          "name": "Chrome Hearts Pillow",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743674492&affcode=ecdru"
-        },
-        {
-          "id": "7740666847",
-          "name": "Wetgrass Flocked Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740666847&affcode=ecdru"
-        },
-        {
-          "id": "7740613149",
-          "name": "Bape Wall Clock",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740613149&affcode=ecdru"
-        },
-        {
-          "id": "7740645049",
-          "name": "Supreme Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740645049&affcode=ecdru"
         },
         {
           "id": "7740637045",
