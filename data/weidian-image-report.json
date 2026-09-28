@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:28:29.444Z",
+  "checkedAt": "2026-09-28T05:29:15.236Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -453,11 +453,20 @@
     "7626015223",
     "7628977472",
     "7629036466",
-    "7629030246"
+    "7629030246",
+    "7626001529",
+    "7626052247",
+    "7818343933",
+    "7816351300",
+    "7816398538",
+    "7813219373",
+    "7816447712",
+    "7816341506",
+    "7816345420"
   ],
   "productCards": 3387,
-  "cardsWithImages": 899,
-  "cardsMissingImages": 2488,
+  "cardsWithImages": 908,
+  "cardsMissingImages": 2479,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -593,8 +602,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 406,
-      "missingCount": 1434
+      "withImages": 408,
+      "missingCount": 1432
     },
     "ROOM DECOR": {
       "total": 141,
@@ -620,8 +629,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 89,
-      "missingCount": 4,
+      "withImages": 91,
+      "missingCount": 2,
       "missing": [
         {
           "id": "7629016744",
@@ -632,23 +641,13 @@
           "id": "7628963566",
           "name": "Chrome Hearts T-shirt",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628963566&affcode=ecdru"
-        },
-        {
-          "id": "7626001529",
-          "name": "Moissanite Watches",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626001529&affcode=ecdru"
-        },
-        {
-          "id": "7626052247",
-          "name": "Cartier Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626052247&affcode=ecdru"
         }
       ]
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 596,
-      "missingCount": 1860
+      "withImages": 605,
+      "missingCount": 1851
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
