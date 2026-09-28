@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:49:54.994Z",
+  "checkedAt": "2026-09-28T06:51:11.949Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -969,11 +969,18 @@
     "7629503976",
     "7629460408",
     "7626462791",
-    "7629403486"
+    "7629403486",
+    "7626486423",
+    "7629456456",
+    "7629486206",
+    "7629434958",
+    "7629413310",
+    "7626480375",
+    "7626496251"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1416,
-  "cardsMissingImages": 1971,
+  "cardsWithImages": 1423,
+  "cardsMissingImages": 1964,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1109,8 +1116,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 503,
-      "missingCount": 1337
+      "withImages": 510,
+      "missingCount": 1330
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1153,53 +1160,18 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1113,
-      "missingCount": 1343
+      "withImages": 1120,
+      "missingCount": 1336
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 21,
-      "missingCount": 79,
+      "withImages": 28,
+      "missingCount": 72,
       "missing": [
-        {
-          "id": "7626486423",
-          "name": "Versace Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626486423&affcode=ecdru"
-        },
-        {
-          "id": "7629456456",
-          "name": "Tom Fort Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629456456&affcode=ecdru"
-        },
-        {
-          "id": "7629486206",
-          "name": "Van cleef braclets",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629486206&affcode=ecdru"
-        },
-        {
-          "id": "7629434958",
-          "name": "Fred bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629434958&affcode=ecdru"
-        },
-        {
-          "id": "7629413310",
-          "name": "Louis Vuitton LV  Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629413310&affcode=ecdru"
-        },
         {
           "id": "7629492154",
           "name": "Louboutin Shoes",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629492154&affcode=ecdru"
-        },
-        {
-          "id": "7626480375",
-          "name": "Metra Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626480375&affcode=ecdru"
-        },
-        {
-          "id": "7626496251",
-          "name": "Prada Vest",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626496251&affcode=ecdru"
         },
         {
           "id": "7626498251",
