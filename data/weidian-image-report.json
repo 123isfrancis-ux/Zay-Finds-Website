@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:43:42.744Z",
+  "checkedAt": "2026-09-28T04:45:01.652Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -148,11 +148,25 @@
     "7633424133",
     "7633465945",
     "7636398234",
-    "7632529021"
+    "7632529021",
+    "7632250169",
+    "7635251088",
+    "7634620655",
+    "7637874706",
+    "7634545839",
+    "7634549797",
+    "7634471151",
+    "7637509574",
+    "7637859250",
+    "7637587120",
+    "7634940709",
+    "7634934717",
+    "7637951772",
+    "7637592344"
   ],
   "productCards": 3387,
-  "cardsWithImages": 593,
-  "cardsMissingImages": 2794,
+  "cardsWithImages": 607,
+  "cardsMissingImages": 2780,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -288,8 +302,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 150,
-      "missingCount": 1690
+      "withImages": 164,
+      "missingCount": 1676
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1447,14 +1461,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 334,
-      "missingCount": 2122
+      "withImages": 348,
+      "missingCount": 2108
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 114,
+    "withImages": 128,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1533,64 +1547,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634896373&affcode=ecdru"
       },
       {
-        "name": "Chrome Hearts Jacket/Vest",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632250169&affcode=ecdru"
-      },
-      {
-        "name": "Graffiti-print Ripped Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635251088&affcode=ecdru"
-      },
-      {
-        "name": "Racing suit",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634620655&affcode=ecdru"
-      },
-      {
-        "name": "Batman Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637874706&affcode=ecdru"
-      },
-      {
-        "name": "Cut-out design fall and winter cotton jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634545839&affcode=ecdru"
-      },
-      {
-        "name": "Letter Embroidery Pattern Fashion Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634549797&affcode=ecdru"
-      },
-      {
-        "name": "European and American high-street style hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634471151&affcode=ecdru"
-      },
-      {
-        "name": "Badhluod Suit",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637509574&affcode=ecdru"
-      },
-      {
-        "name": "Leopard print jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637859250&affcode=ecdru"
-      },
-      {
-        "name": "Lobster clasp short stand-collar jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637587120&affcode=ecdru"
-      },
-      {
-        "name": "Mohair jacquard hooded knitwear",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634940709&affcode=ecdru"
-      },
-      {
-        "name": "American vintage style cardigan sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634934717&affcode=ecdru"
-      },
-      {
-        "name": "Motorcycle leather jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637951772&affcode=ecdru"
-      },
-      {
         "name": "Denim zip-up hoodie",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634908415&affcode=ecdru"
-      },
-      {
-        "name": "European and American high-street style hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637592344&affcode=ecdru"
       },
       {
         "name": "Zippered hoodie",
