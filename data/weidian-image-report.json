@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:26:05.865Z",
+  "checkedAt": "2026-09-28T05:27:20.875Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -436,11 +436,21 @@
     "7625983593",
     "7625927405",
     "7628971480",
-    "7626072273"
+    "7626072273",
+    "7628999102",
+    "7628967544",
+    "7626038813",
+    "7629101640",
+    "7628973542",
+    "7626089981",
+    "7629089748",
+    "7629014862",
+    "7626030959",
+    "7628988908"
   ],
   "productCards": 3387,
-  "cardsWithImages": 882,
-  "cardsMissingImages": 2505,
+  "cardsWithImages": 892,
+  "cardsMissingImages": 2495,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -576,8 +586,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 389,
-      "missingCount": 1451
+      "withImages": 399,
+      "missingCount": 1441
     },
     "ROOM DECOR": {
       "total": 141,
@@ -603,8 +613,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 72,
-      "missingCount": 21,
+      "withImages": 82,
+      "missingCount": 11,
       "missing": [
         {
           "id": "7629016744",
@@ -652,59 +662,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626001529&affcode=ecdru"
         },
         {
-          "id": "7628999102",
-          "name": "Omega x Swatch Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628999102&affcode=ecdru"
-        },
-        {
-          "id": "7628967544",
-          "name": "Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628967544&affcode=ecdru"
-        },
-        {
-          "id": "7626038813",
-          "name": "CHANEL Earrings",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626038813&affcode=ecdru"
-        },
-        {
-          "id": "7629101640",
-          "name": "Rimowa Card Holder",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629101640&affcode=ecdru"
-        },
-        {
-          "id": "7628973542",
-          "name": "Rimowa Phone Case",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628973542&affcode=ecdru"
-        },
-        {
           "id": "7626052247",
           "name": "Cartier Watchs",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626052247&affcode=ecdru"
-        },
-        {
-          "id": "7626089981",
-          "name": "Patek Philippe Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626089981&affcode=ecdru"
-        },
-        {
-          "id": "7629089748",
-          "name": "Sony WH-XM5-1000",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629089748&affcode=ecdru"
-        },
-        {
-          "id": "7629014862",
-          "name": "Sony Bluetooth Headset",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629014862&affcode=ecdru"
-        },
-        {
-          "id": "7626030959",
-          "name": "MCM Backpack",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626030959&affcode=ecdru"
-        },
-        {
-          "id": "7628988908",
-          "name": "MCM Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628988908&affcode=ecdru"
         },
         {
           "id": "7628977488",
@@ -715,8 +675,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 579,
-      "missingCount": 1877
+      "withImages": 589,
+      "missingCount": 1867
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
