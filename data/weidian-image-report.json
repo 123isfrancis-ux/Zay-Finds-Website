@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:03:03.757Z",
+  "checkedAt": "2026-09-28T07:04:05.492Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1067,11 +1067,23 @@
     "7629056564",
     "7630017046",
     "7627025167",
-    "7626101971"
+    "7626101971",
+    "7626106171",
+    "7627066629",
+    "7629052296",
+    "7627052901",
+    "7629090010",
+    "7780750016",
+    "7629011048",
+    "7629088432",
+    "7626142167",
+    "7626163789",
+    "7626066693",
+    "7780742306"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1514,
-  "cardsMissingImages": 1873,
+  "cardsWithImages": 1526,
+  "cardsMissingImages": 1861,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1207,8 +1219,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 601,
-      "missingCount": 1239
+      "withImages": 604,
+      "missingCount": 1236
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1251,8 +1263,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1211,
-      "missingCount": 1245
+      "withImages": 1215,
+      "missingCount": 1241
     },
     "OLD MONEY": {
       "total": 100,
@@ -1268,69 +1280,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 67,
-      "missingCount": 96,
+      "withImages": 79,
+      "missingCount": 84,
       "missing": [
-        {
-          "id": "7626106171",
-          "name": "New Balance 2002r",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626106171&affcode=ecdru"
-        },
-        {
-          "id": "7627066629",
-          "name": "Dolce & Gabbana Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627066629&affcode=ecdru"
-        },
-        {
-          "id": "7629052296",
-          "name": "Louis Vuitton Slippers (19 Colors)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629052296&affcode=ecdru"
-        },
-        {
-          "id": "7627052901",
-          "name": "Bottega Veneta slippers (8 colors)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627052901&affcode=ecdru"
-        },
-        {
-          "id": "7629090010",
-          "name": "Chanel Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629090010&affcode=ecdru"
-        },
-        {
-          "id": "7780750016",
-          "name": "Nike Mind 001 Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780750016&affcode=ecdru"
-        },
-        {
-          "id": "7629011048",
-          "name": "Dior B25 Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629011048&affcode=ecdru"
-        },
-        {
-          "id": "7629088432",
-          "name": "Lv Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629088432&affcode=ecdru"
-        },
-        {
-          "id": "7626142167",
-          "name": "Lv Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626142167&affcode=ecdru"
-        },
-        {
-          "id": "7626163789",
-          "name": "Nike Air More Uptempo Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626163789&affcode=ecdru"
-        },
-        {
-          "id": "7626066693",
-          "name": "Off-White Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626066693&affcode=ecdru"
-        },
-        {
-          "id": "7780742306",
-          "name": "Louis Vuitton Trainers\n Top Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780742306&affcode=ecdru"
-        },
         {
           "id": "7629058338",
           "name": "Air Jordan 4",
