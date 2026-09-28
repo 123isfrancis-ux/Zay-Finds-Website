@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:24:58.263Z",
+  "checkedAt": "2026-09-28T05:26:05.865Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -428,11 +428,19 @@
     "7626038799",
     "7626115709",
     "7625999465",
-    "7629101628"
+    "7629101628",
+    "7628969486",
+    "7625985567",
+    "7626073999",
+    "7626089971",
+    "7625983593",
+    "7625927405",
+    "7628971480",
+    "7626072273"
   ],
   "productCards": 3387,
-  "cardsWithImages": 874,
-  "cardsMissingImages": 2513,
+  "cardsWithImages": 882,
+  "cardsMissingImages": 2505,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -568,8 +576,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 381,
-      "missingCount": 1459
+      "withImages": 389,
+      "missingCount": 1451
     },
     "ROOM DECOR": {
       "total": 141,
@@ -595,8 +603,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 64,
-      "missingCount": 29,
+      "withImages": 72,
+      "missingCount": 21,
       "missing": [
         {
           "id": "7629016744",
@@ -624,24 +632,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628977472&affcode=ecdru"
         },
         {
-          "id": "7628969486",
-          "name": "Chrome Hearts USA Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628969486&affcode=ecdru"
-        },
-        {
           "id": "7628963566",
           "name": "Chrome Hearts T-shirt",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628963566&affcode=ecdru"
-        },
-        {
-          "id": "7625985567",
-          "name": "Chrome Heart Washed Tee (Different styles)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625985567&affcode=ecdru"
-        },
-        {
-          "id": "7626073999",
-          "name": "Chrome Hearts Jeans",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626073999&affcode=ecdru"
         },
         {
           "id": "7629036466",
@@ -649,39 +642,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629036466&affcode=ecdru"
         },
         {
-          "id": "7626089971",
-          "name": "Chrome Heart Rings",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626089971&affcode=ecdru"
-        },
-        {
           "id": "7629030246",
           "name": "Chrome Hearts Socks",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629030246&affcode=ecdru"
         },
         {
-          "id": "7625983593",
-          "name": "Sp5der Sets",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625983593&affcode=ecdru"
-        },
-        {
-          "id": "7625927405",
-          "name": "Cartier Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625927405&affcode=ecdru"
-        },
-        {
           "id": "7626001529",
           "name": "Moissanite Watches",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626001529&affcode=ecdru"
-        },
-        {
-          "id": "7628971480",
-          "name": "Cartier Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628971480&affcode=ecdru"
-        },
-        {
-          "id": "7626072273",
-          "name": "AUDEMARS PIGUET AP Watch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626072273&affcode=ecdru"
         },
         {
           "id": "7628999102",
@@ -747,8 +715,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 571,
-      "missingCount": 1885
+      "withImages": 579,
+      "missingCount": 1877
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
