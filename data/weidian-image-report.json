@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:06:06.667Z",
+  "checkedAt": "2026-09-28T05:07:17.795Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -284,11 +284,15 @@
     "7637448414",
     "7634211073",
     "7637946164",
-    "7637515868"
+    "7637515868",
+    "7634284961",
+    "7634180979",
+    "7634553743",
+    "7634557663"
   ],
   "productCards": 3387,
-  "cardsWithImages": 730,
-  "cardsMissingImages": 2657,
+  "cardsWithImages": 734,
+  "cardsMissingImages": 2653,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -424,13 +428,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 282,
-      "missingCount": 1558
+      "withImages": 286,
+      "missingCount": 1554
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 57,
-      "missingCount": 84,
+      "withImages": 61,
+      "missingCount": 80,
       "missing": [
         {
           "id": "7813441799",
@@ -488,29 +492,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634494153&affcode=ecdru"
         },
         {
-          "id": "7634284961",
-          "name": "Nordic-Style Dirt-Resistant Crystal Velvet Carpet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634284961&affcode=ecdru"
-        },
-        {
-          "id": "7634180979",
-          "name": "Ltalian-Style Living Room Bubble Sofa",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634180979&affcode=ecdru"
-        },
-        {
-          "id": "7634553743",
-          "name": "Cute Ornaments Exude A Sense Of Sophistication",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634553743&affcode=ecdru"
-        },
-        {
           "id": "7634248635",
           "name": "Solid Wood Folding Display Chair",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634248635&affcode=ecdru"
-        },
-        {
-          "id": "7634557663",
-          "name": "Lego Wall Photo Frame",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634557663&affcode=ecdru"
         },
         {
           "id": "7634951365",
@@ -1323,8 +1307,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 471,
-      "missingCount": 1985
+      "withImages": 475,
+      "missingCount": 1981
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
