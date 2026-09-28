@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:00:56.821Z",
+  "checkedAt": "2026-09-28T05:01:54.238Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -244,11 +244,20 @@
     "7801655666",
     "7798553061",
     "7801574572",
-    "7772347519"
+    "7772347519",
+    "7697262856",
+    "7694320381",
+    "7697253162",
+    "7694247359",
+    "7665615049",
+    "7668695750",
+    "7632862645",
+    "7632908495",
+    "7635850838"
   ],
   "productCards": 3387,
-  "cardsWithImages": 690,
-  "cardsMissingImages": 2697,
+  "cardsWithImages": 699,
+  "cardsMissingImages": 2688,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -384,13 +393,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 242,
-      "missingCount": 1598
+      "withImages": 251,
+      "missingCount": 1589
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 17,
-      "missingCount": 124,
+      "withImages": 26,
+      "missingCount": 115,
       "missing": [
         {
           "id": "7813441799",
@@ -413,54 +422,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7702236324&affcode=ecdru"
         },
         {
-          "id": "7697262856",
-          "name": "Trendy Pomade Haircut Three-Piece Set",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7697262856&affcode=ecdru"
-        },
-        {
-          "id": "7694320381",
-          "name": "Personalized Trendy Luggage Stickers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694320381&affcode=ecdru"
-        },
-        {
-          "id": "7697253162",
-          "name": "Solid Wood Folding Outdoor Canvas Backrest Chair",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7697253162&affcode=ecdru"
-        },
-        {
-          "id": "7694247359",
-          "name": "Alloy steel baseball bat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694247359&affcode=ecdru"
-        },
-        {
           "id": "7694353965",
           "name": "Creative Thickened Hard Plastic Waterproof Playing Cards",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694353965&affcode=ecdru"
-        },
-        {
-          "id": "7665615049",
-          "name": "Violent Bear and Lego Bear Collaboration Trendy Figurines",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7665615049&affcode=ecdru"
-        },
-        {
-          "id": "7668695750",
-          "name": "Bearbrick 400% Hajime Sorayama edition building block bear figurine/toy/collectible.",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7668695750&affcode=ecdru"
-        },
-        {
-          "id": "7632862645",
-          "name": "Creative and cute tissue box/toilet holder",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632862645&affcode=ecdru"
-        },
-        {
-          "id": "7632908495",
-          "name": "Laundry basket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632908495&affcode=ecdru"
-        },
-        {
-          "id": "7635850838",
-          "name": "Mirror",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635850838&affcode=ecdru"
         },
         {
           "id": "7632997865",
@@ -1483,8 +1447,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 431,
-      "missingCount": 2025
+      "withImages": 440,
+      "missingCount": 2016
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
