@@ -1,23 +1,21 @@
 {
-  "startedAt": "2026-09-28T01:57:40.230Z",
-  "checkedAt": "2026-09-28T01:57:56.013Z",
-  "uniqueListings": 3370,
-  "completed": 3,
-  "withImages": 65,
-  "stopped": true,
-  "failures": [
-    {
-      "id": "7818343933",
-      "reason": "UND_ERR_SOCKET"
-    },
-    {
-      "id": "7821314484",
-      "reason": "UND_ERR_SOCKET"
-    },
-    {
-      "id": "7790010254",
-      "reason": "UND_ERR_SOCKET"
-    }
+  "checkedAt": "2026-09-28T03:14:03.813Z",
+  "method": "Kakobuy browser photo verification",
+  "verifiedBatch": [
+    "7858005473",
+    "7629340798",
+    "7849411869",
+    "7843164537",
+    "7629401810",
+    "7708795113",
+    "7708806891",
+    "7711854130",
+    "7708856267"
   ],
-  "unsupportedRows": 19
+  "uniqueListings": 3374,
+  "withImages": 73,
+  "remaining": 3301,
+  "productCards": 3388,
+  "cardsWithImages": 74,
+  "cardsMissingImages": 3314
 }

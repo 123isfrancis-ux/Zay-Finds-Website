@@ -25,3 +25,11 @@ test('matching links apply to all copies of a product without changing purchase 
  const result=applyImages(items,{'123':{image:'https://si.geilicdn.com/photo.jpg'}});
  assert.equal(result[0].image,result[1].image);assert.equal(result[2].image,'existing');assert.equal(result[0].link,link);assert.equal(items[0].image,'');
 });
+
+test("verified Kakobuy short links map to their exact listing IDs", () => {
+ assert.equal(weidianId("https://ikako.vip/dhh5r"), "7708795113");
+ assert.equal(weidianId("https://ikako.vip/t3kda"), "7708806891");
+ assert.equal(weidianId("https://ikako.vip/8xhgp"), "7711854130");
+ assert.equal(weidianId("https://ikako.vip/tg9v7"), "7708856267");
+ assert.equal(weidianId("https://ikako.vip/unknown"), null);
+});
