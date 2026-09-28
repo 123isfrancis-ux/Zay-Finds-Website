@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:55:17.653Z",
+  "checkedAt": "2026-09-28T06:56:11.941Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1007,11 +1007,16 @@
     "7626425495",
     "7626431379",
     "7626440739",
-    "7629476254"
+    "7629476254",
+    "7629407382",
+    "7626492323",
+    "7629521646",
+    "7626450975",
+    "7626423553"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1453,
-  "cardsMissingImages": 1934,
+  "cardsWithImages": 1459,
+  "cardsMissingImages": 1928,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1147,8 +1152,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 540,
-      "missingCount": 1300
+      "withImages": 546,
+      "missingCount": 1294
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1191,13 +1196,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1150,
-      "missingCount": 1306
+      "withImages": 1156,
+      "missingCount": 1300
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 58,
-      "missingCount": 42,
+      "withImages": 64,
+      "missingCount": 36,
       "missing": [
         {
           "id": "7629492154",
@@ -1220,44 +1225,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626447073&affcode=ecdru"
         },
         {
-          "id": "7629409380",
-          "name": "Gucci Loafer super fire quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629409380&affcode=ecdru"
-        },
-        {
           "id": "7629466356",
           "name": "Yves Saint Laurent Glasses",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629466356&affcode=ecdru"
         },
         {
-          "id": "7629407382",
-          "name": "Cartier Shades",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629407382&affcode=ecdru"
-        },
-        {
-          "id": "7626492323",
-          "name": "Clean Black jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626492323&affcode=ecdru"
-        },
-        {
-          "id": "7629521646",
-          "name": "Louis Vuitton\nLV  Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629521646&affcode=ecdru"
-        },
-        {
           "id": "7626401283",
           "name": "Maison Margiela Futures",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626401283&affcode=ecdru"
-        },
-        {
-          "id": "7626450975",
-          "name": "Baimain",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626450975&affcode=ecdru"
-        },
-        {
-          "id": "7626423553",
-          "name": "Lots of Timberlands                     ( 11+ colors )",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626423553&affcode=ecdru"
         },
         {
           "id": "7629421140",
@@ -1413,8 +1388,8 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 46,
-      "missingCount": 117,
+      "withImages": 47,
+      "missingCount": 116,
       "missing": [
         {
           "id": "7629104012",
@@ -1535,11 +1510,6 @@
           "id": "7627052901",
           "name": "Bottega Veneta slippers (8 colors)",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627052901&affcode=ecdru"
-        },
-        {
-          "id": "7626450975",
-          "name": "Baimain",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626450975&affcode=ecdru"
         },
         {
           "id": "7629090010",
