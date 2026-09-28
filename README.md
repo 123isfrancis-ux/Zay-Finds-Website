@@ -50,7 +50,7 @@ The script checks one public listing at a time by default, checkpoints every 50,
 
 CNY and USD values are preserved as calculated by the spreadsheet. EUR and GBP are available when present in the row; missing values say “See item price.” No guessed exchange rates are used. Price sorting uses USD and labels that explicitly. Prices, availability, and purchase destinations must be confirmed at the seller.
 
-All product URLs and affiliate parameters are preserved exactly from the source. The signup link and buying tutorial also come from the source sheet. PBJ's profiles, referral link, analytics, and social preview image have been removed. Product links are checked for HTTP/HTTPS protocols during import; external destinations are not crawled or validated by the importer.
+All product URLs and affiliate parameters are preserved exactly from the source. The signup link and buying tutorial also come from the source sheet. PBJ's profiles, referral link, and social preview image have been removed. Product links are checked for HTTP/HTTPS protocols during import; external destinations are not crawled or validated by the importer.
 
 ## Features
 
@@ -61,3 +61,7 @@ All product URLs and affiliate parameters are preserved exactly from the source.
 - Source spreadsheet link and buying tutorial
 
 The original source folder in Downloads is unchanged. Next.js is updated from 14.2.3 to 14.2.35 within its existing major version. The app retains Pages Router and plain image elements, avoiding image-transformation billing for thousands of catalogue images.
+
+## Analytics
+
+Vercel Web Analytics is mounted once in `pages/_app.js` using `@vercel/analytics/next`. Enable Web Analytics in the Vercel project dashboard and deploy this commit to collect page views. No custom events or additional analytics provider are configured.
