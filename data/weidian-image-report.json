@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:45:01.652Z",
+  "checkedAt": "2026-09-28T04:46:24.046Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -162,11 +162,24 @@
     "7634940709",
     "7634934717",
     "7637951772",
-    "7637592344"
+    "7637592344",
+    "7635067641",
+    "7634959427",
+    "7638000042",
+    "7638024312",
+    "7634949473",
+    "7634973085",
+    "7637543622",
+    "7637974750",
+    "7634945559",
+    "7637931584",
+    "7637465026",
+    "7637650140",
+    "7637258546"
   ],
   "productCards": 3387,
-  "cardsWithImages": 607,
-  "cardsMissingImages": 2780,
+  "cardsWithImages": 620,
+  "cardsMissingImages": 2767,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -302,8 +315,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 164,
-      "missingCount": 1676
+      "withImages": 177,
+      "missingCount": 1663
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1461,14 +1474,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 348,
-      "missingCount": 2108
+      "withImages": 361,
+      "missingCount": 2095
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 128,
+    "withImages": 141,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1559,60 +1572,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629482146&affcode=ecdru"
       },
       {
-        "name": "Printed pullover hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635067641&affcode=ecdru"
-      },
-      {
-        "name": "Distressed and stained sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634959427&affcode=ecdru"
-      },
-      {
-        "name": "Maison Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638000042&affcode=ecdru"
-      },
-      {
         "name": "Corteiz Hoodies",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635008109&affcode=ecdru"
-      },
-      {
-        "name": "Chunky, wide-cut wool sweater",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638024312&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634949473&affcode=ecdru"
-      },
-      {
-        "name": "Chrome Hearts Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634973085&affcode=ecdru"
-      },
-      {
-        "name": "Loose Hooded Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637543622&affcode=ecdru"
-      },
-      {
-        "name": "Harajuku versatile and stylish crew neck",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637974750&affcode=ecdru"
-      },
-      {
-        "name": "Riveted flight jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634945559&affcode=ecdru"
-      },
-      {
-        "name": "American-style street hip-hop fleece lined pullover",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637931584&affcode=ecdru"
-      },
-      {
-        "name": "Knitted Loose-Fit Crew Neck Sweater",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637465026&affcode=ecdru"
-      },
-      {
-        "name": "Skeleton denim shirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637650140&affcode=ecdru"
-      },
-      {
-        "name": "Washed Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637258546&affcode=ecdru"
       },
       {
         "name": "Patchwork A Short Coat",
