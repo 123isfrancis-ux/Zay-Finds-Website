@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:04:58.797Z",
+  "checkedAt": "2026-09-28T05:06:06.667Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -283,11 +283,12 @@
     "7634460575",
     "7637448414",
     "7634211073",
-    "7637946164"
+    "7637946164",
+    "7637515868"
   ],
   "productCards": 3387,
-  "cardsWithImages": 729,
-  "cardsMissingImages": 2658,
+  "cardsWithImages": 730,
+  "cardsMissingImages": 2657,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -423,13 +424,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 281,
-      "missingCount": 1559
+      "withImages": 282,
+      "missingCount": 1558
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 56,
-      "missingCount": 85,
+      "withImages": 57,
+      "missingCount": 84,
       "missing": [
         {
           "id": "7813441799",
@@ -460,11 +461,6 @@
           "id": "7634243213",
           "name": "Magnetic dust-proof box",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634243213&affcode=ecdru"
-        },
-        {
-          "id": "7637515868",
-          "name": "HD Slimming Fitting Mirror",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637515868&affcode=ecdru"
         },
         {
           "id": "7634531879",
@@ -1327,8 +1323,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 470,
-      "missingCount": 1986
+      "withImages": 471,
+      "missingCount": 1985
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
