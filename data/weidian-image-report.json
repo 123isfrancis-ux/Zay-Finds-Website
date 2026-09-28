@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:07:31.273Z",
+  "checkedAt": "2026-09-28T07:09:01.798Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1114,11 +1114,23 @@
     "7626080333",
     "7777750299",
     "7629104358",
-    "7629074602"
+    "7629074602",
+    "7777771943",
+    "7626112383",
+    "7626142189",
+    "7626130399",
+    "7777663521",
+    "7626102169",
+    "7629048492",
+    "7780691068",
+    "7626060797",
+    "7780641310",
+    "7626037557",
+    "7629041108"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1561,
-  "cardsMissingImages": 1826,
+  "cardsWithImages": 1573,
+  "cardsMissingImages": 1814,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1315,69 +1327,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 114,
-      "missingCount": 49,
+      "withImages": 126,
+      "missingCount": 37,
       "missing": [
-        {
-          "id": "7777771943",
-          "name": "Balenciaga 3XL",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777771943&affcode=ecdru"
-        },
-        {
-          "id": "7626112383",
-          "name": "Yeezy 700",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626112383&affcode=ecdru"
-        },
-        {
-          "id": "7626142189",
-          "name": "[Best Batch]\nKobe 6\n40 Colorways",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626142189&affcode=ecdru"
-        },
-        {
-          "id": "7626130399",
-          "name": "Yeezy 500",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626130399&affcode=ecdru"
-        },
-        {
-          "id": "7777663521",
-          "name": "[Best Batch]\nBalenciaga\n40 Colorways",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777663521&affcode=ecdru"
-        },
-        {
-          "id": "7626102169",
-          "name": "Rick Owens",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626102169&affcode=ecdru"
-        },
-        {
-          "id": "7629048492",
-          "name": "Dior B23",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629048492&affcode=ecdru"
-        },
-        {
-          "id": "7780691068",
-          "name": "Christian Louboutin",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780691068&affcode=ecdru"
-        },
-        {
-          "id": "7626060797",
-          "name": "Air Jordan 1 Low Travis Scotts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626060797&affcode=ecdru"
-        },
-        {
-          "id": "7780641310",
-          "name": "Flea Air Force 1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780641310&affcode=ecdru"
-        },
-        {
-          "id": "7626037557",
-          "name": "Nike Foamposite",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626037557&affcode=ecdru"
-        },
-        {
-          "id": "7629041108",
-          "name": "Loro Piana(OG)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629041108&affcode=ecdru"
-        },
         {
           "id": "7629131870",
           "name": "Loro Piana(OG)",
