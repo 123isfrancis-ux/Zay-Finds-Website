@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:56:11.941Z",
+  "checkedAt": "2026-09-28T06:58:13.296Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1012,11 +1012,20 @@
     "7626492323",
     "7629521646",
     "7626450975",
-    "7626423553"
+    "7626423553",
+    "7629511872",
+    "7629421140",
+    "7626462807",
+    "7629458388",
+    "7629422672",
+    "7626504171",
+    "7629486228",
+    "7626516181",
+    "7629488150"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1459,
-  "cardsMissingImages": 1928,
+  "cardsWithImages": 1468,
+  "cardsMissingImages": 1919,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1152,8 +1161,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 546,
-      "missingCount": 1294
+      "withImages": 555,
+      "missingCount": 1285
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1196,13 +1205,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1156,
-      "missingCount": 1300
+      "withImages": 1165,
+      "missingCount": 1291
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 64,
-      "missingCount": 36,
+      "withImages": 73,
+      "missingCount": 27,
       "missing": [
         {
           "id": "7629492154",
@@ -1233,51 +1242,6 @@
           "id": "7626401283",
           "name": "Maison Margiela Futures",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626401283&affcode=ecdru"
-        },
-        {
-          "id": "7629421140",
-          "name": "Louis Vuitton LV Beanie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629421140&affcode=ecdru"
-        },
-        {
-          "id": "7626462807",
-          "name": "Ralp Lauren Polo Beanie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626462807&affcode=ecdru"
-        },
-        {
-          "id": "7629458388",
-          "name": "Goyard Phone Case",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629458388&affcode=ecdru"
-        },
-        {
-          "id": "7629511872",
-          "name": "Louis Vuitton Slipers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629511872&affcode=ecdru"
-        },
-        {
-          "id": "7629422672",
-          "name": "CHEAP GOOD ROLEX",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629422672&affcode=ecdru"
-        },
-        {
-          "id": "7626504171",
-          "name": "Chrome Dagger Necklas REAL SILVER",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626504171&affcode=ecdru"
-        },
-        {
-          "id": "7629486228",
-          "name": "Moissanite Barber Chain",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629486228&affcode=ecdru"
-        },
-        {
-          "id": "7626516181",
-          "name": "Goyard Backpack",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626516181&affcode=ecdru"
-        },
-        {
-          "id": "7629488150",
-          "name": "CLEANEST GOYARD BACKPACK",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629488150&affcode=ecdru"
         },
         {
           "id": "7626466597",
