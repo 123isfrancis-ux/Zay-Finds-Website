@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:06:19.673Z",
+  "checkedAt": "2026-09-28T07:07:31.273Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1102,11 +1102,23 @@
     "7626169653",
     "7626060793",
     "7780722652",
-    "7777736487"
+    "7777736487",
+    "7630030920",
+    "7629074550",
+    "7780744236",
+    "7780779634",
+    "7777675397",
+    "7626155981",
+    "7626144281",
+    "7628993504",
+    "7626080333",
+    "7777750299",
+    "7629104358",
+    "7629074602"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1549,
-  "cardsMissingImages": 1838,
+  "cardsWithImages": 1561,
+  "cardsMissingImages": 1826,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1303,69 +1315,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 102,
-      "missingCount": 61,
+      "withImages": 114,
+      "missingCount": 49,
       "missing": [
-        {
-          "id": "7630030920",
-          "name": "Balenciaga Track3,0 LED              OK Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630030920&affcode=ecdru"
-        },
-        {
-          "id": "7629074550",
-          "name": "Balenciaga Speed \nStretch-knit Mid\nOK Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629074550&affcode=ecdru"
-        },
-        {
-          "id": "7780744236",
-          "name": "Alexander McQueen\n Top Batch \n（23 colorways）",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780744236&affcode=ecdru"
-        },
-        {
-          "id": "7780779634",
-          "name": "Lots of Rickowens Shoes                  Top Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780779634&affcode=ecdru"
-        },
-        {
-          "id": "7777675397",
-          "name": "Lots of Lanvins",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777675397&affcode=ecdru"
-        },
-        {
-          "id": "7626155981",
-          "name": "Timberlands",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626155981&affcode=ecdru"
-        },
-        {
-          "id": "7626144281",
-          "name": "Balenciaga Skiwear",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626144281&affcode=ecdru"
-        },
-        {
-          "id": "7628993504",
-          "name": "UGG Slippers\n Best Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628993504&affcode=ecdru"
-        },
-        {
-          "id": "7626080333",
-          "name": "Nocta Hot Step                           （24 colorways）",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626080333&affcode=ecdru"
-        },
-        {
-          "id": "7777750299",
-          "name": "ON Cloud5",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777750299&affcode=ecdru"
-        },
-        {
-          "id": "7629104358",
-          "name": "Offwhite out of office                Best Batch\n(22 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629104358&affcode=ecdru"
-        },
-        {
-          "id": "7629074602",
-          "name": "Amiri Ma-1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629074602&affcode=ecdru"
-        },
         {
           "id": "7777771943",
           "name": "Balenciaga 3XL",
