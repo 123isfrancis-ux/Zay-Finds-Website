@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:10:43.886Z",
+  "checkedAt": "2026-09-28T05:12:09.833Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -309,11 +309,16 @@
     "7837650425",
     "7768920403",
     "7768965749",
-    "7771906404"
+    "7771906404",
+    "7768861109",
+    "7771865010",
+    "7768855341",
+    "7768855339",
+    "7771820472"
   ],
   "productCards": 3387,
-  "cardsWithImages": 755,
-  "cardsMissingImages": 2632,
+  "cardsWithImages": 760,
+  "cardsMissingImages": 2627,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -454,8 +459,8 @@
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 82,
-      "missingCount": 59,
+      "withImages": 87,
+      "missingCount": 54,
       "missing": [
         {
           "id": "7813441799",
@@ -548,34 +553,9 @@
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750152692&affcode=ecdru"
         },
         {
-          "id": "7768861109",
-          "name": "Chrome Hearts Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768861109&affcode=ecdru"
-        },
-        {
           "id": "7771934052",
           "name": "Sunflower Throw Pillow",
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7771934052&affcode=ecdru"
-        },
-        {
-          "id": "7771865010",
-          "name": "Kirby Bedside Table Decoration",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7771865010&affcode=ecdru"
-        },
-        {
-          "id": "7768855341",
-          "name": "Takashi Murakami Sunflower 3D Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768855341&affcode=ecdru"
-        },
-        {
-          "id": "7768855339",
-          "name": "Pokémon Gengar Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768855339&affcode=ecdru"
-        },
-        {
-          "id": "7771820472",
-          "name": "Pokémon Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7771820472&affcode=ecdru"
         },
         {
           "id": "7768957805",
