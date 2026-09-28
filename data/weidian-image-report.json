@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:41:00.965Z",
+  "checkedAt": "2026-09-28T04:42:29.223Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -122,11 +122,24 @@
     "7662330899",
     "7665391638",
     "7662387813",
-    "7658557315"
+    "7658557315",
+    "7651701384",
+    "7651128150",
+    "7648019231",
+    "7650451870",
+    "7647454037",
+    "7650355640",
+    "7650381028",
+    "7647462429",
+    "7634873899",
+    "7647460054",
+    "7647424938",
+    "7632912701",
+    "7635879048"
   ],
   "productCards": 3387,
-  "cardsWithImages": 567,
-  "cardsMissingImages": 2820,
+  "cardsWithImages": 580,
+  "cardsMissingImages": 2807,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -262,8 +275,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 124,
-      "missingCount": 1716
+      "withImages": 137,
+      "missingCount": 1703
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1421,14 +1434,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 308,
-      "missingCount": 2148
+      "withImages": 321,
+      "missingCount": 2135
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 88,
+    "withImages": 101,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1487,64 +1500,12 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7658163135&affcode=ecdru"
       },
       {
-        "name": "High street style motorcycle bomber jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7651701384&affcode=ecdru"
-      },
-      {
-        "name": "Cross-shaped baseball cap",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7651128150&affcode=ecdru"
-      },
-      {
-        "name": "Saint Alexander Hoodie/Pant",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7648019231&affcode=ecdru"
-      },
-      {
         "name": "Composite double-layer material camouflage hoodie",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647352705&affcode=ecdru"
       },
       {
-        "name": "Dark, minimalist cardigan wool coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650451870&affcode=ecdru"
-      },
-      {
-        "name": "American-style distressed heavyweight sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647454037&affcode=ecdru"
-      },
-      {
-        "name": "Faux fur coat (fox fur imitation)",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650355640&affcode=ecdru"
-      },
-      {
         "name": "Zippered, distressed, tie-dyed terry cloth hoodie in a post-apocalyptic style.",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650376556&affcode=ecdru"
-      },
-      {
-        "name": "Cool-toned, distressed, and washed-out jacket with printed slogans.",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650381028&affcode=ecdru"
-      },
-      {
-        "name": "Windproof, thickened PU leather padded jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647462429&affcode=ecdru"
-      },
-      {
-        "name": "HBA Leather jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634873899&affcode=ecdru"
-      },
-      {
-        "name": "Skull-patterned Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647460054&affcode=ecdru"
-      },
-      {
-        "name": "Patchwork Gray Long-sleeved",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647424938&affcode=ecdru"
-      },
-      {
-        "name": "Suede motorcycle jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632912701&affcode=ecdru"
-      },
-      {
-        "name": "Camouflage Plush Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635879048&affcode=ecdru"
       },
       {
         "name": "Gray and white camouflage fleece zip-up jacket",
