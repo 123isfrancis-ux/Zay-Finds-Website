@@ -44,7 +44,7 @@ Refresh missing image links with:
 pnpm refresh:images
 ```
 
-The script checks one public listing at a time by default, checkpoints every 50, skips successful cached entries, and stops on authentication/rate-limit challenges or three consecutive connection failures. Unavailable listings and non-Weidian destinations retain their existing image or placeholder. `data/weidian-image-report.json` records the latest run. Refresh again after the source catalogue changes, then rebuild and redeploy. Photo links are seller-controlled and may change later.
+Each run checks at most three public listings sequentially, with 20 seconds between requests. A persistent lock prevents overlap. Connection failures stop the batch and trigger a one-hour cooldown, doubling to a maximum of 24 hours on repeated failures; Retry-After is respected. Authentication failures or access challenges pause collection for manual review. Missing listings get at most three attempts and rotate behind unchecked products. Successful links are checkpointed after every request. Local scheduler state is excluded from Git. `data/weidian-image-report.json` records results. Non-Weidian and unavailable listings may require another image source.
 
 ## Prices and links
 
