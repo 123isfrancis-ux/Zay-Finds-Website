@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:23:49.315Z",
+  "checkedAt": "2026-09-28T05:24:58.263Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -418,11 +418,21 @@
     "7629022686",
     "7629054254",
     "7628988892",
-    "7628963552"
+    "7628963552",
+    "7629101612",
+    "7626111711",
+    "7625991471",
+    "7629040378",
+    "7625989519",
+    "7629012926",
+    "7626038799",
+    "7626115709",
+    "7625999465",
+    "7629101628"
   ],
   "productCards": 3387,
-  "cardsWithImages": 864,
-  "cardsMissingImages": 2523,
+  "cardsWithImages": 874,
+  "cardsMissingImages": 2513,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -558,8 +568,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 371,
-      "missingCount": 1469
+      "withImages": 381,
+      "missingCount": 1459
     },
     "ROOM DECOR": {
       "total": 141,
@@ -585,8 +595,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 54,
-      "missingCount": 39,
+      "withImages": 64,
+      "missingCount": 29,
       "missing": [
         {
           "id": "7629016744",
@@ -604,64 +614,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626091839&affcode=ecdru"
         },
         {
-          "id": "7629101612",
-          "name": "Cartier Glasses",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629101612&affcode=ecdru"
-        },
-        {
-          "id": "7626111711",
-          "name": "Cartier Glasses",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626111711&affcode=ecdru"
-        },
-        {
           "id": "7626015223",
           "name": "Louis Vuitton LV  Glasses",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626015223&affcode=ecdru"
         },
         {
-          "id": "7625991471",
-          "name": "Chrome Herats Glases",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625991471&affcode=ecdru"
-        },
-        {
-          "id": "7629040378",
-          "name": "Tom Fort Glases",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629040378&affcode=ecdru"
-        },
-        {
-          "id": "7625989519",
-          "name": "Essentials Hoodie/Pants",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625989519&affcode=ecdru"
-        },
-        {
-          "id": "7629012926",
-          "name": "Essentials Sets",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629012926&affcode=ecdru"
-        },
-        {
-          "id": "7626038799",
-          "name": "Fear Of God Essentials shorts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626038799&affcode=ecdru"
-        },
-        {
-          "id": "7626115709",
-          "name": "Chrome Hearts USA Sweater",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626115709&affcode=ecdru"
-        },
-        {
-          "id": "7625999465",
-          "name": "Chrome Hearts Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625999465&affcode=ecdru"
-        },
-        {
           "id": "7628977472",
           "name": "Chrome Hearts Hoodie",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628977472&affcode=ecdru"
-        },
-        {
-          "id": "7629101628",
-          "name": "Chrome Hearts Sweatshirts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629101628&affcode=ecdru"
         },
         {
           "id": "7628969486",
@@ -787,8 +747,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 561,
-      "missingCount": 1895
+      "withImages": 571,
+      "missingCount": 1885
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
