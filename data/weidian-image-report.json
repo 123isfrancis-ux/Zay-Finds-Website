@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:09:32.492Z",
+  "checkedAt": "2026-09-28T05:10:43.886Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -304,11 +304,16 @@
     "7637529804",
     "7637523840",
     "7634515995",
-    "7634512089"
+    "7634512089",
+    "7635002315",
+    "7837650425",
+    "7768920403",
+    "7768965749",
+    "7771906404"
   ],
   "productCards": 3387,
-  "cardsWithImages": 750,
-  "cardsMissingImages": 2637,
+  "cardsWithImages": 755,
+  "cardsMissingImages": 2632,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -444,13 +449,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 302,
-      "missingCount": 1538
+      "withImages": 303,
+      "missingCount": 1537
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 77,
-      "missingCount": 64,
+      "withImages": 82,
+      "missingCount": 59,
       "missing": [
         {
           "id": "7813441799",
@@ -538,34 +543,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637415064&affcode=ecdru"
         },
         {
-          "id": "7635002315",
-          "name": "Labubu motorcycle jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635002315&affcode=ecdru"
-        },
-        {
           "id": "7750152692",
           "name": "Goyard Suitcase",
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750152692&affcode=ecdru"
-        },
-        {
-          "id": "7837650425",
-          "name": "Pokémon Charmander Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7837650425&affcode=ecdru"
-        },
-        {
-          "id": "7768920403",
-          "name": "Stussy Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768920403&affcode=ecdru"
-        },
-        {
-          "id": "7768965749",
-          "name": "Simpson Rugs",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768965749&affcode=ecdru"
-        },
-        {
-          "id": "7771906404",
-          "name": "Chrome Hearts Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7771906404&affcode=ecdru"
         },
         {
           "id": "7768861109",
@@ -1243,8 +1223,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 491,
-      "missingCount": 1965
+      "withImages": 492,
+      "missingCount": 1964
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
