@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:07:17.795Z",
+  "checkedAt": "2026-09-28T05:08:23.619Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -288,11 +288,19 @@
     "7634284961",
     "7634180979",
     "7634553743",
-    "7634557663"
+    "7634557663",
+    "7637462220",
+    "7634484251",
+    "7634543827",
+    "7634595411",
+    "7634462949",
+    "7638003786",
+    "7635000219",
+    "7634460609"
   ],
   "productCards": 3387,
-  "cardsWithImages": 734,
-  "cardsMissingImages": 2653,
+  "cardsWithImages": 742,
+  "cardsMissingImages": 2645,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -428,13 +436,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 286,
-      "missingCount": 1554
+      "withImages": 294,
+      "missingCount": 1546
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 61,
-      "missingCount": 80,
+      "withImages": 69,
+      "missingCount": 72,
       "missing": [
         {
           "id": "7813441799",
@@ -500,46 +508,6 @@
           "id": "7634951365",
           "name": "Disassemble Alloy Toys",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634951365&affcode=ecdru"
-        },
-        {
-          "id": "7637462220",
-          "name": "Light Luxury Rivet Cushion",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637462220&affcode=ecdru"
-        },
-        {
-          "id": "7634484251",
-          "name": "Square-Shaped Living Room Tissue Box",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634484251&affcode=ecdru"
-        },
-        {
-          "id": "7634543827",
-          "name": "High-End Home Desktop Decoration",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634543827&affcode=ecdru"
-        },
-        {
-          "id": "7634595411",
-          "name": "Creative Mirror",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634595411&affcode=ecdru"
-        },
-        {
-          "id": "7634462949",
-          "name": "The Ironwork Coat Rack Has Fallen To The Ground",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634462949&affcode=ecdru"
-        },
-        {
-          "id": "7638003786",
-          "name": "Perpetual Calendar Hanging Picture Without Punching Holes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638003786&affcode=ecdru"
-        },
-        {
-          "id": "7635000219",
-          "name": "Background Wall Decorative Painting",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635000219&affcode=ecdru"
-        },
-        {
-          "id": "7634460609",
-          "name": "Romantic Candle Lamps As Souvenirs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634460609&affcode=ecdru"
         },
         {
           "id": "7634490225",
@@ -1307,8 +1275,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 475,
-      "missingCount": 1981
+      "withImages": 483,
+      "missingCount": 1973
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
