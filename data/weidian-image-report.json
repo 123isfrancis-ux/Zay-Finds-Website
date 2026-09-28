@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:14:59.165Z",
+  "checkedAt": "2026-09-28T05:15:59.758Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -335,11 +335,20 @@
     "7743674492",
     "7740666847",
     "7740613149",
-    "7740645049"
+    "7740645049",
+    "7740637045",
+    "7743583354",
+    "7743631096",
+    "7740701671",
+    "7740593351",
+    "7740674917",
+    "7740613145",
+    "7740579499",
+    "7740645041"
   ],
   "productCards": 3387,
-  "cardsWithImages": 781,
-  "cardsMissingImages": 2606,
+  "cardsWithImages": 790,
+  "cardsMissingImages": 2597,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -480,8 +489,8 @@
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 108,
-      "missingCount": 33,
+      "withImages": 117,
+      "missingCount": 24,
       "missing": [
         {
           "id": "7813441799",
@@ -602,51 +611,6 @@
           "id": "7740617119",
           "name": "ins Mushroom PC Desk Lamp",
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740617119&affcode=ecdru"
-        },
-        {
-          "id": "7740637045",
-          "name": "Chrome Hearts Cylindrical Stool",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740637045&affcode=ecdru"
-        },
-        {
-          "id": "7743583354",
-          "name": "Supreme Folding Chair",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743583354&affcode=ecdru"
-        },
-        {
-          "id": "7743631096",
-          "name": "BMW Carpets",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743631096&affcode=ecdru"
-        },
-        {
-          "id": "7740701671",
-          "name": "Supreme Skateboard Wall Decoration",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740701671&affcode=ecdru"
-        },
-        {
-          "id": "7740593351",
-          "name": "Chrome Hearts throw pillow",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740593351&affcode=ecdru"
-        },
-        {
-          "id": "7740674917",
-          "name": "Chrome HeartsSolid wood wall coverings",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740674917&affcode=ecdru"
-        },
-        {
-          "id": "7740613145",
-          "name": "Supreme Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740613145&affcode=ecdru"
-        },
-        {
-          "id": "7740579499",
-          "name": "Stussy Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740579499&affcode=ecdru"
-        },
-        {
-          "id": "7740645041",
-          "name": "Nike Book ornaments",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740645041&affcode=ecdru"
         }
       ]
     },
