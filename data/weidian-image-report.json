@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:51:33.185Z",
+  "checkedAt": "2026-09-28T04:52:36.708Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -223,11 +223,20 @@
     "7694278883",
     "7692859892",
     "7684597459",
-    "7687828160"
+    "7687828160",
+    "7647352705",
+    "7635637826",
+    "7635648310",
+    "7634896373",
+    "7635010113",
+    "7635008109",
+    "7634258361",
+    "7638043658",
+    "7634962659"
   ],
   "productCards": 3387,
-  "cardsWithImages": 668,
-  "cardsMissingImages": 2719,
+  "cardsWithImages": 677,
+  "cardsMissingImages": 2710,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -363,8 +372,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 225,
-      "missingCount": 1615
+      "withImages": 234,
+      "missingCount": 1606
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1522,14 +1531,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 409,
-      "missingCount": 2047
+      "withImages": 418,
+      "missingCount": 2038
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 189,
+    "withImages": 198,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1564,52 +1573,16 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7658163135&affcode=ecdru"
       },
       {
-        "name": "Composite double-layer material camouflage hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7647352705&affcode=ecdru"
-      },
-      {
         "name": "Zippered, distressed, tie-dyed terry cloth hoodie in a post-apocalyptic style.",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650376556&affcode=ecdru"
-      },
-      {
-        "name": "Starry Sky Plaid Shirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635637826&affcode=ecdru"
-      },
-      {
-        "name": "Gallery Dept Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635648310&affcode=ecdru"
-      },
-      {
-        "name": "MLB Baseball Uniform",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634896373&affcode=ecdru"
       },
       {
         "name": "Denim zip-up hoodie",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634908415&affcode=ecdru"
       },
       {
-        "name": "Zippered hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635010113&affcode=ecdru"
-      },
-      {
         "name": "Printed pullover hoodie",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629482146&affcode=ecdru"
-      },
-      {
-        "name": "Corteiz Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635008109&affcode=ecdru"
-      },
-      {
-        "name": "Washed Embroidered Workwear Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634258361&affcode=ecdru"
-      },
-      {
-        "name": "Zuoshandiao cotton-padded jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638043658&affcode=ecdru"
-      },
-      {
-        "name": "Denim hooded sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634962659&affcode=ecdru"
       }
     ]
   }
