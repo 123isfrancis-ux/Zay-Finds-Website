@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:54:05.866Z",
+  "checkedAt": "2026-09-28T05:00:06.595Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -232,11 +232,18 @@
     "7635008109",
     "7634258361",
     "7638043658",
-    "7634962659"
+    "7634962659",
+    "7821314484",
+    "7813370823",
+    "7813386661",
+    "7813402405",
+    "7813374917",
+    "7804053126",
+    "7801054921"
   ],
   "productCards": 3387,
-  "cardsWithImages": 678,
-  "cardsMissingImages": 2709,
+  "cardsWithImages": 685,
+  "cardsMissingImages": 2702,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -372,53 +379,18 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 235,
-      "missingCount": 1605
+      "withImages": 237,
+      "missingCount": 1603
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 5,
-      "missingCount": 136,
+      "withImages": 12,
+      "missingCount": 129,
       "missing": [
-        {
-          "id": "7821314484",
-          "name": "Pokémon Pikachu Plush",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7821314484&affcode=ecdru"
-        },
-        {
-          "id": "7813370823",
-          "name": "Violent Bear 28cm Figure",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813370823&affcode=ecdru"
-        },
-        {
-          "id": "7813386661",
-          "name": "Pokémon Cubone Figure",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813386661&affcode=ecdru"
-        },
-        {
-          "id": "7813402405",
-          "name": "Simpson Rugs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813402405&affcode=ecdru"
-        },
-        {
-          "id": "7813374917",
-          "name": "Pokémon Carpet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813374917&affcode=ecdru"
-        },
         {
           "id": "7813441799",
           "name": "YOSHITOMO NARAx TheSkateroom Decorative Skateboard Background",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813441799&affcode=ecdru"
-        },
-        {
-          "id": "7804053126",
-          "name": "Chinatown Market Smiley Face Basketball",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7804053126&affcode=ecdru"
-        },
-        {
-          "id": "7801054921",
-          "name": "KAWS X Gallery 1950 Companion Face Rug",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7801054921&affcode=ecdru"
         },
         {
           "id": "7801094601",
@@ -1531,8 +1503,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 419,
-      "missingCount": 2037
+      "withImages": 426,
+      "missingCount": 2030
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
