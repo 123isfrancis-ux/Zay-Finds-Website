@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:30:19.559Z",
+  "checkedAt": "2026-09-28T05:31:32.893Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -472,11 +472,22 @@
     "7816402450",
     "7813366937",
     "7813408307",
-    "7813368897"
+    "7813368897",
+    "7813406327",
+    "7816339506",
+    "7816418256",
+    "7816355158",
+    "7816424074",
+    "7789913524",
+    "7808397816",
+    "7805309117",
+    "7808315078",
+    "7805303063",
+    "7805366285"
   ],
   "productCards": 3387,
-  "cardsWithImages": 918,
-  "cardsMissingImages": 2469,
+  "cardsWithImages": 929,
+  "cardsMissingImages": 2458,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -612,8 +623,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 408,
-      "missingCount": 1432
+      "withImages": 411,
+      "missingCount": 1429
     },
     "ROOM DECOR": {
       "total": 141,
@@ -656,8 +667,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 615,
-      "missingCount": 1841
+      "withImages": 626,
+      "missingCount": 1830
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
