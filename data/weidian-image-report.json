@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:46:24.046Z",
+  "checkedAt": "2026-09-28T04:47:43.585Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -175,11 +175,26 @@
     "7637931584",
     "7637465026",
     "7637650140",
-    "7637258546"
+    "7637258546",
+    "7637271934",
+    "7637507826",
+    "7637188756",
+    "7637478390",
+    "7637535974",
+    "7635039675",
+    "7637904702",
+    "7637486320",
+    "7634240327",
+    "7634877269",
+    "7635027931",
+    "7637861258",
+    "7637883080",
+    "7634958619",
+    "7634880819"
   ],
   "productCards": 3387,
-  "cardsWithImages": 620,
-  "cardsMissingImages": 2767,
+  "cardsWithImages": 635,
+  "cardsMissingImages": 2752,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -315,8 +330,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 177,
-      "missingCount": 1663
+      "withImages": 192,
+      "missingCount": 1648
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1474,14 +1489,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 361,
-      "missingCount": 2095
+      "withImages": 376,
+      "missingCount": 2080
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 141,
+    "withImages": 156,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1576,68 +1591,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635008109&affcode=ecdru"
       },
       {
-        "name": "Patchwork A Short Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637271934&affcode=ecdru"
-      },
-      {
-        "name": "Cardigan Hooded Sweatshirt Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637507826&affcode=ecdru"
-      },
-      {
-        "name": "Lightweight Softshell Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637188756&affcode=ecdru"
-      },
-      {
         "name": "Washed Embroidered Workwear Jacket",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634258361&affcode=ecdru"
-      },
-      {
-        "name": "American-Style Flight Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637478390&affcode=ecdru"
-      },
-      {
-        "name": "Racing Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637535974&affcode=ecdru"
-      },
-      {
-        "name": "Trendy And Versatile Coat Top",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635039675&affcode=ecdru"
-      },
-      {
-        "name": "Zipper Hoodie Coat With Embroidery And Cap",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637904702&affcode=ecdru"
-      },
-      {
-        "name": "Embroidered Motorcycle Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637486320&affcode=ecdru"
-      },
-      {
-        "name": "Distressed Oversized Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634240327&affcode=ecdru"
-      },
-      {
-        "name": "3D Digital Print Pullover Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634877269&affcode=ecdru"
-      },
-      {
-        "name": "Acne Studios Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635027931&affcode=ecdru"
-      },
-      {
-        "name": "Embroidered badge jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637861258&affcode=ecdru"
-      },
-      {
-        "name": "Dark-style hooded zip-up sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637883080&affcode=ecdru"
-      },
-      {
-        "name": "Studded Loose Zipper Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634958619&affcode=ecdru"
-      },
-      {
-        "name": "Leopard Print Hooded Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634880819&affcode=ecdru"
       },
       {
         "name": "Zipper Wool-Collar Cotton-Padded Jacket",
