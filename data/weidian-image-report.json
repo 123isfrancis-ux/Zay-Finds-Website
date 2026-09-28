@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:39:18.558Z",
+  "checkedAt": "2026-09-28T04:41:00.965Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -96,11 +96,37 @@
     "7692822324",
     "7689798903",
     "7687834116",
-    "7687719196"
+    "7687719196",
+    "7684854103",
+    "7688002500",
+    "7684729081",
+    "7681160182",
+    "7677856395",
+    "7678164173",
+    "7678097467",
+    "7681136702",
+    "7681077576",
+    "7678121171",
+    "7681108804",
+    "7681100894",
+    "7681043718",
+    "7663447401",
+    "7663419391",
+    "7663496819",
+    "7666478788",
+    "7663522301",
+    "7663496879",
+    "7663469237",
+    "7666474926",
+    "7665395742",
+    "7662330899",
+    "7665391638",
+    "7662387813",
+    "7658557315"
   ],
   "productCards": 3387,
-  "cardsWithImages": 541,
-  "cardsMissingImages": 2846,
+  "cardsWithImages": 567,
+  "cardsMissingImages": 2820,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -236,8 +262,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 98,
-      "missingCount": 1742
+      "withImages": 124,
+      "missingCount": 1716
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1395,14 +1421,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 282,
-      "missingCount": 2174
+      "withImages": 308,
+      "missingCount": 2148
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 62,
+    "withImages": 88,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1437,128 +1463,24 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7684597459&affcode=ecdru"
       },
       {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7684854103&affcode=ecdru"
-      },
-      {
-        "name": "Rose Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7688002500&affcode=ecdru"
-      },
-      {
         "name": "Protocol Index Hoodies",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7687828160&affcode=ecdru"
-      },
-      {
-        "name": "MLB Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7684729081&affcode=ecdru"
-      },
-      {
-        "name": "Casual zipper jacket and cool hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681160182&affcode=ecdru"
-      },
-      {
-        "name": "Form-fitting heavy-duty zipper hoodie jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7677856395&affcode=ecdru"
-      },
-      {
-        "name": "Cashmere collar sweater knitted loose coat with thick padding",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678164173&affcode=ecdru"
-      },
-      {
-        "name": "Gypsum water-washed distressed jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678097467&affcode=ecdru"
       },
       {
         "name": "Loose Spring-Summer Men's Long-Sleeved Sweatshirt",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678130687&affcode=ecdru"
       },
       {
-        "name": "Washed and distressed hooded zipper pullover hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681136702&affcode=ecdru"
-      },
-      {
-        "name": "Hooded sweatshirt with embroidered letters",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681077576&affcode=ecdru"
-      },
-      {
         "name": "High-end distressed slim-fit work jacket",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678093573&affcode=ecdru"
-      },
-      {
-        "name": "Jacket with hood and sleeveless hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678121171&affcode=ecdru"
       },
       {
         "name": "High-end Korean-style embroidered cardigan from a trendy brand",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678108931&affcode=ecdru"
       },
       {
-        "name": "Metallic embroidery crewneck hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681108804&affcode=ecdru"
-      },
-      {
-        "name": "Loose and versatile patchwork collar jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681100894&affcode=ecdru"
-      },
-      {
         "name": "Ultralight waterproof leopard print jacket",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fitem.taobao.com%2Fitem.htm%3Fapp%3Dchrome%26bxsign%3DscdnXi2XdsMVP_hOIbzzNOdQW1-e5p-Xium_naMKNzkz_0_Uolj5rTuMkZNnCmvpsxe6lfx3GjuL8zAinMjjrXYzAw1gucR7ASeLnFZOVzZJrT8kQSnoGfSlx6TytXCOzn9%26cpp%3D1%26id%3D715742531937%26price%3D3560%26shareUniqueId%3D34939759526%26share_crt_v%3D1%26shareurl%3Dtrue%26short_name%3Dh.7qNY5d6QexVnCfq%26sourceType%3Ditem%26sp_tk%3DS21sVVVTNTU3WEw%253D%26spm%3Da2159r.13376460.0.0%26suid%3D079B9230-63A8-4390-94E2-750F64B30479%26tbSocialPopKey%3DshareItem%26tk%3DKmlUUS557XL%2520HU293%26un%3D4e4fcc8acc999433875dbdeffcd1c5a5%26un_site%3D0%26ut_sk%3D1.Z6sqZUzFCKEDAPcDX9OS8W2a_21380790_1769587449352.Copy.1%26wxsign%3DtbwLbpFYrxYczJS4hwnx0TKrRClixwHJJZgzV-MTAnjPoQ-vHnytUXgRAw94XLsBsgE_qr34CqjyeXRCqlIacaofYeYjglJxea_dlyu38_Cpyp-gEjIMC7ALR6cM-CmDxzS%26sku_properties%3D1627207%253A3255041&affcode=ecdru"
-      },
-      {
-        "name": "Rex rabbit fur vest with stripes",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7681043718&affcode=ecdru"
-      },
-      {
-        "name": "Canvas deconstructed bomber jacket with cotton lining",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663447401&affcode=ecdru"
-      },
-      {
-        "name": "Stand-collar flight jacket (padded/quilted)",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663419391&affcode=ecdru"
-      },
-      {
-        "name": "High Street Harrington jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663496819&affcode=ecdru"
-      },
-      {
-        "name": "Zuoshanying Fleece-Lined Hooded Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7666478788&affcode=ecdru"
-      },
-      {
-        "name": "Padded short jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663522301&affcode=ecdru"
-      },
-      {
-        "name": "Zuoshandiao corduroy cotton jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663496879&affcode=ecdru"
-      },
-      {
-        "name": "Structured stand-collar bomber jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7663469237&affcode=ecdru"
-      },
-      {
-        "name": "Hand-knitted rope detail sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7666474926&affcode=ecdru"
-      },
-      {
-        "name": "Fur-coated one-piece lapel cardigan in fox fur for men",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7665395742&affcode=ecdru"
-      },
-      {
-        "name": "Winter new style embroidered and padded coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7662330899&affcode=ecdru"
-      },
-      {
-        "name": "Basic silhouette loose basic hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7665391638&affcode=ecdru"
-      },
-      {
-        "name": "Handmade patchwork of cowhide",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7662387813&affcode=ecdru"
-      },
-      {
-        "name": "Vintage distressed suede jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7658557315&affcode=ecdru"
       },
       {
         "name": "New Chinese style retro stand-up collar suit",
