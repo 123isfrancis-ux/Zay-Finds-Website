@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:42:29.223Z",
+  "checkedAt": "2026-09-28T04:43:42.744Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -135,11 +135,24 @@
     "7647460054",
     "7647424938",
     "7632912701",
-    "7635879048"
+    "7635879048",
+    "7644508433",
+    "7644551935",
+    "7635947424",
+    "7632280387",
+    "7635557456",
+    "7635639734",
+    "7632250471",
+    "7635689676",
+    "7636475646",
+    "7633424133",
+    "7633465945",
+    "7636398234",
+    "7632529021"
   ],
   "productCards": 3387,
-  "cardsWithImages": 580,
-  "cardsMissingImages": 2807,
+  "cardsWithImages": 593,
+  "cardsMissingImages": 2794,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -275,8 +288,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 137,
-      "missingCount": 1703
+      "withImages": 150,
+      "missingCount": 1690
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1434,14 +1447,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 321,
-      "missingCount": 2135
+      "withImages": 334,
+      "missingCount": 2122
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 101,
+    "withImages": 114,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1508,64 +1521,12 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650376556&affcode=ecdru"
       },
       {
-        "name": "Gray and white camouflage fleece zip-up jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7644508433&affcode=ecdru"
-      },
-      {
-        "name": "Eye-print knitted sweater",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7644551935&affcode=ecdru"
-      },
-      {
-        "name": "Acne Studios Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635947424&affcode=ecdru"
-      },
-      {
-        "name": "Washed Ink Splatter Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632280387&affcode=ecdru"
-      },
-      {
-        "name": "[atched Nylon Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635557456&affcode=ecdru"
-      },
-      {
-        "name": "Y2k Subculture Cross Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635639734&affcode=ecdru"
-      },
-      {
         "name": "Starry Sky Plaid Shirt",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635637826&affcode=ecdru"
       },
       {
-        "name": "Airplane Button Denim Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632250471&affcode=ecdru"
-      },
-      {
-        "name": "Washed And Faded Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635689676&affcode=ecdru"
-      },
-      {
         "name": "Gallery Dept Hoodies",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635648310&affcode=ecdru"
-      },
-      {
-        "name": "Heavy Metal Cowhide Diagonal Zipper Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636475646&affcode=ecdru"
-      },
-      {
-        "name": "Genuine Calfskin Vest",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7633424133&affcode=ecdru"
-      },
-      {
-        "name": "Corteiz Hooodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7633465945&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Leather Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636398234&affcode=ecdru"
-      },
-      {
-        "name": "Distressed denim jacket with holes",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632529021&affcode=ecdru"
       },
       {
         "name": "MLB Baseball Uniform",
