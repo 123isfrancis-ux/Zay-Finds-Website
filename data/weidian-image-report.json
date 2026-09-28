@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:51:11.949Z",
+  "checkedAt": "2026-09-28T06:52:24.074Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -976,11 +976,19 @@
     "7629434958",
     "7629413310",
     "7626480375",
-    "7626496251"
+    "7626496251",
+    "7629440796",
+    "7626444659",
+    "7626468557",
+    "7629430994",
+    "7626425491",
+    "7626431373",
+    "7629488138",
+    "7626488347"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1423,
-  "cardsMissingImages": 1964,
+  "cardsWithImages": 1431,
+  "cardsMissingImages": 1956,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1116,8 +1124,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 510,
-      "missingCount": 1330
+      "withImages": 518,
+      "missingCount": 1322
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1160,13 +1168,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1120,
-      "missingCount": 1336
+      "withImages": 1128,
+      "missingCount": 1328
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 28,
-      "missingCount": 72,
+      "withImages": 36,
+      "missingCount": 64,
       "missing": [
         {
           "id": "7629492154",
@@ -1177,46 +1185,6 @@
           "id": "7626498251",
           "name": "Loro Piana Winter Walkers",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626498251&affcode=ecdru"
-        },
-        {
-          "id": "7629440796",
-          "name": "Louis Vuitton Card Holder Golf",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629440796&affcode=ecdru"
-        },
-        {
-          "id": "7626444659",
-          "name": "Louis Vuitton Card Holder Beach",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626444659&affcode=ecdru"
-        },
-        {
-          "id": "7626468557",
-          "name": "Louis Vuitton Card Holder Ski",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626468557&affcode=ecdru"
-        },
-        {
-          "id": "7629430994",
-          "name": "Louis Vuitton LV  Wallet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629430994&affcode=ecdru"
-        },
-        {
-          "id": "7626425491",
-          "name": "Denim Montell Bag LV\n1:1 \nBEST QUALITY",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626425491&affcode=ecdru"
-        },
-        {
-          "id": "7626431373",
-          "name": "Denim Montell Bag LV\n1:1 \nBEST QUALITY",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626431373&affcode=ecdru"
-        },
-        {
-          "id": "7629488138",
-          "name": "Goyard Bag",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629488138&affcode=ecdru"
-        },
-        {
-          "id": "7626488347",
-          "name": "Gucci Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626488347&affcode=ecdru"
         },
         {
           "id": "7626426885",
