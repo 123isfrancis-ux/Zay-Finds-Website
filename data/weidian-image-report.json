@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:17:02.127Z",
+  "checkedAt": "2026-09-28T05:17:45.850Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -351,11 +351,19 @@
     "7694353965",
     "7634243213",
     "7634531879",
-    "7637507910"
+    "7637507910",
+    "7634476277",
+    "7634872909",
+    "7634494153",
+    "7634248635",
+    "7634951365",
+    "7634490225",
+    "7634518029",
+    "7637430822"
   ],
   "productCards": 3387,
-  "cardsWithImages": 797,
-  "cardsMissingImages": 2590,
+  "cardsWithImages": 805,
+  "cardsMissingImages": 2582,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -491,58 +499,18 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 309,
-      "missingCount": 1531
+      "withImages": 317,
+      "missingCount": 1523
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 124,
-      "missingCount": 17,
+      "withImages": 132,
+      "missingCount": 9,
       "missing": [
         {
           "id": "7775361202",
           "name": "Supreme x Rimowa Suitcase\n [Black/Red]",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7775361202&affcode=ecdru"
-        },
-        {
-          "id": "7634476277",
-          "name": "Sunflower Carpet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634476277&affcode=ecdru"
-        },
-        {
-          "id": "7634872909",
-          "name": "Bear Sakura Figurine Doll Gift",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634872909&affcode=ecdru"
-        },
-        {
-          "id": "7634494153",
-          "name": "Wind Diatom Mud Floor Mat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634494153&affcode=ecdru"
-        },
-        {
-          "id": "7634248635",
-          "name": "Solid Wood Folding Display Chair",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634248635&affcode=ecdru"
-        },
-        {
-          "id": "7634951365",
-          "name": "Disassemble Alloy Toys",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634951365&affcode=ecdru"
-        },
-        {
-          "id": "7634490225",
-          "name": "Yoga Mat Storage Basket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634490225&affcode=ecdru"
-        },
-        {
-          "id": "7634518029",
-          "name": "Plush Toy Streetwear Brand",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634518029&affcode=ecdru"
-        },
-        {
-          "id": "7637430822",
-          "name": "Modern Diamond Painting Cross-Stitch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637430822&affcode=ecdru"
         },
         {
           "id": "7637415064",
@@ -1055,8 +1023,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 499,
-      "missingCount": 1957
+      "withImages": 507,
+      "missingCount": 1949
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
