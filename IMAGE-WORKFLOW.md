@@ -1,0 +1,12 @@
+# Catalogue photo workflow
+
+Use this workflow for future catalogue photo requests. Do not repeat broad research or scan products that already have photos.
+
+1. Run `node scripts/catalogue-images.cjs queue "CATEGORY"`. Omit the category only for an all-catalogue request. The compact queue merges duplicate purchase links and excludes completed products. A zero-length queue needs no browser work.
+2. Use the supported computer/browser tool with one reusable Kakobuy tab. Navigate only to queued purchase URLs. Read the rendered accessibility state; initial HTML is not a reliable product-data source. Prefer text observations, and use screenshots only when needed. Work in bounded batches, keeping output to product ID, image URL and exceptions.
+3. Wait for the current product to load. Verify both the address and source product link against the expected ID before accepting an image. A redirect or stale previous-page image is not evidence. For short links, finish the redirect and record the exact destination ID. Never assume a short-link destination from the preceding page. Select one main product photo; variants do not require separate cards.
+4. Record a JSON array with `id`, `image` (full HTTPS CDN URL), `source` (observed Kakobuy destination URL), and optional `shortLink`. Get the full image address from browser evidence. No cookies, tokens, browser internals, undocumented API guessing, or alternate browser automation. Respect access challenges and cooldowns. A transient "may not exist" message can be checked once more after the page loads; otherwise record the gap.
+5. Save the batch outside the repository, then run `node scripts/catalogue-images.cjs ingest /tmp/batch.json`. This validates ID/source agreement and image hosts, checks each new image URL once, skips repeated IDs and cached photo URLs, and saves successful results plus verified short-link mappings without replacing existing photos. Inspect failures.
+6. Run `coverage` for the requested category to verify exact remaining gaps. Run the existing tests once for the completed change, not after every product. For image-data-only changes a production rebuild is unnecessary. Review the diff and push only the intended data changes when authorized. Report actual coverage, never inferred completion.
+
+The CLI streamlines queueing and ingestion; rendered-page discovery still requires the supported browser tool. Do not claim this is a fully unattended Kakobuy scraper. The existing Weidian automation is separate and retains its own cooldown state.
