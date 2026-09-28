@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:49:03.210Z",
+  "checkedAt": "2026-09-28T04:50:10.042Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -204,11 +204,24 @@
     "7634974509",
     "7634991729",
     "7637886934",
-    "7626498231"
+    "7626498231",
+    "7634945411",
+    "7637937364",
+    "7634475145",
+    "7637942636",
+    "7634224351",
+    "7637855232",
+    "7637315742",
+    "7637170870",
+    "7637172300",
+    "7636725604",
+    "7626466527",
+    "7636690012",
+    "7636626580"
   ],
   "productCards": 3387,
-  "cardsWithImages": 649,
-  "cardsMissingImages": 2738,
+  "cardsWithImages": 662,
+  "cardsMissingImages": 2725,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -344,8 +357,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 206,
-      "missingCount": 1634
+      "withImages": 219,
+      "missingCount": 1621
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1503,14 +1516,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 390,
-      "missingCount": 2066
+      "withImages": 403,
+      "missingCount": 2053
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 170,
+    "withImages": 183,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1615,58 +1628,6 @@
       {
         "name": "Denim hooded sweatshirt",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634962659&affcode=ecdru"
-      },
-      {
-        "name": "American Retro Short Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634945411&affcode=ecdru"
-      },
-      {
-        "name": "Denim Jacket Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637937364&affcode=ecdru"
-      },
-      {
-        "name": "Vintage Heavy Knit Sweater",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634475145&affcode=ecdru"
-      },
-      {
-        "name": "Zuoshandiao cotton-padded jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637942636&affcode=ecdru"
-      },
-      {
-        "name": "Denim Loose Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634224351&affcode=ecdru"
-      },
-      {
-        "name": "Acne Studios Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637855232&affcode=ecdru"
-      },
-      {
-        "name": "Suede Velvet Stand-Up Collar Short Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637315742&affcode=ecdru"
-      },
-      {
-        "name": "Long-Sleeved T-shirt With Letter Prints",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637170870&affcode=ecdru"
-      },
-      {
-        "name": "Fox Fur Collar Hat Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637172300&affcode=ecdru"
-      },
-      {
-        "name": "American Solid-Color Flight Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636725604&affcode=ecdru"
-      },
-      {
-        "name": "Acne Studios Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626466527&affcode=ecdru"
-      },
-      {
-        "name": "Retro Loose Camouflage Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636690012&affcode=ecdru"
-      },
-      {
-        "name": "Suede Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636626580&affcode=ecdru"
       }
     ]
   }
