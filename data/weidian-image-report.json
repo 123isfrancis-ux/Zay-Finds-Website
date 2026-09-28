@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:47:43.585Z",
+  "checkedAt": "2026-09-28T04:49:03.210Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -190,11 +190,25 @@
     "7637861258",
     "7637883080",
     "7634958619",
-    "7634880819"
+    "7634880819",
+    "7634482227",
+    "7637472226",
+    "7637975254",
+    "7635013727",
+    "7638011978",
+    "7637984192",
+    "7634231237",
+    "7636634162",
+    "7634433593",
+    "7637495778",
+    "7634974509",
+    "7634991729",
+    "7637886934",
+    "7626498231"
   ],
   "productCards": 3387,
-  "cardsWithImages": 635,
-  "cardsMissingImages": 2752,
+  "cardsWithImages": 649,
+  "cardsMissingImages": 2738,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -330,8 +344,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 192,
-      "missingCount": 1648
+      "withImages": 206,
+      "missingCount": 1634
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1489,14 +1503,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 376,
-      "missingCount": 2080
+      "withImages": 390,
+      "missingCount": 2066
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 156,
+    "withImages": 170,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1595,64 +1609,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634258361&affcode=ecdru"
       },
       {
-        "name": "Zipper Wool-Collar Cotton-Padded Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634482227&affcode=ecdru"
-      },
-      {
-        "name": "Loose Jacket Coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637472226&affcode=ecdru"
-      },
-      {
-        "name": "SUP reflective embroidered letter zip-up hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637975254&affcode=ecdru"
-      },
-      {
         "name": "Zuoshandiao cotton-padded jacket",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638043658&affcode=ecdru"
-      },
-      {
-        "name": "Broken Planet Hoodies/Pants",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635013727&affcode=ecdru"
-      },
-      {
-        "name": "Corteiz Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638011978&affcode=ecdru"
-      },
-      {
-        "name": "Corduroy jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637984192&affcode=ecdru"
-      },
-      {
-        "name": "Thickened Zuoshan Diao Warm Cotton-Padded Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634231237&affcode=ecdru"
-      },
-      {
-        "name": "Artificial Red Hooded Style",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636634162&affcode=ecdru"
-      },
-      {
-        "name": "Loose Hooded Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634433593&affcode=ecdru"
-      },
-      {
-        "name": "European And American Hooded Sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637495778&affcode=ecdru"
-      },
-      {
-        "name": "Vintage distressed washed top",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634974509&affcode=ecdru"
-      },
-      {
-        "name": "Distressed denim jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634991729&affcode=ecdru"
-      },
-      {
-        "name": "Pearl-embellished, cropped denim jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637886934&affcode=ecdru"
-      },
-      {
-        "name": "Seersucker pleated short-sleeved shirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626498231&affcode=ecdru"
       },
       {
         "name": "Denim hooded sweatshirt",
