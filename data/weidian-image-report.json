@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:02:56.133Z",
+  "checkedAt": "2026-09-28T05:03:47.290Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -263,11 +263,21 @@
     "7636648332",
     "7634310777",
     "7634290941",
-    "7634183527"
+    "7634183527",
+    "7634310773",
+    "7637172418",
+    "7637962058",
+    "7634922455",
+    "7634227519",
+    "7634253445",
+    "7637255268",
+    "7637233448",
+    "7637292718",
+    "7637282854"
   ],
   "productCards": 3387,
-  "cardsWithImages": 709,
-  "cardsMissingImages": 2678,
+  "cardsWithImages": 719,
+  "cardsMissingImages": 2668,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -403,13 +413,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 261,
-      "missingCount": 1579
+      "withImages": 271,
+      "missingCount": 1569
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 36,
-      "missingCount": 105,
+      "withImages": 46,
+      "missingCount": 95,
       "missing": [
         {
           "id": "7813441799",
@@ -435,56 +445,6 @@
           "id": "7694353965",
           "name": "Creative Thickened Hard Plastic Waterproof Playing Cards",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694353965&affcode=ecdru"
-        },
-        {
-          "id": "7634310773",
-          "name": "Ins-Style Full-Body Mirror",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634310773&affcode=ecdru"
-        },
-        {
-          "id": "7637172418",
-          "name": "Violent bear Van Gogh Sunflower Ornament",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637172418&affcode=ecdru"
-        },
-        {
-          "id": "7637962058",
-          "name": "Violent Bear building blocks",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637962058&affcode=ecdru"
-        },
-        {
-          "id": "7634922455",
-          "name": "Retro Drawing Board Mirror",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634922455&affcode=ecdru"
-        },
-        {
-          "id": "7634227519",
-          "name": "Wide-Angle Concave And Convex Lens",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634227519&affcode=ecdru"
-        },
-        {
-          "id": "7634253445",
-          "name": "Desktop Ornaments For Home Decoration",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634253445&affcode=ecdru"
-        },
-        {
-          "id": "7637255268",
-          "name": "Colorful Leather Cross Car Pillow",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637255268&affcode=ecdru"
-        },
-        {
-          "id": "7637233448",
-          "name": "Solid WoodBbeach Chair",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637233448&affcode=ecdru"
-        },
-        {
-          "id": "7637292718",
-          "name": "Leisure Table And Chair",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637292718&affcode=ecdru"
-        },
-        {
-          "id": "7637282854",
-          "name": "High-End Decorative Picture Frame",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637282854&affcode=ecdru"
         },
         {
           "id": "7637306366",
@@ -1407,8 +1367,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 450,
-      "missingCount": 2006
+      "withImages": 460,
+      "missingCount": 1996
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
