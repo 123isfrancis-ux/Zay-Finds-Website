@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:17:45.850Z",
+  "checkedAt": "2026-09-28T05:18:31.141Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -359,11 +359,17 @@
     "7634951365",
     "7634490225",
     "7634518029",
-    "7637430822"
+    "7637430822",
+    "7637415064",
+    "7750152692",
+    "7771934052",
+    "7768957805",
+    "7765841967",
+    "7740617119"
   ],
   "productCards": 3387,
-  "cardsWithImages": 805,
-  "cardsMissingImages": 2582,
+  "cardsWithImages": 811,
+  "cardsMissingImages": 2576,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -499,13 +505,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 317,
-      "missingCount": 1523
+      "withImages": 318,
+      "missingCount": 1522
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 132,
-      "missingCount": 9,
+      "withImages": 138,
+      "missingCount": 3,
       "missing": [
         {
           "id": "7775361202",
@@ -513,44 +519,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7775361202&affcode=ecdru"
         },
         {
-          "id": "7637415064",
-          "name": "Tech-Savvy Personalized Decorative Paintings",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637415064&affcode=ecdru"
-        },
-        {
-          "id": "7750152692",
-          "name": "Goyard Suitcase",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750152692&affcode=ecdru"
-        },
-        {
-          "id": "7771934052",
-          "name": "Sunflower Throw Pillow",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7771934052&affcode=ecdru"
-        },
-        {
-          "id": "7768957805",
-          "name": "Chrome Hearts Carpet",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768957805&affcode=ecdru"
-        },
-        {
           "id": "7750260292",
           "name": "Custom YouTube Metal Plaque (Custom products are non-returnable and non-exchangeable)",
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750260292&affcode=ecdru"
         },
         {
-          "id": "7765841967",
-          "name": "Supreme Wooden Baseball Bat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765841967&affcode=ecdru"
-        },
-        {
           "id": "7765840043",
           "name": "Louis Vuitton Monogram Leather Football",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765840043&affcode=ecdru"
-        },
-        {
-          "id": "7740617119",
-          "name": "ins Mushroom PC Desk Lamp",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740617119&affcode=ecdru"
         }
       ]
     },
@@ -1023,8 +999,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 507,
-      "missingCount": 1949
+      "withImages": 508,
+      "missingCount": 1948
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
