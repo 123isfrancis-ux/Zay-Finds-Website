@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:08:23.619Z",
+  "checkedAt": "2026-09-28T05:09:32.492Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -296,11 +296,19 @@
     "7634462949",
     "7638003786",
     "7635000219",
-    "7634460609"
+    "7634460609",
+    "7634541845",
+    "7634533887",
+    "7638019672",
+    "7637521848",
+    "7637529804",
+    "7637523840",
+    "7634515995",
+    "7634512089"
   ],
   "productCards": 3387,
-  "cardsWithImages": 742,
-  "cardsMissingImages": 2645,
+  "cardsWithImages": 750,
+  "cardsMissingImages": 2637,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -436,13 +444,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 294,
-      "missingCount": 1546
+      "withImages": 302,
+      "missingCount": 1538
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 69,
-      "missingCount": 72,
+      "withImages": 77,
+      "missingCount": 64,
       "missing": [
         {
           "id": "7813441799",
@@ -515,49 +523,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634490225&affcode=ecdru"
         },
         {
-          "id": "7634541845",
-          "name": "Atmosphere Light Charging",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634541845&affcode=ecdru"
-        },
-        {
-          "id": "7634533887",
-          "name": "Ins-Style Text Ceramic Toys",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634533887&affcode=ecdru"
-        },
-        {
-          "id": "7638019672",
-          "name": "Display Case Stand",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638019672&affcode=ecdru"
-        },
-        {
-          "id": "7637521848",
-          "name": "Creative Shoe-Changing Round Stool",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637521848&affcode=ecdru"
-        },
-        {
-          "id": "7637529804",
-          "name": "Refers To The Hand Guard Armor",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637529804&affcode=ecdru"
-        },
-        {
           "id": "7634518029",
           "name": "Plush Toy Streetwear Brand",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634518029&affcode=ecdru"
-        },
-        {
-          "id": "7637523840",
-          "name": "Decorative Light Luxury Handicraft Gold",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637523840&affcode=ecdru"
-        },
-        {
-          "id": "7634515995",
-          "name": "Storage Sray Display Stand For Household Use",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634515995&affcode=ecdru"
-        },
-        {
-          "id": "7634512089",
-          "name": "Decorate And Place Billiards",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634512089&affcode=ecdru"
         },
         {
           "id": "7637430822",
@@ -1275,8 +1243,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 483,
-      "missingCount": 1973
+      "withImages": 491,
+      "missingCount": 1965
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
