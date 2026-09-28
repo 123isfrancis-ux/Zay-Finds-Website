@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:52:36.708Z",
+  "checkedAt": "2026-09-28T04:54:05.866Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -235,8 +235,8 @@
     "7634962659"
   ],
   "productCards": 3387,
-  "cardsWithImages": 677,
-  "cardsMissingImages": 2710,
+  "cardsWithImages": 678,
+  "cardsMissingImages": 2709,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -372,8 +372,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 234,
-      "missingCount": 1606
+      "withImages": 235,
+      "missingCount": 1605
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1531,14 +1531,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 418,
-      "missingCount": 2038
+      "withImages": 419,
+      "missingCount": 2037
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 198,
+    "withImages": 199,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1563,10 +1563,6 @@
       {
         "name": "High-end Korean-style embroidered cardigan from a trendy brand",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678108931&affcode=ecdru"
-      },
-      {
-        "name": "Ultralight waterproof leopard print jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fitem.taobao.com%2Fitem.htm%3Fapp%3Dchrome%26bxsign%3DscdnXi2XdsMVP_hOIbzzNOdQW1-e5p-Xium_naMKNzkz_0_Uolj5rTuMkZNnCmvpsxe6lfx3GjuL8zAinMjjrXYzAw1gucR7ASeLnFZOVzZJrT8kQSnoGfSlx6TytXCOzn9%26cpp%3D1%26id%3D715742531937%26price%3D3560%26shareUniqueId%3D34939759526%26share_crt_v%3D1%26shareurl%3Dtrue%26short_name%3Dh.7qNY5d6QexVnCfq%26sourceType%3Ditem%26sp_tk%3DS21sVVVTNTU3WEw%253D%26spm%3Da2159r.13376460.0.0%26suid%3D079B9230-63A8-4390-94E2-750F64B30479%26tbSocialPopKey%3DshareItem%26tk%3DKmlUUS557XL%2520HU293%26un%3D4e4fcc8acc999433875dbdeffcd1c5a5%26un_site%3D0%26ut_sk%3D1.Z6sqZUzFCKEDAPcDX9OS8W2a_21380790_1769587449352.Copy.1%26wxsign%3DtbwLbpFYrxYczJS4hwnx0TKrRClixwHJJZgzV-MTAnjPoQ-vHnytUXgRAw94XLsBsgE_qr34CqjyeXRCqlIacaofYeYjglJxea_dlyu38_Cpyp-gEjIMC7ALR6cM-CmDxzS%26sku_properties%3D1627207%253A3255041&affcode=ecdru"
       },
       {
         "name": "New Chinese style retro stand-up collar suit",
