@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:09:01.798Z",
+  "checkedAt": "2026-09-28T07:14:01.860Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1126,11 +1126,48 @@
     "7626060797",
     "7780641310",
     "7626037557",
-    "7629041108"
+    "7629041108",
+    "7629131870",
+    "7629086504",
+    "7626096623",
+    "7626011393",
+    "7626140231",
+    "7629056866",
+    "7626128347",
+    "7629096396",
+    "7629098416",
+    "7629056930",
+    "7626100589",
+    "7629054948",
+    "7777730643",
+    "7629025294",
+    "7626060767",
+    "7629090412",
+    "7626064651",
+    "7626052677",
+    "7626094603",
+    "7780748128",
+    "7626108449",
+    "7628989358",
+    "7629104354",
+    "7777758007",
+    "7626118395",
+    "7629104418",
+    "7629055004",
+    "7626098133",
+    "7626130391",
+    "7626114529",
+    "7629114214",
+    "7780667394",
+    "7629088478",
+    "7629110374",
+    "7626069071",
+    "7626098147",
+    "7629064738"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1573,
-  "cardsMissingImages": 1814,
+  "cardsWithImages": 1610,
+  "cardsMissingImages": 1777,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1327,195 +1364,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 126,
-      "missingCount": 37,
-      "missing": [
-        {
-          "id": "7629131870",
-          "name": "Loro Piana(OG)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629131870&affcode=ecdru"
-        },
-        {
-          "id": "7629086504",
-          "name": "Louis Vuitton x Air Force 1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629086504&affcode=ecdru"
-        },
-        {
-          "id": "7626096623",
-          "name": "Ralph Lauren Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626096623&affcode=ecdru"
-        },
-        {
-          "id": "7626011393",
-          "name": "DSQUARED 2",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626011393&affcode=ecdru"
-        },
-        {
-          "id": "7626140231",
-          "name": "Maison Margelia Gats\nTop Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626140231&affcode=ecdru"
-        },
-        {
-          "id": "7629056866",
-          "name": "Mihara Yasuki （17 colors）",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629056866&affcode=ecdru"
-        },
-        {
-          "id": "7626128347",
-          "name": "Dolce & Gabbana Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626128347&affcode=ecdru"
-        },
-        {
-          "id": "7629096396",
-          "name": "Louis Vuitton LV Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629096396&affcode=ecdru"
-        },
-        {
-          "id": "7629098416",
-          "name": "Cucci",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629098416&affcode=ecdru"
-        },
-        {
-          "id": "7629056930",
-          "name": "Cucci",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629056930&affcode=ecdru"
-        },
-        {
-          "id": "7626100589",
-          "name": "Air Jordan 1 low",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626100589&affcode=ecdru"
-        },
-        {
-          "id": "7626098147",
-          "name": "Amiri Skeleton Sneaker",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626098147&affcode=ecdru"
-        },
-        {
-          "id": "7629054948",
-          "name": "Gucci X Adidas Gazelle",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629054948&affcode=ecdru"
-        },
-        {
-          "id": "7777730643",
-          "name": "Balenciaga Triple S",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777730643&affcode=ecdru"
-        },
-        {
-          "id": "7629064738",
-          "name": "Fendi Slipers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629064738&affcode=ecdru"
-        },
-        {
-          "id": "7629025294",
-          "name": "Brunello Culcinelli\nWomen Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629025294&affcode=ecdru"
-        },
-        {
-          "id": "7626060767",
-          "name": "Nike AirMax 95 (10+ Colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626060767&affcode=ecdru"
-        },
-        {
-          "id": "7629090412",
-          "name": "Nike ALL-STAR EP",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629090412&affcode=ecdru"
-        },
-        {
-          "id": "7626064651",
-          "name": "Airmax 95 Corteiz (4 Colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626064651&affcode=ecdru"
-        },
-        {
-          "id": "7626052677",
-          "name": "Lots of Airmax TN's",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626052677&affcode=ecdru"
-        },
-        {
-          "id": "7626094603",
-          "name": "Lots of Nike Vomero 5",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626094603&affcode=ecdru"
-        },
-        {
-          "id": "7780748128",
-          "name": "Nike SB Dunks",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780748128&affcode=ecdru"
-        },
-        {
-          "id": "7626108449",
-          "name": "Burberry Check Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626108449&affcode=ecdru"
-        },
-        {
-          "id": "7628989358",
-          "name": "Nike Padded Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628989358&affcode=ecdru"
-        },
-        {
-          "id": "7629104354",
-          "name": "Nike Air Force 1 Halloween Skeleton Black Grey Glow",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629104354&affcode=ecdru"
-        },
-        {
-          "id": "7777758007",
-          "name": "Dior Slides (different colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777758007&affcode=ecdru"
-        },
-        {
-          "id": "7626118395",
-          "name": "Hermes Slippers (different colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626118395&affcode=ecdru"
-        },
-        {
-          "id": "7629104418",
-          "name": "Christian Louboutin CL Slides",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629104418&affcode=ecdru"
-        },
-        {
-          "id": "7629055004",
-          "name": "Nike Air Max DN8",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629055004&affcode=ecdru"
-        },
-        {
-          "id": "7626098133",
-          "name": "New Balance 1906",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626098133&affcode=ecdru"
-        },
-        {
-          "id": "7626130391",
-          "name": "Adidas Spezial",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626130391&affcode=ecdru"
-        },
-        {
-          "id": "7626114529",
-          "name": "Alexander McQueen",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626114529&affcode=ecdru"
-        },
-        {
-          "id": "7629114214",
-          "name": "Bally",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629114214&affcode=ecdru"
-        },
-        {
-          "id": "7780667394",
-          "name": "Dior Slipers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780667394&affcode=ecdru"
-        },
-        {
-          "id": "7629088478",
-          "name": "Hogan",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629088478&affcode=ecdru"
-        },
-        {
-          "id": "7629110374",
-          "name": "FENDI",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629110374&affcode=ecdru"
-        },
-        {
-          "id": "7626069071",
-          "name": "Dior B30 OG",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626069071&affcode=ecdru"
-        }
-      ]
+      "withImages": 163,
+      "missingCount": 0,
+      "missing": []
     },
     "LEGOS": {
       "total": 7,
