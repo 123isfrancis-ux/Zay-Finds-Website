@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T04:36:09.654Z",
+  "checkedAt": "2026-09-28T04:39:18.558Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -82,11 +82,25 @@
     "7694247391",
     "7693200339",
     "7693168879",
-    "7695425868"
+    "7695425868",
+    "7692267005",
+    "7695360804",
+    "7695396346",
+    "7695429700",
+    "7695417748",
+    "7695419912",
+    "7695437658",
+    "7692881632",
+    "7692790872",
+    "7689870001",
+    "7692822324",
+    "7689798903",
+    "7687834116",
+    "7687719196"
   ],
   "productCards": 3387,
-  "cardsWithImages": 527,
-  "cardsMissingImages": 2860,
+  "cardsWithImages": 541,
+  "cardsMissingImages": 2846,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -222,8 +236,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 84,
-      "missingCount": 1756
+      "withImages": 98,
+      "missingCount": 1742
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1381,14 +1395,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 268,
-      "missingCount": 2188
+      "withImages": 282,
+      "missingCount": 2174
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 48,
+    "withImages": 62,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -1411,48 +1425,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694278883&affcode=ecdru"
       },
       {
-        "name": "black hooded sweatshirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7692267005&affcode=ecdru"
-      },
-      {
-        "name": "Mud-dyed warhorse embroidery washed distressed hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695360804&affcode=ecdru"
-      },
-      {
-        "name": "Thick-fabric, stylish and versatile short coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695396346&affcode=ecdru"
-      },
-      {
-        "name": "Washed Skull Pin Cutout Gray Hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695429700&affcode=ecdru"
-      },
-      {
-        "name": "Soccer uniform sports jacket coat",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695417748&affcode=ecdru"
-      },
-      {
-        "name": "Hand-painted graffiti high street hooded cotton jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695419912&affcode=ecdru"
-      },
-      {
-        "name": "Zip-up hooded sweatshirt casual jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695437658&affcode=ecdru"
-      },
-      {
         "name": "Loose circular knit long-sleeved T-shirt",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7695398264&affcode=ecdru"
-      },
-      {
-        "name": "Distressed skeleton denim shirt",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7692881632&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7692790872&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Windproof Jacket",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7689870001&affcode=ecdru"
       },
       {
         "name": "Balenciaga Hoodies",
@@ -1460,23 +1434,7 @@
       },
       {
         "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7692822324&affcode=ecdru"
-      },
-      {
-        "name": "Leopard Print Casual Pants",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7689798903&affcode=ecdru"
-      },
-      {
-        "name": "Saint Alexander Tracksuit Suit",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7687834116&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7684597459&affcode=ecdru"
-      },
-      {
-        "name": "Balenciaga Hoodies",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7687719196&affcode=ecdru"
       },
       {
         "name": "Balenciaga Hoodies",
