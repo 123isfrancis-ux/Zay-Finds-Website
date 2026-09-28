@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:53:37.270Z",
+  "checkedAt": "2026-09-28T06:55:17.653Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -995,11 +995,23 @@
     "7626474515",
     "7626456961",
     "7626484375",
-    "7629505986"
+    "7629505986",
+    "7626500221",
+    "7626478463",
+    "7629409380",
+    "7629432976",
+    "7629480278",
+    "7629458382",
+    "7626464437",
+    "7626500227",
+    "7626425495",
+    "7626431379",
+    "7626440739",
+    "7629476254"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1442,
-  "cardsMissingImages": 1945,
+  "cardsWithImages": 1453,
+  "cardsMissingImages": 1934,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1135,8 +1147,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 529,
-      "missingCount": 1311
+      "withImages": 540,
+      "missingCount": 1300
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1179,13 +1191,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1139,
-      "missingCount": 1317
+      "withImages": 1150,
+      "missingCount": 1306
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 47,
-      "missingCount": 53,
+      "withImages": 58,
+      "missingCount": 42,
       "missing": [
         {
           "id": "7629492154",
@@ -1208,64 +1220,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626447073&affcode=ecdru"
         },
         {
-          "id": "7626500221",
-          "name": "Thom Browne TB Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626500221&affcode=ecdru"
-        },
-        {
-          "id": "7626478463",
-          "name": "Corteiz Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626478463&affcode=ecdru"
-        },
-        {
           "id": "7629409380",
           "name": "Gucci Loafer super fire quality",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629409380&affcode=ecdru"
-        },
-        {
-          "id": "7629432976",
-          "name": "Loro Piana summer walkers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629432976&affcode=ecdru"
-        },
-        {
-          "id": "7629480278",
-          "name": "Goyard Wallet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629480278&affcode=ecdru"
-        },
-        {
-          "id": "7629458382",
-          "name": "Dior Backpack super clean and super high quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629458382&affcode=ecdru"
-        },
-        {
-          "id": "7626464437",
-          "name": "Budget AP",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626464437&affcode=ecdru"
-        },
-        {
-          "id": "7626500227",
-          "name": "Cartier Watchs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626500227&affcode=ecdru"
-        },
-        {
-          "id": "7626425495",
-          "name": "LV Jorts fire qual",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626425495&affcode=ecdru"
-        },
-        {
-          "id": "7626431379",
-          "name": "Balenciaga Dick Print Paris FIRE AF",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626431379&affcode=ecdru"
-        },
-        {
-          "id": "7626440739",
-          "name": "Clean Rhinestone Pants",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626440739&affcode=ecdru"
-        },
-        {
-          "id": "7629476254",
-          "name": "Tom Fort Glases",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629476254&affcode=ecdru"
         },
         {
           "id": "7629466356",
