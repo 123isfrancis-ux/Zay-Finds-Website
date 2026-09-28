@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:04:05.492Z",
+  "checkedAt": "2026-09-28T07:05:10.147Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1079,11 +1079,23 @@
     "7626142167",
     "7626163789",
     "7626066693",
-    "7780742306"
+    "7780742306",
+    "7629058338",
+    "7777787631",
+    "7780720348",
+    "7777750303",
+    "7629106346",
+    "7629110330",
+    "7626163781",
+    "7626144233",
+    "7626092165",
+    "7780773770",
+    "7629047016",
+    "7777708959"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1526,
-  "cardsMissingImages": 1861,
+  "cardsWithImages": 1538,
+  "cardsMissingImages": 1849,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1280,69 +1292,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 79,
-      "missingCount": 84,
+      "withImages": 91,
+      "missingCount": 72,
       "missing": [
-        {
-          "id": "7629058338",
-          "name": "Air Jordan 4",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629058338&affcode=ecdru"
-        },
-        {
-          "id": "7777787631",
-          "name": "Nike Shox",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777787631&affcode=ecdru"
-        },
-        {
-          "id": "7780720348",
-          "name": "Asics Gel NYC                          TOP Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780720348&affcode=ecdru"
-        },
-        {
-          "id": "7777750303",
-          "name": "Christian Louboutin",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777750303&affcode=ecdru"
-        },
-        {
-          "id": "7629106346",
-          "name": "Golden Goose                           Best Batch\n(22 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629106346&affcode=ecdru"
-        },
-        {
-          "id": "7629110330",
-          "name": "Birkenstock Slipers                                       ( 27+ colors )",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629110330&affcode=ecdru"
-        },
-        {
-          "id": "7626163781",
-          "name": "Air Force 1                            Top Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626163781&affcode=ecdru"
-        },
-        {
-          "id": "7626144233",
-          "name": "Air Jordan 4            OG-Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626144233&affcode=ecdru"
-        },
-        {
-          "id": "7626092165",
-          "name": "Nike P6000",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626092165&affcode=ecdru"
-        },
-        {
-          "id": "7780773770",
-          "name": "Yeezy slides / Foam Runners   Top Batch                  \n(31 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780773770&affcode=ecdru"
-        },
-        {
-          "id": "7629047016",
-          "name": "Nike Dunk Low                         Top M-Batch                            (27 Colours)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629047016&affcode=ecdru"
-        },
-        {
-          "id": "7777708959",
-          "name": "Travis Scott Air Jordan 1 Low           LJR Batch\n(27 options)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777708959&affcode=ecdru"
-        },
         {
           "id": "7780755952",
           "name": "Adidas Samba\nTOP Batch                                       (31 colorways)",
