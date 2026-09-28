@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:14:01.860Z",
+  "checkedAt": "2026-09-28T07:16:06.469Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1163,11 +1163,27 @@
     "7629110374",
     "7626069071",
     "7626098147",
-    "7629064738"
+    "7629064738",
+    "7629482146",
+    "7658163135",
+    "7634908415",
+    "7634912989",
+    "7637458290",
+    "7634478289",
+    "7637415074",
+    "7634519981",
+    "7637430842",
+    "7660721418",
+    "7629012386",
+    "7628943202",
+    "7626022403",
+    "7628990764",
+    "7629000406",
+    "7648161759"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1610,
-  "cardsMissingImages": 1777,
+  "cardsWithImages": 1626,
+  "cardsMissingImages": 1761,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1303,8 +1319,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 604,
-      "missingCount": 1236
+      "withImages": 613,
+      "missingCount": 1227
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1347,8 +1363,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1215,
-      "missingCount": 1241
+      "withImages": 1224,
+      "missingCount": 1232
     },
     "OLD MONEY": {
       "total": 100,
@@ -1376,98 +1392,18 @@
     },
     "ALL ITEMS FROM TIKTOK": {
       "total": 426,
-      "withImages": 372,
-      "missingCount": 54,
+      "withImages": 388,
+      "missingCount": 38,
       "missing": [
-        {
-          "id": "7629482146",
-          "name": "8-Millimeter Stud Earrings",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629482146&affcode=ecdru"
-        },
         {
           "id": "7634975683",
           "name": "Leopard print shorts",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634975683&affcode=ecdru"
         },
         {
-          "id": "7658163135",
-          "name": "New Chinese style retro stand-up collar suit",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7658163135&affcode=ecdru"
-        },
-        {
-          "id": "7634908415",
-          "name": "Denim zip-up hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634908415&affcode=ecdru"
-        },
-        {
           "id": "7637956082",
           "name": "Dingdang handbag",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637956082&affcode=ecdru"
-        },
-        {
-          "id": "7634912989",
-          "name": "Goyard Crossbody Bag",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634912989&affcode=ecdru"
-        },
-        {
-          "id": "7637458290",
-          "name": "Cross Pattern Versatile Handbag",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637458290&affcode=ecdru"
-        },
-        {
-          "id": "7634478289",
-          "name": "Storage and Protective Wallet Combo",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634478289&affcode=ecdru"
-        },
-        {
-          "id": "7637415074",
-          "name": "Crocodile Pattern Accordion Card Wallet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637415074&affcode=ecdru"
-        },
-        {
-          "id": "7634519981",
-          "name": "Korean Style Crossbody Sports Gym Bag",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634519981&affcode=ecdru"
-        },
-        {
-          "id": "7637430842",
-          "name": "High-End Underarm Bag",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637430842&affcode=ecdru"
-        },
-        {
-          "id": "7660721418",
-          "name": "Exquisite embroidered 3U cotton slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7660721418&affcode=ecdru"
-        },
-        {
-          "id": "7629012386",
-          "name": "Colorful ice flower cross necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629012386&affcode=ecdru"
-        },
-        {
-          "id": "7628943202",
-          "name": "Colorful snake-shaped cross pendant vintage necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628943202&affcode=ecdru"
-        },
-        {
-          "id": "7626022403",
-          "name": "Cross-shaped luxury copper zircon bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626022403&affcode=ecdru"
-        },
-        {
-          "id": "7628990764",
-          "name": "Cross Crusader flower watch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628990764&affcode=ecdru"
-        },
-        {
-          "id": "7629000406",
-          "name": "Cross chain holy sword diamond necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629000406&affcode=ecdru"
-        },
-        {
-          "id": "7648161759",
-          "name": "Skiing goggles, protective eyewear",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7648161759&affcode=ecdru"
         },
         {
           "id": "7635453498",
@@ -2267,7 +2203,7 @@
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
   "hoodiesThroughRow234": {
     "total": 209,
-    "withImages": 199,
+    "withImages": 202,
     "missing": [
       {
         "name": "Balenciaga Hoodies",
@@ -2294,20 +2230,8 @@
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7678108931&affcode=ecdru"
       },
       {
-        "name": "New Chinese style retro stand-up collar suit",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7658163135&affcode=ecdru"
-      },
-      {
         "name": "Zippered, distressed, tie-dyed terry cloth hoodie in a post-apocalyptic style.",
         "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7650376556&affcode=ecdru"
-      },
-      {
-        "name": "Denim zip-up hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634908415&affcode=ecdru"
-      },
-      {
-        "name": "Printed pullover hoodie",
-        "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629482146&affcode=ecdru"
       }
     ]
   }
