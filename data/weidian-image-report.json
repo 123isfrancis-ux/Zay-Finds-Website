@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:20:19.790Z",
+  "checkedAt": "2026-09-28T05:21:26.310Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -384,11 +384,21 @@
     "7626070023",
     "7626013263",
     "7626015179",
-    "7629022656"
+    "7629022656",
+    "7626113697",
+    "7628979476",
+    "7626073985",
+    "7628995192",
+    "7629995128",
+    "7629046312",
+    "7629985296",
+    "7629985298",
+    "7629976842",
+    "7626085989"
   ],
   "productCards": 3387,
-  "cardsWithImages": 830,
-  "cardsMissingImages": 2557,
+  "cardsWithImages": 840,
+  "cardsMissingImages": 2547,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -524,8 +534,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 337,
-      "missingCount": 1503
+      "withImages": 347,
+      "missingCount": 1493
     },
     "ROOM DECOR": {
       "total": 141,
@@ -551,8 +561,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 20,
-      "missingCount": 73,
+      "withImages": 30,
+      "missingCount": 63,
       "missing": [
         {
           "id": "7629016744",
@@ -560,64 +570,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629016744&affcode=ecdru"
         },
         {
-          "id": "7626113697",
-          "name": "Chrome Hearts Bracelets",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626113697&affcode=ecdru"
-        },
-        {
           "id": "7629008910",
           "name": "Cartier Cross Bracelet",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629008910&affcode=ecdru"
         },
         {
-          "id": "7628979476",
-          "name": "Nike SKI MASK",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628979476&affcode=ecdru"
-        },
-        {
-          "id": "7626073985",
-          "name": "Gucci Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626073985&affcode=ecdru"
-        },
-        {
-          "id": "7628995192",
-          "name": "Gucci Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628995192&affcode=ecdru"
-        },
-        {
-          "id": "7629995128",
-          "name": "Louis Vuitton LV  \nBeanie&Scarf",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629995128&affcode=ecdru"
-        },
-        {
-          "id": "7629046312",
-          "name": "Burbery  Cashmere Scarf \nBest Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629046312&affcode=ecdru"
-        },
-        {
-          "id": "7629985296",
-          "name": "Ralph Lauren Beanie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629985296&affcode=ecdru"
-        },
-        {
-          "id": "7629985298",
-          "name": "Dior Perfume",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629985298&affcode=ecdru"
-        },
-        {
           "id": "7626091839",
           "name": "Dior Perfume",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626091839&affcode=ecdru"
-        },
-        {
-          "id": "7629976842",
-          "name": "Versace Perfume",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629976842&affcode=ecdru"
-        },
-        {
-          "id": "7626085989",
-          "name": "Tom Ford Perfume",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626085989&affcode=ecdru"
         },
         {
           "id": "7626027063",
@@ -923,8 +883,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 527,
-      "missingCount": 1929
+      "withImages": 537,
+      "missingCount": 1919
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
