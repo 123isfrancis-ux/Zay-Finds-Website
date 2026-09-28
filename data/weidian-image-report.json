@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:27:20.875Z",
+  "checkedAt": "2026-09-28T05:28:29.444Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -446,11 +446,18 @@
     "7629089748",
     "7629014862",
     "7626030959",
-    "7628988908"
+    "7628988908",
+    "7628977488",
+    "7629008910",
+    "7626091839",
+    "7626015223",
+    "7628977472",
+    "7629036466",
+    "7629030246"
   ],
   "productCards": 3387,
-  "cardsWithImages": 892,
-  "cardsMissingImages": 2495,
+  "cardsWithImages": 899,
+  "cardsMissingImages": 2488,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -586,8 +593,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 399,
-      "missingCount": 1441
+      "withImages": 406,
+      "missingCount": 1434
     },
     "ROOM DECOR": {
       "total": 141,
@@ -613,8 +620,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 82,
-      "missingCount": 11,
+      "withImages": 89,
+      "missingCount": 4,
       "missing": [
         {
           "id": "7629016744",
@@ -622,39 +629,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629016744&affcode=ecdru"
         },
         {
-          "id": "7629008910",
-          "name": "Cartier Cross Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629008910&affcode=ecdru"
-        },
-        {
-          "id": "7626091839",
-          "name": "Dior Perfume",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626091839&affcode=ecdru"
-        },
-        {
-          "id": "7626015223",
-          "name": "Louis Vuitton LV  Glasses",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626015223&affcode=ecdru"
-        },
-        {
-          "id": "7628977472",
-          "name": "Chrome Hearts Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628977472&affcode=ecdru"
-        },
-        {
           "id": "7628963566",
           "name": "Chrome Hearts T-shirt",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628963566&affcode=ecdru"
-        },
-        {
-          "id": "7629036466",
-          "name": "Chrome Heart Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629036466&affcode=ecdru"
-        },
-        {
-          "id": "7629030246",
-          "name": "Chrome Hearts Socks",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629030246&affcode=ecdru"
         },
         {
           "id": "7626001529",
@@ -665,18 +642,13 @@
           "id": "7626052247",
           "name": "Cartier Watchs",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626052247&affcode=ecdru"
-        },
-        {
-          "id": "7628977488",
-          "name": "Tom Fort Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628977488&affcode=ecdru"
         }
       ]
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 589,
-      "missingCount": 1867
+      "withImages": 596,
+      "missingCount": 1860
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
