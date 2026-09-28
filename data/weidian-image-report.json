@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:12:09.833Z",
+  "checkedAt": "2026-09-28T05:13:02.718Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -314,11 +314,18 @@
     "7771865010",
     "7768855341",
     "7768855339",
-    "7771820472"
+    "7771820472",
+    "7750264256",
+    "7768790722",
+    "7768808390",
+    "7768759050",
+    "7765790651",
+    "7768771888",
+    "7765804551"
   ],
   "productCards": 3387,
-  "cardsWithImages": 760,
-  "cardsMissingImages": 2627,
+  "cardsWithImages": 767,
+  "cardsMissingImages": 2620,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -459,8 +466,8 @@
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 87,
-      "missingCount": 54,
+      "withImages": 94,
+      "missingCount": 47,
       "missing": [
         {
           "id": "7813441799",
@@ -568,44 +575,9 @@
           "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750260292&affcode=ecdru"
         },
         {
-          "id": "7750264256",
-          "name": "Chrome Hearts Sofa Stool",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7750264256&affcode=ecdru"
-        },
-        {
-          "id": "7768790722",
-          "name": "Complete Wooden Fingerboard Skateboard Set",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768790722&affcode=ecdru"
-        },
-        {
-          "id": "7768808390",
-          "name": "Maybach Badminton Racket Set",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768808390&affcode=ecdru"
-        },
-        {
           "id": "7765841967",
           "name": "Supreme Wooden Baseball Bat",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765841967&affcode=ecdru"
-        },
-        {
-          "id": "7768759050",
-          "name": "Gucci Leather Sunglasses Case",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768759050&affcode=ecdru"
-        },
-        {
-          "id": "7765790651",
-          "name": "Chrome Hearts Wooden Cross Inlay Skateboard Set",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765790651&affcode=ecdru"
-        },
-        {
-          "id": "7768771888",
-          "name": "Chrome Hearts Chopsticks",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768771888&affcode=ecdru"
-        },
-        {
-          "id": "7765804551",
-          "name": "Chrome Hearts Silver-Plated Ashtray",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765804551&affcode=ecdru"
         },
         {
           "id": "7765867693",
