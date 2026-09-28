@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:52:24.074Z",
+  "checkedAt": "2026-09-28T06:53:37.270Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -984,11 +984,22 @@
     "7626425491",
     "7626431373",
     "7629488138",
-    "7626488347"
+    "7626488347",
+    "7626462795",
+    "7626525981",
+    "7629428972",
+    "7626527979",
+    "7629478218",
+    "7626539775",
+    "7626466585",
+    "7626474515",
+    "7626456961",
+    "7626484375",
+    "7629505986"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1431,
-  "cardsMissingImages": 1956,
+  "cardsWithImages": 1442,
+  "cardsMissingImages": 1945,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1124,8 +1135,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 518,
-      "missingCount": 1322
+      "withImages": 529,
+      "missingCount": 1311
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1168,13 +1179,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1128,
-      "missingCount": 1328
+      "withImages": 1139,
+      "missingCount": 1317
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 36,
-      "missingCount": 64,
+      "withImages": 47,
+      "missingCount": 53,
       "missing": [
         {
           "id": "7629492154",
@@ -1192,64 +1203,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626426885&affcode=ecdru"
         },
         {
-          "id": "7626462795",
-          "name": "Rimowa Phone Case",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626462795&affcode=ecdru"
-        },
-        {
-          "id": "7626525981",
-          "name": "Cuban Chain Zicron",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626525981&affcode=ecdru"
-        },
-        {
-          "id": "7629428972",
-          "name": "Moissanite Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629428972&affcode=ecdru"
-        },
-        {
-          "id": "7626527979",
-          "name": "Lv Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626527979&affcode=ecdru"
-        },
-        {
-          "id": "7629478218",
-          "name": "Louis Vuitton LV  Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629478218&affcode=ecdru"
-        },
-        {
-          "id": "7626539775",
-          "name": "Zircon Tennis Necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626539775&affcode=ecdru"
-        },
-        {
           "id": "7626447073",
           "name": "Christian Necklace",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626447073&affcode=ecdru"
-        },
-        {
-          "id": "7626466585",
-          "name": "Cartier Inspo Shades budget",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626466585&affcode=ecdru"
-        },
-        {
-          "id": "7626474515",
-          "name": "Moncler Down Verstaile Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626474515&affcode=ecdru"
-        },
-        {
-          "id": "7626456961",
-          "name": "Rimowa Suitcase",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626456961&affcode=ecdru"
-        },
-        {
-          "id": "7626484375",
-          "name": "Dior Textured Tee",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626484375&affcode=ecdru"
-        },
-        {
-          "id": "7629505986",
-          "name": "Louis Vuitton Polo Super Good Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629505986&affcode=ecdru"
         },
         {
           "id": "7626500221",
