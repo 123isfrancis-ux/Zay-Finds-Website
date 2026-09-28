@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:58:13.296Z",
+  "checkedAt": "2026-09-28T06:59:26.029Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1021,11 +1021,23 @@
     "7626504171",
     "7629486228",
     "7626516181",
-    "7629488150"
+    "7629488150",
+    "7626466597",
+    "7629478234",
+    "7629480288",
+    "7629470328",
+    "7626527993",
+    "7626506181",
+    "7626432931",
+    "7629505996",
+    "7626480391",
+    "7626488359",
+    "7627137871",
+    "7630011542"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1468,
-  "cardsMissingImages": 1919,
+  "cardsWithImages": 1480,
+  "cardsMissingImages": 1907,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1161,8 +1173,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 555,
-      "missingCount": 1285
+      "withImages": 567,
+      "missingCount": 1273
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1205,13 +1217,13 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1165,
-      "missingCount": 1291
+      "withImages": 1177,
+      "missingCount": 1279
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 73,
-      "missingCount": 27,
+      "withImages": 85,
+      "missingCount": 15,
       "missing": [
         {
           "id": "7629492154",
@@ -1242,66 +1254,6 @@
           "id": "7626401283",
           "name": "Maison Margiela Futures",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626401283&affcode=ecdru"
-        },
-        {
-          "id": "7626466597",
-          "name": "Louis Vuitton LV  Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626466597&affcode=ecdru"
-        },
-        {
-          "id": "7629478234",
-          "name": "Gucci Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629478234&affcode=ecdru"
-        },
-        {
-          "id": "7629480288",
-          "name": "Louis Vuitton LV Bag 1",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629480288&affcode=ecdru"
-        },
-        {
-          "id": "7629470328",
-          "name": "Louis Vuitton LV Bag 2",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629470328&affcode=ecdru"
-        },
-        {
-          "id": "7626527993",
-          "name": "Louis Vuitton LV  Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626527993&affcode=ecdru"
-        },
-        {
-          "id": "7626506181",
-          "name": "Zircon Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626506181&affcode=ecdru"
-        },
-        {
-          "id": "7626432931",
-          "name": "Zircon Tennis Necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626432931&affcode=ecdru"
-        },
-        {
-          "id": "7629505996",
-          "name": "Hermès Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629505996&affcode=ecdru"
-        },
-        {
-          "id": "7626480391",
-          "name": "Burbery  Cashmere Scarf \nBest Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626480391&affcode=ecdru"
-        },
-        {
-          "id": "7626488359",
-          "name": "Gucci Hat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626488359&affcode=ecdru"
-        },
-        {
-          "id": "7627137871",
-          "name": "Old Money Button Up Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627137871&affcode=ecdru"
-        },
-        {
-          "id": "7630011542",
-          "name": "Old Money Linen Pants Brown super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630011542&affcode=ecdru"
         },
         {
           "id": "7629991296",
