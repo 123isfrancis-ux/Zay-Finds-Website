@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:03:47.290Z",
+  "checkedAt": "2026-09-28T05:04:58.797Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -273,11 +273,21 @@
     "7637255268",
     "7637233448",
     "7637292718",
-    "7637282854"
+    "7637282854",
+    "7637306366",
+    "7637962960",
+    "7637296782",
+    "7637529786",
+    "7634537911",
+    "7637535772",
+    "7634460575",
+    "7637448414",
+    "7634211073",
+    "7637946164"
   ],
   "productCards": 3387,
-  "cardsWithImages": 719,
-  "cardsMissingImages": 2668,
+  "cardsWithImages": 729,
+  "cardsMissingImages": 2658,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -413,13 +423,13 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 271,
-      "missingCount": 1569
+      "withImages": 281,
+      "missingCount": 1559
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 46,
-      "missingCount": 95,
+      "withImages": 56,
+      "missingCount": 85,
       "missing": [
         {
           "id": "7813441799",
@@ -447,59 +457,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694353965&affcode=ecdru"
         },
         {
-          "id": "7637306366",
-          "name": "Figurines Dolls, Violent Bears",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637306366&affcode=ecdru"
-        },
-        {
-          "id": "7637962960",
-          "name": "Chrome Hearts Seat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637962960&affcode=ecdru"
-        },
-        {
           "id": "7634243213",
           "name": "Magnetic dust-proof box",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634243213&affcode=ecdru"
-        },
-        {
-          "id": "7637296782",
-          "name": "Bay Window Floor Mat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637296782&affcode=ecdru"
-        },
-        {
-          "id": "7637529786",
-          "name": "Wide-Angle Lens When Going Out",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637529786&affcode=ecdru"
-        },
-        {
-          "id": "7634537911",
-          "name": "Digital Electronic Clock",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634537911&affcode=ecdru"
-        },
-        {
-          "id": "7637535772",
-          "name": "Durable Decorative Rug",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637535772&affcode=ecdru"
-        },
-        {
-          "id": "7634460575",
-          "name": "Living Room Decorative rug",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634460575&affcode=ecdru"
-        },
-        {
-          "id": "7637448414",
-          "name": "Esports Bedroom Mattress",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637448414&affcode=ecdru"
-        },
-        {
-          "id": "7634211073",
-          "name": "The Violent Bear Hanging Painting In The Living Room",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634211073&affcode=ecdru"
-        },
-        {
-          "id": "7637946164",
-          "name": "Locomotive Hanging Painting",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637946164&affcode=ecdru"
         },
         {
           "id": "7637515868",
@@ -1367,8 +1327,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 460,
-      "missingCount": 1996
+      "withImages": 470,
+      "missingCount": 1986
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
