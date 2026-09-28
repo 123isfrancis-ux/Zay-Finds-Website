@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:00:34.597Z",
+  "checkedAt": "2026-09-28T07:01:50.590Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1045,11 +1045,22 @@
     "7627100485",
     "7629492154",
     "7626498251",
-    "7626426885"
+    "7626426885",
+    "7629466356",
+    "7626401283",
+    "7629104012",
+    "7629125812",
+    "7626092281",
+    "7629050668",
+    "7629052254",
+    "7629092156",
+    "7629046720",
+    "7629056556",
+    "7626133937"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1492,
-  "cardsMissingImages": 1895,
+  "cardsWithImages": 1503,
+  "cardsMissingImages": 1884,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1185,8 +1196,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 579,
-      "missingCount": 1261
+      "withImages": 590,
+      "missingCount": 1250
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1229,81 +1240,26 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1189,
-      "missingCount": 1267
+      "withImages": 1200,
+      "missingCount": 1256
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 97,
-      "missingCount": 3,
+      "withImages": 99,
+      "missingCount": 1,
       "missing": [
         {
           "id": "7626447073",
           "name": "Christian Necklace",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626447073&affcode=ecdru"
-        },
-        {
-          "id": "7629466356",
-          "name": "Yves Saint Laurent Glasses",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629466356&affcode=ecdru"
-        },
-        {
-          "id": "7626401283",
-          "name": "Maison Margiela Futures",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626401283&affcode=ecdru"
         }
       ]
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 47,
-      "missingCount": 116,
+      "withImages": 56,
+      "missingCount": 107,
       "missing": [
-        {
-          "id": "7629104012",
-          "name": "Adidas Campus                    TOP Batch \n（31 options）",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629104012&affcode=ecdru"
-        },
-        {
-          "id": "7629125812",
-          "name": "Air Jordan 11                         Best Budget Batch                       \n(27 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629125812&affcode=ecdru"
-        },
-        {
-          "id": "7626092281",
-          "name": "Top Batch-Bapestas",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626092281&affcode=ecdru"
-        },
-        {
-          "id": "7629050668",
-          "name": "CDG",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629050668&affcode=ecdru"
-        },
-        {
-          "id": "7629052254",
-          "name": "Crocs",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629052254&affcode=ecdru"
-        },
-        {
-          "id": "7629092156",
-          "name": "[Best Batch]\nACG\n40 Colorways",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629092156&affcode=ecdru"
-        },
-        {
-          "id": "7629046720",
-          "name": "Brunello Culcinelli",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629046720&affcode=ecdru"
-        },
-        {
-          "id": "7629056556",
-          "name": "Valentino",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629056556&affcode=ecdru"
-        },
-        {
-          "id": "7626133937",
-          "name": "[Best Batch]\nBalenciaga slippers\n40 Colorways",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626133937&affcode=ecdru"
-        },
         {
           "id": "7626155643",
           "name": "New Balance 327",
