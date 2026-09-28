@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T07:05:10.147Z",
+  "checkedAt": "2026-09-28T07:06:19.673Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1091,11 +1091,22 @@
     "7626092165",
     "7780773770",
     "7629047016",
-    "7777708959"
+    "7777708959",
+    "7780755952",
+    "7629042660",
+    "7626033019",
+    "7780777712",
+    "7629145660",
+    "7626074463",
+    "7626074177",
+    "7626169653",
+    "7626060793",
+    "7780722652",
+    "7777736487"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1538,
-  "cardsMissingImages": 1849,
+  "cardsWithImages": 1549,
+  "cardsMissingImages": 1838,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1292,64 +1303,9 @@
     },
     "OG Shoes": {
       "total": 163,
-      "withImages": 91,
-      "missingCount": 72,
+      "withImages": 102,
+      "missingCount": 61,
       "missing": [
-        {
-          "id": "7780755952",
-          "name": "Adidas Samba\nTOP Batch                                       (31 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780755952&affcode=ecdru"
-        },
-        {
-          "id": "7629042660",
-          "name": "Yeezy 350 V2                                LW Batch\n（29 colorways）",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629042660&affcode=ecdru"
-        },
-        {
-          "id": "7626033019",
-          "name": "Nike Air Jordan 1 High           LJR Batch\n(27 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626033019&affcode=ecdru"
-        },
-        {
-          "id": "7780777712",
-          "name": "Nike Air Jordan 3                  LJR Batch\n(26 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780777712&affcode=ecdru"
-        },
-        {
-          "id": "7629145660",
-          "name": "Nike Air Jordan 5                  LJR Batch\n(27 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629145660&affcode=ecdru"
-        },
-        {
-          "id": "7626074463",
-          "name": "Nike Air Jordan 12",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626074463&affcode=ecdru"
-        },
-        {
-          "id": "7626074177",
-          "name": "New Balance 2002r                 Top Batch\n(27 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626074177&affcode=ecdru"
-        },
-        {
-          "id": "7626169653",
-          "name": "New Balance 9060                       Top Batch\n(30 colorways)",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626169653&affcode=ecdru"
-        },
-        {
-          "id": "7626060793",
-          "name": "New Balance 1906",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626060793&affcode=ecdru"
-        },
-        {
-          "id": "7780722652",
-          "name": "Balenciaga Runner Graffiti",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7780722652&affcode=ecdru"
-        },
-        {
-          "id": "7777736487",
-          "name": "Balenciaga Track 3,0 \n   OK Batch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7777736487&affcode=ecdru"
-        },
         {
           "id": "7630030920",
           "name": "Balenciaga Track3,0 LED              OK Batch",
