@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:15:59.758Z",
+  "checkedAt": "2026-09-28T05:17:02.127Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -344,11 +344,18 @@
     "7740674917",
     "7740613145",
     "7740579499",
-    "7740645041"
+    "7740645041",
+    "7813441799",
+    "7801606136",
+    "7702236324",
+    "7694353965",
+    "7634243213",
+    "7634531879",
+    "7637507910"
   ],
   "productCards": 3387,
-  "cardsWithImages": 790,
-  "cardsMissingImages": 2597,
+  "cardsWithImages": 797,
+  "cardsMissingImages": 2590,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -484,53 +491,18 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 303,
-      "missingCount": 1537
+      "withImages": 309,
+      "missingCount": 1531
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 117,
-      "missingCount": 24,
+      "withImages": 124,
+      "missingCount": 17,
       "missing": [
-        {
-          "id": "7813441799",
-          "name": "YOSHITOMO NARAx TheSkateroom Decorative Skateboard Background",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7813441799&affcode=ecdru"
-        },
-        {
-          "id": "7801606136",
-          "name": "FIFA World Cup Trophy Replica",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7801606136&affcode=ecdru"
-        },
         {
           "id": "7775361202",
           "name": "Supreme x Rimowa Suitcase\n [Black/Red]",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7775361202&affcode=ecdru"
-        },
-        {
-          "id": "7702236324",
-          "name": "BMW M Series Style Carpet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7702236324&affcode=ecdru"
-        },
-        {
-          "id": "7694353965",
-          "name": "Creative Thickened Hard Plastic Waterproof Playing Cards",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7694353965&affcode=ecdru"
-        },
-        {
-          "id": "7634243213",
-          "name": "Magnetic dust-proof box",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634243213&affcode=ecdru"
-        },
-        {
-          "id": "7634531879",
-          "name": "Lrregular-Shaped Balloon Butt Chair",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634531879&affcode=ecdru"
-        },
-        {
-          "id": "7637507910",
-          "name": "Storage Baskets For Household Use",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637507910&affcode=ecdru"
         },
         {
           "id": "7634476277",
@@ -1083,8 +1055,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 492,
-      "missingCount": 1964
+      "withImages": 499,
+      "missingCount": 1957
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
