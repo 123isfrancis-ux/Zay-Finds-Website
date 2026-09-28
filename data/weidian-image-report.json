@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:22:35.682Z",
+  "checkedAt": "2026-09-28T05:23:49.315Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -406,11 +406,23 @@
     "7628985394",
     "7625993449",
     "7626025059",
-    "7626107721"
+    "7626107721",
+    "7628965548",
+    "7629075838",
+    "7628991290",
+    "7629069860",
+    "7629044390",
+    "7628905398",
+    "7625993457",
+    "7629014828",
+    "7629022686",
+    "7629054254",
+    "7628988892",
+    "7628963552"
   ],
   "productCards": 3387,
-  "cardsWithImages": 852,
-  "cardsMissingImages": 2535,
+  "cardsWithImages": 864,
+  "cardsMissingImages": 2523,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -546,8 +558,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 359,
-      "missingCount": 1481
+      "withImages": 371,
+      "missingCount": 1469
     },
     "ROOM DECOR": {
       "total": 141,
@@ -573,8 +585,8 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 42,
-      "missingCount": 51,
+      "withImages": 54,
+      "missingCount": 39,
       "missing": [
         {
           "id": "7629016744",
@@ -590,66 +602,6 @@
           "id": "7626091839",
           "name": "Dior Perfume",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626091839&affcode=ecdru"
-        },
-        {
-          "id": "7628965548",
-          "name": "Ralph Lauren Sweatshirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628965548&affcode=ecdru"
-        },
-        {
-          "id": "7629075838",
-          "name": "Ralph Lauren Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629075838&affcode=ecdru"
-        },
-        {
-          "id": "7628991290",
-          "name": "Ralph Lauren Chief Keef Polos",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628991290&affcode=ecdru"
-        },
-        {
-          "id": "7629069860",
-          "name": "Polo Ralph Lauren Short",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629069860&affcode=ecdru"
-        },
-        {
-          "id": "7629044390",
-          "name": "Ralph Lauren Vest",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629044390&affcode=ecdru"
-        },
-        {
-          "id": "7628905398",
-          "name": "Ralph Lauren\nDown Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628905398&affcode=ecdru"
-        },
-        {
-          "id": "7625993457",
-          "name": "Ralph Lauren Slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625993457&affcode=ecdru"
-        },
-        {
-          "id": "7629014828",
-          "name": "Denim Tears Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629014828&affcode=ecdru"
-        },
-        {
-          "id": "7629022686",
-          "name": "Denim Tears Pants",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629022686&affcode=ecdru"
-        },
-        {
-          "id": "7629054254",
-          "name": "Denim Tears Tshirts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629054254&affcode=ecdru"
-        },
-        {
-          "id": "7628988892",
-          "name": "Denim Tears Shorts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628988892&affcode=ecdru"
-        },
-        {
-          "id": "7628963552",
-          "name": "Prada Glasses",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628963552&affcode=ecdru"
         },
         {
           "id": "7629101612",
@@ -835,8 +787,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 549,
-      "missingCount": 1907
+      "withImages": 561,
+      "missingCount": 1895
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
