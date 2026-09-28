@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:42:16.627Z",
+  "checkedAt": "2026-09-28T05:43:31.713Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -558,11 +558,18 @@
     "7647331037",
     "7626464347",
     "7798555141",
-    "7798559039"
+    "7798559039",
+    "7637480158",
+    "7694314353",
+    "7697045230",
+    "7696097520",
+    "7692445683",
+    "7678201621",
+    "7655051273"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1004,
-  "cardsMissingImages": 2383,
+  "cardsWithImages": 1011,
+  "cardsMissingImages": 2376,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -742,8 +749,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 701,
-      "missingCount": 1755
+      "withImages": 708,
+      "missingCount": 1748
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
