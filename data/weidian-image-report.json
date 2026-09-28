@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-09-28T01:57:40.230Z",
+  "checkedAt": "2026-09-28T01:57:56.013Z",
+  "uniqueListings": 3370,
+  "completed": 3,
+  "withImages": 65,
+  "stopped": true,
+  "failures": [
+    {
+      "id": "7818343933",
+      "reason": "UND_ERR_SOCKET"
+    },
+    {
+      "id": "7821314484",
+      "reason": "UND_ERR_SOCKET"
+    },
+    {
+      "id": "7790010254",
+      "reason": "UND_ERR_SOCKET"
+    }
+  ],
+  "unsupportedRows": 19
+}

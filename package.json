@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test tests/*.test.cjs",
-    "import:sheet": "node scripts/import-sheet.cjs"
+    "import:sheet": "node scripts/import-sheet.cjs",
+    "refresh:images": "node scripts/refresh-weidian-images.cjs"
   },
   "dependencies": {
     "next": "14.2.35",

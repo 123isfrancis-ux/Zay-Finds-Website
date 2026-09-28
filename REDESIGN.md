@@ -4,4 +4,4 @@ The supplied source layout is retained, including product cards, saved items, se
 
 No weekly status is inferred from sheet row positions or an old update banner. The UI exposes All Finds and Saved. Filters come from the 17 spreadsheet tabs; duplicates can belong to multiple collections.
 
-See README.md for snapshot refresh and pending embedded-image extraction.
+Categories follow spreadsheet-tab order. Product photos use matched Weidian image URLs directly. See README.md for catalogue and image refresh commands.

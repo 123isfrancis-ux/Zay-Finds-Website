@@ -36,7 +36,15 @@ Commit the updated snapshot and redeploy to publish the update. This tool never 
 
 ## Images
 
-Two product rows expose an `IMAGE` formula and are included. Most product photos are embedded objects that the Sheets cell API did not expose. The connected Google Drive account refused the Excel download, so these cannot yet be extracted. Attach an authorized Excel download of the original spreadsheet to recover images and their row anchors. Missing images deliberately show a Zay placeholder with a link to seller photos; no substitute product images are invented.
+Product photos load directly from Weidian's public image CDN. The lookup in `data/weidian-images.json` maps each exact Weidian item ID to the main product image exposed by that listing. It does not download or rehost photos, modify purchase links, or extract restricted Google images. Multiple cards for the same item ID share that listing's main image; selecting a specific SKU/variant photo is not inferred.
+
+Refresh missing image links with:
+
+```sh
+pnpm refresh:images
+```
+
+The script checks one public listing at a time by default, checkpoints every 50, skips successful cached entries, and stops on authentication/rate-limit challenges or three consecutive connection failures. Unavailable listings and non-Weidian destinations retain their existing image or placeholder. `data/weidian-image-report.json` records the latest run. Refresh again after the source catalogue changes, then rebuild and redeploy. Photo links are seller-controlled and may change later.
 
 ## Prices and links
 
@@ -47,7 +55,7 @@ All product URLs and affiliate parameters are preserved exactly from the source.
 ## Features
 
 - Global search across names and collection memberships
-- Seventeen collection filters, price/name sorting, and 60-card progressive loading
+- Seventeen collection filters in spreadsheet-tab order, price/name sorting, and 60-card progressive loading
 - Saved items stored locally in the visitor's browser
 - Responsive category dialog, keyboard focus states, reduced motion, device dark mode
 - Source spreadsheet link and buying tutorial

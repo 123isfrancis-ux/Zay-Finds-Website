@@ -168,6 +168,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
 export default function Home() {
   const router = useRouter();
   const [items, setItems] = useState([]);
+  const [collectionOrder, setCollectionOrder] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [attempt, setAttempt] = useState(0);
@@ -215,9 +216,10 @@ export default function Home() {
       try {
         const response = await fetch('/api/catalogue', { signal: controller.signal, cache: 'no-store' });
         if (!response.ok) throw new Error('Catalogue request failed');
-        const { items: rows } = await response.json();
+        const { items: rows, collections } = await response.json();
         if (!active) return;
         setItems(rows);
+        setCollectionOrder(collections || []);
         setView(previous => previous || (rows.some(item => item.visibility === 'weekly') ? 'week' : 'all'));
       } catch (failure) {
         if (active && (failure.name !== 'AbortError' || timedOut)) {
@@ -254,7 +256,7 @@ export default function Home() {
   const searching = Boolean(deferredSearch.trim());
   const base = useMemo(() => viewItems(items, activeView, wishlistSet, deferredSearch),
     [items, activeView, wishlistSet, deferredSearch]);
-  const categories = useMemo(() => categoriesFor(base), [base]);
+  const categories = useMemo(() => categoriesFor(base, collectionOrder), [base, collectionOrder]);
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
   const effectiveCategory = !category || !categoryCanBeValidated || categoryExists ? category : '';
