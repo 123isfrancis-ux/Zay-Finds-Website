@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:19:23.501Z",
+  "checkedAt": "2026-09-28T05:20:19.790Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -374,11 +374,21 @@
     "7626066351",
     "7629024552",
     "7629026548",
-    "7626066355"
+    "7626066355",
+    "7626076209",
+    "7628969440",
+    "7629051982",
+    "7628969442",
+    "7629040344",
+    "7625981583",
+    "7626070023",
+    "7626013263",
+    "7626015179",
+    "7629022656"
   ],
   "productCards": 3387,
-  "cardsWithImages": 820,
-  "cardsMissingImages": 2567,
+  "cardsWithImages": 830,
+  "cardsMissingImages": 2557,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -514,8 +524,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 327,
-      "missingCount": 1513
+      "withImages": 337,
+      "missingCount": 1503
     },
     "ROOM DECOR": {
       "total": 141,
@@ -541,63 +551,13 @@
     },
     "Resell": {
       "total": 93,
-      "withImages": 10,
-      "missingCount": 83,
+      "withImages": 20,
+      "missingCount": 73,
       "missing": [
         {
           "id": "7629016744",
           "name": "Dyson Airwrap HS05",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629016744&affcode=ecdru"
-        },
-        {
-          "id": "7626076209",
-          "name": "Cuban Chain Zicron",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626076209&affcode=ecdru"
-        },
-        {
-          "id": "7628969440",
-          "name": "Zircon Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628969440&affcode=ecdru"
-        },
-        {
-          "id": "7629051982",
-          "name": "Zircon Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629051982&affcode=ecdru"
-        },
-        {
-          "id": "7628969442",
-          "name": "Zircon Tennis Necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7628969442&affcode=ecdru"
-        },
-        {
-          "id": "7629040344",
-          "name": "Zircon Tennis Necklace",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629040344&affcode=ecdru"
-        },
-        {
-          "id": "7625981583",
-          "name": "Moissanite Tennis Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7625981583&affcode=ecdru"
-        },
-        {
-          "id": "7626070023",
-          "name": "Louis Vuitton LV  Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626070023&affcode=ecdru"
-        },
-        {
-          "id": "7626013263",
-          "name": "Louis Vuitton LV  Bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626013263&affcode=ecdru"
-        },
-        {
-          "id": "7626015179",
-          "name": "Van Cleef & Arpels bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626015179&affcode=ecdru"
-        },
-        {
-          "id": "7629022656",
-          "name": "Tiffany Bracelets",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629022656&affcode=ecdru"
         },
         {
           "id": "7626113697",
@@ -963,8 +923,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 517,
-      "missingCount": 1939
+      "withImages": 527,
+      "missingCount": 1929
     }
   },
   "unresolvedReason": "No verified main photo after extended first-visit loading checks and one later retry; product page remained unavailable or lacked a usable image.",
