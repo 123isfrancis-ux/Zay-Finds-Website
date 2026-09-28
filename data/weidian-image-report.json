@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:13:02.718Z",
+  "checkedAt": "2026-09-28T05:14:20.341Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -321,11 +321,19 @@
     "7768759050",
     "7765790651",
     "7768771888",
-    "7765804551"
+    "7765804551",
+    "7765867693",
+    "7768763090",
+    "7768839842",
+    "7743583356",
+    "7743652990",
+    "7740641079",
+    "7743563508",
+    "7743629080"
   ],
   "productCards": 3387,
-  "cardsWithImages": 767,
-  "cardsMissingImages": 2620,
+  "cardsWithImages": 775,
+  "cardsMissingImages": 2612,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -466,8 +474,8 @@
     },
     "ROOM DECOR": {
       "total": 141,
-      "withImages": 94,
-      "missingCount": 47,
+      "withImages": 102,
+      "missingCount": 39,
       "missing": [
         {
           "id": "7813441799",
@@ -580,49 +588,9 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765841967&affcode=ecdru"
         },
         {
-          "id": "7765867693",
-          "name": "Chrome Hearts Pillow",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765867693&affcode=ecdru"
-        },
-        {
           "id": "7765840043",
           "name": "Louis Vuitton Monogram Leather Football",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7765840043&affcode=ecdru"
-        },
-        {
-          "id": "7768763090",
-          "name": "Chrome Hearts Tea Coaster",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768763090&affcode=ecdru"
-        },
-        {
-          "id": "7768839842",
-          "name": "Chrome Hearts Notebook Clip",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7768839842&affcode=ecdru"
-        },
-        {
-          "id": "7743583356",
-          "name": "Mickey Mouse collectible figurines",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743583356&affcode=ecdru"
-        },
-        {
-          "id": "7743652990",
-          "name": "Abstract art sculptures and soft furnishings",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743652990&affcode=ecdru"
-        },
-        {
-          "id": "7740641079",
-          "name": "Astronaut figurine",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7740641079&affcode=ecdru"
-        },
-        {
-          "id": "7743563508",
-          "name": "Creative bedroom bedside lamp",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743563508&affcode=ecdru"
-        },
-        {
-          "id": "7743629080",
-          "name": "Never-setting Sun Ambient Lighting",
-          "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7743629080&affcode=ecdru"
         },
         {
           "id": "7740617119",
