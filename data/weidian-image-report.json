@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T05:51:36.313Z",
+  "checkedAt": "2026-09-28T05:52:31.253Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -635,7 +635,8 @@
     "7721348205",
     "7721391881",
     "7721301383",
-    "7724350366"
+    "7724350366",
+    "7721251213"
   ],
   "productCards": 3387,
   "cardsWithImages": 1081,
