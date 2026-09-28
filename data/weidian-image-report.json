@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:48:16.632Z",
+  "checkedAt": "2026-09-28T06:49:54.994Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -957,11 +957,23 @@
     "7626466569",
     "7629523604",
     "7626474503",
-    "7626423531"
+    "7626423531",
+    "7626447057",
+    "7629507936",
+    "7629421122",
+    "7629403480",
+    "7629422654",
+    "7626440723",
+    "7626435305",
+    "7629521628",
+    "7629503976",
+    "7629460408",
+    "7626462791",
+    "7629403486"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1404,
-  "cardsMissingImages": 1983,
+  "cardsWithImages": 1416,
+  "cardsMissingImages": 1971,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1097,8 +1109,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 491,
-      "missingCount": 1349
+      "withImages": 503,
+      "missingCount": 1337
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1141,74 +1153,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1101,
-      "missingCount": 1355
+      "withImages": 1113,
+      "missingCount": 1343
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 9,
-      "missingCount": 91,
+      "withImages": 21,
+      "missingCount": 79,
       "missing": [
-        {
-          "id": "7626447057",
-          "name": "Super Clean Leather jacket blank",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626447057&affcode=ecdru"
-        },
-        {
-          "id": "7629507936",
-          "name": "Balenciaga Passport",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629507936&affcode=ecdru"
-        },
-        {
-          "id": "7629421122",
-          "name": "Jacquemus Crewneck",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629421122&affcode=ecdru"
-        },
-        {
-          "id": "7629403480",
-          "name": "Jacquemus Scarf",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629403480&affcode=ecdru"
-        },
-        {
-          "id": "7629422654",
-          "name": "Louis Vuitton LV \n Cashmere Scarf Best Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629422654&affcode=ecdru"
-        },
-        {
-          "id": "7626440723",
-          "name": "Leather Hat with fur",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626440723&affcode=ecdru"
-        },
-        {
-          "id": "7626435305",
-          "name": "Saint Sweater",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626435305&affcode=ecdru"
-        },
-        {
-          "id": "7629521628",
-          "name": "Gucci Sweater",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629521628&affcode=ecdru"
-        },
-        {
-          "id": "7629503976",
-          "name": "Burberry Sweater",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629503976&affcode=ecdru"
-        },
-        {
-          "id": "7629460408",
-          "name": "comfy joggers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629460408&affcode=ecdru"
-        },
-        {
-          "id": "7626462791",
-          "name": "maison Margiela diff models",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626462791&affcode=ecdru"
-        },
-        {
-          "id": "7629403486",
-          "name": "Rimowa Luggage",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629403486&affcode=ecdru"
-        },
         {
           "id": "7626486423",
           "name": "Versace Belt",
