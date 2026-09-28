@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T06:59:26.029Z",
+  "checkedAt": "2026-09-28T07:00:34.597Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1033,11 +1033,23 @@
     "7626480391",
     "7626488359",
     "7627137871",
-    "7630011542"
+    "7630011542",
+    "7629991296",
+    "7627124073",
+    "7630045190",
+    "7630023044",
+    "7630052926",
+    "7627057407",
+    "7627045073",
+    "7630147600",
+    "7627100485",
+    "7629492154",
+    "7626498251",
+    "7626426885"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1480,
-  "cardsMissingImages": 1907,
+  "cardsWithImages": 1492,
+  "cardsMissingImages": 1895,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1173,8 +1185,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 567,
-      "missingCount": 1273
+      "withImages": 579,
+      "missingCount": 1261
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1217,29 +1229,14 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1177,
-      "missingCount": 1279
+      "withImages": 1189,
+      "missingCount": 1267
     },
     "OLD MONEY": {
       "total": 100,
-      "withImages": 85,
-      "missingCount": 15,
+      "withImages": 97,
+      "missingCount": 3,
       "missing": [
-        {
-          "id": "7629492154",
-          "name": "Louboutin Shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629492154&affcode=ecdru"
-        },
-        {
-          "id": "7626498251",
-          "name": "Loro Piana Winter Walkers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626498251&affcode=ecdru"
-        },
-        {
-          "id": "7626426885",
-          "name": "Chinese Adidas Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626426885&affcode=ecdru"
-        },
         {
           "id": "7626447073",
           "name": "Christian Necklace",
@@ -1254,51 +1251,6 @@
           "id": "7626401283",
           "name": "Maison Margiela Futures",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626401283&affcode=ecdru"
-        },
-        {
-          "id": "7629991296",
-          "name": "Old Money Polo super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629991296&affcode=ecdru"
-        },
-        {
-          "id": "7627124073",
-          "name": "Old Money Button Up Linen Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627124073&affcode=ecdru"
-        },
-        {
-          "id": "7630045190",
-          "name": "Old Money Linen Pants White super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630045190&affcode=ecdru"
-        },
-        {
-          "id": "7630023044",
-          "name": "Old Money Button Up Shirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630023044&affcode=ecdru"
-        },
-        {
-          "id": "7630052926",
-          "name": "Old Money Leather Belt Super high Quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630052926&affcode=ecdru"
-        },
-        {
-          "id": "7627057407",
-          "name": "Old Money linen Polo super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627057407&affcode=ecdru"
-        },
-        {
-          "id": "7627045073",
-          "name": "Old Money Polo super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627045073&affcode=ecdru"
-        },
-        {
-          "id": "7630147600",
-          "name": "Old Money Linen Pants Brown super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7630147600&affcode=ecdru"
-        },
-        {
-          "id": "7627100485",
-          "name": "Old Money Polo super good quality",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7627100485&affcode=ecdru"
         }
       ]
     },
