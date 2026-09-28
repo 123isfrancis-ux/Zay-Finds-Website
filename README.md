@@ -22,7 +22,7 @@ Source: https://docs.google.com/spreadsheets/d/1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtO
 
 The initial import contains 3,755 distinct listings from all 17 tabs. Exact repeated name/link/CNY/USD combinations share one card and retain all collection memberships. Different names or prices remain separate. Product order follows the sheet. Each listing records its original sheet ID and row.
 
-`data/catalogue.json` is a dated snapshot, not an automatic live connection. The site displays the import date. No Google credentials or environment variables are required to run it. Google Sheets' regular CSV export is insufficient: it loses embedded hyperlinks, images, and formula detail.
+`data/catalogue.json` is a dated snapshot, not an automatic live connection. The import date is recorded in the data file. No Google credentials or environment variables are required to run it. Google Sheets' regular CSV export is insufficient: it loses embedded hyperlinks, images, and formula detail.
 
 To refresh, obtain an authorized Google Sheets API `spreadsheets.get` JSON response containing `sheets.properties` and `sheets.data.rowData.values` with `formattedValue`, `effectiveValue`, `userEnteredValue`, `hyperlink`, and `textFormatRuns`. Then run:
 
@@ -50,6 +50,6 @@ All product URLs and affiliate parameters are preserved exactly from the source.
 - Seventeen collection filters, price/name sorting, and 60-card progressive loading
 - Saved items stored locally in the visitor's browser
 - Responsive category dialog, keyboard focus states, reduced motion, device dark mode
-- Source spreadsheet link, imported date, and affiliate disclosure
+- Source spreadsheet link and buying tutorial
 
 The original source folder in Downloads is unchanged. Next.js is updated from 14.2.3 to 14.2.35 within its existing major version. The app retains Pages Router and plain image elements, avoiding image-transformation billing for thousands of catalogue images.

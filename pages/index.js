@@ -171,7 +171,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [attempt, setAttempt] = useState(0);
-  const [importedAt, setImportedAt] = useState(null);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
   const [currency, setCurrency] = useState('USD');
@@ -212,14 +211,12 @@ export default function Home() {
     setLoading(true);
     setError('');
     setItems([]);
-    setImportedAt(null);
     async function load() {
       try {
         const response = await fetch('/api/catalogue', { signal: controller.signal, cache: 'no-store' });
         if (!response.ok) throw new Error('Catalogue request failed');
-        const { items: rows, importedAt: date } = await response.json();
+        const { items: rows } = await response.json();
         if (!active) return;
-        setImportedAt(date);
         setItems(rows);
         setView(previous => previous || (rows.some(item => item.visibility === 'weekly') ? 'week' : 'all'));
       } catch (failure) {
@@ -385,7 +382,7 @@ export default function Home() {
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
         </section>
-        <footer className="site-footer"><strong>ZAY FINDS</strong><p>{importedAt ? 'Catalogue imported ' + new Date(importedAt).toLocaleDateString('en-CA', { timeZone: 'UTC' }) + '. ' : ''}Prices and availability may change. Purchase links are provided by the original spreadsheet and may be affiliate links.</p><a href="https://www.kakobuy.com/register?affcode=ecdru" target="_blank" rel="noopener noreferrer">Create a Kakobuy account ↗</a></footer>
+        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ecdru" target="_blank" rel="noopener noreferrer">Create a Kakobuy account ↗</a></footer>
       </main>
     </>
   );
