@@ -337,7 +337,7 @@ export default function Home() {
         </section>
         <nav className="quick-links" aria-label="Buying help and signup">
           <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▷</span> Watch buying tutorial <span aria-hidden="true">↗</span></a>
-          <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ecdru" target="_blank" rel="noopener noreferrer">Sign up for $400 <span aria-hidden="true">↗</span></a>
+          <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer">Sign up for $400 <span aria-hidden="true">↗</span></a>
         </nav>
         <div className="shopping-tools">
           <div className="tools-inner">
@@ -390,7 +390,7 @@ export default function Home() {
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
         </section>
-        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ecdru" target="_blank" rel="noopener noreferrer">Create a Kakobuy account ↗</a></footer>
+        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer">Create a Kakobuy account ↗</a></footer>
       </main>
     </>
   );

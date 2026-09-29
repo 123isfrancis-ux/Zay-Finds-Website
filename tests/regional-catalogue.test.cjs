@@ -8,14 +8,14 @@ test('catalogue serves imported product data and source date without credentials
  assert.ok(res.data.items.length>3000); assert.ok(res.data.importedAt);
  assert.ok(res.data.items.every(i=>i._search && Array.isArray(i._categories)));
  assert.equal(res.data.items[0].prices.CNY,160);
- assert.match(res.data.items[0].link,/affcode=ecdru/);
+ assert.match(res.data.items[0].link,/affcode=ZAYFINDS/);
 });
 test('catalogue rejects writes',async()=>{const res=response();await handler({method:'POST'},res);assert.equal(res.code,405);assert.equal(res.headers.Allow,'GET');});
 
 test('personally bought labels follow exact spreadsheet listing matches and preserve hidden items', async()=>{
  const res=response(); await handler({method:'GET'},res);
  const {weidianId}=require('../lib/weidian-images');
- const marked=new Set(require('../data/personally-bought.json'));
+ const marked=new Set(require('../data/personally-bought.json').map(key=>key.startsWith('http')?require('../lib/affiliate').affiliateLink(key):key));
  for(const item of res.data.items) assert.equal(item.personallyBought,marked.has(weidianId(item.link)||item.link));
  assert.equal(res.data.items.find(i=>weidianId(i.link)==='7626350689').visibility,'hidden');
  assert.equal(res.data.items.filter(i=>i.personallyBought && i.visibility!=='hidden').length,29);
@@ -32,6 +32,6 @@ test('Hoodies cleanup changes only that membership and preserves every product a
   assert.deepEqual(after.categories.filter(c=>c!=='HOODIES'),before.categories.filter(c=>c!=='HOODIES'));
   assert.equal(after.categories.includes('HOODIES'),before.categories.includes('HOODIES')&&allowed.has(before.id));
   assert.equal(after.visibility,before.visibility);
-  assert.equal(after.link,before.link);
+  assert.equal(after.link,require('../lib/affiliate').affiliateLink(before.link));
  }
 });
