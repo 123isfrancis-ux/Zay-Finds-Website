@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T20:08:40.457Z",
+  "checkedAt": "2026-09-29T21:35:43.530Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1179,11 +1179,168 @@
     "7626022403",
     "7628990764",
     "7629000406",
-    "7648161759"
+    "7648161759",
+    "7630001228",
+    "7626517983",
+    "7626375371",
+    "7629409194",
+    "7629409198",
+    "7629442336",
+    "7629353374",
+    "7629452364",
+    "7629494000",
+    "7626533695",
+    "7626519967",
+    "7629480130",
+    "7629499916",
+    "7626458701",
+    "7626541621",
+    "7629424880",
+    "7629482012",
+    "7626519973",
+    "7629407228",
+    "7626448501",
+    "7626460747",
+    "7626523913",
+    "7629484016",
+    "7629444436",
+    "7629486062",
+    "7629424884",
+    "7626514007",
+    "7626535649",
+    "7629515644",
+    "7626440633",
+    "7629482018",
+    "7626425345",
+    "7629456334",
+    "7629401400",
+    "7629452372",
+    "7629417024",
+    "7629446404",
+    "7626541629",
+    "7626539645",
+    "7626446891",
+    "7629476124",
+    "7629460268",
+    "7626490193",
+    "7629409216",
+    "7626486293",
+    "7629407238",
+    "7626504025",
+    "7629509736",
+    "7629442346",
+    "7629519640",
+    "7629335544",
+    "7626537641",
+    "7626531735",
+    "7629452382",
+    "7629507806",
+    "7629410822",
+    "7629499936",
+    "7626423409",
+    "7626432821",
+    "7626504027",
+    "7629436714",
+    "7626535663",
+    "7626478343",
+    "7626431223",
+    "7629517648",
+    "7629434850",
+    "7626466447",
+    "7629422572",
+    "7626502149",
+    "7626423413",
+    "7629446420",
+    "7626375387",
+    "7629482034",
+    "7626512087",
+    "7629486082",
+    "7626510027",
+    "7629413206",
+    "7626516029",
+    "7626508081",
+    "7629424914",
+    "7626488217",
+    "7626417457",
+    "7626492199",
+    "7626420875",
+    "7626431227",
+    "7626516031",
+    "7626531741",
+    "7626437069",
+    "7626502153",
+    "7626474389",
+    "7629409232",
+    "7629403370",
+    "7626426799",
+    "7626478347",
+    "7626488221",
+    "7629434858",
+    "7626440643",
+    "7629517666",
+    "7629446428",
+    "7626484265",
+    "7629499946",
+    "7626500111",
+    "7629353394",
+    "7626502159",
+    "7629482046",
+    "7626417463",
+    "7626458731",
+    "7629499914",
+    "7626525843",
+    "7629422562",
+    "7629403342",
+    "7626490195",
+    "7626442979",
+    "7629401414",
+    "7626476379",
+    "7626450855",
+    "7626506035",
+    "7626448513",
+    "7626442995",
+    "7626466457",
+    "7626484269",
+    "7635453498",
+    "7632769071",
+    "7635966902",
+    "7636297552",
+    "7633407893",
+    "7635249576",
+    "7632324901",
+    "7635505046",
+    "7635461282",
+    "7637273516",
+    "7637471088",
+    "7629490158",
+    "7626426853",
+    "7637787574",
+    "7634777123",
+    "7637904226",
+    "7637894934",
+    "7634871339",
+    "7637966048",
+    "7637944592",
+    "7637947352",
+    "7637996138",
+    "7636678166",
+    "7633745831",
+    "7635053601",
+    "7637225464",
+    "7637239032",
+    "7637224254",
+    "7634563599",
+    "7637429378",
+    "7632912783",
+    "7634987809",
+    "7638010110",
+    "7637927530",
+    "7634251399",
+    "7634537775"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1747,
-  "cardsMissingImages": 1640,
+  "cardsWithImages": 1781,
+  "cardsMissingImages": 1606,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1392,8 +1549,8 @@
     },
     "ALL ITEMS FROM TIKTOK": {
       "total": 426,
-      "withImages": 388,
-      "missingCount": 38,
+      "withImages": 422,
+      "missingCount": 4,
       "missing": [
         {
           "id": "7634975683",
@@ -1406,184 +1563,14 @@
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637956082&affcode=ecdru"
         },
         {
-          "id": "7635453498",
-          "name": "Roman Numeral Watch",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635453498&affcode=ecdru"
-        },
-        {
-          "id": "7632769071",
-          "name": "Office Art Desktop Decorations",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632769071&affcode=ecdru"
-        },
-        {
-          "id": "7632912783",
-          "name": "Waffle Plaid Long Sleeve",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632912783&affcode=ecdru"
-        },
-        {
-          "id": "7635966902",
-          "name": "Union Jack Print Sweatshirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635966902&affcode=ecdru"
-        },
-        {
-          "id": "7636297552",
-          "name": "Star-patterned Suede Denim Shorts",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636297552&affcode=ecdru"
-        },
-        {
-          "id": "7633407893",
-          "name": "Leopard Print Washed Distressed Scimitar Jeans",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7633407893&affcode=ecdru"
-        },
-        {
-          "id": "7635249576",
-          "name": "Ralph Lauren Skull Cap",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635249576&affcode=ecdru"
-        },
-        {
-          "id": "7632324901",
-          "name": "Random Clothing Brand jacklet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7632324901&affcode=ecdru"
-        },
-        {
-          "id": "7635505046",
-          "name": "Airpods 1:1 best qualty",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635505046&affcode=ecdru"
-        },
-        {
-          "id": "7635461282",
-          "name": "Chrome Hearts Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635461282&affcode=ecdru"
-        },
-        {
-          "id": "7637273516",
-          "name": "Cowboy boots",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637273516&affcode=ecdru"
-        },
-        {
-          "id": "7637471088",
-          "name": "Distressed, ripped denim jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637471088&affcode=ecdru"
-        },
-        {
-          "id": "7629490158",
-          "name": "Chrome Hearts wallet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7629490158&affcode=ecdru"
-        },
-        {
-          "id": "7626426853",
-          "name": "Chrome Hearts Hoodies",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7626426853&affcode=ecdru"
-        },
-        {
           "id": "7637787574",
           "name": "Distressed casual shoes",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637787574&affcode=ecdru"
         },
         {
-          "id": "7634777123",
-          "name": "Embroidered letter print baseball jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634777123&affcode=ecdru"
-        },
-        {
           "id": "7637904226",
           "name": "Casual sweatpants",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637904226&affcode=ecdru"
-        },
-        {
-          "id": "7637894934",
-          "name": "Large fox fur collar hat",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637894934&affcode=ecdru"
-        },
-        {
-          "id": "7634871339",
-          "name": "Skull bracelet",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634871339&affcode=ecdru"
-        },
-        {
-          "id": "7637966048",
-          "name": "Bread slippers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637966048&affcode=ecdru"
-        },
-        {
-          "id": "7637944592",
-          "name": "Suede hooded sweatshirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637944592&affcode=ecdru"
-        },
-        {
-          "id": "7634987809",
-          "name": "Camouflage hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634987809&affcode=ecdru"
-        },
-        {
-          "id": "7638010110",
-          "name": "Straight-leg black wide-leg trousers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7638010110&affcode=ecdru"
-        },
-        {
-          "id": "7637927530",
-          "name": "Zippered, checkered, reversible sweatshirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637927530&affcode=ecdru"
-        },
-        {
-          "id": "7637947352",
-          "name": "Embroidered zip-up hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637947352&affcode=ecdru"
-        },
-        {
-          "id": "7637996138",
-          "name": "Camouflage hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637996138&affcode=ecdru"
-        },
-        {
-          "id": "7636678166",
-          "name": "Trendy Couple's Half-Sleeved Top",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7636678166&affcode=ecdru"
-        },
-        {
-          "id": "7633745831",
-          "name": "Metal Perforated Hood",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7633745831&affcode=ecdru"
-        },
-        {
-          "id": "7635053601",
-          "name": "Model Assembly Car Toys",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7635053601&affcode=ecdru"
-        },
-        {
-          "id": "7634251399",
-          "name": "Two Fake Wide-Leg Pants",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634251399&affcode=ecdru"
-        },
-        {
-          "id": "7637225464",
-          "name": "Light-Colored Curved Jeans",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637225464&affcode=ecdru"
-        },
-        {
-          "id": "7637239032",
-          "name": "A Cool And Stylish Round-Neck Hoodie",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637239032&affcode=ecdru"
-        },
-        {
-          "id": "7637224254",
-          "name": "Printed Color-Block Crewneck Sweatshirt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637224254&affcode=ecdru"
-        },
-        {
-          "id": "7634563599",
-          "name": "Casual Couple Sneakers",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634563599&affcode=ecdru"
-        },
-        {
-          "id": "7637429378",
-          "name": "Retro Camouflage Print Zipper Jacket",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637429378&affcode=ecdru"
-        },
-        {
-          "id": "7634537775",
-          "name": "Retro Leopard Print Accessory Belt",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7634537775&affcode=ecdru"
         }
       ]
     },
