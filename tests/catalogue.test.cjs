@@ -63,3 +63,14 @@ Three,T Shirts,weekly`);
   assert.deepEqual(ids(filterAndSort(viewItems(dynamicRows, filters.view, new Set()), filters.category, 'default')), [dynamicRows[0].id]);
   assert.deepEqual(catalogueFiltersFromQuery({ view: 'unknown', category: ['Shoes', 'Bags'] }), { view: null, category: 'shoes' });
 });
+
+test('category sheet order overrides shared Main positions without changing All or explicit sorting', () => {
+  const items = [
+    {id:'a',name:'Alpha',_category:'watches',categoryOrder:{watches:1}},
+    {id:'b',name:'Beta',_category:'watches',categoryOrder:{watches:0}},
+  ];
+  assert.deepEqual(filterAndSort(items, 'watches', 'default').map(i=>i.id), ['b','a']);
+  assert.deepEqual(filterAndSort(items, '', 'default').map(i=>i.id), ['a','b']);
+  assert.deepEqual(filterAndSort(items, 'watches', 'name').map(i=>i.id), ['a','b']);
+  assert.deepEqual(items.map(i=>i.id), ['a','b']);
+});
