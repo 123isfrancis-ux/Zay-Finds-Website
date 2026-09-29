@@ -287,7 +287,7 @@ export default function Home() {
     }
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl]);
   const simpleSaved = activeView === 'saved';
-  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'default' && !effectiveCategory && !simpleSaved ? 'featured' : sortBy, currency, exchangeRate.usdToCad),
+  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy, currency, exchangeRate.usdToCad),
     [base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad]);
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
@@ -376,7 +376,7 @@ export default function Home() {
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control">Sort
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
-                  <option value="default">{effectiveCategory ? 'Sheet order' : 'Featured first'}</option>
+                  <option value="default">Sheet order</option>
                   <option value="price-asc">Price: Low → High</option>
                   <option value="price-desc">Price: High → Low</option>
                   <option value="name">Name: A → Z</option>
