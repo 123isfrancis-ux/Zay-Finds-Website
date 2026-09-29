@@ -35,3 +35,15 @@ test('Hoodies cleanup changes only that membership and preserves every product a
   assert.equal(after.link,require('../lib/affiliate').affiliateLink(before.link));
  }
 });
+
+test('compact catalogue preserves display, filtering, order and price fields', async()=>{
+ const full=response(), compact=response();
+ await handler({method:'GET'},full); await handler({method:'GET',query:{compact:'1'}},compact);
+ assert.equal(full.data.items.length,compact.data.items.length);
+ for(let i=0;i<full.data.items.length;i++) for(const key of ['id','name','image','link','prices','_search','_categories','categoryOrder','personallyBought','visibility']) assert.deepEqual(compact.data.items[i][key],full.data.items[i][key]);
+ assert.ok(JSON.stringify(compact.data).length<JSON.stringify(full.data).length);
+});
+test('conflicting historical names do not create misleading search matches',()=>{
+ const {searchableItems}=require('../lib/google-sheet');
+ assert.equal(searchableItems([{name:'Stud Earrings',category:'Accessories',categories:['Accessories'],alternateNames:['Blue Hoodie']}])[0]._search.includes('hoodie'),false);
+});

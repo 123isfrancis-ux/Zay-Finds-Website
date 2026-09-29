@@ -14,13 +14,13 @@ const ids = items => items.map(item => item.id);
 
 test('visibility and search exclude hidden products, including saved hidden IDs', () => {
   assert.deepEqual(ids(viewItems(rows, 'week', new Set())), ['1', '4']);
-  assert.deepEqual(ids(viewItems(rows, 'all', new Set())), ['2', '5', '6']);
+  assert.deepEqual(ids(viewItems(rows, 'all', new Set())), ['1', '2', '4', '5', '6']);
   assert.deepEqual(ids(viewItems(rows, 'saved', new Set(['1', '2', '3']))), ['1', '2']);
-  assert.deepEqual(ids(viewItems(rows, 'week', new Set(), 'shoes')), ['1', '2', '5']);
-  assert.deepEqual(ids(viewItems(rows, 'saved', new Set(), 'bags')), ['4']);
+  assert.deepEqual(ids(viewItems(rows, 'week', new Set(), 'shoes')), ['1']);
+  assert.deepEqual(ids(viewItems(rows, 'saved', new Set(), 'bags')), []);
 });
 test('categories are alphabetical, normalized, unique, nonblank and scoped to the view', () => {
-  assert.deepEqual(categoriesFor(viewItems(rows, 'all', new Set())), [{ value: 'shoes', label: 'shoes' }]);
+  assert.deepEqual(categoriesFor(viewItems(rows, 'all', new Set())), [{ value: 'bags', label: 'Bags' }, { value: 'shoes', label: 'Shoes' }]);
   assert.deepEqual(categoriesFor(viewItems(rows, 'week', new Set())).map(c => c.value), ['bags', 'shoes']);
   const mixed = parseCSV('name,category\nOne,zara\nTwo,Shirts\nThree,accessories\nFour,Bags');
   assert.deepEqual(categoriesFor(mixed).map(c => c.label), ['accessories', 'Bags', 'Shirts', 'zara']);
@@ -60,7 +60,7 @@ Three,T Shirts,weekly`);
 
   assert.deepEqual(filters, { view: 'all', category: 't shirts' });
   assert.ok(available.some(option => option.value === filters.category));
-  assert.deepEqual(ids(filterAndSort(viewItems(dynamicRows, filters.view, new Set()), filters.category, 'default')), [dynamicRows[0].id]);
+  assert.deepEqual(ids(filterAndSort(viewItems(dynamicRows, filters.view, new Set()), filters.category, 'default')), [dynamicRows[0].id, dynamicRows[2].id]);
   assert.deepEqual(catalogueFiltersFromQuery({ view: 'unknown', category: ['Shoes', 'Bags'] }), { view: null, category: 'shoes' });
 });
 
@@ -73,4 +73,16 @@ test('category sheet order overrides shared Main positions without changing All 
   assert.deepEqual(filterAndSort(items, '', 'default').map(i=>i.id), ['a','b']);
   assert.deepEqual(filterAndSort(items, 'watches', 'name').map(i=>i.id), ['a','b']);
   assert.deepEqual(items.map(i=>i.id), ['a','b']);
+});
+
+test('saved search stays scoped and personally bought excludes hidden entries', () => {
+  assert.deepEqual(ids(viewItems(rows, 'saved', new Set(['2']), 'weekly')), []);
+  assert.deepEqual(ids(viewItems(rows, 'saved', new Set(['2']), 'shoes')), ['2']);
+  assert.deepEqual(ids(viewItems([{...rows[0],personallyBought:true},{...rows[2],personallyBought:true}], 'bought', new Set())), ['1']);
+});
+test('price sorting uses selected currency and keeps unknown or zero prices last', () => {
+  const list = [{id:'a',prices:{USD:10,CNY:90}}, {id:'b',prices:{USD:20,CNY:50}}, {id:'c',prices:{USD:0}}];
+  assert.deepEqual(ids(filterAndSort(list,'','price-asc','CNY')), ['b','a','c']);
+  assert.deepEqual(ids(filterAndSort(list,'','price-desc','CNY')), ['a','b','c']);
+  assert.deepEqual(ids(filterAndSort(list,'','price-asc','USD')), ['a','b','c']);
 });

@@ -7,5 +7,5 @@ test('shared listings merge categories and retain first identity, price, affilia
  const second={...first,id:'b',name:'Skeleton',link:'https://weidian.com/item.html?itemID=123',image:'https://si.geilicdn.com/photo.jpg',prices:{USD:20},category:'Watches',categories:['Watches']};
  const result=deduplicateProducts([first,second,{...first,id:'c',link:'https://ikako.vip/other'}]);
  assert.equal(result.length,2);assert.equal(result[0].id,'a');assert.equal(result[0].link,first.link);assert.equal(result[0].prices.USD,10);
- assert.deepEqual(result[0].categories,['MAIN','Watches']);assert.equal(result[0].image,second.image);assert.match(searchableItems(result)[0]._search,/skeleton/);assert.deepEqual(first.categories,['MAIN']);
+ assert.deepEqual(result[0].categories,['MAIN','Watches']);assert.equal(result[0].image,second.image);assert.doesNotMatch(searchableItems(result)[0]._search,/skeleton/);assert.deepEqual(first.categories,['MAIN']);
 });

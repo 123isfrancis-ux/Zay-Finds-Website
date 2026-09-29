@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, memo } from 'react';
 import Head from 'next/head';
+import { track } from '@vercel/analytics';
+import BuyingGuide from '../components/BuyingGuide';
 import { useRouter } from 'next/router';
 import SocialLinks from '../components/SocialLinks';
 import CategoryFilter from '../components/CategoryFilter';
-import { viewItems, categoriesFor, filterAndSort, catalogueFiltersFromQuery } from '../lib/catalogue';
+import { viewItems, categoriesFor, filterAndSort, catalogueFiltersFromQuery, priceAmount } from '../lib/catalogue';
 
 // Cards are never wider than ~220px, but the sheet links full-size originals
 // (often 1440x1920). The Weidian CDN resizes on request — asking for 400px wide
@@ -20,6 +22,9 @@ function thumb(url) {
 // How many cards to mount at once. Womens alone is ~1,900 rows, which locks up
 // the main thread if rendered in a single commit.
 const PAGE_SIZE = 60;
+
+const CURRENCIES = ['USD', 'CNY'];
+function record(name, data) { try { track(name, data); } catch {} }
 
 const WISHLIST_KEY = 'zay-wishlist-v1';
 const WISHLIST_MAX = 500;
@@ -70,7 +75,7 @@ function Badge({ cat }) {
 const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority }) {
   const [imgError, setImgError] = useState(false);
 
-  const amount = item.prices?.[currency];
+  const amount = priceAmount(item, currency);
   const displayPrice = Number.isFinite(amount)
     ? new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount)
     : 'See item price';
@@ -91,7 +96,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         flexDirection: 'column',
       }}
     >
-      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} />}
+      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => record('product_click', { product: item.id, category: item.category })} />}
       {/* Image */}
       <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', background: 'var(--cream)', overflow: 'hidden' }}>
         {item.image && !imgError ? (
@@ -162,6 +167,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
           </div>
 
         </div>
+        <span className="shop-label">{item.link?.includes('kakobuy.com') ? 'View on Kakobuy' : 'View at seller'} ↗</span>
       </div>
     </div>
   );
@@ -188,7 +194,7 @@ export default function Home() {
   useEffect(() => {
     if (!router.isReady) return;
     const filters = catalogueFiltersFromQuery(router.query);
-    if (filters.view) setView(filters.view);
+    setView(filters.view || 'all');
     setCategory(filters.category);
     setUrlFiltersReady(true);
   }, [router.isReady, router.query.view, router.query.category]);
@@ -200,7 +206,7 @@ export default function Home() {
     else delete query.view;
     if (nextCategory) query.category = nextCategory;
     else delete query.category;
-    void router.replace({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false });
+    void router.push({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false });
   }, [router]);
 
   // Keeps the input responsive while the grid catches up on a big filter pass.
@@ -216,7 +222,7 @@ export default function Home() {
     setItems([]);
     async function load() {
       try {
-        const response = await fetch('/api/catalogue', { signal: controller.signal, cache: 'no-store' });
+        const response = await fetch('/api/catalogue?compact=1', { signal: controller.signal, cache: 'default' });
         if (!response.ok) throw new Error('Catalogue request failed');
         const { items: rows, collections } = await response.json();
         if (!active) return;
@@ -238,10 +244,12 @@ export default function Home() {
 
   useEffect(() => {
     setWishlist(loadWishlist());
+    try { const stored = localStorage.getItem('zay-currency'); if (CURRENCIES.includes(stored)) setCurrency(stored); } catch {}
   }, []);
 
   // Stable identity, so memoized cards don't re-render when the parent does.
   const toggleWishlist = useCallback((id) => {
+    record('save_toggle', { product: id });
     setWishlist(prev => {
       const next = prev.includes(id)
         ? prev.filter(n => n !== id)
@@ -258,7 +266,7 @@ export default function Home() {
   const searching = Boolean(deferredSearch.trim());
   const base = useMemo(() => viewItems(items, activeView, wishlistSet, deferredSearch),
     [items, activeView, wishlistSet, deferredSearch]);
-  const categories = useMemo(() => categoriesFor(base, collectionOrder), [base, collectionOrder]);
+  const categories = useMemo(() => categoriesFor(items.filter(item => item.visibility !== 'hidden'), collectionOrder), [items, collectionOrder]);
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
   const effectiveCategory = !category || !categoryCanBeValidated || categoryExists ? category : '';
@@ -268,18 +276,24 @@ export default function Home() {
       updateFiltersInUrl(activeView, effectiveCategory);
     }
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl]);
-  const simpleSaved = activeView === 'saved' && !searching;
-  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, simpleSaved ? 'default' : sortBy),
-    [base, effectiveCategory, sortBy, simpleSaved]);
+  const simpleSaved = activeView === 'saved';
+  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'default' && !effectiveCategory && !simpleSaved ? 'featured' : sortBy, currency),
+    [base, effectiveCategory, sortBy, simpleSaved, currency]);
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
   const counts = useMemo(() => ({
     week: items.filter(item => item.visibility === 'weekly').length,
-    all: items.filter(item => item.visibility === 'catalog').length,
+    all: items.filter(item => item.visibility !== 'hidden').length,
+    bought: items.filter(item => item.visibility !== 'hidden' && item.personallyBought).length,
     saved: items.filter(item => item.visibility !== 'hidden' && wishlistSet.has(item.id)).length,
   }), [items, wishlistSet]);
+  useEffect(() => {
+    if (loading || error || !searching) return;
+    const timer = setTimeout(() => record(filtered.length ? 'search_results' : 'search_empty', { category: effectiveCategory || 'all', view: activeView, results: filtered.length }), 800);
+    return () => clearTimeout(timer);
+  }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching]);
   function selectCategory(next) {
     setCategory(next);
     updateFiltersInUrl(activeView, next);
@@ -323,31 +337,27 @@ export default function Home() {
               <p>THE FINDS. ALL IN ONE PLACE.</p>
             </div>
             <div className="header-actions">
-              <select className="currency-select control" aria-label="Currency" value={currency} onChange={event => setCurrency(event.target.value)}>
-                {['USD', 'CNY', 'EUR', 'GBP'].map(value => <option key={value}>{value}</option>)}
+              <select className="currency-select control" aria-label="Currency" value={currency} onChange={event => { setCurrency(event.target.value); try { localStorage.setItem('zay-currency', event.target.value); } catch {} }}>
+                {CURRENCIES.map(value => <option key={value}>{value}</option>)}
               </select>
-              <SocialLinks />
+              <SocialLinks record={record} />
             </div>
           </div>
         </header>
 
-        <section className="intro" aria-label="Welcome">
-          <div><p className="eyebrow">THE ZAY COLLECTION</p><h2>Good finds.<br /><em>Great taste.</em></h2><p className="intro-copy">Your next favorite piece is in here. Explore clothing, accessories, room decor, and more.</p></div>
-          <div className="intro-aside"><span className="intro-mark" aria-hidden="true">Z.</span><a href="https://docs.google.com/spreadsheets/d/1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY/edit" target="_blank" rel="noopener noreferrer">Open the original spreadsheet ↗</a></div>
+        <section className="intro compact-intro" aria-label="Welcome">
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally bought.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
-        <nav className="quick-links" aria-label="Buying help and signup">
-          <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▷</span> Watch buying tutorial <span aria-hidden="true">↗</span></a>
-          <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer">Sign up for $400 <span aria-hidden="true">↗</span></a>
-        </nav>
+        <BuyingGuide record={record} />
         <div className="shopping-tools">
           <div className="tools-inner">
             <div className="search-wrap" role="search">
-              <input type="search" aria-label="Search all finds" placeholder="Search all finds…" value={search} onChange={event => setSearch(event.target.value)} />
+              <input type="search" aria-label={simpleSaved ? 'Search saved finds' : 'Search finds'} placeholder={simpleSaved ? 'Search saved finds…' : 'Search this collection…'} value={search} onChange={event => setSearch(event.target.value)} />
               {search && <button className="clear-search" type="button" onClick={() => setSearch('')} aria-label="Clear search">Clear ×</button>}
             </div>
             <nav className="shopping-tabs" aria-label="Shopping views">
-              {[['all', 'All Finds'], ['saved', 'Saved']].map(([value, label]) =>
-                <button type="button" key={value} aria-pressed={!searching && activeView === value} onClick={() => selectView(value)}>
+              {[['all', 'All Finds'], ['bought', 'Personally bought'], ['saved', 'Saved']].map(([value, label]) =>
+                <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
                   {label} <span>({counts[value].toLocaleString()})</span>
                 </button>
               )}
@@ -356,7 +366,7 @@ export default function Home() {
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control">Sort
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
-                  <option value="default">Sheet order</option>
+                  <option value="default">{effectiveCategory ? 'Sheet order' : 'Featured first'}</option>
                   <option value="price-asc">Price: Low → High</option>
                   <option value="price-desc">Price: High → Low</option>
                   <option value="name">Name: A → Z</option>
@@ -367,7 +377,7 @@ export default function Home() {
         </div>
 
         <section className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
-          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>Prices from the sheet · Confirm at seller</p></div>}
+          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>Item prices · Shipping extra · Confirm at checkout</p></div>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
             {Array.from({ length: 8 }, (_, index) => <div className="skeleton-card" key={index} aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-copy"><div /><div /><div /></div></div>)}
@@ -376,13 +386,13 @@ export default function Home() {
             <button className="control" type="button" onClick={() => setAttempt(value => value + 1)}>Retry</button>
           </div> : filtered.length === 0 ? <div className="catalogue-message" role="status">
             <p className="empty-symbol">✦</p>
-            <h2>{simpleSaved ? 'Save your favorite finds' : searching ? 'No matching finds' : 'No finds here yet'}</h2>
+            <h2>{searching ? 'No matching finds' : simpleSaved ? 'Save your favorite finds' : 'No finds here yet'}</h2>
             <p>{simpleSaved ? 'Tap a heart on any product to keep it here.' : 'Try another category or browse all finds.'}</p>
             <button className="control" type="button" onClick={() => {
               setSearch('');
-              if (searching) selectCategory('');
+              if (searching) return;
               else selectView('all');
-            }}>{searching ? 'Clear search and filters' : 'Browse All Finds'}</button>
+            }}>{searching ? 'Clear search' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
             {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} priority={index < 4} />)}
           </div>}
@@ -390,7 +400,7 @@ export default function Home() {
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
         </section>
-        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer">Create a Kakobuy account ↗</a></footer>
+        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get $400 in signup coupons ↗</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>
   );

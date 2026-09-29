@@ -361,3 +361,41 @@ body { font-weight: 400; }
   .quick-links { padding: 0 12px; margin-bottom: 16px; gap: 8px; }
   .quick-links a { flex: 1 1 auto; padding: 10px; font-size: 12px; gap: 5px; }
 }
+
+/* Keep discovery and buying help compact on every screen. */
+.intro.compact-intro { padding: 22px 24px 16px; }
+.intro.compact-intro h2 { font: 400 clamp(25px, 3vw, 38px)/1.15 var(--font-playfair); }
+.intro.compact-intro .intro-copy { margin-top: 6px; max-width: none; }
+.buying-help { max-width: 1248px; margin: 0 auto; padding: 0 24px 12px; }
+.buying-help .quick-links { padding: 0; margin: 0 0 8px; }
+.buying-guide { border-bottom: 1px solid var(--border); font-size: 13px; }
+.buying-guide summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; }
+.buying-guide ol { margin: 8px 0 12px; padding-left: 22px; display: grid; gap: 12px; line-height: 1.6; }
+.buying-guide p { margin: 12px 0; color: var(--muted); line-height: 1.6; }
+.shopping-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 580px; }
+.shop-label { display: block; margin-top: 5px; font-size: 12px; font-weight: 600; color: var(--ink); }
+@media (min-width: 641px) {
+  .category-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; }
+  .category-chip { flex-shrink: 0; }
+  .content-controls { min-width: 0; }
+}
+@media (max-width: 640px) {
+  .intro.compact-intro { padding: 14px 12px 10px; }
+  .intro.compact-intro .intro-copy { font-size: 12px; }
+  .buying-help { padding: 0 12px 4px; }
+  .shopping-tabs button { font-size: 12px; padding: 8px 4px; }
+  .shopping-tabs span { display: none; }
+  .catalogue-summary p:last-child { font-size: 11px; }
+  .shop-label { font-size: 11px; }
+}
+@media (min-width: 900px) {
+  .tools-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(400px, .85fr); gap: 12px; }
+  .shopping-tabs { margin: 0; max-width: none; }
+  .content-controls { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .intro.compact-intro .intro-copy { display: none; }
+  .tools-inner { padding-top: 8px; padding-bottom: 8px; }
+  .content-controls { gap: 4px; }
+  .catalogue-summary { gap: 2px; margin-bottom: 8px; }
+}
