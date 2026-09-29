@@ -4,7 +4,6 @@ export default function CategoryFilter({ categories, value, onChange }) {
   const dialog = useRef(null);
   const trigger = useRef(null);
   const [draft, setDraft] = useState(value);
-  const [more, setMore] = useState(false);
   const label = categories.find(category => category.value === value)?.label || 'All';
   const options = [{ value: '', label: 'All categories' }, ...categories];
   useEffect(() => () => { dialog.current?.close(); }, []);
@@ -12,10 +11,10 @@ export default function CategoryFilter({ categories, value, onChange }) {
   return <>
     <button className="category-trigger control" ref={trigger} type="button" aria-haspopup="dialog" onClick={() => { setDraft(value); dialog.current.showModal(); }}>Category <span>{label} ▾</span></button>
     <div className="category-chips" aria-label="Category">
-      {options.filter((option, index) => more || index < 7 || option.value === value).map(option =>
+      {options.map(option =>
         <button key={option.value} type="button" className="category-chip" aria-pressed={value === option.value} onClick={() => onChange(option.value)}>{option.value ? option.label : 'All'}</button>
       )}
-      {options.length > 7 && <button className="category-chip" type="button" aria-expanded={more} onClick={() => setMore(previous => !previous)}>{more ? 'Less' : 'More'} ▾</button>}
+
     </div>
     <dialog ref={dialog} className="category-sheet" aria-labelledby="category-title" onClick={event => { if (event.target === dialog.current) close(); }} onCancel={() => trigger.current?.focus()}>
       <div className="sheet-content">

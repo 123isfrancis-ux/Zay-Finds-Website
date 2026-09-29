@@ -148,7 +148,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         </div>
 
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginTop: 'auto' }}>
-          <div>
+          <div className="product-prices">
             <span style={{ fontSize: '17px', fontFamily: 'var(--font-playfair), serif', fontWeight: 500, color: 'var(--ink)' }}>
               {displayPrice}
             </span>
@@ -351,8 +351,8 @@ export default function Home() {
               <label className="sort-control control">Sort
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
                   <option value="default">Sheet order</option>
-                  <option value="price-asc">USD: Low → High</option>
-                  <option value="price-desc">USD: High → Low</option>
+                  <option value="price-asc">Price: Low → High</option>
+                  <option value="price-desc">Price: High → Low</option>
                   <option value="name">Name: A → Z</option>
                 </select>
               </label>

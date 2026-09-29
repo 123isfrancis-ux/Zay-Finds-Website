@@ -290,3 +290,49 @@ body { font-weight: 400; }
   .catalogue-summary { flex-direction: column; gap: 6px; font-size: 10px; }
   .brand h1 { font-size: 26px; }
 }
+
+/* Mobile catalogue: keep these after the brand rules so the grid cannot be overridden. */
+.category-chip { min-height: 44px; }
+.product-prices { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; }
+.product-prices > span + span { margin-left: 0 !important; }
+@media (hover: none) {
+  .card:hover, .card:hover .card-img { transform: none; }
+}
+@media (max-width: 640px) {
+  .site-header { position: relative; padding-inline: max(12px, env(safe-area-inset-left)); }
+  .header-inner { min-height: 60px; }
+  .currency-select { min-height: 44px; font-size: 16px; width: 76px; }
+  .social-links a { width: 44px; }
+  .intro { padding: 20px 16px; display: block; }
+  .eyebrow { font-size: 10px; margin-bottom: 8px; }
+  .intro h2 { font-size: 36px; line-height: 1.08; }
+  .intro h2 br { display: none; }
+  .intro h2 em::before { content: ' '; }
+  .intro-copy { max-width: 100%; font-size: 14px; line-height: 1.5; margin-top: 10px; }
+  .intro-aside { display: none; }
+  .shopping-tools { padding: 0 12px; }
+  .shopping-tabs { max-width: none; margin-top: 8px; }
+  .shopping-tabs span { display: inline; margin: 0; }
+  .shopping-tabs button { font-size: 14px; }
+  .content-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+  .category-chips { display: flex; flex: 0 0 100%; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding: 4px 2px 10px; scrollbar-width: thin; overscroll-behavior-x: contain; }
+  .category-chip { flex-shrink: 0; font-size: 12px; white-space: nowrap; }
+  .category-trigger { display: flex; flex: 1; order: 1; font-size: 13px; }
+  .sort-control { flex: 1; order: 2; width: auto; font-size: 13px; }
+  .sort-control select { font-size: 16px; min-height: 30px; }
+  .sheet-options .category-chip { white-space: normal; }
+  .catalogue { padding: 12px 12px max(32px, env(safe-area-inset-bottom)); }
+  .catalogue-summary { font-family: var(--font-dm-sans); font-size: 12px; line-height: 1.5; margin-bottom: 12px; }
+  .catalogue-summary p:first-child { color: var(--ink); font-size: 14px; font-weight: 600; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .card-copy { padding: 10px !important; gap: 8px !important; }
+  .product-name { font-size: 13px !important; line-height: 1.45 !important; min-height: 38px; }
+  .card-copy .badge { font-size: 10px; letter-spacing: 0; padding: 3px 6px; }
+  .wishlist-button { width: 44px !important; height: 44px !important; }
+  .product-prices > span:first-child { font: 600 17px var(--font-dm-sans) !important; }
+  .product-prices > span + span { font-size: 12px !important; }
+  .photo-placeholder small { font: 11px var(--font-dm-sans); text-align: center; padding: 0 8px; }
+  .photo-placeholder > span { font-size: 48px; }
+  .load-more button { width: 100%; min-height: 48px; font-size: 16px; }
+  .site-footer a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+}
