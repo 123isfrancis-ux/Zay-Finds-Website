@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29T21:35:43.530Z",
+  "checkedAt": "2026-09-29T21:40:37.873Z",
   "method": "Verified rendered product/source matching; adaptive first-visit checks; one bounded retry; CDN image validation",
   "verifiedBatch": [
     "7775394176",
@@ -1336,11 +1336,58 @@
     "7638010110",
     "7637927530",
     "7634251399",
-    "7634537775"
+    "7634537775",
+    "7626120105",
+    "7629987244",
+    "7629066354",
+    "7629050658",
+    "7626048985",
+    "7627052807",
+    "7629026988",
+    "7629119872",
+    "7629013322",
+    "7626068707",
+    "7626052503",
+    "7626988913",
+    "7630089658",
+    "7630077854",
+    "7629997146",
+    "7627078219",
+    "7629975518",
+    "7629127806",
+    "7626039207",
+    "7626035325",
+    "7626104205",
+    "7626137905",
+    "7626112125",
+    "7627072519",
+    "7629025018",
+    "7629096086",
+    "7629052256",
+    "7626100215",
+    "7629040756",
+    "7626149811",
+    "7629092166",
+    "7626122091",
+    "7629088142",
+    "7626072677",
+    "7626080151",
+    "7626035333",
+    "7629036854",
+    "7626155647",
+    "7629078232",
+    "7626139927",
+    "7626157653",
+    "7630040818",
+    "7627074355",
+    "7626076669",
+    "7629070310",
+    "7630010988",
+    "7630073976"
   ],
   "productCards": 3387,
-  "cardsWithImages": 1781,
-  "cardsMissingImages": 1606,
+  "cardsWithImages": 1830,
+  "cardsMissingImages": 1557,
   "watchCategory": {
     "total": 51,
     "withImages": 51,
@@ -1476,8 +1523,8 @@
     },
     "HOODIES": {
       "total": 1840,
-      "withImages": 613,
-      "missingCount": 1227
+      "withImages": 660,
+      "missingCount": 1180
     },
     "ROOM DECOR": {
       "total": 141,
@@ -1520,8 +1567,8 @@
     },
     "MAIN": {
       "total": 2456,
-      "withImages": 1224,
-      "missingCount": 1232
+      "withImages": 1271,
+      "missingCount": 1185
     },
     "OLD MONEY": {
       "total": 100,
@@ -1549,8 +1596,8 @@
     },
     "ALL ITEMS FROM TIKTOK": {
       "total": 426,
-      "withImages": 422,
-      "missingCount": 4,
+      "withImages": 424,
+      "missingCount": 2,
       "missing": [
         {
           "id": "7634975683",
@@ -1561,16 +1608,6 @@
           "id": "7637956082",
           "name": "Dingdang handbag",
           "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637956082&affcode=ecdru"
-        },
-        {
-          "id": "7637787574",
-          "name": "Distressed casual shoes",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637787574&affcode=ecdru"
-        },
-        {
-          "id": "7637904226",
-          "name": "Casual sweatpants",
-          "link": "https://kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7637904226&affcode=ecdru"
         }
       ]
     },
