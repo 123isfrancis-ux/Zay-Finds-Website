@@ -6,7 +6,7 @@ test('catalogue serves imported product data and source date without credentials
  const res=response(); await handler({method:'GET'},res);
  assert.equal(res.code,200); assert.equal(res.data.collections.length,17);
  assert.ok(res.data.items.length>3000); assert.ok(res.data.importedAt);
- assert.ok(res.data.items.every(i=>i._search && i._categories.length));
+ assert.ok(res.data.items.every(i=>i._search && Array.isArray(i._categories)));
  assert.equal(res.data.items[0].prices.CNY,160);
  assert.match(res.data.items[0].link,/affcode=ecdru/);
 });
@@ -19,4 +19,19 @@ test('personally bought labels follow exact spreadsheet listing matches and pres
  for(const item of res.data.items) assert.equal(item.personallyBought,marked.has(weidianId(item.link)||item.link));
  assert.equal(res.data.items.find(i=>weidianId(i.link)==='7626350689').visibility,'hidden');
  assert.equal(res.data.items.filter(i=>i.personallyBought && i.visibility!=='hidden').length,29);
+});
+
+test('Hoodies cleanup changes only that membership and preserves every product and other category',async()=>{
+ const res=response();await handler({method:'GET'},res);
+ const {deduplicateProducts}=require('../lib/deduplicate-products');
+ const original=deduplicateProducts(require('../data/catalogue.json').items);
+ const allowed=new Set(require('../data/hoodie-products.json'));
+ assert.equal(res.data.items.length,original.length);
+ for(const before of original){
+  const after=res.data.items.find(i=>i.id===before.id);
+  assert.deepEqual(after.categories.filter(c=>c!=='HOODIES'),before.categories.filter(c=>c!=='HOODIES'));
+  assert.equal(after.categories.includes('HOODIES'),before.categories.includes('HOODIES')&&allowed.has(before.id));
+  assert.equal(after.visibility,before.visibility);
+  assert.equal(after.link,before.link);
+ }
 });
