@@ -105,7 +105,8 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
             onError={() => setImgError(true)}
             style={{
               position: 'absolute', inset: 0, width: '100%', height: '100%',
-              objectFit: 'cover',
+              objectFit: item.image?.startsWith('/owner-photos/') ? 'contain' : 'cover',
+              background: item.image?.startsWith('/owner-photos/') ? '#fff' : undefined,
             }}
           />
         ) : (
@@ -334,6 +335,10 @@ export default function Home() {
           <div><p className="eyebrow">THE ZAY COLLECTION</p><h2>Good finds.<br /><em>Great taste.</em></h2><p className="intro-copy">Your next favorite piece is in here. Explore clothing, accessories, room decor, and more.</p></div>
           <div className="intro-aside"><span className="intro-mark" aria-hidden="true">Z.</span><a href="https://docs.google.com/spreadsheets/d/1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY/edit" target="_blank" rel="noopener noreferrer">Open the original spreadsheet ↗</a></div>
         </section>
+        <nav className="quick-links" aria-label="Buying help and signup">
+          <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▷</span> Watch buying tutorial <span aria-hidden="true">↗</span></a>
+          <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ecdru" target="_blank" rel="noopener noreferrer">Sign up for $400 <span aria-hidden="true">↗</span></a>
+        </nav>
         <div className="shopping-tools">
           <div className="tools-inner">
             <div className="search-wrap" role="search">

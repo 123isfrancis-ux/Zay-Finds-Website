@@ -352,3 +352,12 @@ body { font-weight: 400; }
 @media (prefers-color-scheme: dark) {
   .personally-bought { background: #26392b; color: #c0d8ba; border-color: #45624b; }
 }
+
+.quick-links { max-width: 1200px; margin: 0 auto 20px; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+.quick-links a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; color: var(--ink); background: var(--surface); text-decoration: none; font-size: 12px; font-weight: 500; }
+.quick-links .signup-link { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.quick-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 640px) {
+  .quick-links { padding: 0 12px; margin-bottom: 16px; gap: 8px; }
+  .quick-links a { flex: 1 1 auto; padding: 10px; font-size: 12px; gap: 5px; }
+}
