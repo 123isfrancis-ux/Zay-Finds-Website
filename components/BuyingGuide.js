@@ -1,7 +1,7 @@
 export default function BuyingGuide({ record }) {
   return <div className="buying-help">
     <div className="quick-links">
-      <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'top' })}>$400 signup coupons ↗</a>
+      <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'top' })}>$400 coupon bundle ↗</a>
       <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer" onClick={() => record('tutorial_click', {})}>Watch tutorial ↗</a>
     </div>
     <details className="buying-guide" onToggle={event => { if (event.currentTarget.open) record('buying_guide_open', {}); }}>
@@ -12,7 +12,7 @@ export default function BuyingGuide({ record }) {
         <li><strong>Order to the warehouse.</strong> Pay for the items and applicable domestic shipping. Kakobuy buys them from the seller and receives them in China.</li>
         <li><strong>Check, then ship.</strong> Review the warehouse photos before arranging delivery. Select your items and shipping method, then pay international shipping separately.</li>
       </ol>
-      <p>The $400 offer is a signup coupon package, not cash. Check coupon eligibility, minimum spend and expiry in your Kakobuy account. Final prices, shipping options and any taxes depend on your order and destination.</p>
+      <p>The signup bundle contains multiple coupons with a combined value of $400. Check coupon eligibility, minimum spend and expiry in your Kakobuy account. Final prices, shipping options and any taxes depend on your order and destination.</p>
       <p>A few items link directly to other sellers; follow their checkout process.</p>
     </details>
   </div>;

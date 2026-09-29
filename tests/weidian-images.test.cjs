@@ -4,8 +4,8 @@ const {weidianId,extractImage,applyImages}=require('../lib/weidian-images');
 const {categoriesFor}=require('../lib/catalogue');
 test('collection order follows sheet tabs even when products appear in a different order',()=>{
  const items=[{category:'HOODIES',categories:['HOODIES','MAIN']},{category:'ZARA',categories:['ZARA']}];
- assert.deepEqual(categoriesFor(items,['MAIN','SUPER CLONE WATCHES','ZARA','HOODIES']).map(c=>c.label),['MAIN','ZARA','HOODIES']);
- assert.deepEqual(categoriesFor(items.slice(0,1),['MAIN','ZARA','HOODIES']).map(c=>c.label),['MAIN','HOODIES']);
+ assert.deepEqual(categoriesFor(items,['MAIN','SUPER CLONE WATCHES','ZARA','HOODIES']).map(c=>c.label),['ZARA','HOODIES']);
+ assert.deepEqual(categoriesFor(items.slice(0,1),['MAIN','ZARA','HOODIES']).map(c=>c.label),['HOODIES']);
 });
 test('only extracts exact Weidian IDs, including embedded Kakobuy destinations',()=>{
  assert.equal(weidianId('https://kakobuy.com/item/details?url='+encodeURIComponent('https://weidian.com/item.html?itemID=123')),'123');

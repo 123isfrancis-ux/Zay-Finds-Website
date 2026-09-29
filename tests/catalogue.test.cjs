@@ -86,3 +86,21 @@ test('price sorting uses selected currency and keeps unknown or zero prices last
   assert.deepEqual(ids(filterAndSort(list,'','price-desc','CNY')), ['a','b','c']);
   assert.deepEqual(ids(filterAndSort(list,'','price-asc','USD')), ['a','b','c']);
 });
+
+test('CAD estimates convert USD consistently for display and sorting', () => {
+ const {priceAmount}=require('../lib/catalogue');
+ assert.equal(priceAmount({prices:{USD:10}}, 'CAD', 1.4188),14.19);
+ assert.ok(Number.isNaN(priceAmount({prices:{USD:0}}, 'CAD', 1.4188)));
+ assert.deepEqual(ids(filterAndSort([{id:'b',prices:{USD:20}},{id:'a',prices:{USD:10}}],'','price-asc','CAD',1.4188)),['a','b']);
+});
+test('MAIN tab is hidden while its products remain in All Finds',()=>{
+ const items=parseCSV('id,name,category\n1,Shirt,MAIN\n2,Hoodie,Hoodies');
+ assert.deepEqual(categoriesFor(items),[{value:'hoodies',label:'Hoodies'}]);
+ assert.equal(viewItems(items,'all',new Set()).length,2);
+});
+test('exchange rate parsing rejects bad upstream values',()=>{
+ const {parseRate}=require('../lib/exchange-rate');
+ assert.equal(parseRate({observations:[{d:'2026-09-29',FXUSDCAD:{v:'1.4188'}}]}).usdToCad,1.4188);
+ assert.throws(()=>parseRate({observations:[]}));
+ assert.throws(()=>parseRate({observations:[{d:'2026-09-29',FXUSDCAD:{v:'0'}}]}));
+});

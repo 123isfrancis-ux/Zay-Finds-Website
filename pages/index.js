@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, memo } from 'react';
 import Head from 'next/head';
+import initialExchangeRate from '../data/exchange-rate.json';
 import { track } from '@vercel/analytics';
 import BuyingGuide from '../components/BuyingGuide';
 import { useRouter } from 'next/router';
@@ -23,7 +24,7 @@ function thumb(url) {
 // the main thread if rendered in a single commit.
 const PAGE_SIZE = 60;
 
-const CURRENCIES = ['USD', 'CNY'];
+const CURRENCIES = ['USD', 'CAD'];
 function record(name, data) { try { track(name, data); } catch {} }
 
 const WISHLIST_KEY = 'zay-wishlist-v1';
@@ -72,15 +73,15 @@ function Badge({ cat }) {
   );
 }
 
-const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority }) {
+const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad }) {
   const [imgError, setImgError] = useState(false);
 
-  const amount = priceAmount(item, currency);
+  const amount = priceAmount(item, currency, usdToCad);
   const displayPrice = Number.isFinite(amount)
-    ? new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount)
+    ? (currency === 'CAD' ? '≈ ' : '') + new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount)
     : 'See item price';
-  const subPrice = currency !== 'CNY' && Number.isFinite(item.prices?.CNY)
-    ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CNY' }).format(item.prices.CNY) + ' CNY'
+  const subPrice = currency === 'CAD' && Number.isFinite(item.prices?.USD)
+    ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(item.prices.USD) + ' USD'
     : null;
 
   return (
@@ -151,7 +152,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
             {item.name}
           </p>
           {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally bought</span>}
-          <Badge cat={item.category} />
+          {item.category?.toLowerCase() !== 'main' && <Badge cat={item.category} />}
         </div>
 
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginTop: 'auto' }}>
@@ -183,6 +184,7 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
   const [currency, setCurrency] = useState('USD');
+  const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
   const [view, setView] = useState(null);
   const [sortBy, setSortBy] = useState('default');
@@ -247,6 +249,14 @@ export default function Home() {
     try { const stored = localStorage.getItem('zay-currency'); if (CURRENCIES.includes(stored)) setCurrency(stored); } catch {}
   }, []);
 
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch('/api/exchange-rate', { signal: controller.signal }).then(response => response.ok ? response.json() : null).then(rate => {
+      if (rate && Number.isFinite(rate.usdToCad) && rate.usdToCad > 0 && /^\d{4}-\d{2}-\d{2}$/.test(rate.date)) setExchangeRate(rate);
+    }).catch(() => {});
+    return () => controller.abort();
+  }, []);
+
   // Stable identity, so memoized cards don't re-render when the parent does.
   const toggleWishlist = useCallback((id) => {
     record('save_toggle', { product: id });
@@ -277,8 +287,8 @@ export default function Home() {
     }
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl]);
   const simpleSaved = activeView === 'saved';
-  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'default' && !effectiveCategory && !simpleSaved ? 'featured' : sortBy, currency),
-    [base, effectiveCategory, sortBy, simpleSaved, currency]);
+  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'default' && !effectiveCategory && !simpleSaved ? 'featured' : sortBy, currency, exchangeRate.usdToCad),
+    [base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad]);
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
@@ -291,7 +301,7 @@ export default function Home() {
   }), [items, wishlistSet]);
   useEffect(() => {
     if (loading || error || !searching) return;
-    const timer = setTimeout(() => record(filtered.length ? 'search_results' : 'search_empty', { category: effectiveCategory || 'all', view: activeView, results: filtered.length }), 800);
+    const timer = setTimeout(() => record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length }), 800);
     return () => clearTimeout(timer);
   }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching]);
   function selectCategory(next) {
@@ -377,7 +387,7 @@ export default function Home() {
         </div>
 
         <section className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
-          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>Item prices · Shipping extra · Confirm at checkout</p></div>}
+          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
             {Array.from({ length: 8 }, (_, index) => <div className="skeleton-card" key={index} aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-copy"><div /><div /><div /></div></div>)}
@@ -394,13 +404,13 @@ export default function Home() {
               else selectView('all');
             }}>{searching ? 'Clear search' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
-            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} priority={index < 4} />)}
+            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} priority={index < 4} />)}
           </div>}
           {!loading && !error && filtered.length > visibleCount && <div className="load-more">
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
         </section>
-        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get $400 in signup coupons ↗</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
+        <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get your $400 coupon bundle ↗</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>
   );

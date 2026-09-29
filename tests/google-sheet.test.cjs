@@ -12,7 +12,7 @@ test('maps both layouts, preserves exact prices/affiliate links, skips banners a
  assert.equal(data.items.length,2);assert.equal(data.items[0].prices.CNY,160);assert.equal(data.items[1].prices.USD,238.33);
  assert.deepEqual(data.items[0].categories,['MAIN','HOODIES']);assert.equal(data.items[0].source.row,2);
  assert.equal(data.items[0].link,link.hyperlink);
- const items=searchableItems(data.items);assert.equal(categoriesFor(items).length,3);assert.equal(filterAndSort(items,'hoodies','default').length,1);
+ const items=searchableItems(data.items);assert.equal(categoriesFor(items).length,2);assert.equal(filterAndSort(items,'hoodies','default').length,1);
 });
 test('extracts image formulas and rejects unsafe hyperlinks; IDs survive inserted headings',()=>{
  const row=[cell('Top'),{userEnteredValue:{formulaValue:'=IMAGE("https://example.com/top.jpg")'}},{userEnteredValue:{formulaValue:'=HYPERLINK("https://example.com/top";"LINK")'}},money(50),money(7)];
