@@ -144,6 +144,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
           <p className="product-name" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--ink)', lineHeight: 1.4, flex: 1 }}>
             {item.name}
           </p>
+          {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally bought</span>}
           <Badge cat={item.category} />
         </div>
 

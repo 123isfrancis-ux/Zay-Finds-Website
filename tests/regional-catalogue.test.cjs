@@ -11,3 +11,12 @@ test('catalogue serves imported product data and source date without credentials
  assert.match(res.data.items[0].link,/affcode=ecdru/);
 });
 test('catalogue rejects writes',async()=>{const res=response();await handler({method:'POST'},res);assert.equal(res.code,405);assert.equal(res.headers.Allow,'GET');});
+
+test('personally bought labels follow exact spreadsheet listing matches and preserve hidden items', async()=>{
+ const res=response(); await handler({method:'GET'},res);
+ const {weidianId}=require('../lib/weidian-images');
+ const marked=new Set(require('../data/personally-bought.json'));
+ for(const item of res.data.items) assert.equal(item.personallyBought,marked.has(weidianId(item.link)||item.link));
+ assert.equal(res.data.items.find(i=>weidianId(i.link)==='7626350689').visibility,'hidden');
+ assert.equal(res.data.items.filter(i=>i.personallyBought && i.visibility!=='hidden').length,29);
+});

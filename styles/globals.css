@@ -336,3 +336,19 @@ body { font-weight: 400; }
   .load-more button { width: 100%; min-height: 48px; font-size: 16px; }
   .site-footer a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
 }
+
+.personally-bought {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  padding: 4px 7px;
+  border: 1px solid #b9cbb7;
+  border-radius: 5px;
+  background: #edf3e9;
+  color: #36523c;
+  font: 500 11px/1.3 var(--font-dm-sans);
+}
+@media (prefers-color-scheme: dark) {
+  .personally-bought { background: #26392b; color: #c0d8ba; border-color: #45624b; }
+}
