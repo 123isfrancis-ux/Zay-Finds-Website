@@ -151,7 +151,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
           <p className="product-name" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--ink)', lineHeight: 1.4, flex: 1 }}>
             {item.name}
           </p>
-          {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally bought</span>}
+          {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally Bought</span>}
           {item.category?.toLowerCase() !== 'main' && <Badge cat={item.category} />}
         </div>
 
@@ -356,7 +356,7 @@ export default function Home() {
         </header>
 
         <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally bought.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
         <BuyingGuide record={record} />
         <div className="shopping-tools">
@@ -366,7 +366,7 @@ export default function Home() {
               {search && <button className="clear-search" type="button" onClick={() => setSearch('')} aria-label="Clear search">Clear ×</button>}
             </div>
             <nav className="shopping-tabs" aria-label="Shopping views">
-              {[['all', 'All Finds'], ['bought', 'Personally bought'], ['saved', 'Saved']].map(([value, label]) =>
+              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
                   {label} <span>({counts[value].toLocaleString()})</span>
                 </button>
