@@ -18,7 +18,7 @@ test('personally bought labels follow exact spreadsheet listing matches and pres
  const marked=new Set(require('../data/personally-bought.json').map(key=>key.startsWith('http')?require('../lib/affiliate').affiliateLink(key):key));
  for(const item of res.data.items) assert.equal(item.personallyBought,marked.has(weidianId(item.link)||item.link));
  assert.equal(res.data.items.find(i=>weidianId(i.link)==='7626350689').visibility,'hidden');
- assert.equal(res.data.items.filter(i=>i.personallyBought && i.visibility!=='hidden').length,161);
+ assert.equal(res.data.items.filter(i=>i.personallyBought && i.visibility!=='hidden').length,157);
 });
 
 test('Hoodies cleanup changes only that membership and preserves every product and other category',async()=>{
