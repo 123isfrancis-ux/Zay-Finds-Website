@@ -64,4 +64,10 @@ The original source folder in Downloads is unchanged. Next.js is updated from 14
 
 ## Analytics
 
-Vercel Web Analytics is mounted once in `pages/_app.js` using `@vercel/analytics/next`. Enable Web Analytics in the Vercel project dashboard and deploy this commit to collect page views. No custom events or additional analytics provider are configured.
+Vercel Web Analytics is mounted once in `pages/_app.js` using `@vercel/analytics/next`. The existing custom events are `product_click` (product ID and category), `signup_click` (placement), `tutorial_click`, `save_toggle` (product ID), and `search_results` / `search_empty` (view/category scope and result count). Search text is not sent. No additional analytics provider is configured.
+
+These events measure interactions on Zay Finds. An outgoing product or signup click does not establish a completed purchase or registration on Kakobuy. Purchase attribution and commission must be reconciled with the agent's affiliate reports; this website does not receive checkout confirmations.
+
+Web Analytics must be enabled for the current Vercel project. Custom-event reporting requires an eligible Pro or Enterprise plan according to [Vercel's custom-event documentation](https://vercel.com/docs/analytics/custom-events). Verify collection in the project's Events panel before treating the handlers as measured conversions. The handlers keep navigation working if tracking is unavailable. Do not change the billing plan or add another tracking provider as part of routine catalogue maintenance.
+
+Search collapses line breaks and repeated whitespace in the search index and query, while preserving original product names, links, IDs, prices and collection memberships.

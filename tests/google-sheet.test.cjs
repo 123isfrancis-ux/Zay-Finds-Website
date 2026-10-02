@@ -20,3 +20,16 @@ test('extracts image formulas and rejects unsafe hyperlinks; IDs survive inserte
  const next=importSheet({sheets:[sheet('MAIN',1,[[cell('Heading')],row,[cell('Bad'),{hyperlink:'javascript:alert(1)'},money(1),money(2)]])]});
  assert.equal(first.items[0].image,'https://example.com/top.jpg');assert.equal(first.items[0].id,next.items[0].id);assert.equal(next.items.length,1);
 });
+
+// Real sheet names contain line breaks and repeated spaces. Search should treat
+// them like ordinary spaces without rewriting product identities or source data.
+test('normal spaced searches match multiline sheet names and preserve source fields',()=>{
+ const {viewItems}=require('../lib/catalogue');
+ const original={id:'wallet',name:'Carhartt\n  Wallet',link:'https://example.com/item?affcode=ecdru',prices:{USD:4},category:'ACCESSORIES',categories:['ACCESSORIES'],visibility:'catalog'};
+ const items=searchableItems([original]);
+ assert.equal(viewItems(items,'all',new Set(),'Carhartt Wallet').length,1);
+ assert.equal(viewItems(items,'all',new Set(),'  CARHARTT\n  Wallet  ').length,1);
+ assert.equal(items[0].name,original.name);assert.equal(items[0].link,original.link);
+ assert.equal(items[0].id,original.id);assert.deepEqual(items[0].prices,original.prices);
+ assert.deepEqual(original,{id:'wallet',name:'Carhartt\n  Wallet',link:'https://example.com/item?affcode=ecdru',prices:{USD:4},category:'ACCESSORIES',categories:['ACCESSORIES'],visibility:'catalog'});
+});
