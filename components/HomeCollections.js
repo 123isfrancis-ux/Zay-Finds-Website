@@ -13,7 +13,7 @@ function Shelf({section,renderCard,audience}) {
     const observer=new ResizeObserver(measure);observer.observe(rail.current);
     return ()=>observer.disconnect();
   },[section.items]);
-  const href=section.key==='explore'?'#catalogue':`?audience=${audience}&view=${section.key==='bought'?'bought':'all'}${section.key==='bought'?'':`&collection=${section.key}`}#catalogue`;
+  const href=section.key==='explore'?`/shop?audience=${audience}`:`/shop?audience=${audience}&view=${section.key==='bought'?'bought':'all'}${section.key==='bought'?'':`&collection=${section.key}`}#catalogue`;
   function move(direction) {
     const node=rail.current;
     node.scrollBy({left:direction*node.clientWidth*.8,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
@@ -29,7 +29,6 @@ function Shelf({section,renderCard,audience}) {
 export default function HomeCollections({sections,renderCard,audience}) {
   if(!sections.length)return null;
   return <div className="home-collections" aria-label="Featured collections">
-    <div className="discovery-heading"><div><p className="discovery-eyebrow">THE EDIT</p><h2>A few good places to start.</h2></div><a className="control" href="#catalogue">Browse all finds ↓</a></div>
     {sections.map(section=><Shelf key={`${audience}:${section.key}`} section={section} renderCard={renderCard} audience={audience}/>)}
   </div>;
 }
