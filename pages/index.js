@@ -11,6 +11,8 @@ import { audienceFor, normalizeAudience, audienceFromQuery } from '../lib/audien
 import initialExchangeRate from '../data/exchange-rate.json';
 import { track } from '@vercel/analytics';
 import BuyingGuide from '../components/BuyingGuide';
+import MobileBuyingHelp from '../components/MobileBuyingHelp';
+import MobileFilters from '../components/MobileFilters';
 import { useRouter } from 'next/router';
 import SocialLinks from '../components/SocialLinks';
 import CategoryFilter from '../components/CategoryFilter';
@@ -431,13 +433,14 @@ export default function Home() {
         <section className="intro compact-intro" aria-label="Welcome">
           <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
-        <BuyingGuide record={record} />
+        <div className="desktop-buying-help"><BuyingGuide record={record} /></div>
         <div className="shopping-tools">
           <div className="tools-inner">
             <div className="search-wrap" role="search">
               <input type="search" aria-label={simpleSaved ? 'Search saved finds' : 'Search finds'} placeholder={simpleSaved ? 'Search saved finds…' : 'Search this collection…'} value={search} onChange={event => setSearch(event.target.value)} />
               {search && <button className="clear-search" type="button" onClick={() => setSearch('')} aria-label="Clear search">Clear ×</button>}
             </div>
+            {!simpleSaved && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
               {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
@@ -460,6 +463,7 @@ export default function Home() {
           </div>
         </div>
 
+        <MobileBuyingHelp record={record}/>
         {showHome && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={false}/>}/>}
         <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>

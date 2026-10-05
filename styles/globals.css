@@ -505,3 +505,25 @@ body { font-weight: 400; }
 .fit-heading-aside a { display:inline-flex; min-height:44px; align-items:center; color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
 .fit-view-saved { display:inline-flex; align-items:center; min-height:44px; font-size:12px; text-decoration:underline; text-underline-offset:4px; }
 @media(max-width:760px) { .fit-heading-aside { max-width:125px; font-size:12px; } }
+
+.mobile-filters, .mobile-buying-help { display:none; }
+@media(max-width:640px) {
+  .desktop-buying-help, .shopping-tools .content-controls { display:none; }
+  .tools-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; }
+  .search-wrap { grid-column:1; min-width:0; }
+  .search-wrap input { min-width:0; width:100%; padding-right:52px; }
+  .mobile-filters { display:block; grid-column:2; }
+  .mobile-filter-trigger { height:100%; min-height:46px; font-size:12px; white-space:nowrap; padding:8px 10px; }
+  .filter-active { margin-left:5px; }
+  .shopping-tabs { grid-column:1 / -1; margin:0; }
+  .tools-inner:not(:has(.mobile-filters)) .search-wrap { grid-column:1 / -1; }
+  .mobile-buying-help { display:block; margin:0 12px 8px; border-bottom:1px solid var(--border); }
+  .mobile-buying-help summary { min-height:44px; display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; cursor:pointer; list-style:none; }
+  .mobile-buying-help summary::-webkit-details-marker { display:none; }
+  .mobile-help-content { padding:8px 0 16px; font-size:13px; line-height:1.6; }
+  .mobile-help-content ol { padding-left:20px; list-style:decimal; margin:14px 0; }
+  .mobile-help-content li { margin:8px 0; }
+  .mobile-help-content p { margin:10px 0; }
+  .mobile-filter-field { display:flex; flex-direction:column; gap:8px; margin:20px 0; font-size:14px; }
+  .mobile-filter-field select { min-height:48px; max-width:100%; padding:10px; border:1px solid var(--border); border-radius:8px; background:var(--surface); color:var(--ink); font-size:16px; }
+}
