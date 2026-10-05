@@ -216,11 +216,11 @@ export default function Home() {
     const nextAudience = audienceFromQuery(router.query.audience, initialAudience.current);
     setAudience(nextAudience);
     try { localStorage.setItem('zay-audience', nextAudience); } catch {}
-    setView(filters.view || 'all');
+    setView(router.query.fit ? 'fits' : filters.view || 'all');
     setCategory(filters.category);
     setCollection(!filters.view || filters.view === 'all' ? normalizeCollection(router.query.collection) : '');
     setUrlFiltersReady(true);
-  }, [router.isReady, router.query.view, router.query.category, router.query.audience, router.query.collection]);
+  }, [router.isReady, router.query.view, router.query.category, router.query.audience, router.query.collection, router.query.fit]);
 
   const updateFiltersInUrl = useCallback((nextView, nextCategory, nextAudience = audience, nextCollection = '') => {
     if (!router.isReady) return;
@@ -317,6 +317,7 @@ export default function Home() {
     }
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl, audience, collection]);
   const simpleSaved = activeView === 'saved';
+  const fitView = activeView === 'fits';
   const filtered = useMemo(() => {
     const sheetOrder = new Map(items.map((item,index)=>[item.id,index]));
     const orderedBase = collection && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
@@ -335,13 +336,13 @@ export default function Home() {
   const selectedFit = looks.find(look => look.id === requestedFit) || looks[0];
   const fitLinkScrolled = useRef(false);
   useEffect(() => {
-    if (showHome && requestedFit && !fitLinkScrolled.current && window.location.hash === '#shop-the-fit') {
+    if (fitView && !loading && requestedFit && !fitLinkScrolled.current && window.location.hash === '#shop-the-fit') {
       fitLinkScrolled.current = true;
       requestAnimationFrame(()=>document.getElementById('shop-the-fit')?.scrollIntoView({block:'start'}));
     }
-  }, [showHome, requestedFit]);
+  }, [fitView, loading, requestedFit]);
   const fitItems = useMemo(() => selectedFit?.pieces.map(piece=>piece.item) || [], [selectedFit]);
-  const trackedItems = useMemo(() => showHome ? [...visible, ...sections.flatMap(section => section.items), ...fitItems] : visible, [showHome, visible, sections, fitItems]);
+  const trackedItems = useMemo(() => fitView ? fitItems : showHome ? [...visible, ...sections.flatMap(section => section.items)] : visible, [fitView, showHome, visible, sections, fitItems]);
   const onDemand = useDemandTracking(demand.collect, trackedItems);
   function saveWholeLook(ids) {
     const result = saveLook(wishlist, ids, WISHLIST_MAX);
@@ -375,9 +376,10 @@ export default function Home() {
     updateFiltersInUrl(activeView, '', next, collection);
   }
   function selectCategory(next) {
+    if (fitView) setView('all');
     setCollection('');
     setCategory(next);
-    updateFiltersInUrl(activeView, next);
+    updateFiltersInUrl(fitView ? 'all' : activeView, next);
   }
   function selectView(next) {
     setCollection('');
@@ -431,24 +433,24 @@ export default function Home() {
         </header>
 
         <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Shop the Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
         <div className="desktop-buying-help"><BuyingGuide record={record} /></div>
         <div className="shopping-tools">
           <div className="tools-inner">
-            <div className="search-wrap" role="search">
+            {!fitView && <div className="search-wrap" role="search">
               <input type="search" aria-label={simpleSaved ? 'Search saved finds' : 'Search finds'} placeholder={simpleSaved ? 'Search saved finds…' : 'Search this collection…'} value={search} onChange={event => setSearch(event.target.value)} />
               {search && <button className="clear-search" type="button" onClick={() => setSearch('')} aria-label="Clear search">Clear ×</button>}
-            </div>
-            {!simpleSaved && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
+            </div>}
+            {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
-              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved']].map(([value, label]) =>
+              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Shop the Fit']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
-                  {label} <span>({counts[value].toLocaleString()})</span>
+                  {label} {value!=='fits' && <span>({counts[value].toLocaleString()})</span>}
                 </button>
               )}
             </nav>
-            {!simpleSaved && <div className="content-controls">
+            {!simpleSaved && !fitView && <div className="content-controls">
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control"><span className="sort-control-title">Sort</span>
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
@@ -460,13 +462,17 @@ export default function Home() {
                 </select>
               </label>
             </div>}
+            {!simpleSaved && <nav className="mobile-browse-categories" aria-label="Browse categories"><button type="button" aria-pressed={!effectiveCategory&&!fitView} onClick={()=>selectCategory('')}>All categories</button>{categories.map(c=><button type="button" key={c.value} aria-pressed={effectiveCategory===c.value&&!fitView} onClick={()=>selectCategory(c.value)}>{c.label}</button>)}</nav>}
           </div>
         </div>
 
         <MobileBuyingHelp record={record}/>
-        {showHome && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience}/>}
+        {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={false}/>}/>}
-        <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
+        {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
+        {fitView && error && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
+        {fitView && !loading && !error && !looks.length && <p className="fit-route-message">More looks are on the way.</p>}
+        {!fitView && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
           {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
@@ -493,7 +499,7 @@ export default function Home() {
           {!loading && !error && filtered.length > visibleCount && <div className="load-more">
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
-        </section>
+        </section>}
         <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get your $400 Coupon Bundle</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>

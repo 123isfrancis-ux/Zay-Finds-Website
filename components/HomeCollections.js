@@ -29,7 +29,6 @@ function Shelf({section,renderCard,audience}) {
 export default function HomeCollections({sections,renderCard,audience}) {
   if(!sections.length)return null;
   return <div className="home-collections" aria-label="Featured collections">
-    <div className="discovery-heading"><div><p className="discovery-eyebrow">THE EDIT</p><h2>A few good places to start.</h2></div></div>
     {sections.map(section=><Shelf key={`${audience}:${section.key}`} section={section} renderCard={renderCard} audience={audience}/>)}
   </div>;
 }

@@ -5,9 +5,9 @@ const make=(id,extra={})=>({id,name:id,image:'photo',visibility:'catalog',prices
 test('homepage uses honest cold-start labels and only visible photographed products',()=>{
  const rows=[make('a'),make('hidden',{visibility:'hidden',personallyBought:true}),make('blank',{image:null,personallyBought:true})];
  const shelves=homeSections(rows,{status:'learning',scores:{a:.5}},'USD',1.4);
- assert.equal(shelves[0].title,'Explore the Finds');
+ assert.ok(!shelves.some(s=>s.key==='explore'||s.key==='trending'));
  assert.ok(!shelves.some(s=>s.key==='bought'||s.key==='new'));
- assert.deepEqual(shelves.flatMap(s=>s.items.map(i=>i.id)),['a','a']);
+ assert.deepEqual(shelves.flatMap(s=>s.items.map(i=>i.id)),['a']);
 });
 test('Trending section contains only proven scored products in demand order',()=>{
  const d={status:'ready',scores:{a:.3,b:.6,hidden:.9}};
@@ -51,4 +51,8 @@ test('new product dates survive compact API and match the known 206-item import'
  const handler=require('../lib/regional-catalogue');let payload;
  handler({method:'GET',query:{compact:'1'}},{setHeader(){},status(){return this;},json(value){payload=value;}});
  assert.equal(payload.items.filter(i=>i.addedAt).length,206);
+});
+
+test('Shop the Fit view survives shared links',()=>{
+ assert.equal(require('../lib/catalogue').catalogueFiltersFromQuery({view:'fits'}).view,'fits');
 });
