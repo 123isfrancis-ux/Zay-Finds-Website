@@ -433,7 +433,7 @@ export default function Home() {
         </header>
 
         <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Shop the Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Build A Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
         <div className="desktop-buying-help"><BuyingGuide record={record} /></div>
         <div className="shopping-tools">
@@ -444,7 +444,7 @@ export default function Home() {
             </div>}
             {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
-              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Shop the Fit']].map(([value, label]) =>
+              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
                   {label} {value!=='fits' && <span>({counts[value].toLocaleString()})</span>}
                 </button>

@@ -537,3 +537,11 @@ body { font-weight: 400; }
   .mobile-browse-categories button { flex-shrink:0; min-height:44px; padding:8px 12px; font-size:11px; border:1px solid var(--border); border-radius:20px; color:var(--ink); background:var(--surface); white-space:nowrap; }
   .mobile-browse-categories button[aria-pressed="true"] { background:var(--ink); color:var(--on-ink); }
 }
+
+@media(max-width:640px) {
+  .brand h1 { font-size:36px; line-height:1.08; }
+  .audience-switch { flex:0 0 auto; padding:2px; gap:0; }
+  .audience-switch button { flex:0 0 auto; min-height:36px; padding:5px 9px; font-size:11px; }
+  .header-actions { justify-content:flex-start; gap:10px; }
+  .header-actions .currency-select { margin-left:auto; }
+}

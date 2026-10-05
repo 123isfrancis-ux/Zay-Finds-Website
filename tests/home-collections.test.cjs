@@ -26,7 +26,7 @@ test('Just Added uses known dates and mixes collections within an addition batch
  const copy=JSON.stringify(rows);
  assert.equal(collectionItems(rows,'new')[0].id,'lulu0');
  const shelf=homeSections(rows,{},'USD',1).find(s=>s.key==='new');
- assert.deepEqual(shelf.items.map(i=>i.id),['lulu0','uniqlo0','alo0','lulu1','uniqlo1','alo1']);
+ assert.deepEqual(shelf.items.map(i=>i.id),['lulu0','uniqlo0','alo0','lulu1','uniqlo1','alo1','lulu2','uniqlo2','alo2','lulu3','uniqlo3','alo3']);
  assert.equal(JSON.stringify(rows),copy);
 });
 test('audience scoping excludes opposite-audience items from every shelf',()=>{
