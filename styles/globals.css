@@ -454,3 +454,54 @@ body { font-weight: 400; }
   .collection-context { align-items:flex-start; flex-direction:column; gap:10px; }
   #catalogue { scroll-margin-top:12px; }
 }
+
+/* Shop the Fit: product-photo moodboard with individually shoppable pieces. */
+.fit-section { max-width:1248px; margin:0 auto; padding:32px 24px 12px; scroll-margin-top:100px; }
+.fit-heading { display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:18px; }
+.fit-heading h2 { font-size:38px; line-height:1.1; }
+.fit-heading > p { font-size:14px; color:var(--muted); }
+.fit-picker { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+.fit-picker button { min-height:44px; padding:10px 18px; border:1px solid var(--border); border-radius:24px; color:var(--ink); background:var(--surface); font-size:13px; }
+.fit-picker button[aria-pressed="true"] { background:var(--ink); color:var(--on-ink); border-color:var(--ink); }
+.fit-layout { display:grid; grid-template-columns:1.2fr 1fr; border:1px solid var(--border); border-radius:18px; overflow:hidden; background:var(--surface); }
+.fit-board { position:relative; padding:18px 18px 42px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:12px; min-width:0; background:var(--cream); }
+.fit-photo { min-height:180px; position:relative; display:block; overflow:hidden; border-radius:10px; background:var(--surface); }
+.fit-photo-0 { grid-row:1 / 3; }
+.fit-photo img { width:100%; height:100%; position:absolute; inset:0; object-fit:contain; background:#fff; }
+.fit-photo-label { position:absolute; bottom:8px; left:8px; right:8px; padding:7px 9px; border-radius:6px; font-size:11px; color:var(--ink); background:var(--float); }
+.fit-photo-fallback { display:flex; height:100%; align-items:center; justify-content:center; padding:16px; color:var(--muted); font-size:13px; }
+.fit-board-note { position:absolute; bottom:14px; left:18px; right:18px; color:var(--muted); font-size:10px; }
+.fit-details { padding:28px; min-width:0; }
+.fit-audience { text-transform:uppercase; font-size:10px; letter-spacing:.12em; color:var(--muted); margin-bottom:8px; }
+.fit-details h3 { font-size:32px; line-height:1.1; margin-bottom:10px; }
+.fit-description { font-size:14px; line-height:1.5; color:var(--muted); }
+.fit-pieces { list-style:none; margin:20px 0; padding:0; }
+.fit-pieces li { display:grid; grid-template-columns:22px 1fr auto; gap:10px; padding:13px 0; border-bottom:1px solid var(--border); align-items:center; }
+.fit-number { font-size:11px; color:var(--muted); }
+.fit-pieces a { display:flex; flex-direction:column; gap:4px; min-height:44px; justify-content:center; font-size:12px; line-height:1.4; color:var(--ink); }
+.fit-role { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.fit-piece-price { font-size:12px; white-space:nowrap; }
+.fit-total { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px; font-size:12px; }
+.fit-total strong { font-size:24px; }
+.fit-price-note { font-size:11px; color:var(--muted); line-height:1.5; margin-top:7px; }
+.fit-save { width:100%; min-height:48px; padding:12px; margin-top:20px; border-radius:9px; background:var(--ink); color:var(--on-ink); font-size:14px; }
+.fit-permalink { display:inline-flex; align-items:center; min-height:44px; color:var(--ink); font-size:12px; text-underline-offset:4px; text-decoration:underline; }
+.fit-feedback { font-size:12px; line-height:1.5; color:var(--ink); }
+@media(max-width:760px) {
+  .fit-section { padding:26px 12px 8px; scroll-margin-top:12px; }
+  .fit-heading { align-items:start; }
+  .fit-heading h2 { font-size:32px; }
+  .fit-heading > p { max-width:110px; font-size:12px; text-align:right; }
+  .fit-picker { gap:6px; }
+  .fit-picker button { padding-inline:12px; font-size:12px; }
+  .fit-layout { grid-template-columns:1fr; }
+  .fit-board { min-height:330px; padding:12px 12px 36px; gap:8px; }
+  .fit-photo { min-height:135px; }
+  .fit-board-note { left:12px; right:12px; bottom:11px; font-size:9px; }
+  .fit-details { padding:20px 16px 12px; }
+  .fit-details h3 { font-size:29px; }
+}
+.fit-heading-aside { text-align:right; font-size:13px; color:var(--muted); }
+.fit-heading-aside a { display:inline-flex; min-height:44px; align-items:center; color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
+.fit-view-saved { display:inline-flex; align-items:center; min-height:44px; font-size:12px; text-decoration:underline; text-underline-offset:4px; }
+@media(max-width:760px) { .fit-heading-aside { max-width:125px; font-size:12px; } }

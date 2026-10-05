@@ -36,7 +36,7 @@ export default function useDemandTracking(enabled, visibleItems) {
         }
       }
     }, {threshold:0.5});
-    const cards = Array.from(document.querySelectorAll('.card[data-product-id]'));
+    const cards = Array.from(document.querySelectorAll('.card[data-product-id], .fit-photo[data-product-id]'));
     const observe = () => {
       for (const timer of timers.values()) clearTimeout(timer);
       timers.clear(); observer.disconnect();

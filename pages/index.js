@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import ShopTheFit from '../components/ShopTheFit';
+import { availableLooks, saveLook } from '../lib/shop-the-fit';
 import HomeCollections from '../components/HomeCollections';
 import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
 import { rankTrending } from '../lib/trending';
@@ -221,6 +223,7 @@ export default function Home() {
   const updateFiltersInUrl = useCallback((nextView, nextCategory, nextAudience = audience, nextCollection = '') => {
     if (!router.isReady) return;
     const query = { ...router.query, audience: nextAudience };
+    delete query.fit;
     if (nextCollection) query.collection = nextCollection;
     else delete query.collection;
     if (nextView) query.view = nextView;
@@ -325,8 +328,31 @@ export default function Home() {
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
   const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
   const sections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
-  const trackedItems = useMemo(() => showHome ? [...visible, ...sections.flatMap(section => section.items)] : visible, [showHome, visible, sections]);
+  const looks = useMemo(() => availableLooks(items, audience), [items, audience]);
+  const requestedFit = Array.isArray(router.query.fit) ? router.query.fit[0] : router.query.fit;
+  const selectedFit = looks.find(look => look.id === requestedFit) || looks[0];
+  const fitLinkScrolled = useRef(false);
+  useEffect(() => {
+    if (showHome && requestedFit && !fitLinkScrolled.current && window.location.hash === '#shop-the-fit') {
+      fitLinkScrolled.current = true;
+      requestAnimationFrame(()=>document.getElementById('shop-the-fit')?.scrollIntoView({block:'start'}));
+    }
+  }, [showHome, requestedFit]);
+  const fitItems = useMemo(() => selectedFit?.pieces.map(piece=>piece.item) || [], [selectedFit]);
+  const trackedItems = useMemo(() => showHome ? [...visible, ...sections.flatMap(section => section.items), ...fitItems] : visible, [showHome, visible, sections, fitItems]);
   const onDemand = useDemandTracking(demand.collect, trackedItems);
+  function saveWholeLook(ids) {
+    const result = saveLook(wishlist, ids, WISHLIST_MAX);
+    if (result.status === 'saved') {
+      setWishlist(result.ids);saveWishlist(result.ids);
+      result.added.forEach(id=>onDemand(id,'save'));
+      record('fit_save', {fit: selectedFit.id, pieces: result.added.length});
+    }
+    return result;
+  }
+  function selectFit(id) {
+    router.push({pathname:router.pathname,query:{...router.query,fit:id}},undefined,{shallow:true,scroll:false});
+  }
   const collectionTitle = collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
   const counts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
@@ -434,6 +460,7 @@ export default function Home() {
           </div>
         </div>
 
+        {showHome && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={false}/>}/>}
         <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
