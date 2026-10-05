@@ -128,7 +128,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
             position: 'absolute', inset: 0, display: 'flex', alignItems: 'center',
             justifyContent: 'center', color: 'var(--border)', fontSize: '32px',
           }}>
-            <span className="photo-placeholder"><span>Z.</span><small>View photos at seller ↗</small></span>
+            <span className="photo-placeholder"><span>Z.</span><small>View photos at seller</small></span>
           </div>
         )}
         {/* Wishlist button */}
@@ -176,7 +176,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
           </div>
 
         </div>
-        <span className="shop-label">{item.link?.includes('kakobuy.com') ? 'View on Kakobuy' : 'View at seller'} ↗</span>
+        <span className="shop-label">{item.link?.includes('kakobuy.com') ? 'View on Kakobuy' : 'View at seller'}</span>
       </div>
     </div>
   );
@@ -451,9 +451,9 @@ export default function Home() {
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
                   <option value="trending">{collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'}</option>
                   <option value="default">Sheet order</option>
-                  <option value="price-asc">Price: Low → High</option>
-                  <option value="price-desc">Price: High → Low</option>
-                  <option value="name">Name: A → Z</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="name">Name: A to Z</option>
                 </select>
               </label>
             </div>}

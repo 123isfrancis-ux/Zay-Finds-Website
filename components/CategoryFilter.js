@@ -9,7 +9,7 @@ export default function CategoryFilter({ categories, value, onChange }) {
   useEffect(() => () => { dialog.current?.close(); }, []);
   function close() { dialog.current.close(); trigger.current?.focus(); }
   return <>
-    <button className="category-trigger control" ref={trigger} type="button" aria-haspopup="dialog" onClick={() => { setDraft(value); dialog.current.showModal(); }}>Category <span>{label} ▾</span></button>
+    <button className="category-trigger control" ref={trigger} type="button" aria-haspopup="dialog" onClick={() => { setDraft(value); dialog.current.showModal(); }}>Category <span>{label}</span></button>
     <div className="category-chips" aria-label="Category">
       {options.map(option =>
         <button key={option.value} type="button" className="category-chip" aria-pressed={value === option.value} onClick={() => onChange(option.value)}>{option.value ? option.label : 'All'}</button>

@@ -2,7 +2,7 @@ export default function BuyingGuide({ record }) {
   return <div className="buying-help">
     <div className="quick-links">
       <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'top' })}>$400 Coupon Bundle</a>
-      <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer" onClick={() => record('tutorial_click', {})}>Watch tutorial ↗</a>
+      <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer" onClick={() => record('tutorial_click', {})}>Watch tutorial</a>
     </div>
     <details className="buying-guide" onToggle={event => { if (event.currentTarget.open) record('buying_guide_open', {}); }}>
       <summary>New Here? How Buying Works <span aria-hidden="true">＋</span></summary>

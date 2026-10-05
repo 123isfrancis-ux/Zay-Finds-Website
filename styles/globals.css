@@ -437,7 +437,7 @@ body { font-weight: 400; }
 .shelf-item .card { height:100%; }
 .shelf-controls { margin-top:6px; font-size:12px; color:var(--muted); }
 .shelf-controls div { display:flex; gap:8px; }
-.shelf-controls button { height:44px; width:44px; border:1px solid var(--border); border-radius:50%; background:var(--surface); color:var(--ink); font-size:20px; }
+.shelf-controls button { height:44px; min-width:64px; padding:0 12px; border:1px solid var(--border); border-radius:50%; background:var(--surface); color:var(--ink); font-size:12px; }
 .shelf-controls button:disabled { opacity:.35; cursor:default; }
 .full-catalogue-title { font-size:30px; font-weight:400; margin-bottom:16px; }
 #catalogue { scroll-margin-top:100px; }
