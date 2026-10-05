@@ -1,5 +1,8 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import { rankTrending } from '../lib/trending';
+import { loadTrending } from '../lib/demand-client';
+import useDemandTracking from '../hooks/useDemandTracking';
 import { audienceFor, normalizeAudience, audienceFromQuery } from '../lib/audience';
 import initialExchangeRate from '../data/exchange-rate.json';
 import { track } from '@vercel/analytics';
@@ -74,7 +77,7 @@ function Badge({ cat }) {
   );
 }
 
-const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad }) {
+const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad, onDemand }) {
   const [imgError, setImgError] = useState(false);
 
   const amount = priceAmount(item, currency, usdToCad);
@@ -98,7 +101,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         flexDirection: 'column',
       }}
     >
-      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => record('product_click', { product: item.id, category: item.category })} />}
+      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => { record('product_click', { product: item.id, category: item.category }); onDemand(item.id, 'click'); }} />}
       {/* Image */}
       <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', background: 'var(--cream)', overflow: 'hidden' }}>
         {item.image && !imgError ? (
@@ -126,7 +129,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         )}
         {/* Wishlist button */}
         <button
-          onClick={event => { event.stopPropagation(); onWishlist(item.id); }}
+          onClick={event => { event.stopPropagation(); if (!wishlisted) onDemand(item.id, 'save'); onWishlist(item.id); }}
           type="button"
           className="wishlist-button"
           aria-pressed={wishlisted}
@@ -190,7 +193,8 @@ export default function Home() {
   const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
   const [view, setView] = useState(null);
-  const [sortBy, setSortBy] = useState('default');
+  const [sortBy, setSortBy] = useState('trending');
+  const [demand, setDemand] = useState({status:'disabled',scores:{},collect:false});
   const [page, setPage] = useState({ list: null, count: PAGE_SIZE });
   const [urlFiltersReady, setUrlFiltersReady] = useState(false);
 
@@ -233,10 +237,14 @@ export default function Home() {
     setItems([]);
     async function load() {
       try {
-        const response = await fetch('/api/catalogue?compact=1', { signal: controller.signal, cache: 'default' });
+        const [response, snapshot] = await Promise.all([
+          fetch('/api/catalogue?compact=1', { signal: controller.signal, cache: 'default' }),
+          loadTrending(),
+        ]);
         if (!response.ok) throw new Error('Catalogue request failed');
         const { items: rows, collections } = await response.json();
         if (!active) return;
+        setDemand(snapshot);
         setItems(rows);
         setCollectionOrder(collections || []);
         setView(previous => previous || (rows.some(item => item.visibility === 'weekly') ? 'week' : 'all'));
@@ -297,12 +305,16 @@ export default function Home() {
     }
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl]);
   const simpleSaved = activeView === 'saved';
-  const filtered = useMemo(() => filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy, currency, exchangeRate.usdToCad),
-    [base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad]);
+  const filtered = useMemo(() => {
+    const list = filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
+    return sortBy === 'trending' && !simpleSaved ? rankTrending(list, demand) : list;
+  }, [base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand]);
+  const hasScopedTrends = demand.status === 'ready' && filtered.some(item => item.image && Number.isFinite(demand.scores[item.id]));
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+  const onDemand = useDemandTracking(demand.collect, visible);
   const counts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
     all: audienceItems.filter(item => item.visibility !== 'hidden').length,
@@ -396,6 +408,7 @@ export default function Home() {
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control">Sort
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
+                  <option value="trending">{hasScopedTrends ? 'Trending' : 'Recommended'}</option>
                   <option value="default">Sheet order</option>
                   <option value="price-asc">Price: Low → High</option>
                   <option value="price-desc">Price: High → Low</option>
@@ -408,6 +421,7 @@ export default function Home() {
 
         <section className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
+          {!loading && !error && !simpleSaved && sortBy === 'trending' && hasScopedTrends && <p className="trending-note">Popular with shoppers, with room for new discoveries.</p>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
             {Array.from({ length: 8 }, (_, index) => <div className="skeleton-card" key={index} aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-copy"><div /><div /><div /></div></div>)}
@@ -425,7 +439,7 @@ export default function Home() {
               else selectView('all');
             }}>{searching ? 'Clear search' : simpleSaved && audience !== 'everyone' ? 'Show Everyone' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
-            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} priority={index < 4} />)}
+            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={index < 4} />)}
           </div>}
           {!loading && !error && filtered.length > visibleCount && <div className="load-more">
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
