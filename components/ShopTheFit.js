@@ -20,7 +20,7 @@ export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave
     setMessage({lookId:look.id,text:result.status==='full'?'Saved is full. Remove a few items, then save this look.':result.status==='already'?'Every piece is already in Saved.':`${result.added.length} ${result.added.length===1?'piece added':'pieces added'} to Saved.`});
   }
   return <section className="fit-section" id="shop-the-fit" aria-labelledby="fit-heading">
-    <div className="fit-heading"><div><p className="discovery-eyebrow">PUT IT TOGETHER</p><h2 id="fit-heading">Shop the Fit</h2></div><div className="fit-heading-aside"><p>One look. Every piece.</p><a href={`/shop?audience=${audience}`}>Shop All →</a></div></div>
+    <div className="fit-heading"><div><p className="discovery-eyebrow">PUT IT TOGETHER</p><h2 id="fit-heading">Shop the Fit</h2></div><div className="fit-heading-aside"><p>One look. Every piece.</p><a href="#catalogue">Browse all finds ↓</a></div></div>
     <div className="fit-picker" role="group" aria-label="Choose a look">{looks.map(option=><button key={option.id} type="button" aria-pressed={look.id===option.id} onClick={()=>{setMessage('');onSelect(option.id);}}>{option.title}</button>)}</div>
     <div className="fit-layout" key={look.id}>
       <div className="fit-board" aria-label={`${look.title} outfit pieces`}>
@@ -35,7 +35,7 @@ export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave
         {currency==='CAD'&&usdTotal!==null&&<p className="fit-price-note">{money(usdTotal,'USD')} USD before conversion</p>}
         <p className="fit-price-note">Shipping extra. Each piece is purchased separately; prices and options may vary.</p>
         <button className="fit-save" type="button" onClick={save}>{allSaved?'✓ All pieces saved':'♡ Save the whole look'}</button>
-        <a className="fit-permalink" href={`/shop-the-fit?audience=${audience}&fit=${look.id}#shop-the-fit`}>Link to this look ↗</a>
+        <a className="fit-permalink" href={`?audience=${audience}&view=all&fit=${look.id}#shop-the-fit`}>Link to this look ↗</a>
         <p className="fit-feedback" role="status">{message?.lookId===look.id?message.text:''}</p>
         {allSaved&&<button type="button" className="fit-view-saved" onClick={onViewSaved}>View Saved →</button>}
       </div>
