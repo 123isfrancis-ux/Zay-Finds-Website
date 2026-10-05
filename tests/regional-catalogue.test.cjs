@@ -4,7 +4,7 @@ const handler = require('../lib/regional-catalogue');
 function response() { return { headers: {}, setHeader(k,v){this.headers[k]=v;},status(n){this.code=n;return this;},json(data){this.data=data;return this;} }; }
 test('catalogue serves imported product data and source date without credentials', async()=>{
  const res=response(); await handler({method:'GET'},res);
- assert.equal(res.code,200); assert.equal(res.data.collections.length,17);
+ assert.equal(res.code,200); assert.equal(res.data.collections.length,20);
  assert.ok(res.data.items.length>3000); assert.ok(res.data.importedAt);
  assert.ok(res.data.items.every(i=>i._search && Array.isArray(i._categories)));
  assert.equal(res.data.items[0].prices.CNY,160);
