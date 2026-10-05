@@ -413,3 +413,10 @@ body { font-weight: 400; }
 }
 
 .trending-note { margin: 0 0 16px; font-size: 13px; color: var(--muted); }
+
+@media (max-width: 420px) {
+  .sort-control-title { display: none; }
+  .sort-control { gap: 0; flex: 1.3; }
+  .category-trigger { flex: .7; }
+  .sort-control select { max-width: none; }
+}

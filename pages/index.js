@@ -406,7 +406,7 @@ export default function Home() {
             </nav>
             {!simpleSaved && <div className="content-controls">
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
-              <label className="sort-control control">Sort
+              <label className="sort-control control"><span className="sort-control-title">Sort</span>
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
                   <option value="trending">{hasScopedTrends ? 'Trending' : 'Recommended'}</option>
                   <option value="default">Sheet order</option>
