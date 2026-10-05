@@ -1,5 +1,6 @@
-import { useState, useEffect, useMemo, useCallback, useDeferredValue, memo } from 'react';
+import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import { audienceFor, normalizeAudience, audienceFromQuery } from '../lib/audience';
 import initialExchangeRate from '../data/exchange-rate.json';
 import { track } from '@vercel/analytics';
 import BuyingGuide from '../components/BuyingGuide';
@@ -183,6 +184,8 @@ export default function Home() {
   const [attempt, setAttempt] = useState(0);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
+  const [audience, setAudience] = useState('everyone');
+  const initialAudience = useRef(null);
   const [currency, setCurrency] = useState('USD');
   const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
@@ -196,20 +199,26 @@ export default function Home() {
   useEffect(() => {
     if (!router.isReady) return;
     const filters = catalogueFiltersFromQuery(router.query);
+    if (initialAudience.current === null) {
+      try { initialAudience.current = normalizeAudience(localStorage.getItem('zay-audience')); } catch { initialAudience.current = 'everyone'; }
+    }
+    const nextAudience = audienceFromQuery(router.query.audience, initialAudience.current);
+    setAudience(nextAudience);
+    try { localStorage.setItem('zay-audience', nextAudience); } catch {}
     setView(filters.view || 'all');
     setCategory(filters.category);
     setUrlFiltersReady(true);
-  }, [router.isReady, router.query.view, router.query.category]);
+  }, [router.isReady, router.query.view, router.query.category, router.query.audience]);
 
-  const updateFiltersInUrl = useCallback((nextView, nextCategory) => {
+  const updateFiltersInUrl = useCallback((nextView, nextCategory, nextAudience = audience) => {
     if (!router.isReady) return;
-    const query = { ...router.query };
+    const query = { ...router.query, audience: nextAudience };
     if (nextView) query.view = nextView;
     else delete query.view;
     if (nextCategory) query.category = nextCategory;
     else delete query.category;
     void router.push({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false });
-  }, [router]);
+  }, [router, audience]);
 
   // Keeps the input responsive while the grid catches up on a big filter pass.
   const deferredSearch = useDeferredValue(search);
@@ -272,11 +281,12 @@ export default function Home() {
   // Membership lookup per card was a linear scan of the whole wishlist.
   const wishlistSet = useMemo(() => new Set(wishlist), [wishlist]);
 
+  const audienceItems = useMemo(() => items.filter(item => audience === 'everyone' || audienceFor(item) === 'everyone' || audienceFor(item) === audience), [items, audience]);
   const activeView = view || 'all';
   const searching = Boolean(deferredSearch.trim());
-  const base = useMemo(() => viewItems(items, activeView, wishlistSet, deferredSearch),
-    [items, activeView, wishlistSet, deferredSearch]);
-  const categories = useMemo(() => categoriesFor(items.filter(item => item.visibility !== 'hidden'), collectionOrder), [items, collectionOrder]);
+  const base = useMemo(() => viewItems(audienceItems, activeView, wishlistSet, deferredSearch),
+    [audienceItems, activeView, wishlistSet, deferredSearch]);
+  const categories = useMemo(() => categoriesFor(audienceItems.filter(item => item.visibility !== 'hidden'), collectionOrder), [audienceItems, collectionOrder]);
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
   const effectiveCategory = !category || !categoryCanBeValidated || categoryExists ? category : '';
@@ -294,16 +304,23 @@ export default function Home() {
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
   const counts = useMemo(() => ({
-    week: items.filter(item => item.visibility === 'weekly').length,
-    all: items.filter(item => item.visibility !== 'hidden').length,
-    bought: items.filter(item => item.visibility !== 'hidden' && item.personallyBought).length,
-    saved: items.filter(item => item.visibility !== 'hidden' && wishlistSet.has(item.id)).length,
-  }), [items, wishlistSet]);
+    week: audienceItems.filter(item => item.visibility === 'weekly').length,
+    all: audienceItems.filter(item => item.visibility !== 'hidden').length,
+    bought: audienceItems.filter(item => item.visibility !== 'hidden' && item.personallyBought).length,
+    saved: audienceItems.filter(item => item.visibility !== 'hidden' && wishlistSet.has(item.id)).length,
+  }), [audienceItems, wishlistSet]);
   useEffect(() => {
     if (loading || error || !searching) return;
     const timer = setTimeout(() => record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length }), 800);
     return () => clearTimeout(timer);
   }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching]);
+  function selectAudience(next) {
+    if (next === audience) return;
+    setAudience(next);
+    setCategory('');
+    try { localStorage.setItem('zay-audience', next); } catch {}
+    updateFiltersInUrl(activeView, '', next);
+  }
   function selectCategory(next) {
     setCategory(next);
     updateFiltersInUrl(activeView, next);
@@ -347,6 +364,9 @@ export default function Home() {
               <p>THE FINDS. ALL IN ONE PLACE.</p>
             </div>
             <div className="header-actions">
+              <div className="audience-switch" role="group" aria-label="Shop for">
+                {['everyone', 'men', 'women'].map(value => <button key={value} type="button" aria-pressed={audience === value} onClick={() => selectAudience(value)}>{value === 'everyone' ? 'Everyone' : value === 'men' ? 'Men' : 'Women'}</button>)}
+              </div>
               <select className="currency-select control" aria-label="Currency" value={currency} onChange={event => { setCurrency(event.target.value); try { localStorage.setItem('zay-currency', event.target.value); } catch {} }}>
                 {CURRENCIES.map(value => <option key={value}>{value}</option>)}
               </select>
@@ -356,7 +376,7 @@ export default function Home() {
         </header>
 
         <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
         <BuyingGuide record={record} />
         <div className="shopping-tools">
@@ -387,7 +407,7 @@ export default function Home() {
         </div>
 
         <section className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
-          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
+          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
             {Array.from({ length: 8 }, (_, index) => <div className="skeleton-card" key={index} aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-copy"><div /><div /><div /></div></div>)}
@@ -397,12 +417,13 @@ export default function Home() {
           </div> : filtered.length === 0 ? <div className="catalogue-message" role="status">
             <p className="empty-symbol">✦</p>
             <h2>{searching ? 'No matching finds' : simpleSaved ? 'Save your favorite finds' : 'No finds here yet'}</h2>
-            <p>{simpleSaved ? 'Tap a heart on any product to keep it here.' : 'Try another category or browse all finds.'}</p>
+            <p>{simpleSaved ? audience === 'everyone' ? 'Tap a heart on any product to keep it here.' : 'No saved finds in this selection. Choose Everyone to see all your saved items.' : 'Try another category or browse all finds.'}</p>
             <button className="control" type="button" onClick={() => {
               setSearch('');
               if (searching) return;
+              if (simpleSaved && audience !== 'everyone') selectAudience('everyone');
               else selectView('all');
-            }}>{searching ? 'Clear search' : 'Browse All Finds'}</button>
+            }}>{searching ? 'Clear search' : simpleSaved && audience !== 'everyone' ? 'Show Everyone' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
             {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} priority={index < 4} />)}
           </div>}
