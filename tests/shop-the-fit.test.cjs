@@ -8,9 +8,9 @@ test('published looks resolve complete outfits from visible photographed catalog
  for(const look of looks){assert.equal(look.pieces.length,3);assert.ok(look.pieces.every(p=>p.item.link&&p.item.image&&p.item.visibility!=='hidden'));assert.ok(lookTotal(look.pieces,'USD',1.4)>0);}
  assert.equal(new Set(definitions.map(l=>l.id)).size,definitions.length);
 });
-test('looks follow audience selection and preserve shared outfits',()=>{
+test('looks follow audience selection',()=>{
  assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['airport-fit','clean-everyday']);
- assert.deepEqual(availableLooks(catalogue,'women').map(l=>l.id),['airport-fit','gym-to-coffee','night-out']);
+ assert.deepEqual(availableLooks(catalogue,'women').map(l=>l.id),['gym-to-coffee','night-out']);
 });
 test('missing, hidden, unphotographed or incompatible pieces suppress complete look',()=>{
  const look=definitions[0], id=look.pieces[0].id;

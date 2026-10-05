@@ -1,6 +1,82 @@
 [
-  {"id":"airport-fit","title":"Airport Fit","audience":"everyone","description":"Relaxed layers for the journey and everything after.","pieces":[{"id":"102d1f983929c9a68d13c9c7","role":"The hoodie"},{"id":"6d8a9ce075ab51bc1efe5c99","role":"The sweats"},{"id":"15f4e1fcb222a0f0771c3f98","role":"The sneakers"}]},
-  {"id":"clean-everyday","title":"Clean Everyday","audience":"men","description":"An easy tee, relaxed trousers, and a clean sneaker finish.","pieces":[{"id":"abcc404d53f5219b757f2691","role":"The tee"},{"id":"a85c35c1ed751f46e01f0ca0","role":"The trousers"},{"id":"4389b3753eb4c0eac4e5d88d","role":"The sneakers"}]},
-  {"id":"gym-to-coffee","title":"Gym to Coffee","audience":"women","description":"A simple activewear look that keeps going after your workout.","pieces":[{"id":"f6669d8b5321f152b53aa2ad","role":"The tank"},{"id":"2acc9f3cc9e75d8539f4a3c6","role":"The leggings"},{"id":"a1850b0f61213e1546d003da","role":"The sneakers"}]},
-  {"id":"night-out","title":"Night Out","audience":"women","description":"An off-shoulder top, relaxed tailoring, and low-key sneakers.","pieces":[{"id":"9607482ec543b9329e0a4df5","role":"The top"},{"id":"f01acd524d0b4bc8f90c778d","role":"The trousers"},{"id":"e8ec2943a66d975b43afd665","role":"The sneakers"}]}
+  {
+    "id": "airport-fit",
+    "title": "Airport Fit",
+    "audience": "men",
+    "description": "Relaxed layers for the journey and everything after.",
+    "pieces": [
+      {
+        "id": "102d1f983929c9a68d13c9c7",
+        "role": "The hoodie"
+      },
+      {
+        "id": "0538d997fb80eb2328dad6cf",
+        "role": "The sweats"
+      },
+      {
+        "id": "15f4e1fcb222a0f0771c3f98",
+        "role": "The sneakers"
+      }
+    ]
+  },
+  {
+    "id": "clean-everyday",
+    "title": "Clean Everyday",
+    "audience": "men",
+    "description": "An easy tee, relaxed trousers, and a clean sneaker finish.",
+    "pieces": [
+      {
+        "id": "abcc404d53f5219b757f2691",
+        "role": "The tee"
+      },
+      {
+        "id": "39d5eba916a550c9e1fb0ff2",
+        "role": "The trousers"
+      },
+      {
+        "id": "4389b3753eb4c0eac4e5d88d",
+        "role": "The sneakers"
+      }
+    ]
+  },
+  {
+    "id": "gym-to-coffee",
+    "title": "Gym to Coffee",
+    "audience": "women",
+    "description": "A simple activewear look that keeps going after your workout.",
+    "pieces": [
+      {
+        "id": "f6669d8b5321f152b53aa2ad",
+        "role": "The tank"
+      },
+      {
+        "id": "2acc9f3cc9e75d8539f4a3c6",
+        "role": "The leggings"
+      },
+      {
+        "id": "a1850b0f61213e1546d003da",
+        "role": "The sneakers"
+      }
+    ]
+  },
+  {
+    "id": "night-out",
+    "title": "Night Out",
+    "audience": "women",
+    "description": "An off-shoulder top, relaxed tailoring, and low-key sneakers.",
+    "pieces": [
+      {
+        "id": "9607482ec543b9329e0a4df5",
+        "role": "The top"
+      },
+      {
+        "id": "f01acd524d0b4bc8f90c778d",
+        "role": "The trousers"
+      },
+      {
+        "id": "e8ec2943a66d975b43afd665",
+        "role": "The sneakers"
+      }
+    ]
+  }
 ]
