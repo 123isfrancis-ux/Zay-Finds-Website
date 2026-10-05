@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import HomeCollections from '../components/HomeCollections';
+import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
 import { rankTrending } from '../lib/trending';
 import { loadTrending } from '../lib/demand-client';
 import useDemandTracking from '../hooks/useDemandTracking';
@@ -187,6 +189,7 @@ export default function Home() {
   const [attempt, setAttempt] = useState(0);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
+  const [collection, setCollection] = useState('');
   const [audience, setAudience] = useState('everyone');
   const initialAudience = useRef(null);
   const [currency, setCurrency] = useState('USD');
@@ -211,12 +214,15 @@ export default function Home() {
     try { localStorage.setItem('zay-audience', nextAudience); } catch {}
     setView(filters.view || 'all');
     setCategory(filters.category);
+    setCollection(!filters.view || filters.view === 'all' ? normalizeCollection(router.query.collection) : '');
     setUrlFiltersReady(true);
-  }, [router.isReady, router.query.view, router.query.category, router.query.audience]);
+  }, [router.isReady, router.query.view, router.query.category, router.query.audience, router.query.collection]);
 
-  const updateFiltersInUrl = useCallback((nextView, nextCategory, nextAudience = audience) => {
+  const updateFiltersInUrl = useCallback((nextView, nextCategory, nextAudience = audience, nextCollection = '') => {
     if (!router.isReady) return;
     const query = { ...router.query, audience: nextAudience };
+    if (nextCollection) query.collection = nextCollection;
+    else delete query.collection;
     if (nextView) query.view = nextView;
     else delete query.view;
     if (nextCategory) query.category = nextCategory;
@@ -292,8 +298,9 @@ export default function Home() {
   const audienceItems = useMemo(() => items.filter(item => audience === 'everyone' || audienceFor(item) === 'everyone' || audienceFor(item) === audience), [items, audience]);
   const activeView = view || 'all';
   const searching = Boolean(deferredSearch.trim());
-  const base = useMemo(() => viewItems(audienceItems, activeView, wishlistSet, deferredSearch),
-    [audienceItems, activeView, wishlistSet, deferredSearch]);
+  const collectionBase = useMemo(() => activeView === 'all' ? collectionItems(audienceItems, collection, demand, currency, exchangeRate.usdToCad) : audienceItems, [audienceItems, collection, activeView, demand, currency, exchangeRate.usdToCad]);
+  const base = useMemo(() => viewItems(collectionBase, activeView, wishlistSet, deferredSearch),
+    [collectionBase, activeView, wishlistSet, deferredSearch]);
   const categories = useMemo(() => categoriesFor(audienceItems.filter(item => item.visibility !== 'hidden'), collectionOrder), [audienceItems, collectionOrder]);
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
@@ -301,20 +308,26 @@ export default function Home() {
   useEffect(() => {
     if (categoryCanBeValidated && category !== effectiveCategory) {
       setCategory(effectiveCategory);
-      updateFiltersInUrl(activeView, effectiveCategory);
+      updateFiltersInUrl(activeView, effectiveCategory, audience, collection);
     }
-  }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl]);
+  }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl, audience, collection]);
   const simpleSaved = activeView === 'saved';
   const filtered = useMemo(() => {
-    const list = filterAndSort(base, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
-    return sortBy === 'trending' && !simpleSaved ? rankTrending(list, demand) : list;
-  }, [base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand]);
+    const sheetOrder = new Map(items.map((item,index)=>[item.id,index]));
+    const orderedBase = collection && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
+    const list = filterAndSort(orderedBase, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
+    return sortBy === 'trending' && !simpleSaved && !collection ? rankTrending(list, demand) : list;
+  }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
   const hasScopedTrends = demand.status === 'ready' && filtered.some(item => item.image && Number.isFinite(demand.scores[item.id]));
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
-  const onDemand = useDemandTracking(demand.collect, visible);
+  const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
+  const sections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
+  const trackedItems = useMemo(() => showHome ? [...visible, ...sections.flatMap(section => section.items)] : visible, [showHome, visible, sections]);
+  const onDemand = useDemandTracking(demand.collect, trackedItems);
+  const collectionTitle = collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
   const counts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
     all: audienceItems.filter(item => item.visibility !== 'hidden').length,
@@ -331,13 +344,15 @@ export default function Home() {
     setAudience(next);
     setCategory('');
     try { localStorage.setItem('zay-audience', next); } catch {}
-    updateFiltersInUrl(activeView, '', next);
+    updateFiltersInUrl(activeView, '', next, collection);
   }
   function selectCategory(next) {
+    setCollection('');
     setCategory(next);
     updateFiltersInUrl(activeView, next);
   }
   function selectView(next) {
+    setCollection('');
     setView(next);
     setSearch('');
     setCategory('');
@@ -388,7 +403,7 @@ export default function Home() {
         </header>
 
         <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.'}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
         </section>
         <BuyingGuide record={record} />
         <div className="shopping-tools">
@@ -408,7 +423,7 @@ export default function Home() {
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control"><span className="sort-control-title">Sort</span>
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
-                  <option value="trending">{hasScopedTrends ? 'Trending' : 'Recommended'}</option>
+                  <option value="trending">{collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'}</option>
                   <option value="default">Sheet order</option>
                   <option value="price-asc">Price: Low → High</option>
                   <option value="price-desc">Price: High → Low</option>
@@ -419,9 +434,12 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
+        {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={false}/>}/>}
+        <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
+          {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
+          {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
           {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
-          {!loading && !error && !simpleSaved && sortBy === 'trending' && hasScopedTrends && <p className="trending-note">Popular with shoppers, with room for new discoveries.</p>}
+          {!loading && !error && !simpleSaved && sortBy === 'trending' && (!collection || collection === 'trending') && hasScopedTrends && <p className="trending-note">Popular with shoppers, with room for new discoveries.</p>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
             {Array.from({ length: 8 }, (_, index) => <div className="skeleton-card" key={index} aria-hidden="true"><div className="skeleton-image" /><div className="skeleton-copy"><div /><div /><div /></div></div>)}
@@ -439,7 +457,7 @@ export default function Home() {
               else selectView('all');
             }}>{searching ? 'Clear search' : simpleSaved && audience !== 'everyone' ? 'Show Everyone' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
-            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={index < 4} />)}
+            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={!showHome && index < 4} />)}
           </div>}
           {!loading && !error && filtered.length > visibleCount && <div className="load-more">
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>

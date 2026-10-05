@@ -420,3 +420,37 @@ body { font-weight: 400; }
   .category-trigger { flex: .7; }
   .sort-control select { max-width: none; }
 }
+
+.home-collections { max-width: 1248px; margin: auto; padding: 28px 24px 0; }
+.discovery-heading, .shelf-heading, .shelf-controls, .collection-context { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.discovery-heading { margin-bottom: 28px; }
+.discovery-eyebrow { font-size:11px; letter-spacing:.16em; margin-bottom:6px; color:var(--muted); }
+.discovery-heading h2 { font-size:30px; font-weight:400; }
+.discovery-heading a { text-decoration:none; white-space:nowrap; display:inline-flex; align-items:center; }
+.home-shelf { padding-bottom:24px; margin-bottom:24px; border-bottom:1px solid var(--border); }
+.shelf-heading { align-items:flex-start; margin-bottom:16px; }
+.shelf-heading h2 { font-size:28px; font-weight:400; }
+.shelf-heading p { font-size:14px; color:var(--muted); margin-top:5px; }
+.shelf-all { min-height:44px; display:inline-flex; align-items:center; white-space:nowrap; font-size:13px; color:var(--ink); text-underline-offset:4px; }
+.shelf-rail { display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x proximity; padding:2px 2px 12px; scrollbar-width:thin; }
+.shelf-item { flex:0 0 calc((100% - 64px)/5); min-width:190px; scroll-snap-align:start; }
+.shelf-item .card { height:100%; }
+.shelf-controls { margin-top:6px; font-size:12px; color:var(--muted); }
+.shelf-controls div { display:flex; gap:8px; }
+.shelf-controls button { height:44px; width:44px; border:1px solid var(--border); border-radius:50%; background:var(--surface); color:var(--ink); font-size:20px; }
+.shelf-controls button:disabled { opacity:.35; cursor:default; }
+.full-catalogue-title { font-size:30px; font-weight:400; margin-bottom:16px; }
+#catalogue { scroll-margin-top:100px; }
+.collection-context { margin-bottom:16px; font-size:14px; }
+@media(max-width:640px) {
+  .home-collections { padding:24px 12px 0; }
+  .discovery-heading { align-items:flex-start; flex-direction:column; gap:12px; }
+  .discovery-heading h2 { font-size:28px; }
+  .shelf-heading { gap:10px; }
+  .shelf-heading h2 { font-size:25px; line-height:1.12; }
+  .shelf-heading p { font-size:13px; line-height:1.4; }
+  .shelf-rail { gap:10px; }
+  .shelf-item { flex-basis:44%; min-width:145px; }
+  .collection-context { align-items:flex-start; flex-direction:column; gap:10px; }
+  #catalogue { scroll-margin-top:12px; }
+}
