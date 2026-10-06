@@ -189,29 +189,32 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
   );
 });
 
-export default function Home() {
+export default function Home({initial = null}) {
   const router = useRouter();
-  const [items, setItems] = useState([]);
-  const [collectionOrder, setCollectionOrder] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState(()=>restoreSearchFields(initial?.items || []));
+  const [collectionOrder, setCollectionOrder] = useState(initial?.collections || []);
+  const [complete, setComplete] = useState(false);
+  const [backgroundError,setBackgroundError]=useState(false);
   const [error, setError] = useState('');
   const [attempt, setAttempt] = useState(0);
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
-  const [collection, setCollection] = useState('');
-  const [audience, setAudience] = useState('everyone');
+  const [category, setCategory] = useState(initial?.category || '');
+  const [collection, setCollection] = useState(initial?.collection || '');
+  const [audience, setAudience] = useState(initial?.audience || 'everyone');
   const initialAudience = useRef(null);
   const [currency, setCurrency] = useState('USD');
   const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
   const [recent, setRecent] = useState([]);
   const [previewItem,setPreviewItem]=useState(null);
-  const [view, setView] = useState(null);
+  const [view, setView] = useState(initial?.view || null);
   const [sortBy, setSortBy] = useState('trending');
-  const [demand, setDemand] = useState({status:'disabled',scores:{},collect:false});
+  const [demand, setDemand] = useState(initial?.demand || {status:'disabled',scores:{},collect:false});
   useEffect(()=>{setSignalsEnabled(demand.collect);return()=>setSignalsEnabled(false);},[demand.collect]);
   const [page, setPage] = useState({ list: null, count: PAGE_SIZE });
-  const [urlFiltersReady, setUrlFiltersReady] = useState(false);
+  const [urlFiltersReady, setUrlFiltersReady] = useState(Boolean(initial));
+  const usingPreview=!complete && initial?.preview && audience===initial.audience && (view||'all')===initial.view && category===initial.category && collection===initial.collection && !search.trim() && sortBy==='trending' && currency==='USD';
+  const loading=!complete && !usingPreview && !error;
 
   // TODO: Give categories stable IDs/slugs so shared links survive future label changes.
   // TODO: Consider adding a Copy link button for the currently selected view/category.
@@ -251,12 +254,11 @@ export default function Home() {
     let active = true;
     let timedOut = false;
     const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, 20000);
-    setLoading(true);
     setError('');
-    setItems([]);
+    setBackgroundError(false);
     async function load() {
       try {
-        const rankingRequest=loadTrending();
+        const rankingRequest=initial ? Promise.resolve(initial.demand) : loadTrending();
         const response=await fetch('/api/catalogue?compact=2', { signal: controller.signal, cache: 'default' });
         if (!response.ok) throw new Error('Catalogue request failed');
         const { items: deliveredRows, collections } = await response.json();
@@ -265,15 +267,16 @@ export default function Home() {
         if (!active) return;
         setDemand(snapshot);
         setItems(rows);
+        setComplete(true);
         setCollectionOrder(collections || []);
         setView(previous => previous || (rows.some(item => item.visibility === 'weekly') ? 'week' : 'all'));
       } catch (failure) {
         if (active && (failure.name !== 'AbortError' || timedOut)) {
-          setError('We couldn’t load the catalogue. Please try again.');
+          setBackgroundError(true);
+          if(!initial?.preview)setError('We couldn’t load the catalogue. Please try again.');
         }
       } finally {
         clearTimeout(timeout);
-        if (active) setLoading(false);
       }
     }
     load();
@@ -315,7 +318,8 @@ export default function Home() {
   const collectionBase = useMemo(() => activeView === 'all' ? collectionItems(audienceItems, collection, demand, currency, exchangeRate.usdToCad) : audienceItems, [audienceItems, collection, activeView, demand, currency, exchangeRate.usdToCad]);
   const base = useMemo(() => viewItems(collectionBase, activeView, wishlistSet, deferredSearch),
     [collectionBase, activeView, wishlistSet, deferredSearch]);
-  const categories = useMemo(() => categoriesFor(audienceItems.filter(item => item.visibility !== 'hidden'), collectionOrder), [audienceItems, collectionOrder]);
+  const computedCategories = useMemo(() => categoriesFor(audienceItems.filter(item => item.visibility !== 'hidden'), collectionOrder), [audienceItems, collectionOrder]);
+  const categories = usingPreview ? initial.categories : computedCategories;
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
   const effectiveCategory = !category || !categoryCanBeValidated || categoryExists ? category : '';
@@ -327,12 +331,14 @@ export default function Home() {
   }, [activeView, category, categoryCanBeValidated, effectiveCategory, updateFiltersInUrl, audience, collection]);
   const simpleSaved = activeView === 'saved';
   const fitView = activeView === 'fits';
-  const filtered = useMemo(() => {
+  const computedFiltered = useMemo(() => {
     const sheetOrder = new Map(items.map((item,index)=>[item.id,index]));
     const orderedBase = collection && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
     const list = filterAndSort(orderedBase, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
     return sortBy === 'trending' && !simpleSaved && !collection ? rankRecommended(list, demand) : list;
   }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
+  const filtered=useMemo(()=>usingPreview ? initial.visibleIds.map(id=>items.find(i=>i.id===id)).filter(Boolean) : computedFiltered,[usingPreview,initial,items,computedFiltered]);
+  const total=usingPreview?initial.total:filtered.length;
   const hasScopedTrends = demand.status === 'ready' && filtered.some(item => item.image && Number.isFinite(demand.scores[item.id]));
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
@@ -340,7 +346,8 @@ export default function Home() {
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
   const homeLoading=loading && activeView==='all' && !category && !collection && !search.trim();
   const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
-  const sections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
+  const computedSections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
+  const sections=useMemo(()=>usingPreview?initial.sections.map(({ids,...section})=>({...section,items:ids.map(id=>items.find(i=>i.id===id)).filter(Boolean)})):computedSections,[usingPreview,initial,items,computedSections]);
   const looks = useMemo(() => availableLooks(items, audience), [items, audience]);
   const requestedFit = Array.isArray(router.query.fit) ? router.query.fit[0] : router.query.fit;
   const selectedFit = looks.find(look => look.id === requestedFit) || looks[0];
@@ -379,12 +386,13 @@ export default function Home() {
     router.push({pathname:router.pathname,query:{...router.query,fit:id}},undefined,{shallow:true,scroll:false});
   }
   const collectionTitle = collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
-  const counts = useMemo(() => ({
+  const computedCounts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
     all: audienceItems.filter(item => item.visibility !== 'hidden').length,
     bought: audienceItems.filter(item => item.visibility !== 'hidden' && item.personallyBought).length,
     saved: audienceItems.filter(item => item.visibility !== 'hidden' && wishlistSet.has(item.id)).length,
   }), [audienceItems, wishlistSet]);
+  const counts=usingPreview?initial.counts:computedCounts;
   useEffect(() => {
     if (loading || error || !searching) return;
     const timer = setTimeout(() => {record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length });if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim()});}, 1200);
@@ -490,6 +498,7 @@ export default function Home() {
         </div>
 
         <MobileBuyingHelp record={record}/>
+        {backgroundError && initial?.preview && <div className="catalogue-message" role="status"><p>Your first finds are ready. The rest couldn’t load.</p><button type="button" className="control" onClick={()=>setAttempt(value=>value+1)}>Retry loading all finds</button></div>}
         {homeLoading && <HomeSkeleton/>}
         {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience} onPreview={openPreview}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index,sectionIndex)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={sectionIndex===0 && index<2}/>}/>}
@@ -500,7 +509,7 @@ export default function Home() {
         {!homeLoading && !fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
-          {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
+          {!loading && !error && <div className="catalogue-summary"><p>{total.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
           {!loading && !error && !simpleSaved && sortBy === 'trending' && (!collection || collection === 'trending') && hasScopedTrends && <p className="trending-note">Popular with shoppers, with room for new discoveries.</p>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
@@ -521,8 +530,8 @@ export default function Home() {
           </div> : <div className="product-grid">
             {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={!showHome && index < 4} />)}
           </div>}
-          {!loading && !error && filtered.length > visibleCount && <div className="load-more">
-            <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
+          {!loading && !error && total > visibleCount && <div className="load-more">
+            <button className="control" type="button" disabled={!complete} onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>{complete?'Load more':'Loading more finds…'}</button>
           </div>}
         </section>}
         {previewItem&&<QuickView item={previewItem} items={items} currency={currency} rate={exchangeRate.usdToCad} audience={audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={onDemand}/>}
@@ -530,4 +539,23 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getServerSideProps({query,res}) {
+  try {
+    const {default:catalogue}=await import('../lib/regional-catalogue');
+    const {prepareInitialCatalogue}=await import('../lib/initial-catalogue');
+    const {default:handler}=await import('./api/trending');
+    const collections=(await import('../data/catalogue.json')).default.collections || [];
+    // A cold or unavailable ranking store must not hold up the first page.
+    const demand=await boundedRanking(new Promise((resolve,reject)=>{
+      handler({method:'GET'},{setHeader(){},status(){return this;},json:resolve}).catch(reject);
+    }));
+    const initial=prepareInitialCatalogue(catalogue.items,collections,query,demand);
+    res.setHeader('Cache-Control','public, s-maxage=300, stale-while-revalidate=60');
+    return {props:{initial:JSON.parse(JSON.stringify(initial))}};
+  } catch {
+    res.setHeader('Cache-Control','no-store');
+    return {props:{initial:null}};
+  }
 }
