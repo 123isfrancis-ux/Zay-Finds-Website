@@ -694,5 +694,3 @@ body { font-weight: 400; }
 .shelf-skeleton-heading{height:64px;width:220px;border-radius:8px;background:var(--border);opacity:.4;}
 .shelf-skeleton-controls{height:50px;}
 .home-loading .skeleton-copy{min-height:128px;}
-/* Off-screen rows retain their boxes while rendering is deferred. */
-.product-grid>.card{content-visibility:auto;contain-intrinsic-size:auto 360px;}
