@@ -56,3 +56,19 @@ test('new product dates survive compact API and match the known 206-item import'
 test('Shop the Fit view survives shared links',()=>{
  assert.equal(require('../lib/catalogue').catalogueFiltersFromQuery({view:'fits'}).view,'fits');
 });
+
+test('editorial Just Added picks are mixed, unique, scoped, and included in See all',()=>{
+ const rows=require('../lib/regional-catalogue').items;
+ const picks=require('../data/just-added-picks.json');
+ const shelf=homeSections(rows,{},'USD',1).find(s=>s.key==='new').items;
+ assert.equal(shelf.length,12);
+ assert.equal(new Set(shelf.map(i=>i.id)).size,12);
+ assert.deepEqual(shelf.filter(i=>picks.includes(i.id)).map(i=>i.id),picks);
+ for(const id of picks)assert.ok(collectionItems(rows,'new').some(i=>i.id===id));
+ const hidden=rows.map(i=>picks.includes(i.id)?{...i,visibility:'hidden'}:i);
+ assert.ok(homeSections(hidden,{},'USD',1).find(s=>s.key==='new').items.every(i=>!picks.includes(i.id)));
+ for(const audience of ['men','women']) {
+  const scoped=rows.filter(i=>audienceFor(i)==='everyone'||audienceFor(i)===audience);
+  assert.ok(homeSections(scoped,{},'USD',1).find(s=>s.key==='new').items.every(i=>audienceFor(i)!==(audience==='men'?'women':'men')));
+ }
+});

@@ -553,3 +553,9 @@ body { font-weight: 400; }
 .fit-board-photo-led .fit-photo-0 { align-self:center; }
 .fit-board-photo-led .fit-photo img { position:static; display:block; width:100%; height:auto; }
 .fit-board-photo-led .fit-photo-label { position:static; display:block; margin:0; border-radius:0; padding:8px; }
+
+/* Keep eight outfit choices compact and swipeable on phones. */
+@media (max-width: 640px) {
+  .fit-picker { flex-wrap:nowrap; overflow-x:auto; padding-bottom:6px; }
+  .fit-picker button { flex-shrink:0; }
+}

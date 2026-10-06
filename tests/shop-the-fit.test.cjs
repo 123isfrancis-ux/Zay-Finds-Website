@@ -4,12 +4,12 @@ const catalogue=require('../lib/regional-catalogue').items;
 const definitions=require('../data/shop-the-fit.json');
 test('published looks resolve complete outfits from visible photographed catalogue items',()=>{
  const looks=availableLooks(catalogue);
- assert.equal(looks.length,4);
+ assert.equal(looks.length,8);
  for(const look of looks){assert.equal(look.pieces.length,3);assert.ok(look.pieces.every(p=>p.item.link&&p.item.image&&p.item.visibility!=='hidden'));assert.ok(lookTotal(look.pieces,'USD',1.4)>0);}
  assert.equal(new Set(definitions.map(l=>l.id)).size,definitions.length);
 });
 test('looks follow audience selection',()=>{
- assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['airport-fit','clean-everyday']);
+ assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['airport-fit','clean-everyday','going-out','designer-fit','smart-casual','streetwear']);
  assert.deepEqual(availableLooks(catalogue,'women').map(l=>l.id),['gym-to-coffee','night-out']);
 });
 test('missing, hidden, unphotographed or incompatible pieces suppress complete look',()=>{
