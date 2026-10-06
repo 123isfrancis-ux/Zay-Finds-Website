@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import HaulBuilder from '../components/HaulBuilder';
+import {cleanIds} from '../lib/haul-builder';
 import ShopTheFit from '../components/ShopTheFit';
 import { availableLooks, saveLook } from '../lib/shop-the-fit';
 import HomeCollections from '../components/HomeCollections';
@@ -199,6 +201,7 @@ export default function Home() {
   const [currency, setCurrency] = useState('USD');
   const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
+  const [recent, setRecent] = useState([]);
   const [view, setView] = useState(null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState({status:'disabled',scores:{},collect:false});
@@ -274,6 +277,7 @@ export default function Home() {
 
   useEffect(() => {
     setWishlist(loadWishlist());
+    try {setRecent(cleanIds(JSON.parse(localStorage.getItem('zay-recent-v1')||'[]'),30));}catch{}
     try { const stored = localStorage.getItem('zay-currency'); if (CURRENCIES.includes(stored)) setCurrency(stored); } catch {}
   }, []);
 
@@ -343,13 +347,21 @@ export default function Home() {
   }, [fitView, loading, requestedFit]);
   const fitItems = useMemo(() => selectedFit?.pieces.map(piece=>piece.item) || [], [selectedFit]);
   const trackedItems = useMemo(() => fitView ? fitItems : showHome ? [...visible, ...sections.flatMap(section => section.items)] : visible, [fitView, showHome, visible, sections, fitItems]);
-  const onDemand = useDemandTracking(demand.collect, trackedItems);
+  const trackDemand = useDemandTracking(demand.collect, trackedItems);
+  const onDemand = useCallback((id,event)=>{
+    trackDemand(id,event);
+    if(event==='click')setRecent(previous=>{
+      const next=[id,...previous.filter(value=>value!==id)].slice(0,30);
+      try{localStorage.setItem('zay-recent-v1',JSON.stringify(next));}catch{}
+      return next;
+    });
+  },[trackDemand]);
   function saveWholeLook(ids) {
     const result = saveLook(wishlist, ids, WISHLIST_MAX);
     if (result.status === 'saved') {
       setWishlist(result.ids);saveWishlist(result.ids);
       result.added.forEach(id=>onDemand(id,'save'));
-      record('fit_save', {fit: selectedFit.id, pieces: result.added.length});
+      if(fitView && selectedFit)record('fit_save', {fit: selectedFit.id, pieces: result.added.length});
     }
     return result;
   }
@@ -472,7 +484,8 @@ export default function Home() {
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
         {fitView && error && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
         {fitView && !loading && !error && !looks.length && <p className="fit-route-message">More looks are on the way.</p>}
-        {!fitView && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
+        {simpleSaved && !loading && !error && <HaulBuilder items={items} wishlist={wishlist} onWishlist={toggleWishlist} onSave={saveWholeLook} currency={currency} rate={exchangeRate.usdToCad} audience={audience} search={deferredSearch} recent={recent} onDemand={onDemand} onBrowse={()=>selectView('all')}/>}
+        {!fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
           {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
