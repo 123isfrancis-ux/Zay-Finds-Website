@@ -81,6 +81,60 @@
     "photoLayout": "portrait-top"
   },
   {
+    "id": "weekend-streetwear",
+    "title": "Weekend Streetwear",
+    "audience": "women",
+    "description": "A white graphic tee, wide-leg blue denim, and blue Gazelles. Choose the listed seller options to recreate this look.",
+    "pieces": [
+      {
+        "id": "917683d727c7e87902246174",
+        "role": "The tee \u00b7 Style 12",
+        "imageWidth": 800,
+        "imageHeight": 800
+      },
+      {
+        "id": "1a9e868bc88fab91d117d4f6",
+        "role": "The jeans \u00b7 Style 14",
+        "imageWidth": 900,
+        "imageHeight": 897
+      },
+      {
+        "id": "4f48f0de449e0a15125bd86b",
+        "role": "The sneakers \u00b7 Blue White HQ8717",
+        "imageWidth": 1179,
+        "imageHeight": 1180
+      }
+    ],
+    "photoLayout": "square-top"
+  },
+  {
+    "id": "night-out",
+    "title": "Night Out",
+    "audience": "women",
+    "description": "A black lace-trim slip dress, sculptural slingback heels, and a compact Coach bag. Choose the listed seller options to recreate this look.",
+    "pieces": [
+      {
+        "id": "a6c2acadf5f4e83413dba1ef",
+        "role": "The dress \u00b7 Style 1",
+        "imageWidth": 800,
+        "imageHeight": 800
+      },
+      {
+        "id": "b37a19da5dc91b44fb33b1c0",
+        "role": "The heels \u00b7 Black",
+        "imageWidth": 800,
+        "imageHeight": 800
+      },
+      {
+        "id": "b96c90f686b035b49fb467f1",
+        "role": "The bag \u00b7 Black Coffee",
+        "imageWidth": 1279,
+        "imageHeight": 1698
+      }
+    ],
+    "photoLayout": "square-top"
+  },
+  {
     "id": "gym-to-coffee",
     "title": "Gym to Coffee",
     "audience": "women",
@@ -108,10 +162,10 @@
     "photoLayout": "square-top"
   },
   {
-    "id": "night-out",
-    "title": "Night Out",
+    "id": "city-chic",
+    "title": "City Chic",
     "audience": "women",
-    "description": "An off-shoulder top, relaxed tailoring, and low-key sneakers.",
+    "description": "An off-shoulder top, tailored trousers, and black slingback heels for dinner in the city.",
     "pieces": [
       {
         "id": "9607482ec543b9329e0a4df5",
@@ -126,10 +180,10 @@
         "imageHeight": 600
       },
       {
-        "id": "4389b3753eb4c0eac4e5d88d",
-        "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 600
+        "id": "b37a19da5dc91b44fb33b1c0",
+        "role": "The heels \u00b7 Black",
+        "imageWidth": 800,
+        "imageHeight": 800
       }
     ],
     "photoLayout": "portrait-top"
