@@ -1,12 +1,14 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+import {restoreSearchFields,cardImage,boundedRanking} from '../lib/catalogue-delivery';
 import {siteSignal,setSignalsEnabled} from '../lib/site-signals';
-import QuickView from '../components/QuickView';
-import HaulBuilder from '../components/HaulBuilder';
+const QuickView = dynamic(()=>import('../components/QuickView'));
+const HaulBuilder = dynamic(()=>import('../components/HaulBuilder'));
 import {cleanIds} from '../lib/haul-builder';
-import ShopTheFit from '../components/ShopTheFit';
+const ShopTheFit = dynamic(()=>import('../components/ShopTheFit'));
 import { availableLooks, saveLook } from '../lib/shop-the-fit';
-import HomeCollections from '../components/HomeCollections';
+import HomeCollections, {HomeSkeleton} from '../components/HomeCollections';
 import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
 import { rankRecommended } from '../lib/trending';
 import { loadTrending } from '../lib/demand-client';
@@ -22,21 +24,7 @@ import SocialLinks from '../components/SocialLinks';
 import CategoryFilter from '../components/CategoryFilter';
 import { viewItems, categoriesFor, filterAndSort, catalogueFiltersFromQuery, priceAmount } from '../lib/catalogue';
 
-// Cards are never wider than ~220px, but the sheet links full-size originals
-// (often 1440x1920). The Weidian CDN resizes on request — asking for 400px wide
-// cuts roughly 86% of the bytes with no visible difference at 2x density.
-const THUMB_WIDTH = 400;
-function thumb(url) {
-  try {
-    const parsed = new URL(url);
-    if (parsed.hostname === 'si.geilicdn.com') parsed.searchParams.set('w', String(THUMB_WIDTH));
-    return parsed.toString();
-  } catch { return url; }
-}
-
-// How many cards to mount at once. Womens alone is ~1,900 rows, which locks up
-// the main thread if rendered in a single commit.
-const PAGE_SIZE = 60;
+const PAGE_SIZE = 24;
 
 const CURRENCIES = ['USD', 'CAD'];
 function record(name, data) { try { track(name, data); } catch {} }
@@ -89,6 +77,7 @@ function Badge({ cat }) {
 
 const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad, onDemand, onPreview }) {
   const [imgError, setImgError] = useState(false);
+  const [originalImage,setOriginalImage]=useState(false);
 
   const amount = priceAmount(item, currency, usdToCad);
   const displayPrice = Number.isFinite(amount)
@@ -118,12 +107,12 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         {item.image && !imgError ? (
           <img
             className="card-img"
-            src={thumb(item.image)}
+            src={cardImage(item.image,!originalImage)}
             alt={item.name}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
             decoding="async"
-            onError={() => {setImgError(true);siteSignal({type:'image_error',id:item.id});}}
+            onError={() => {if(!originalImage && cardImage(item.image)!==cardImage(item.image,false)){setOriginalImage(true);return;}setImgError(true);siteSignal({type:'image_error',id:item.id});}}
             style={{
               position: 'absolute', inset: 0, width: '100%', height: '100%',
               objectFit: item.image?.startsWith('/owner-photos/') ? 'contain' : 'cover',
@@ -257,12 +246,12 @@ export default function Home() {
     setItems([]);
     async function load() {
       try {
-        const [response, snapshot] = await Promise.all([
-          fetch('/api/catalogue?compact=1', { signal: controller.signal, cache: 'default' }),
-          loadTrending(),
-        ]);
+        const rankingRequest=loadTrending();
+        const response=await fetch('/api/catalogue?compact=2', { signal: controller.signal, cache: 'default' });
         if (!response.ok) throw new Error('Catalogue request failed');
-        const { items: rows, collections } = await response.json();
+        const { items: deliveredRows, collections } = await response.json();
+        const rows=restoreSearchFields(deliveredRows);
+        const snapshot=await boundedRanking(rankingRequest);
         if (!active) return;
         setDemand(snapshot);
         setItems(rows);
@@ -339,6 +328,7 @@ export default function Home() {
   // the first render, not in an effect after an oversized grid has mounted.
   const visibleCount = page.list === filtered ? page.count : PAGE_SIZE;
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+  const homeLoading=loading && activeView==='all' && !category && !collection && !search.trim();
   const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
   const sections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
   const looks = useMemo(() => availableLooks(items, audience), [items, audience]);
@@ -417,6 +407,7 @@ export default function Home() {
         <title>ZAY FINDS</title>
         <meta name="description" content="Clothing, accessories and everyday finds curated by Zay." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://si.geilicdn.com" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         {/* Tints the browser/OS chrome to match, so the page doesn't sit in a white frame */}
         {/* keys are required — next/head otherwise dedupes these two by name */}
@@ -489,13 +480,14 @@ export default function Home() {
         </div>
 
         <MobileBuyingHelp record={record}/>
+        {homeLoading && <HomeSkeleton/>}
         {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience} onPreview={openPreview}/>}
-        {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={false}/>}/>}
+        {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index,sectionIndex)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={sectionIndex===0 && index<2}/>}/>}
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
         {fitView && error && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
         {fitView && !loading && !error && !looks.length && <p className="fit-route-message">More looks are on the way.</p>}
         {simpleSaved && !loading && !error && <HaulBuilder items={items} wishlist={wishlist} onWishlist={toggleWishlist} onSave={saveWholeLook} currency={currency} rate={exchangeRate.usdToCad} audience={audience} search={deferredSearch} recent={recent} onDemand={onDemand} onBrowse={()=>selectView('all')} onPreview={openPreview}/>}
-        {!fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
+        {!homeLoading && !fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
           {!loading && !error && <div className="catalogue-summary"><p>{filtered.length.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}

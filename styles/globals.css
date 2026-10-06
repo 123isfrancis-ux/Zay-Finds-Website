@@ -687,3 +687,12 @@ body { font-weight: 400; }
  .insights-note{font-size:12px;}
  .insights li{padding:12px 0;}
 }
+
+/* Reserve the discovery region while data loads so the catalogue never jumps. */
+.home-loading{overflow:hidden;min-height:100vh;}
+.home-loading .shelf-rail{overflow:hidden;}
+.shelf-skeleton-heading{height:64px;width:220px;border-radius:8px;background:var(--border);opacity:.4;}
+.shelf-skeleton-controls{height:50px;}
+.home-loading .skeleton-copy{min-height:128px;}
+/* Off-screen rows retain their boxes while rendering is deferred. */
+.product-grid>.card{content-visibility:auto;contain-intrinsic-size:auto 360px;}
