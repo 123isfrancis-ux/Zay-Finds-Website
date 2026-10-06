@@ -633,3 +633,11 @@ body { font-weight: 400; }
 .fit-piece-price {grid-column:3;grid-row:1;}
 
 .quick-related .quick-photo-fallback {height:120px;font-size:12px;padding:8px;}
+
+/* Mobile cards open the product preview; the heart remains independently tappable. */
+.card-mobile-preview {display:none;}
+@media(max-width:640px){
+ .card .card-link,.card .card-quick-view,.card .shop-label {display:none;}
+ .card-mobile-preview {display:block;position:absolute;inset:0;z-index:1;border:0;border-radius:12px;background:transparent;cursor:pointer;}
+ .card-mobile-preview:focus-visible {outline:2px solid var(--ink);outline-offset:-4px;}
+}

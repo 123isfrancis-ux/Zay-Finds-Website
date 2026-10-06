@@ -111,6 +111,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
       }}
     >
       {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => { record('product_click', { product: item.id, category: item.category }); onDemand(item.id, 'click'); }} />}
+      <button className="card-mobile-preview" type="button" aria-label={`Preview ${item.name}`} aria-haspopup="dialog" onClick={()=>onPreview(item)} />
       {/* Image */}
       <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', background: 'var(--cream)', overflow: 'hidden' }}>
         {item.image && !imgError ? (
