@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import QuickView from '../components/QuickView';
 import HaulBuilder from '../components/HaulBuilder';
 import {cleanIds} from '../lib/haul-builder';
 import ShopTheFit from '../components/ShopTheFit';
@@ -85,7 +86,7 @@ function Badge({ cat }) {
   );
 }
 
-const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad, onDemand }) {
+const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad, onDemand, onPreview }) {
   const [imgError, setImgError] = useState(false);
 
   const amount = priceAmount(item, currency, usdToCad);
@@ -181,6 +182,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
 
         </div>
         <span className="shop-label">{item.link?.includes('kakobuy.com') ? 'View on Kakobuy' : 'View at seller'}</span>
+        <button className="card-quick-view" type="button" onClick={()=>onPreview(item)} aria-label={`Quick View ${item.name}`}>Quick View</button>
       </div>
     </div>
   );
@@ -202,6 +204,7 @@ export default function Home() {
   const [exchangeRate, setExchangeRate] = useState(initialExchangeRate);
   const [wishlist, setWishlist] = useState([]);
   const [recent, setRecent] = useState([]);
+  const [previewItem,setPreviewItem]=useState(null);
   const [view, setView] = useState(null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState({status:'disabled',scores:{},collect:false});
@@ -356,6 +359,10 @@ export default function Home() {
       return next;
     });
   },[trackDemand]);
+  const openPreview=useCallback(item=>{
+    setPreviewItem(item);
+    setRecent(previous=>{const next=[item.id,...previous.filter(id=>id!==item.id)].slice(0,30);try{localStorage.setItem('zay-recent-v1',JSON.stringify(next));}catch{}return next;});
+  },[]);
   function saveWholeLook(ids) {
     const result = saveLook(wishlist, ids, WISHLIST_MAX);
     if (result.status === 'saved') {
@@ -479,12 +486,12 @@ export default function Home() {
         </div>
 
         <MobileBuyingHelp record={record}/>
-        {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience}/>}
-        {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={false}/>}/>}
+        {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience} onPreview={openPreview}/>}
+        {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={false}/>}/>}
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
         {fitView && error && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
         {fitView && !loading && !error && !looks.length && <p className="fit-route-message">More looks are on the way.</p>}
-        {simpleSaved && !loading && !error && <HaulBuilder items={items} wishlist={wishlist} onWishlist={toggleWishlist} onSave={saveWholeLook} currency={currency} rate={exchangeRate.usdToCad} audience={audience} search={deferredSearch} recent={recent} onDemand={onDemand} onBrowse={()=>selectView('all')}/>}
+        {simpleSaved && !loading && !error && <HaulBuilder items={items} wishlist={wishlist} onWishlist={toggleWishlist} onSave={saveWholeLook} currency={currency} rate={exchangeRate.usdToCad} audience={audience} search={deferredSearch} recent={recent} onDemand={onDemand} onBrowse={()=>selectView('all')} onPreview={openPreview}/>}
         {!fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
@@ -507,12 +514,13 @@ export default function Home() {
               else selectView('all');
             }}>{searching ? 'Clear search' : simpleSaved && audience !== 'everyone' ? 'Show Everyone' : 'Browse All Finds'}</button>
           </div> : <div className="product-grid">
-            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} priority={!showHome && index < 4} />)}
+            {visible.map((item, index) => <ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={!showHome && index < 4} />)}
           </div>}
           {!loading && !error && filtered.length > visibleCount && <div className="load-more">
             <button className="control" type="button" onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>Load more</button>
           </div>}
         </section>}
+        {previewItem&&<QuickView item={previewItem} items={items} currency={currency} rate={exchangeRate.usdToCad} audience={audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={onDemand}/>}
         <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get your $400 Coupon Bundle</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>

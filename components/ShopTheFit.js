@@ -8,7 +8,7 @@ function FitPhoto({item}) {
   try { const url=new URL(src);if(url.hostname==='si.geilicdn.com')url.searchParams.set('w','600');src=url.toString(); }catch{}
   return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>;
 }
-export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved}) {
+export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview}) {
   const [message,setMessage]=useState(null);
   if(!looks.length)return null;
   const look=looks.find(look=>look.id===selectedId)||looks[0];
@@ -30,7 +30,7 @@ export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave
       <div className="fit-details">
         <p className="fit-audience">{look.audience==='everyone'?'For everyone':look.audience==='men'?'For men':'For women'}</p>
         <h3>{look.title}</h3><p className="fit-description">{look.description}</p>
-        <ol className="fit-pieces">{look.pieces.map(({item,role},index)=>{const amount=priceAmount(item,currency,rate);return <li key={item.id}><span className="fit-number">{String(index+1).padStart(2,'0')}</span><a href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}><span className="fit-role">{role}</span><span>{item.name}</span></a><span className="fit-piece-price">{Number.isFinite(amount)?money(amount,currency):'See price'}</span></li>;})}</ol>
+        <ol className="fit-pieces">{look.pieces.map(({item,role},index)=>{const amount=priceAmount(item,currency,rate);return <li key={item.id}><span className="fit-number">{String(index+1).padStart(2,'0')}</span><a href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}><span className="fit-role">{role}</span><span>{item.name}</span></a><button className="fit-preview" onClick={()=>onPreview(item)} aria-label={`Quick View ${item.name}`}>Quick View</button><span className="fit-piece-price">{Number.isFinite(amount)?money(amount,currency):'See price'}</span></li>;})}</ol>
         <div className="fit-total"><span>Combined item price</span><strong>{total===null?'Check seller prices':`${money(total,currency)} ${currency}`}</strong></div>
         {currency==='CAD'&&usdTotal!==null&&<p className="fit-price-note">{money(usdTotal,'USD')} USD before conversion</p>}
         <p className="fit-price-note">Shipping extra. Each piece is purchased separately; prices and options may vary.</p>
