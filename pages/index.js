@@ -8,7 +8,7 @@ import ShopTheFit from '../components/ShopTheFit';
 import { availableLooks, saveLook } from '../lib/shop-the-fit';
 import HomeCollections from '../components/HomeCollections';
 import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
-import { rankTrending } from '../lib/trending';
+import { rankRecommended } from '../lib/trending';
 import { loadTrending } from '../lib/demand-client';
 import useDemandTracking from '../hooks/useDemandTracking';
 import { audienceFor, normalizeAudience, audienceFromQuery } from '../lib/audience';
@@ -332,7 +332,7 @@ export default function Home() {
     const sheetOrder = new Map(items.map((item,index)=>[item.id,index]));
     const orderedBase = collection && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
     const list = filterAndSort(orderedBase, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
-    return sortBy === 'trending' && !simpleSaved && !collection ? rankTrending(list, demand) : list;
+    return sortBy === 'trending' && !simpleSaved && !collection ? rankRecommended(list, demand) : list;
   }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
   const hasScopedTrends = demand.status === 'ready' && filtered.some(item => item.image && Number.isFinite(demand.scores[item.id]));
   // Scope pagination to the exact result array: a changed filter is capped in
@@ -464,7 +464,7 @@ export default function Home() {
               <input type="search" aria-label={simpleSaved ? 'Search saved finds' : 'Search finds'} placeholder={simpleSaved ? 'Search saved finds…' : 'Search this collection…'} value={search} onChange={event => setSearch(event.target.value)} />
               {search && <button className="clear-search" type="button" onClick={() => setSearch('')} aria-label="Clear search">Clear ×</button>}
             </div>}
-            {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
+            {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
               {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
@@ -476,7 +476,7 @@ export default function Home() {
               <CategoryFilter categories={categories} value={effectiveCategory} onChange={selectCategory} />
               <label className="sort-control control"><span className="sort-control-title">Sort</span>
                 <select aria-label="Sort products" value={sortBy} onChange={event => setSortBy(event.target.value)}>
-                  <option value="trending">{collection === 'new' ? 'Newest first' : hasScopedTrends ? 'Trending' : 'Recommended'}</option>
+                  <option value="trending">{collection === 'new' ? 'Newest first' : 'Recommended'}</option>
                   <option value="default">Sheet order</option>
                   <option value="price-asc">Price: Low to High</option>
                   <option value="price-desc">Price: High to Low</option>

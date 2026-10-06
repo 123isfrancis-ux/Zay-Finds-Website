@@ -19,3 +19,13 @@ With data, four out of five slots use descending scores; the fifth gives an unra
 ## Validation
 
 Run `node --test tests/*.test.cjs` and `node node_modules/next/dist/bin/next build`. Test live Redis logic using a separate `zay:trending:verify:<random>` prefix, never seed fake popularity into `zay:trending:v1`. Verification records must have short expiry. The owner dashboard and its additional signals are documented in INSIGHTS.md.
+
+## Adaptive Recommended ordering
+
+Recommended uses a separate click-rate model; Trending eligibility and its click/save scores remain available. Products are grouped by recognizable product type (watches, shoes, bags, bottoms, tops, dresses, accessories), with specific catalogue categories as fallback. Generic Main/TikTok/Taobao sections are not comparison groups. Unclassified products stay eligible for discovery rather than being judged against unrelated products.
+
+A product needs 100 raw views within seven UTC dates. A comparison group needs at least three such photographed, visible products, 100 recency-weighted views and five weighted clicks. Click rates use the existing three-day half-life and 50 baseline-weighted pseudo-views to dampen small samples. Eligible products rank by rate relative to their group; rates below 60% of the group baseline move behind discovery products. They are not deleted and can recover as their recent results change or old evidence expires.
+
+Four positions favor measured performers and every fifth offers an unjudged photographed product; after performers are exhausted, remaining discoveries follow, then low performers and unphotographed items. Discovery order rotates deterministically daily. With no eligible evidence in the filtered results, sheet order remains. Scores are computed using the existing seven Redis buckets and five-minute server cache, with no additional database reads or new tracking. Each page load fetches one snapshot: an open page never reshuffles as new events arrive.
+
+Adaptive ordering applies to default Recommended catalogue browsing and the already-proven Trending shelf. Just Added, budget collection order, manual price sorts, Saved, and curated fits preserve their own ordering. The model measures seller clicks, not confirmed purchases. No paid services or scheduled tasks are required.

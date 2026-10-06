@@ -91,3 +91,38 @@ test('client snapshot fetch falls back cleanly and rejects unsafe scores',async(
   const data=await loadTrending(async()=>({ok:true,json:async()=>({version:1,status:'ready',scores:{good:.4,bad:'10',overflow:100},seed:'invalid',collect:true})}));
   assert.deepEqual(data.scores,{good:.4});assert.equal(data.collect,true);
 });
+
+test('adaptive ranking compares like products and waits for 100 views plus a valid cohort',()=>{
+ const {adaptiveScores}=require('../lib/trending');
+ const items=['a','b','c','tiny'].map(id=>({id,name:'Watch',image:'photo'}));
+ const fields={'a:view':1000,'a:click':20,'b:view':100,'b:click':20,'c:view':100,'c:click':0,'tiny:view':99,'tiny:click':40};
+ const scores=adaptiveScores([fields],items);
+ assert.ok(scores.scores.b>scores.scores.a);assert.ok(scores.low.includes('c'));assert.equal(scores.scores.tiny,undefined);
+ assert.deepEqual(adaptiveScores([fields],items.slice(0,2)),{scores:{},low:[]});
+ const shoes=['x','y','z'].map(id=>({id,name:'Sneaker',image:'photo'}));
+ const shoeFields=Object.fromEntries(shoes.flatMap(i=>[[i.id+':view',100],[i.id+':click',50]]));
+ assert.deepEqual(adaptiveScores([{...fields,...shoeFields}],[...items,...shoes]).scores.b,scores.scores.b);
+ assert.equal(adaptiveScores([fields],items.map(i=>({...i,visibility:'hidden'}))).scores.a,undefined);
+});
+test('adaptive ordering demotes weak products, rotates discovery and preserves all items without mutation',()=>{
+ const {rankRecommended}=require('../lib/trending');
+ const items=['weak','a','b','c','d','e','new1','new2','noPhoto'].map(id=>({id,image:id==='noPhoto'?'':'photo'}));
+ const snapshot={status:'learning',seed:'2026-10-06',adaptive:{scores:{weak:.1,a:.9,b:.8,c:.7,d:.6,e:.5},low:['weak']}};
+ const ranked=rankRecommended(items,snapshot);
+ assert.deepEqual(ranked.slice(0,4).map(i=>i.id),['a','b','c','d']);
+ assert.ok(ranked[4].id.startsWith('new'));assert.equal(ranked.at(-2).id,'weak');assert.equal(ranked.at(-1).id,'noPhoto');
+ assert.deepEqual(new Set(ranked.map(i=>i.id)),new Set(items.map(i=>i.id)));
+ assert.equal(items[0].id,'weak');assert.deepEqual(rankRecommended(items,snapshot),ranked);
+ assert.deepEqual(rankRecommended(items,{...snapshot,status:'unavailable'}),items);
+ assert.deepEqual(rankRecommended([items[6]],snapshot),[items[6]]);
+});
+test('adaptive evidence follows recent demand and rejects unsafe client scores',async()=>{
+ const {adaptiveScores}=require('../lib/trending');
+ const items=['a','b','c'].map(id=>({id,name:'T-Shirt',image:'p'}));
+ const recent={'a:view':100,'a:click':20,'b:view':100,'b:click':1,'c:view':100,'c:click':5};
+ const old={'a:view':100,'a:click':1,'b:view':100,'b:click':20,'c:view':100,'c:click':5};
+ const scores=adaptiveScores([recent,{},{},{},{},{},old],items).scores;
+ assert.ok(scores.a>scores.b);
+ const data=await loadTrending(async()=>({ok:true,json:async()=>({version:1,status:'learning',adaptive:{scores:{good:.8,bad:-1,huge:9},low:['good','bad']}})}));
+ assert.deepEqual(data.adaptive,{scores:{good:.8},low:['good']});
+});
