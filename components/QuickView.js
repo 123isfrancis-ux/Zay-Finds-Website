@@ -1,3 +1,4 @@
+import {siteSignal} from '../lib/site-signals';
 import {useEffect,useRef,useState} from 'react';
 import {priceAmount} from '../lib/catalogue';
 import {relatedFinds} from '../lib/quick-view';
@@ -5,7 +6,7 @@ function Photo({item}) {
  const [failed,setFailed]=useState(false);
  let src=item.image;
  try{const url=new URL(src,window.location.origin);if(url.hostname==='si.geilicdn.com'){url.searchParams.set('w','900');url.searchParams.delete('h');}src=url.toString();}catch{}
- return src&&!failed?<img src={src} alt={item.name} onError={()=>setFailed(true)}/>:<div className="quick-photo-fallback">Photos are available at the seller.</div>;
+ return src&&!failed?<img src={src} alt={item.name} onError={()=>{setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>:<div className="quick-photo-fallback">Photos are available at the seller.</div>;
 }
 export default function QuickView({item,items,currency,rate,audience,wishlist,onWishlist,onSelect,onClose,onDemand}) {
  const dialog=useRef(null),content=useRef(null),closeButton=useRef(null);

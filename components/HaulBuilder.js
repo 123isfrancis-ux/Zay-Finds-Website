@@ -1,3 +1,4 @@
+import {siteSignal} from '../lib/site-signals';
 import {useEffect,useMemo,useState,useRef} from 'react';
 import {audienceFor} from '../lib/audience';
 import {MAX_BOARDS,MAX_ITEMS,cleanBoards,cleanName,addToBoard,resolveHaul,subtotal,shareHash,readSharedHaul} from '../lib/haul-builder';
@@ -6,7 +7,7 @@ function HaulPhoto({item}) {
  const [failed,setFailed]=useState(false);
  let src=item.image;
  try{const url=new URL(src);if(url.hostname==='si.geilicdn.com')url.searchParams.set('w','400');src=url.toString();}catch{}
- return failed?<span className="haul-no-photo">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" onError={()=>setFailed(true)}/>;
+ return failed?<span className="haul-no-photo">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" onError={()=>{setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 export default function HaulBuilder({items,wishlist,onWishlist,onSave,currency,rate,audience,search,recent,onDemand,onBrowse,onPreview}) {
   const grid=useRef(null);

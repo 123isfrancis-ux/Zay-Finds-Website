@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
+import {siteSignal,setSignalsEnabled} from '../lib/site-signals';
 import QuickView from '../components/QuickView';
 import HaulBuilder from '../components/HaulBuilder';
 import {cleanIds} from '../lib/haul-builder';
@@ -122,7 +123,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
             decoding="async"
-            onError={() => setImgError(true)}
+            onError={() => {setImgError(true);siteSignal({type:'image_error',id:item.id});}}
             style={{
               position: 'absolute', inset: 0, width: '100%', height: '100%',
               objectFit: item.image?.startsWith('/owner-photos/') ? 'contain' : 'cover',
@@ -209,6 +210,7 @@ export default function Home() {
   const [view, setView] = useState(null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState({status:'disabled',scores:{},collect:false});
+  useEffect(()=>{setSignalsEnabled(demand.collect);return()=>setSignalsEnabled(false);},[demand.collect]);
   const [page, setPage] = useState({ list: null, count: PAGE_SIZE });
   const [urlFiltersReady, setUrlFiltersReady] = useState(false);
 
@@ -385,7 +387,7 @@ export default function Home() {
   }), [audienceItems, wishlistSet]);
   useEffect(() => {
     if (loading || error || !searching) return;
-    const timer = setTimeout(() => record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length }), 800);
+    const timer = setTimeout(() => {record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length });if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim()});}, 1200);
     return () => clearTimeout(timer);
   }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching]);
   function selectAudience(next) {

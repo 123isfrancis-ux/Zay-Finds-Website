@@ -1,3 +1,4 @@
+import {siteSignal} from '../lib/site-signals';
 import { useState } from 'react';
 import { lookTotal } from '../lib/shop-the-fit';
 import { priceAmount } from '../lib/catalogue';
@@ -6,7 +7,7 @@ function FitPhoto({item}) {
   const [failed,setFailed]=useState(false);
   let src=item.image;
   try { const url=new URL(src);if(url.hostname==='si.geilicdn.com')url.searchParams.set('w','600');src=url.toString(); }catch{}
-  return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>;
+  return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" decoding="async" onError={()=>{setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview}) {
   const [message,setMessage]=useState(null);
