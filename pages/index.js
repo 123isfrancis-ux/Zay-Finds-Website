@@ -78,6 +78,15 @@ function Badge({ cat }) {
 const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency, priority, usdToCad, onDemand, onPreview }) {
   const [imgError, setImgError] = useState(false);
   const [originalImage,setOriginalImage]=useState(false);
+  const photoTarget=useRef(null);
+  const [loadPhoto,setLoadPhoto]=useState(priority);
+  useEffect(()=>{
+    if(loadPhoto)return;
+    if(priority||!window.IntersectionObserver){setLoadPhoto(true);return;}
+    const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){setLoadPhoto(true);observer.disconnect();}},{rootMargin:'180px'});
+    if(photoTarget.current)observer.observe(photoTarget.current);
+    return()=>observer.disconnect();
+  },[loadPhoto,priority]);
 
   const amount = priceAmount(item, currency, usdToCad);
   const displayPrice = Number.isFinite(amount)
@@ -90,6 +99,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
   return (
     <div
       className="card"
+      ref={photoTarget}
       data-product-id={item.id}
       style={{
         background: 'var(--surface)',
@@ -107,7 +117,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         {item.image && !imgError ? (
           <img
             className="card-img"
-            src={cardImage(item.image,!originalImage)}
+            src={loadPhoto?cardImage(item.image,!originalImage):undefined}
             alt={item.name}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
