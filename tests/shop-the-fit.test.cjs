@@ -9,7 +9,7 @@ test('published looks resolve complete outfits from visible photographed catalog
  assert.equal(new Set(definitions.map(l=>l.id)).size,definitions.length);
 });
 test('looks follow audience selection',()=>{
- assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['airport-fit','clean-everyday','going-out','designer-fit','smart-casual','streetwear']);
+ assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['streetwear','airport-fit','clean-everyday','going-out','designer-fit','smart-casual']);
  assert.deepEqual(availableLooks(catalogue,'women').map(l=>l.id),['gym-to-coffee','night-out']);
 });
 test('missing, hidden, unphotographed or incompatible pieces suppress complete look',()=>{
