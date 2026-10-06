@@ -6,7 +6,7 @@
     "description": "Relaxed layers for the journey and everything after.",
     "pieces": [
       {
-        "id": "102d1f983929c9a68d13c9c7",
+        "id": "3bea8fea16442b56d8e183b6",
         "role": "The hoodie"
       },
       {
@@ -14,10 +14,11 @@
         "role": "The sweats"
       },
       {
-        "id": "15f4e1fcb222a0f0771c3f98",
+        "id": "a1850b0f61213e1546d003da",
         "role": "The sneakers"
       }
-    ]
+    ],
+    "photoLayout": "square-top"
   },
   {
     "id": "clean-everyday",
@@ -37,7 +38,8 @@
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers"
       }
-    ]
+    ],
+    "photoLayout": "portrait-top"
   },
   {
     "id": "gym-to-coffee",
@@ -74,7 +76,7 @@
         "role": "The trousers"
       },
       {
-        "id": "e8ec2943a66d975b43afd665",
+        "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers"
       }
     ]

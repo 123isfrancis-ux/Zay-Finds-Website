@@ -545,3 +545,11 @@ body { font-weight: 400; }
   .header-actions { justify-content:flex-start; gap:10px; }
   .header-actions .currency-select { margin-left:auto; }
 }
+
+/* Match the menswear panels to the photographs instead of letterboxing them. */
+.fit-board-photo-led { grid-template-columns:2fr 1fr; grid-template-rows:auto auto; align-items:start; align-self:center; min-height:0; }
+.fit-board-portrait-top { grid-template-columns:1.75fr 1fr; }
+.fit-board-photo-led .fit-photo { min-height:0; }
+.fit-board-photo-led .fit-photo-0 { align-self:center; }
+.fit-board-photo-led .fit-photo img { position:static; display:block; width:100%; height:auto; }
+.fit-board-photo-led .fit-photo-label { position:static; display:block; margin:0; border-radius:0; padding:8px; }
