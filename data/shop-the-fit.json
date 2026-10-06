@@ -127,7 +127,7 @@
     "id": "smart-casual",
     "title": "Smart Casual Fit",
     "audience": "men",
-    "description": "A knit polo, tailored trousers, and loafers for plans that call for a little polish.",
+    "description": "A knit polo, tailored trousers, and clean white sneakers for an easy smart casual balance.",
     "pieces": [
       {
         "id": "a028647d64d6e076f75a20da",
@@ -138,8 +138,8 @@
         "role": "The trousers"
       },
       {
-        "id": "761bdff5f5d465c0a0436af4",
-        "role": "The loafers"
+        "id": "4389b3753eb4c0eac4e5d88d",
+        "role": "The sneakers"
       }
     ],
     "photoLayout": "square-top"
@@ -148,18 +148,18 @@
     "id": "streetwear",
     "title": "Streetwear Outfit",
     "audience": "men",
-    "description": "A graphic hoodie, wide carpenter jeans, and black sneakers with a relaxed silhouette.",
+    "description": "A washed zip hoodie, distressed baggy denim, and chunky Rick Owens-style sneakers from the TikTok finds.",
     "pieces": [
       {
-        "id": "3bea8fea16442b56d8e183b6",
+        "id": "624966f5838e444a30233f5c",
         "role": "The hoodie"
       },
       {
-        "id": "4bc1dbec8b5eb549687fc210",
-        "role": "The jeans"
+        "id": "d227aa75ef153fbb19319d8d",
+        "role": "The baggy jeans"
       },
       {
-        "id": "a1850b0f61213e1546d003da",
+        "id": "a6eacda4b390e97d89a59001",
         "role": "The sneakers"
       }
     ],

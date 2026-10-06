@@ -24,3 +24,17 @@ test('audience scopes category availability and saved view without deleting save
   assert.deepEqual(viewItems(men,'saved',saved).map(i=>i.id),['s']);
   assert.deepEqual(viewItems(items,'saved',saved).map(i=>i.id),['w','s']);
 });
+
+ test('specific womenswear stays out of Men without misclassifying shared garment words',()=>{
+  const {audienceFor}=require('../lib/audience');
+  for(const name of ['Asymmetric lapel cut blouse','Off-shoulder top','Ribbed camisole','Lace bodysuit','Ballet flats','Halter neck top','Crop top'])assert.equal(audienceFor({name}),'women',name);
+  for(const name of ['Mens tank top','Men’s cropped jacket','Mens compression leggings'])assert.equal(audienceFor({name}),'men',name);
+  for(const name of ['Unisex hoodie','Tank 68 Keyboard','Cartier Tank','Dress shirt','Baby bodysuit'])assert.equal(audienceFor({name}),'everyone',name);
+ });
+ test('reviewed Lululemon womens pieces remain in Women and Everyone',()=>{
+  const {audienceFor}=require('../lib/audience');
+  const items=require('../lib/regional-catalogue').items.filter(i=>i.categories.includes('LULULEMON'));
+  assert.equal(items.length,27);
+  assert.ok(items.every(i=>audienceFor(i)==='women'));
+  assert.equal(audienceFor({name:'Lululemon Mens Joggers',categories:['LULULEMON']}),'men');
+ });
