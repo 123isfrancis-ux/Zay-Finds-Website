@@ -1,13 +1,15 @@
+import {cardImage} from '../lib/catalogue-delivery';
 import {siteSignal} from '../lib/site-signals';
 import { useState } from 'react';
 import { lookTotal } from '../lib/shop-the-fit';
 import { priceAmount } from '../lib/catalogue';
 function money(amount,currency) {return (currency==='CAD'?'≈ ':'')+new Intl.NumberFormat('en-US',{style:'currency',currency}).format(amount);}
-function FitPhoto({item}) {
+function FitPhoto({item,width,height,priority}) {
   const [failed,setFailed]=useState(false);
-  let src=item.image;
-  try { const url=new URL(src);if(url.hostname==='si.geilicdn.com')url.searchParams.set('w','600');src=url.toString(); }catch{}
-  return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} loading="lazy" decoding="async" onError={()=>{setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
+  const [original,setOriginal]=useState(false);
+  let src=cardImage(item.image,!original);
+  try { const url=new URL(src);if(url.hostname==='si.geilicdn.com'){url.searchParams.set('w','600');url.searchParams.delete('h');}src=url.toString(); }catch{}
+  return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} width={width} height={height} loading={priority?"eager":"lazy"} fetchPriority={priority?"high":"auto"} decoding="async" onError={()=>{if(!original && cardImage(item.image)!==cardImage(item.image,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview}) {
   const [message,setMessage]=useState(null);
@@ -25,7 +27,7 @@ export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave
     <div className="fit-picker" role="group" aria-label="Choose a look">{looks.map(option=><button key={option.id} type="button" aria-pressed={look.id===option.id} onClick={()=>{setMessage('');onSelect(option.id);}}>{option.title}</button>)}</div>
     <div className="fit-layout" key={look.id}>
       <div className={`fit-board${look.photoLayout ? ` fit-board-photo-led fit-board-${look.photoLayout}` : ''}`} aria-label={`${look.title} outfit pieces`}>
-        {look.pieces.map(({item,role},index)=><a className={`fit-photo fit-photo-${index}`} key={item.id} data-product-id={item.id} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={()=>onDemand(item.id,'click')}><FitPhoto item={item}/><span className="fit-photo-label">{String(index+1).padStart(2,'0')} / {role}</span></a>)}
+        {look.pieces.map(({item,role,imageWidth,imageHeight},index)=><a className={`fit-photo fit-photo-${index}`} key={item.id} data-product-id={item.id} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={()=>onDemand(item.id,'click')}><FitPhoto item={item} width={imageWidth} height={imageHeight} priority={index===0}/><span className="fit-photo-label">{String(index+1).padStart(2,'0')} / {role}</span></a>)}
         <span className="fit-board-note">Style inspiration · Choose colors & sizes at the seller</span>
       </div>
       <div className="fit-details">
