@@ -35,12 +35,13 @@ test('invalid category falls back to a usable catalogue',()=>{
 });
 
 for(const audience of ['everyone','men','women'])test(`direct ${audience} outfit visits have complete looks without the full catalogue`,()=>{
- const {availableLooks}=require('../lib/shop-the-fit');
+ const {availableLooks,reviewedLooks}=require('../lib/shop-the-fit');
  const p=prepareInitialCatalogue(catalogue.items,[],{view:'fits',audience,fit:audience==='women'?'night-out':'streetwear'},demand);
  assert.equal(p.fitPreview,true);assert.equal(p.preview,false);
  assert.equal(p.items.length,23);assert.ok(p.items.length<catalogue.items.length/100);
  for(const selection of ['everyone','men','women']){
   assert.deepEqual(availableLooks(restoreSearchFields(p.items),selection),availableLooks(catalogue.items,selection));
+  assert.deepEqual(reviewedLooks(restoreSearchFields(p.items),selection),reviewedLooks(catalogue.items,selection));
   assert.equal(p.fitCounts[selection].all,catalogue.items.filter(i=>i.visibility!=='hidden'&&(selection==='everyone'||audienceFor(i)==='everyone'||audienceFor(i)===selection)).length);
  }
  assert.ok(p.items.every(i=>i.visibility!=='hidden'));

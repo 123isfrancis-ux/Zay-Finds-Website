@@ -1,14 +1,17 @@
 const test=require('node:test');const assert=require('node:assert/strict');
-const {availableLooks,lookTotal,saveLook}=require('../lib/shop-the-fit');
+const {availableLooks,reviewedLooks,lookTotal,saveLook}=require('../lib/shop-the-fit');
 const catalogue=require('../lib/regional-catalogue').items;
 const definitions=require('../data/shop-the-fit.json');
 test('published looks resolve complete outfits from visible photographed catalogue items',()=>{
- const looks=availableLooks(catalogue);
+ const looks=[...availableLooks(catalogue,'men'),...availableLooks(catalogue,'women')];
  assert.equal(looks.length,10);
  for(const look of looks){assert.equal(look.pieces.length,3);assert.ok(look.pieces.every(p=>p.item.link&&p.item.image&&p.item.visibility!=='hidden'));assert.ok(lookTotal(look.pieces,'USD',1.4)>0);}
  assert.equal(new Set(definitions.map(l=>l.id)).size,definitions.length);
 });
-test('looks follow audience selection',()=>{
+test('Everyone and Men show the same looks, with women only in Women mode',()=>{
+ assert.deepEqual(availableLooks(catalogue),availableLooks(catalogue,'men'));
+ assert.deepEqual(reviewedLooks(catalogue),reviewedLooks(catalogue,'men'));
+ assert.deepEqual(reviewedLooks(catalogue,'women').map(l=>l.id),['weekend-streetwear','night-out','gym-to-coffee','city-chic']);
  assert.deepEqual(availableLooks(catalogue,'men').map(l=>l.id),['streetwear','airport-fit','clean-everyday','going-out','designer-fit','smart-casual']);
  assert.deepEqual(availableLooks(catalogue,'women').map(l=>l.id),['weekend-streetwear','night-out','gym-to-coffee','city-chic']);
 });

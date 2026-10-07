@@ -7,7 +7,7 @@ const QuickView = dynamic(()=>import('../components/QuickView'));
 const HaulBuilder = dynamic(()=>import('../components/HaulBuilder'));
 import {cleanIds} from '../lib/haul-builder';
 const ShopTheFit = dynamic(()=>import('../components/ShopTheFit'));
-import { reviewedLooks, applyLookSwaps, saveLook } from '../lib/shop-the-fit';
+import { fitAudience, reviewedLooks, applyLookSwaps, saveLook } from '../lib/shop-the-fit';
 import HomeCollections, {HomeSkeleton} from '../components/HomeCollections';
 import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
 import { rankRecommended } from '../lib/trending';
@@ -561,7 +561,7 @@ export default function Home({initial = null}) {
             <button className="control" type="button" disabled={!complete} onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>{complete?'Load more':'Loading more finds…'}</button>
           </div>}
         </section>}
-        {previewItem&&<QuickView item={previewItem} items={items} relatedLoading={!complete&&!backgroundError} relatedError={backgroundError} onRetry={()=>setAttempt(value=>value+1)} currency={currency} rate={exchangeRate.usdToCad} audience={audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={fitView?fitDemand:onDemand}/>}
+        {previewItem&&<QuickView item={previewItem} items={items} relatedLoading={!complete&&!backgroundError} relatedError={backgroundError} onRetry={()=>setAttempt(value=>value+1)} currency={currency} rate={exchangeRate.usdToCad} audience={fitView?fitAudience(audience):audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={fitView?fitDemand:onDemand}/>}
         <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get your $400 Coupon Bundle</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>

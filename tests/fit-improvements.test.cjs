@@ -6,7 +6,7 @@ const definitions=require('../data/shop-the-fit.json');
 const {prepareInitialCatalogue}=require('../lib/initial-catalogue');
 test('all curated alternatives have verified catalogue products, audience and known dimensions',()=>{
  const {audienceFor}=require('../lib/audience');
- for(const look of reviewedLooks(catalogue))for(const piece of look.pieces)for(const option of piece.alternatives){
+ for(const look of [...reviewedLooks(catalogue,'men'),...reviewedLooks(catalogue,'women')])for(const piece of look.pieces)for(const option of piece.alternatives){
   assert.ok(option.item.image&&option.item.link&&option.imageWidth>0&&option.imageHeight>0);
   assert.ok(audienceFor(option.item)==='everyone'||audienceFor(option.item)===look.audience);
   assert.notEqual(option.id,piece.id);
