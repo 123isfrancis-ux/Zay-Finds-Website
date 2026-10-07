@@ -548,11 +548,13 @@ body { font-weight: 400; }
 }
 
 @media(max-width:640px) {
-  .brand h1 { font-size:36px; line-height:1.08; }
-  .audience-switch { flex:0 0 auto; padding:2px; gap:0; }
-  .audience-switch button { flex:0 0 auto; min-height:36px; padding:5px 9px; font-size:11px; }
-  .header-actions { justify-content:flex-start; gap:10px; }
-  .header-actions .currency-select { margin-left:auto; }
+  .header-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; }
+  .brand h1 { font-size:clamp(24px,8vw,36px); line-height:1.08; }
+  .audience-switch { grid-column:1 / -1; padding:2px; gap:0; }
+  .audience-switch button { flex:1; min-height:44px; padding:5px 9px; font-size:11px; }
+  .header-actions { display:grid; width:auto; grid-template-columns:minmax(76px,1fr) 44px; gap:4px 8px; }
+  .header-actions .currency-select { margin-left:0; justify-self:center; }
+  .header-actions .social-links { justify-self:end; }
 }
 
 /* Match the menswear panels to the photographs instead of letterboxing them. */
