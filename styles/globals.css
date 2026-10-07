@@ -182,6 +182,15 @@ body:has(.category-sheet[open]) { overflow: hidden; }
 .sheet-options button { overflow-wrap: anywhere; }
 .sheet-actions { position: sticky; bottom: 0; padding-top: 8px; background: var(--surface); }
 .sheet-actions button { flex: 1; }
+.mobile-filter-dialog { inset: 0; margin: auto; width: min(420px, calc(100% - 32px)); max-width: calc(100% - 32px); max-height: calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); border-radius: 16px; overflow: hidden; box-shadow: 0 16px 60px rgba(0, 0, 0, .2); }
+.mobile-filter-dialog .sheet-content { display: flex; flex-direction: column; max-height: inherit; padding: 0; }
+.mobile-filter-dialog .sheet-heading { flex-shrink: 0; padding: 16px; border-bottom: 1px solid var(--border); }
+.mobile-filter-dialog .sheet-heading h2 { margin: 0; font-size: 22px; }
+.mobile-filter-dialog .sheet-heading button { min-height: 44px; }
+.mobile-filter-options { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 16px; }
+.mobile-filter-dialog .sheet-actions { position: static; flex-shrink: 0; padding: 16px; border-top: 1px solid var(--border); }
+.mobile-filter-dialog .sheet-actions button { min-height: 48px; }
+
 .catalogue { max-width: 1248px; margin: auto; padding: 20px 24px 60px; }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
 .card { position: relative; min-width: 0; }
