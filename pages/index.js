@@ -207,6 +207,7 @@ export default function Home({initial = null}) {
   const [wishlist, setWishlist] = useState([]);
   const [recent, setRecent] = useState([]);
   const [previewItem,setPreviewItem]=useState(null);
+  const [catalogueRequested,setCatalogueRequested]=useState(false);
   const [view, setView] = useState(initial?.view || null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState(initial?.demand || {status:'disabled',scores:{},collect:false});
@@ -216,6 +217,7 @@ export default function Home({initial = null}) {
   const usingPreview=!complete && initial?.preview && audience===initial.audience && (view||'all')===initial.view && category===initial.category && collection===initial.collection && !search.trim() && sortBy==='trending' && currency==='USD';
   const usingFitPreview=!complete && initial?.fitPreview && (view||'all')==='fits';
   const loading=!complete && !usingPreview && !usingFitPreview && !error;
+  const shouldLoadCatalogue=!usingFitPreview || catalogueRequested;
 
   // TODO: Give categories stable IDs/slugs so shared links survive future label changes.
   // TODO: Consider adding a Copy link button for the currently selected view/category.
@@ -252,8 +254,8 @@ export default function Home({initial = null}) {
 
   useEffect(() => {
     // A direct outfit visit is fully usable from its small server snapshot.
-    // Fetch the entire catalogue only when the shopper opens another view.
-    if(usingFitPreview){setError('');setBackgroundError(false);return;}
+    // Fetch the entire catalogue for another view or related Quick View suggestions.
+    if(!shouldLoadCatalogue){setError('');setBackgroundError(false);return;}
     const controller = new AbortController();
     let active = true;
     let timedOut = false;
@@ -285,7 +287,7 @@ export default function Home({initial = null}) {
     }
     load();
     return () => { active = false; clearTimeout(timeout); controller.abort(); };
-  }, [attempt, usingFitPreview]);
+  }, [attempt, shouldLoadCatalogue]);
 
   useEffect(() => {
     setWishlist(loadWishlist());
@@ -383,6 +385,7 @@ export default function Home({initial = null}) {
     });
   },[trackDemand]);
   const openPreview=useCallback(item=>{
+    setCatalogueRequested(true);
     setPreviewItem(item);
     setRecent(previous=>{const next=[item.id,...previous.filter(id=>id!==item.id)].slice(0,30);try{localStorage.setItem('zay-recent-v1',JSON.stringify(next));}catch{}return next;});
   },[]);
