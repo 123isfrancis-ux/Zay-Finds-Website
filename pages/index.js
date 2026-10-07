@@ -208,6 +208,7 @@ export default function Home({initial = null}) {
   const [recent, setRecent] = useState([]);
   const [previewItem,setPreviewItem]=useState(null);
   const [catalogueRequested,setCatalogueRequested]=useState(false);
+  const fitLoadMeasured=useRef(false);
   const [view, setView] = useState(initial?.view || null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState(initial?.demand || {status:'disabled',scores:{},collect:false});
@@ -525,7 +526,7 @@ export default function Home({initial = null}) {
         <MobileBuyingHelp record={record}/>
         {backgroundError && initial?.preview && <div className="catalogue-message" role="status"><p>Your first finds are ready. The rest couldn’t load.</p><button type="button" className="control" onClick={()=>setAttempt(value=>value+1)}>Retry loading all finds</button></div>}
         {homeLoading && <HomeSkeleton/>}
-        {fitView && !loading && (!error || usingFitPreview) && <ShopTheFit key={audience} looks={looks} selectedLook={selectedFit} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={fitDemand} audience={audience} onPreview={openPreview} onBrowseIntent={requestCatalogue} collect={demand.collect} directVisit={initial?.fitPreview} rateDate={exchangeRate.date}/>}
+        {fitView && !loading && (!error || usingFitPreview) && <ShopTheFit key={audience} looks={looks} selectedLook={selectedFit} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={fitDemand} audience={audience} onPreview={openPreview} onBrowseIntent={requestCatalogue} collect={demand.collect} measureReady={!fitLoadMeasured.current} onReadyMeasured={()=>{fitLoadMeasured.current=true;}} directVisit={initial?.fitPreview} rateDate={exchangeRate.date}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index,sectionIndex)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={sectionIndex===0 && index<2}/>}/>}
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
         {fitView && error && !usingFitPreview && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}

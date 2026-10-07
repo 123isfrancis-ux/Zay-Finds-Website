@@ -31,7 +31,7 @@ function BuyingChecklist({look,onDemand,signal}) {
   <p>Choose your seller options separately for each item. Check shipping, agent fees and any other checkout charges before paying. Saving the look keeps the selected products together.</p>
  </details>;
 }
-export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview,onBrowseIntent,collect,directVisit,rateDate}) {
+export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview,onBrowseIntent,collect,measureReady,onReadyMeasured,directVisit,rateDate}) {
  const [message,setMessage]=useState(null),[filters,setFilters]=useState({occasion:'',layers:'',budget:''});
  const heading=useRef(null),started=useRef(null),readyTime=useRef(null),readySent=useRef(false);
  const look=selectedLook||looks[0];
@@ -50,8 +50,9 @@ export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSa
  // This measures the first outfit photo being ready after hydration, not LCP.
  // Only coarse timing bands reach storage; no raw timing or personal data.
  function photoReady(){
+  if(!measureReady)return;
   if(readyTime.current===null)readyTime.current=Math.max(0,performance.now()-(started.current||0));
-  if(collect&&!readySent.current&&document.visibilityState==='visible'){readySent.current=true;siteSignal({type:'fit',fit:fitId,action:'ready',bucket:readyBucket(readyTime.current)});}
+  if(collect&&!readySent.current&&document.visibilityState==='visible'){readySent.current=true;onReadyMeasured?.();siteSignal({type:'fit',fit:fitId,action:'ready',bucket:readyBucket(readyTime.current)});}
  }
  useEffect(()=>{if(readyTime.current!==null)photoReady();},[collect]);
  if(!look)return null;
