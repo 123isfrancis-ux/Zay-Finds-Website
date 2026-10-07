@@ -547,7 +547,7 @@ body { font-weight: 400; }
 }
 
 /* Match the menswear panels to the photographs instead of letterboxing them. */
-.fit-board-photo-led { grid-template-columns:2fr 1fr; grid-template-rows:auto auto; align-items:start; align-self:center; min-height:0; }
+.fit-board-photo-led { grid-template-columns:2fr 1fr; grid-template-rows:auto auto; align-items:start; align-self:start; min-height:0; }
 .fit-board-portrait-top { grid-template-columns:1.75fr 1fr; }
 .fit-board-photo-led .fit-photo { min-height:0; }
 .fit-board-photo-led .fit-photo-0 { align-self:center; }
