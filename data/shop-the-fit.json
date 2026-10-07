@@ -21,10 +21,21 @@
         "id": "a6eacda4b390e97d89a59001",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "4389b3753eb4c0eac4e5d88d",
+            "role": "The sneakers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Everyday",
+    "layers": "Layered",
+    "silhouette": "Oversized layers and wide denim"
   },
   {
     "id": "airport-fit",
@@ -36,7 +47,15 @@
         "id": "3bea8fea16442b56d8e183b6",
         "role": "The hoodie",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "624966f5838e444a30233f5c",
+            "role": "The hoodie",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       },
       {
         "id": "0538d997fb80eb2328dad6cf",
@@ -48,10 +67,21 @@
         "id": "a1850b0f61213e1546d003da",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 400
+        "imageHeight": 400,
+        "alternatives": [
+          {
+            "id": "4389b3753eb4c0eac4e5d88d",
+            "role": "The sneakers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Travel",
+    "layers": "Layered",
+    "silhouette": "Relaxed layers and soft trousers"
   },
   {
     "id": "clean-everyday",
@@ -63,22 +93,49 @@
         "id": "abcc404d53f5219b757f2691",
         "role": "The tee",
         "imageWidth": 400,
-        "imageHeight": 400
+        "imageHeight": 400,
+        "alternatives": [
+          {
+            "id": "a028647d64d6e076f75a20da",
+            "role": "The polo",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       },
       {
         "id": "39d5eba916a550c9e1fb0ff2",
         "role": "The trousers",
         "imageWidth": 600,
-        "imageHeight": 800
+        "imageHeight": 800,
+        "alternatives": [
+          {
+            "id": "d227aa75ef153fbb19319d8d",
+            "role": "The baggy jeans",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       },
       {
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "761bdff5f5d465c0a0436af4",
+            "role": "The loafers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "portrait-top"
+    "photoLayout": "portrait-top",
+    "occasion": "Everyday",
+    "layers": "Light",
+    "silhouette": "A simple top and relaxed trousers"
   },
   {
     "id": "weekend-streetwear",
@@ -88,24 +145,27 @@
     "pieces": [
       {
         "id": "917683d727c7e87902246174",
-        "role": "The tee \u00b7 Style 12",
+        "role": "The tee · Style 12",
         "imageWidth": 800,
         "imageHeight": 800
       },
       {
         "id": "1a9e868bc88fab91d117d4f6",
-        "role": "The jeans \u00b7 Style 14",
+        "role": "The jeans · Style 14",
         "imageWidth": 900,
         "imageHeight": 897
       },
       {
         "id": "4f48f0de449e0a15125bd86b",
-        "role": "The sneakers \u00b7 Blue White HQ8717",
+        "role": "The sneakers · Blue White HQ8717",
         "imageWidth": 1179,
         "imageHeight": 1180
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Everyday",
+    "layers": "Light",
+    "silhouette": "A graphic tee and wide-leg denim"
   },
   {
     "id": "night-out",
@@ -115,24 +175,27 @@
     "pieces": [
       {
         "id": "a6c2acadf5f4e83413dba1ef",
-        "role": "The dress \u00b7 Style 1",
+        "role": "The dress · Style 1",
         "imageWidth": 800,
         "imageHeight": 800
       },
       {
         "id": "b37a19da5dc91b44fb33b1c0",
-        "role": "The heels \u00b7 Black",
+        "role": "The heels · Black",
         "imageWidth": 800,
         "imageHeight": 800
       },
       {
         "id": "b96c90f686b035b49fb467f1",
-        "role": "The bag \u00b7 Black Coffee",
+        "role": "The bag · Black Coffee",
         "imageWidth": 1279,
         "imageHeight": 1698
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Evening",
+    "layers": "Light",
+    "silhouette": "A slip dress and sculptural heels"
   },
   {
     "id": "gym-to-coffee",
@@ -156,10 +219,21 @@
         "id": "a1850b0f61213e1546d003da",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 400
+        "imageHeight": 400,
+        "alternatives": [
+          {
+            "id": "4f48f0de449e0a15125bd86b",
+            "role": "The sneakers · Blue White HQ8717",
+            "imageWidth": 1179,
+            "imageHeight": 1180
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Active",
+    "layers": "Light",
+    "silhouette": "A fitted tank and leggings"
   },
   {
     "id": "city-chic",
@@ -181,12 +255,15 @@
       },
       {
         "id": "b37a19da5dc91b44fb33b1c0",
-        "role": "The heels \u00b7 Black",
+        "role": "The heels · Black",
         "imageWidth": 800,
         "imageHeight": 800
       }
     ],
-    "photoLayout": "portrait-top"
+    "photoLayout": "portrait-top",
+    "occasion": "Evening",
+    "layers": "Light",
+    "silhouette": "An off-shoulder top and tailored trousers"
   },
   {
     "id": "going-out",
@@ -204,16 +281,35 @@
         "id": "39d5eba916a550c9e1fb0ff2",
         "role": "The trousers",
         "imageWidth": 600,
-        "imageHeight": 800
+        "imageHeight": 800,
+        "alternatives": [
+          {
+            "id": "d227aa75ef153fbb19319d8d",
+            "role": "The baggy jeans",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       },
       {
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "761bdff5f5d465c0a0436af4",
+            "role": "The loafers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Evening",
+    "layers": "Light",
+    "silhouette": "A velvet shirt and tailored trousers"
   },
   {
     "id": "designer-fit",
@@ -237,10 +333,21 @@
         "id": "761bdff5f5d465c0a0436af4",
         "role": "The loafers",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "4389b3753eb4c0eac4e5d88d",
+            "role": "The sneakers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Evening",
+    "layers": "Light",
+    "silhouette": "A statement shirt and loafers"
   },
   {
     "id": "smart-casual",
@@ -258,15 +365,34 @@
         "id": "39d5eba916a550c9e1fb0ff2",
         "role": "The trousers",
         "imageWidth": 600,
-        "imageHeight": 800
+        "imageHeight": 800,
+        "alternatives": [
+          {
+            "id": "d227aa75ef153fbb19319d8d",
+            "role": "The baggy jeans",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       },
       {
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers",
         "imageWidth": 600,
-        "imageHeight": 600
+        "imageHeight": 600,
+        "alternatives": [
+          {
+            "id": "761bdff5f5d465c0a0436af4",
+            "role": "The loafers",
+            "imageWidth": 600,
+            "imageHeight": 600
+          }
+        ]
       }
     ],
-    "photoLayout": "square-top"
+    "photoLayout": "square-top",
+    "occasion": "Everyday",
+    "layers": "Light",
+    "silhouette": "A knit polo and tailored trousers"
   }
 ]

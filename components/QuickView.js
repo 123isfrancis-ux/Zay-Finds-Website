@@ -8,7 +8,7 @@ function Photo({item}) {
  try{const url=new URL(src,window.location.origin);if(url.hostname==='si.geilicdn.com'){url.searchParams.set('w','900');url.searchParams.delete('h');}src=url.toString();}catch{}
  return src&&!failed?<img src={src} alt={item.name} onError={()=>{setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>:<div className="quick-photo-fallback">Photos are available at the seller.</div>;
 }
-export default function QuickView({item,items,currency,rate,audience,wishlist,onWishlist,onSelect,onClose,onDemand}) {
+export default function QuickView({item,items,relatedLoading,relatedError,onRetry,currency,rate,audience,wishlist,onWishlist,onSelect,onClose,onDemand}) {
  const dialog=useRef(null),content=useRef(null),closeButton=useRef(null);
  useEffect(()=>{
   const opener=document.activeElement,scrollY=window.scrollY,body=document.body;
@@ -34,6 +34,8 @@ export default function QuickView({item,items,currency,rate,audience,wishlist,on
     <strong className="quick-price">{price}</strong><p className="quick-note">Item price only. Shipping and other checkout charges are extra. Confirm sizes, colors and current prices at the seller.</p>
     <div className="quick-actions"><button className="control" aria-pressed={saved} onClick={()=>{if(!saved)onDemand(item.id,'save');onWishlist(item.id);}}>{saved?'Saved · Remove':'Save find'}</button><a className="control quick-buy" href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}>{item.link?.includes('kakobuy.com')?'View on Kakobuy':'View at seller'}</a></div>
    </div></div>
+   {relatedLoading&&<p className="quick-note" role="status">Loading more related finds…</p>}
+   {relatedError&&<p className="quick-note" role="status">More related finds couldn’t load. <button className="control" onClick={onRetry}>Retry</button></p>}
    {related.length>0&&<section className="quick-related" aria-label="Related finds"><h3>Related finds</h3><div>{related.map(product=><button type="button" key={product.id} onClick={()=>onSelect(product)} aria-label={`Preview ${product.name}`}><Photo key={product.id} item={product}/><span>{product.name}</span></button>)}</div></section>}
   </div></div>
  </dialog>;

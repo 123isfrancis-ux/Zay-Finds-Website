@@ -7,7 +7,7 @@ const QuickView = dynamic(()=>import('../components/QuickView'));
 const HaulBuilder = dynamic(()=>import('../components/HaulBuilder'));
 import {cleanIds} from '../lib/haul-builder';
 const ShopTheFit = dynamic(()=>import('../components/ShopTheFit'));
-import { availableLooks, saveLook } from '../lib/shop-the-fit';
+import { reviewedLooks, applyLookSwaps, saveLook } from '../lib/shop-the-fit';
 import HomeCollections, {HomeSkeleton} from '../components/HomeCollections';
 import { normalizeCollection, collectionItems, homeSections } from '../lib/home-collections';
 import { rankRecommended } from '../lib/trending';
@@ -240,6 +240,7 @@ export default function Home({initial = null}) {
     if (!router.isReady) return;
     const query = { ...router.query, audience: nextAudience };
     delete query.fit;
+    delete query.swap;
     if (nextCollection) query.collection = nextCollection;
     else delete query.collection;
     if (nextView) query.view = nextView;
@@ -363,9 +364,10 @@ export default function Home({initial = null}) {
   const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
   const computedSections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
   const sections=useMemo(()=>usingPreview?initial.sections.map(({ids,...section})=>({...section,items:ids.map(id=>items.find(i=>i.id===id)).filter(Boolean)})):computedSections,[usingPreview,initial,items,computedSections]);
-  const looks = useMemo(() => availableLooks(items, audience), [items, audience]);
+  const looks = useMemo(() => reviewedLooks(items, audience), [items, audience]);
   const requestedFit = Array.isArray(router.query.fit) ? router.query.fit[0] : router.query.fit;
-  const selectedFit = looks.find(look => look.id === requestedFit) || looks[0];
+  const selectedBaseFit = looks.find(look => look.id === requestedFit) || looks[0];
+  const selectedFit = useMemo(()=>selectedBaseFit ? applyLookSwaps(selectedBaseFit, router.query.swap) : null,[selectedBaseFit,router.query.swap]);
   const fitLinkScrolled = useRef(false);
   useEffect(() => {
     if (fitView && !loading && requestedFit && !fitLinkScrolled.current && window.location.hash === '#shop-the-fit') {
@@ -373,7 +375,7 @@ export default function Home({initial = null}) {
       requestAnimationFrame(()=>document.getElementById('shop-the-fit')?.scrollIntoView({block:'start'}));
     }
   }, [fitView, loading, requestedFit]);
-  const fitItems = useMemo(() => selectedFit?.pieces.map(piece=>piece.item) || [], [selectedFit]);
+  const fitItems = useMemo(() => selectedFit?.pieces.map(piece=>piece.item).filter(Boolean) || [], [selectedFit]);
   const trackedItems = useMemo(() => fitView ? fitItems : showHome ? [...visible, ...sections.flatMap(section => section.items)] : visible, [fitView, showHome, visible, sections, fitItems]);
   const trackDemand = useDemandTracking(demand.collect, trackedItems);
   const onDemand = useCallback((id,event)=>{
@@ -398,9 +400,16 @@ export default function Home({initial = null}) {
     }
     return result;
   }
-  function selectFit(id) {
-    router.push({pathname:router.pathname,query:{...router.query,fit:id}},undefined,{shallow:true,scroll:false});
+  function selectFit(id,swap='') {
+    const query={...router.query,fit:id};
+    if(swap)query.swap=swap;else delete query.swap;
+    router.push({pathname:router.pathname,query},undefined,{shallow:true,scroll:false});
   }
+  const requestCatalogue=()=>setCatalogueRequested(true);
+  const fitDemand=(id,event)=>{
+    onDemand(id,event);
+    if(event==='click'&&selectedFit?.pieces.some(piece=>piece.id===id))siteSignal({type:'fit',fit:selectedFit.id,action:'click',id});
+  };
   const collectionTitle = collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
   const computedCounts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
@@ -479,9 +488,9 @@ export default function Home({initial = null}) {
           </div>
         </header>
 
-        <section className="intro compact-intro" aria-label="Welcome">
+        {!fitView && <section className="intro compact-intro" aria-label="Welcome">
           <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Build A Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
-        </section>
+        </section>}
         <div className="desktop-buying-help"><BuyingGuide record={record} /></div>
         <div className="shopping-tools">
           <div className="tools-inner">
@@ -492,7 +501,7 @@ export default function Home({initial = null}) {
             {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
               {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
-                <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
+                <button type="button" key={value} onMouseEnter={()=>{if(value!=='fits')requestCatalogue();}} onFocus={()=>{if(value!=='fits')requestCatalogue();}} aria-pressed={activeView === value} onClick={() => selectView(value)}>
                   {label} {value!=='fits' && !(value==='saved'&&usingFitPreview) && <span>({counts[value].toLocaleString()})</span>}
                 </button>
               )}
@@ -509,17 +518,17 @@ export default function Home({initial = null}) {
                 </select>
               </label>
             </div>}
-            {!simpleSaved && <nav className="mobile-browse-categories" aria-label="Browse categories"><button type="button" aria-pressed={!effectiveCategory&&!fitView} onClick={()=>selectCategory('')}>All categories</button>{categories.map(c=><button type="button" key={c.value} aria-pressed={effectiveCategory===c.value&&!fitView} onClick={()=>selectCategory(c.value)}>{c.label}</button>)}</nav>}
+            {!simpleSaved && !fitView && <nav className="mobile-browse-categories" aria-label="Browse categories"><button type="button" aria-pressed={!effectiveCategory&&!fitView} onClick={()=>selectCategory('')}>All categories</button>{categories.map(c=><button type="button" key={c.value} aria-pressed={effectiveCategory===c.value&&!fitView} onClick={()=>selectCategory(c.value)}>{c.label}</button>)}</nav>}
           </div>
         </div>
 
         <MobileBuyingHelp record={record}/>
         {backgroundError && initial?.preview && <div className="catalogue-message" role="status"><p>Your first finds are ready. The rest couldn’t load.</p><button type="button" className="control" onClick={()=>setAttempt(value=>value+1)}>Retry loading all finds</button></div>}
         {homeLoading && <HomeSkeleton/>}
-        {fitView && !loading && !error && <ShopTheFit key={audience} looks={looks} selectedId={selectedFit?.id} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={onDemand} audience={audience} onPreview={openPreview}/>}
+        {fitView && !loading && (!error || usingFitPreview) && <ShopTheFit key={audience} looks={looks} selectedLook={selectedFit} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={fitDemand} audience={audience} onPreview={openPreview} onBrowseIntent={requestCatalogue} collect={demand.collect} directVisit={initial?.fitPreview} rateDate={exchangeRate.date}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index,sectionIndex)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={sectionIndex===0 && index<2}/>}/>}
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
-        {fitView && error && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
+        {fitView && error && !usingFitPreview && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}
         {fitView && !loading && !error && !looks.length && <p className="fit-route-message">More looks are on the way.</p>}
         {simpleSaved && !loading && !error && <HaulBuilder items={items} wishlist={wishlist} onWishlist={toggleWishlist} onSave={saveWholeLook} currency={currency} rate={exchangeRate.usdToCad} audience={audience} search={deferredSearch} recent={recent} onDemand={onDemand} onBrowse={()=>selectView('all')} onPreview={openPreview}/>}
         {!homeLoading && !fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
@@ -551,7 +560,7 @@ export default function Home({initial = null}) {
             <button className="control" type="button" disabled={!complete} onClick={() => setPage({ list: filtered, count: visibleCount + PAGE_SIZE })}>{complete?'Load more':'Loading more finds…'}</button>
           </div>}
         </section>}
-        {previewItem&&<QuickView item={previewItem} items={items} currency={currency} rate={exchangeRate.usdToCad} audience={audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={onDemand}/>}
+        {previewItem&&<QuickView item={previewItem} items={items} relatedLoading={!complete&&!backgroundError} relatedError={backgroundError} onRetry={()=>setAttempt(value=>value+1)} currency={currency} rate={exchangeRate.usdToCad} audience={audience} wishlist={wishlistSet} onWishlist={toggleWishlist} onSelect={openPreview} onClose={()=>setPreviewItem(null)} onDemand={fitView?fitDemand:onDemand}/>}
         <footer className="site-footer"><strong>ZAY FINDS</strong><a href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'footer' })}>Get your $400 Coupon Bundle</a><p>Zay Finds helps you discover products. Orders, payments and shipping are handled by the linked seller or shopping agent. Prices may change; shipping and other checkout charges are extra. Some links are affiliate links.</p></footer>
       </main>
     </>
