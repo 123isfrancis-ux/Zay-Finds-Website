@@ -214,7 +214,8 @@ export default function Home({initial = null}) {
   const [page, setPage] = useState({ list: null, count: PAGE_SIZE });
   const [urlFiltersReady, setUrlFiltersReady] = useState(Boolean(initial));
   const usingPreview=!complete && initial?.preview && audience===initial.audience && (view||'all')===initial.view && category===initial.category && collection===initial.collection && !search.trim() && sortBy==='trending' && currency==='USD';
-  const loading=!complete && !usingPreview && !error;
+  const usingFitPreview=!complete && initial?.fitPreview && (view||'all')==='fits';
+  const loading=!complete && !usingPreview && !usingFitPreview && !error;
 
   // TODO: Give categories stable IDs/slugs so shared links survive future label changes.
   // TODO: Consider adding a Copy link button for the currently selected view/category.
@@ -250,6 +251,9 @@ export default function Home({initial = null}) {
   const deferredSearch = useDeferredValue(search);
 
   useEffect(() => {
+    // A direct outfit visit is fully usable from its small server snapshot.
+    // Fetch the entire catalogue only when the shopper opens another view.
+    if(usingFitPreview){setError('');setBackgroundError(false);return;}
     const controller = new AbortController();
     let active = true;
     let timedOut = false;
@@ -281,7 +285,7 @@ export default function Home({initial = null}) {
     }
     load();
     return () => { active = false; clearTimeout(timeout); controller.abort(); };
-  }, [attempt]);
+  }, [attempt, usingFitPreview]);
 
   useEffect(() => {
     setWishlist(loadWishlist());
@@ -319,7 +323,7 @@ export default function Home({initial = null}) {
   const base = useMemo(() => viewItems(collectionBase, activeView, wishlistSet, deferredSearch),
     [collectionBase, activeView, wishlistSet, deferredSearch]);
   const computedCategories = useMemo(() => categoriesFor(audienceItems.filter(item => item.visibility !== 'hidden'), collectionOrder), [audienceItems, collectionOrder]);
-  const categories = usingPreview ? initial.categories : computedCategories;
+  const categories = usingPreview || usingFitPreview ? initial.categories : computedCategories;
   const categoryCanBeValidated = urlFiltersReady && !loading && !error;
   const categoryExists = categories.some(option => option.value === category);
   const effectiveCategory = !category || !categoryCanBeValidated || categoryExists ? category : '';
@@ -401,7 +405,7 @@ export default function Home({initial = null}) {
     bought: audienceItems.filter(item => item.visibility !== 'hidden' && item.personallyBought).length,
     saved: audienceItems.filter(item => item.visibility !== 'hidden' && wishlistSet.has(item.id)).length,
   }), [audienceItems, wishlistSet]);
-  const counts=usingPreview?initial.counts:computedCounts;
+  const counts=usingFitPreview?{...computedCounts,...initial.fitCounts[audience]}:usingPreview?initial.counts:computedCounts;
   useEffect(() => {
     if (loading || error || !searching) return;
     const timer = setTimeout(() => {record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length });if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim()});}, 1200);
@@ -486,7 +490,7 @@ export default function Home({initial = null}) {
             <nav className="shopping-tabs" aria-label="Shopping views">
               {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={activeView === value} onClick={() => selectView(value)}>
-                  {label} {value!=='fits' && <span>({counts[value].toLocaleString()})</span>}
+                  {label} {value!=='fits' && !(value==='saved'&&usingFitPreview) && <span>({counts[value].toLocaleString()})</span>}
                 </button>
               )}
             </nav>

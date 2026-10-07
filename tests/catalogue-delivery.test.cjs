@@ -52,3 +52,16 @@ test('LV skates returns all reviewed LV footwear without clothing or bags', () =
  }
  assert.equal(viewItems([{...items.find(i=>i.id===expected[0]),visibility:'hidden'}],'all',new Set(),'lv skates').length,0);
 });
+
+
+test('outfit images offer responsive widths without cropping and retain original-format fallback',()=>{
+ const {fitImage,fitImageSet}=require('../lib/catalogue-delivery');
+ const source='https://si.geilicdn.com/photo.jpg?w=400&h=400&q=85';
+ const optimized=new URL(fitImage(source,240));
+ assert.equal(optimized.searchParams.get('w'),'240');assert.equal(optimized.searchParams.has('h'),false);
+ assert.equal(optimized.pathname,'/photo.jpg.webp');
+ assert.equal(new URL(fitImage(source,600,false)).pathname,'/photo.jpg');
+ assert.ok(fitImageSet(source).includes('w=180'));assert.ok(fitImageSet(source).endsWith('900w'));
+ assert.equal(fitImageSet('/owner-photos/local.jpg'),undefined);
+ assert.equal(fitImage('/owner-photos/local.jpg'),'/owner-photos/local.jpg');
+});

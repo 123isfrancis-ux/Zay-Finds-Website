@@ -1,4 +1,4 @@
-import {cardImage} from '../lib/catalogue-delivery';
+import {fitImage,fitImageSet} from '../lib/catalogue-delivery';
 import {siteSignal} from '../lib/site-signals';
 import { useState } from 'react';
 import { lookTotal } from '../lib/shop-the-fit';
@@ -7,9 +7,10 @@ function money(amount,currency) {return (currency==='CAD'?'≈ ':'')+new Intl.Nu
 function FitPhoto({item,width,height,priority}) {
   const [failed,setFailed]=useState(false);
   const [original,setOriginal]=useState(false);
-  let src=cardImage(item.image,!original);
-  try { const url=new URL(src);if(url.hostname==='si.geilicdn.com'){url.searchParams.set('w','600');url.searchParams.delete('h');}src=url.toString(); }catch{}
-  return failed?<span className="fit-photo-fallback">View photo at seller</span>:<img src={src} alt={item.name} width={width} height={height} loading={priority?"eager":"lazy"} fetchPriority={priority?"high":"auto"} decoding="async" onError={()=>{if(!original && cardImage(item.image)!==cardImage(item.image,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
+  const sizes=priority
+    ? '(max-width: 640px) calc((100vw - 60px) * 0.66), (max-width: 900px) calc((100vw - 84px) * 0.66), (max-width: 1248px) calc((100vw - 84px) * 0.36), 430px'
+    : '(max-width: 640px) calc((100vw - 60px) * 0.33), (max-width: 900px) calc((100vw - 84px) * 0.33), (max-width: 1248px) calc((100vw - 84px) * 0.18), 215px';
+  return failed?<span className="fit-photo-fallback" style={{aspectRatio:`${width} / ${height}`}}>View photo at seller</span>:<img src={fitImage(item.image,600,!original)} srcSet={original?undefined:fitImageSet(item.image)} sizes={sizes} alt={item.name} width={width} height={height} loading={priority?"eager":"lazy"} fetchPriority={priority?"high":"auto"} decoding="async" onError={()=>{if(!original && fitImage(item.image)!==fitImage(item.image,600,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 export default function ShopTheFit({looks,selectedId,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview}) {
   const [message,setMessage]=useState(null);
