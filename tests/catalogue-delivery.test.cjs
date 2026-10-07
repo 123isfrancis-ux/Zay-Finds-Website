@@ -38,3 +38,17 @@ test('laptop aliases work in server catalogue and restored compact delivery', ()
  assert.equal(viewItems([caseItem],'all',new Set(),'macbook').length,0);
  assert.equal(viewItems([{...laptop,visibility:'hidden'}],'all',new Set(),'macbook').length,0);
 });
+
+
+test('LV skates returns all reviewed LV footwear without clothing or bags', () => {
+ const {items}=require('../lib/regional-catalogue');
+ const {viewItems}=require('../lib/catalogue');
+ const aliases=require('../data/search-aliases.json');
+ const expected=items.filter(i=>i.visibility!=='hidden' && aliases[i.id]?.includes('lv skates')).map(i=>i.id).sort();
+ assert.equal(expected.length,25);
+ for(const list of [items,restoreSearchFields(items.map(({_search,...i})=>i))]) {
+  assert.deepEqual(viewItems(list,'all',new Set(),'lv skates').map(i=>i.id).sort(),expected);
+  assert.ok(!viewItems(list,'all',new Set(),'lv skates').some(i=>/pants|bag|jacket/i.test(i.name)));
+ }
+ assert.equal(viewItems([{...items.find(i=>i.id===expected[0]),visibility:'hidden'}],'all',new Set(),'lv skates').length,0);
+});
