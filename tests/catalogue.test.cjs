@@ -104,3 +104,15 @@ test('exchange rate parsing rejects bad upstream values',()=>{
  assert.throws(()=>parseRate({observations:[]}));
  assert.throws(()=>parseRate({observations:[{d:'2026-09-29',FXUSDCAD:{v:'0'}}]}));
 });
+
+
+test('search matches reordered words, accents, punctuation and product plurals', () => {
+ const items=parseCSV('id,name,category\n1,Enfants Riches Déprimés Zip-Up Hoodie,Hoodies\n2,Balenciaga Runner,Shoes\n3,Leather Bag,Bags\n4,Nike Puffer Jacket,Jackets\n5,Nike Hidden Jacket,Jackets');
+ items[4].visibility='hidden';
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'hoodies enfants deprimes')),['1']);
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'zip up hoodie')),['1']);
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'balenciaga runners')),['2']);
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'bag')),['3']);
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'puffer nike')),['4']);
+ assert.deepEqual(ids(viewItems(items,'all',new Set(),'nike omega')),[]);
+});

@@ -339,6 +339,15 @@ export default function Home({initial = null}) {
   }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
   const filtered=useMemo(()=>usingPreview ? initial.visibleIds.map(id=>items.find(i=>i.id===id)).filter(Boolean) : computedFiltered,[usingPreview,initial,items,computedFiltered]);
   const total=usingPreview?initial.total:filtered.length;
+  const broaderSearchCount = useMemo(() => searching && complete && !filtered.length
+    ? viewItems(items, 'all', new Set(), deferredSearch).length : 0,
+    [searching, complete, filtered.length, items, deferredSearch]);
+  function searchAllFinds() {
+    setView('all'); setCategory(''); setCollection(''); setAudience('everyone');
+    try { localStorage.setItem('zay-audience', 'everyone'); } catch {}
+    updateFiltersInUrl('all', '', 'everyone', '');
+  }
+
   const hasScopedTrends = demand.status === 'ready' && filtered.some(item => item.image && Number.isFinite(demand.scores[item.id]));
   // Scope pagination to the exact result array: a changed filter is capped in
   // the first render, not in an effect after an oversized grid has mounted.
@@ -520,7 +529,8 @@ export default function Home({initial = null}) {
           </div> : filtered.length === 0 ? <div className="catalogue-message" role="status">
             <p className="empty-symbol">✦</p>
             <h2>{searching ? 'No matching finds' : simpleSaved ? 'Save your favorite finds' : 'No finds here yet'}</h2>
-            <p>{simpleSaved ? audience === 'everyone' ? 'Tap a heart on any product to keep it here.' : 'No saved finds in this selection. Choose Everyone to see all your saved items.' : 'Try another category or browse all finds.'}</p>
+            <p>{simpleSaved ? audience === 'everyone' ? 'Tap a heart on any product to keep it here.' : 'No saved finds in this selection. Choose Everyone to see all your saved items.' : searching ? broaderSearchCount ? 'Matching finds are available outside your current filters.' : 'Try fewer words, a brand, or a product type.' : 'Try another category or browse all finds.'}</p>
+            {searching && broaderSearchCount > 0 && <button className="control" type="button" onClick={searchAllFinds}>Search all finds ({broaderSearchCount})</button>}
             <button className="control" type="button" onClick={() => {
               setSearch('');
               if (searching) return;
