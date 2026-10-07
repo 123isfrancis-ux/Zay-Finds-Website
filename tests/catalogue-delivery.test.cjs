@@ -22,3 +22,19 @@ test('slow ranking cannot delay catalogue indefinitely and fast rankings are pre
  assert.equal(await boundedRanking(Promise.resolve(ready)),ready);
  assert.equal((await boundedRanking(new Promise(()=>{}),5)).status,'unavailable');
 });
+
+
+test('laptop aliases work in server catalogue and restored compact delivery', () => {
+ const {items}=require('../lib/regional-catalogue');
+ const {viewItems}=require('../lib/catalogue');
+ const laptop=items.find(item=>item.id==='85882f1ca1b571d0e6be1bbf');
+ assert.ok(laptop);
+ const restored=restoreSearchFields([{...laptop,_search:undefined}]);
+ for(const query of ['mac','macbook','mac book','computer','computers','notebook','apple laptop']) {
+  assert.equal(viewItems([laptop],'all',new Set(),query).length,1,query);
+  assert.equal(viewItems(restored,'all',new Set(),query).length,1,query);
+ }
+ const caseItem=items.find(item=>item.name==='Apple Laptop Case');
+ assert.equal(viewItems([caseItem],'all',new Set(),'macbook').length,0);
+ assert.equal(viewItems([{...laptop,visibility:'hidden'}],'all',new Set(),'macbook').length,0);
+});
