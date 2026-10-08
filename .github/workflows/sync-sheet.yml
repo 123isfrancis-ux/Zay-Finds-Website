@@ -1,0 +1,86 @@
+name: Sync product spreadsheet
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview changes without publishing'
+        type: boolean
+        default: true
+concurrency:
+  group: spreadsheet-catalogue-sync
+  cancel-in-progress: false
+permissions:
+  contents: write
+  id-token: write
+  statuses: read
+jobs:
+  sync:
+    if: vars.SHEET_SYNC_ENABLED == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: node --test tests/sheet-sync.test.cjs tests/google-sheet.test.cjs tests/affiliate.test.cjs
+      - id: google
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          workload_identity_provider: ${{ vars.SHEETS_WIF_PROVIDER }}
+          service_account: zay-finds-sync@eighth-server-511008-r7.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/spreadsheets.readonly
+          access_token_lifetime: 600s
+          create_credentials_file: false
+      - name: Read and validate spreadsheet
+        env:
+          GOOGLE_SHEETS_ACCESS_TOKEN: ${{ steps.google.outputs.access_token }}
+        run: node scripts/sync-sheet.cjs --write
+      - id: changes
+        name: Check validated changes
+        run: |
+          if git diff --quiet -- data/catalogue.json data/sheet-sync-state.json data/product-added-at.json data/sheet-sync-image-overrides.json; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            git diff --stat >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+      - name: Publish validated catalogue
+        id: publish
+        if: steps.changes.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.dry_run == false)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/catalogue.json data/sheet-sync-state.json data/product-added-at.json data/sheet-sync-image-overrides.json
+          git commit -m 'Sync validated spreadsheet product updates'
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Verify primary website deployment
+        if: steps.publish.outputs.sha != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SYNC_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          for attempt in $(seq 1 60); do
+            state=$(gh api "repos/$GITHUB_REPOSITORY/commits/$SYNC_SHA/status" --jq '[.statuses[] | select(.context == "Vercel – zway-finds-website")][0].state // "pending"')
+            if [ "$state" = success ]; then
+              echo 'Primary website deployment verified.' >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            if [ "$state" = failure ] || [ "$state" = error ]; then
+              echo 'Deployment failed; previous website deployment remains live.' >&2
+              exit 1
+            fi
+            sleep 10
+          done
+          echo 'Website deployment did not confirm within ten minutes; review Vercel.' >&2
+          exit 1

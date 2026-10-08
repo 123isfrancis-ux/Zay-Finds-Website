@@ -5,3 +5,6 @@ node_modules/
 *.log
 .image-sync-state.json*
 .image-sync.lock
+
+gha-creds-*.json
+data/*.tmp

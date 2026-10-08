@@ -22,7 +22,7 @@ Source: https://docs.google.com/spreadsheets/d/1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtO
 
 The initial import contains 3,755 distinct listings from all 17 tabs. Exact repeated name/link/CNY/USD combinations share one card and retain all collection memberships. Different names or prices remain separate. Product order follows the sheet. Each listing records its original sheet ID and row.
 
-`data/catalogue.json` is a dated snapshot, not an automatic live connection. The import date is recorded in the data file. No Google credentials or environment variables are required to run it. Google Sheets' regular CSV export is insufficient: it loses embedded hyperlinks, images, and formula detail.
+`data/catalogue.json` is a dated snapshot served independently of Google availability. The optional scheduled sync is documented in [SHEET-SYNC.md](SHEET-SYNC.md). The import date is recorded in the data file. No Google credentials or environment variables are required to run it. Google Sheets' regular CSV export is insufficient: it loses embedded hyperlinks, images, and formula detail.
 
 To refresh, obtain an authorized Google Sheets API `spreadsheets.get` JSON response containing `sheets.properties` and `sheets.data.rowData.values` with `formattedValue`, `effectiveValue`, `userEnteredValue`, `hyperlink`, and `textFormatRuns`. Then run:
 
@@ -32,7 +32,7 @@ pnpm test
 pnpm build
 ```
 
-Commit the updated snapshot and redeploy to publish the update. This tool never edits the source spreadsheet. A separate authenticated refresh process would be needed for automatic syncing.
+Commit the updated snapshot and redeploy to publish the update. This tool never edits the source spreadsheet. The legacy import command now uses the same non-destructive baseline merge as the scheduled sync. See SHEET-SYNC.md for activation and recovery.
 
 ## Images
 
