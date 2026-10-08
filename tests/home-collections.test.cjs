@@ -45,12 +45,12 @@ test('addition ledger preserves dates and does not mark existing or renamed list
  assert.deepEqual(recordAddedDates([], [fresh],dates,'2026-10-06'),dates);
  assert.equal(normalizeCollection(['new','budget']),'new');assert.equal(normalizeCollection('bad'),'');
 });
-test('new product dates survive compact API and match the known 206-item import',()=>{
+test('new product dates survive compact API and match the dated imports',()=>{
  const rows=require('../lib/regional-catalogue').items;
- assert.equal(rows.filter(i=>i.addedAt).length,206);
+ assert.equal(rows.filter(i=>i.addedAt).length,254);
  const handler=require('../lib/regional-catalogue');let payload;
  handler({method:'GET',query:{compact:'1'}},{setHeader(){},status(){return this;},json(value){payload=value;}});
- assert.equal(payload.items.filter(i=>i.addedAt).length,206);
+ assert.equal(payload.items.filter(i=>i.addedAt).length,254);
 });
 
 test('Shop the Fit view survives shared links',()=>{

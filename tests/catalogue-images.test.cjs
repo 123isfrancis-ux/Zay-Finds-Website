@@ -11,5 +11,5 @@ test('reject mismatched product evidence and unexpected image hosts',()=>{
  assert.throws(()=>validate({...row,id:'456'}));assert.throws(()=>validate({...row,image:'https://example.com/image.jpg'}));
 });
 test('completed watch category requires no browser lookups',()=>{
- const result=queue('SUPER CLONE WATCHES');assert.equal(result.total,51);assert.equal(result.withImages,51);assert.deepEqual(result.pending,[]);
+ const result=queue('SUPER CLONE WATCHES');assert.equal(result.total,99);assert.equal(result.withImages,99);assert.deepEqual(result.pending,[]);
 });
