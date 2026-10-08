@@ -27,8 +27,8 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
-          cache: npm
-      - run: npm ci --no-audit --no-fund
+      - run: npm install --global pnpm@9.15.9
+      - run: pnpm install --frozen-lockfile
       - run: node --test tests/sheet-sync.test.cjs tests/google-sheet.test.cjs tests/affiliate.test.cjs
       - id: google
         uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
@@ -53,7 +53,7 @@ jobs:
             git diff --stat >> "$GITHUB_STEP_SUMMARY"
           fi
       - if: steps.changes.outputs.changed == 'true'
-        run: npm run build
+        run: pnpm build
       - name: Publish validated catalogue
         id: publish
         if: steps.changes.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.dry_run == false)
