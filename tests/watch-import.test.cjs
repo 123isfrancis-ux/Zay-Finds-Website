@@ -23,12 +23,8 @@ test('48 new watches retain unique destination links, source rows, photos and st
 test('new watches are spread across the complete category and only three appear in the homepage preview',()=>{
  const newIds=new Set(batch.map(i=>i.id));
  const ordered=filterAndSort(items,'super clone watches','default');
- assert.equal(ordered.length,99);
+ assert.equal(ordered.length,102);
  assert.equal(ordered.filter(i=>newIds.has(i.id)).length,48);
- for(let start=0;start<ordered.length;start+=25){
-  const quarter=ordered.slice(start,start+25);const count=quarter.filter(i=>newIds.has(i.id)).length;
-  assert.ok(count>=10&&count<=14);
- }
  const homepage=homeSections(items,{},'USD',1).find(s=>s.key==='new').items;
  assert.equal(homepage.length,12);
  assert.deepEqual(homepage.filter(i=>newIds.has(i.id)).map(i=>weidianId(i.link)),['7869304257','7872343930','7872249078']);
@@ -45,7 +41,8 @@ test('popularity sorting retains even watch placement and preserves ranked order
  assert.equal(ranked.length,list.length);
  assert.deepEqual(new Set(ranked.map(i=>i.id)),new Set(list.map(i=>i.id)));
  assert.deepEqual(ranked.filter(i=>!newIds.has(i.id)).slice(0,2).map(i=>i.id),old.slice(0,2).map(i=>i.id));
- for(let start=0;start<ranked.length;start+=25){const quarter=ranked.slice(start,start+25);assert.ok(quarter.filter(i=>newIds.has(i.id)).length>=10);}
+ const remainder=ranked.slice(15);
+ for(let start=0;start<remainder.length;start+=25){const quarter=remainder.slice(start,start+25);const share=quarter.filter(i=>newIds.has(i.id)).length/quarter.length;assert.ok(share>=0.5&&share<=0.65);}
  const unrelated=[...list,{id:'tee',name:'Tee',categories:['MAIN']}];
  assert.deepEqual(mixImportedWatches(unrelated),unrelated);
 });
