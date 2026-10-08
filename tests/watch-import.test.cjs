@@ -34,3 +34,18 @@ test('new watches are spread across the complete category and only three appear 
  assert.deepEqual(homepage.filter(i=>newIds.has(i.id)).map(i=>weidianId(i.link)),['7869304257','7872343930','7872249078']);
  assert.equal(collectionItems(items,'new').filter(i=>newIds.has(i.id)).length,48);
 });
+test('popularity sorting retains even watch placement and preserves ranked order within each group',()=>{
+ const {rankRecommended}=require('../lib/trending');
+ const {mixImportedWatches}=require('../lib/watch-merchandising');
+ const list=filterAndSort(items,'super clone watches','default').filter(i=>i.visibility!=='hidden');
+ const newIds=new Set(batch.map(i=>i.id));
+ const old=list.filter(i=>!newIds.has(i.id));
+ const snapshot={status:'ready',seed:'2026-10-08',adaptive:{scores:{[old[0].id]:.9,[old[1].id]:.8}}};
+ const ranked=rankRecommended(list,snapshot);
+ assert.equal(ranked.length,list.length);
+ assert.deepEqual(new Set(ranked.map(i=>i.id)),new Set(list.map(i=>i.id)));
+ assert.deepEqual(ranked.filter(i=>!newIds.has(i.id)).slice(0,2).map(i=>i.id),old.slice(0,2).map(i=>i.id));
+ for(let start=0;start<ranked.length;start+=25){const quarter=ranked.slice(start,start+25);assert.ok(quarter.filter(i=>newIds.has(i.id)).length>=10);}
+ const unrelated=[...list,{id:'tee',name:'Tee',categories:['MAIN']}];
+ assert.deepEqual(mixImportedWatches(unrelated),unrelated);
+});
