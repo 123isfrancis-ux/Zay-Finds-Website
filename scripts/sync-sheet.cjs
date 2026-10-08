@@ -48,7 +48,7 @@ async function main(){
     const old=oldById.get(item.id);if(!old)continue;
     for(const field of ['name','link','image','prices','categories','visibility'])if(JSON.stringify(old[field])!==JSON.stringify(item[field])){
       fields[field]=(fields[field]||0)+1;
-      if(samples.length<5)samples.push({id:item.id,field,before:old[field],after:item[field]});
+      if(samples.filter(sample=>sample.field===field).length<3)samples.push({id:item.id,field,before:old[field],after:item[field]});
     }
   }
   console.log(JSON.stringify({...result.changes,fields,samples}));

@@ -43,3 +43,11 @@ test('intentional photo edits take precedence over old recovered photos',()=>{
 test('fragrances and malformed listing links cannot be newly published',()=>{
  const f=fixture(),bad=product('Bad link',456);bad[1].hyperlink='https://weidian.com/item.html?itemID=bad';f.workbook=workbook([product('Original',123),product('Designer perfume',789),bad]);const r=mergeSheet(f);assert.equal(r.changes.added,0);assert.equal(r.changes.invalid,1);
 });
+
+test('source category ordering and new memberships preserve website category exclusions',()=>{
+ const f=fixture(),main=f.workbook.sheets[0],hoodies={...structuredClone(main),properties:{sheetId:2,title:'HOODIES'}};
+ f.workbook={spreadsheetId:SHEET_ID,sheets:[main,hoodies]};f.state=baseline(f.workbook);
+ f.workbook.sheets.reverse();assert.deepEqual(mergeSheet(f).catalogue,f.catalogue);
+ f.workbook.sheets.push({...structuredClone(main),properties:{sheetId:3,title:'Aritzia'}});
+ assert.deepEqual(mergeSheet(f).catalogue.items[0].categories,['MAIN','Aritzia']);
+});
