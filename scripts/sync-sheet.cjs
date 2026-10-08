@@ -42,7 +42,16 @@ async function main(){
     fs.writeFileSync(path.join(root,'data/sheet-sync-state.json'),JSON.stringify(baseline(workbook))+'\n');return;
   }
   const result=mergeSheet({catalogue:read('data/catalogue.json'),state:read('data/sheet-sync-state.json'),dates:read('data/product-added-at.json'),imageOverrides:read('data/sheet-sync-image-overrides.json'),workbook});
-  console.log(JSON.stringify(result.changes));
+  const oldById=new Map(read('data/catalogue.json').items.map(item=>[item.id,item]));
+  const fields={},samples=[];
+  for(const item of result.catalogue.items){
+    const old=oldById.get(item.id);if(!old)continue;
+    for(const field of ['name','link','image','prices','categories','visibility'])if(JSON.stringify(old[field])!==JSON.stringify(item[field])){
+      fields[field]=(fields[field]||0)+1;
+      if(samples.length<5)samples.push({id:item.id,field,before:old[field],after:item[field]});
+    }
+  }
+  console.log(JSON.stringify({...result.changes,fields,samples}));
   if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`## Spreadsheet sync\n\nAdded: ${result.changes.added}; updated rows: ${result.changes.updated}; hidden: ${result.changes.hidden}; missing source products retained: ${result.changes.missing}; malformed rows skipped: ${result.changes.invalid}.\n`);
   if(!args.includes('--write'))return;
   const outputs={'data/catalogue.json':result.catalogue,'data/sheet-sync-state.json':result.state,'data/product-added-at.json':result.dates,'data/sheet-sync-image-overrides.json':result.imageOverrides};
