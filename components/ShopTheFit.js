@@ -2,17 +2,14 @@ import {fitImage,fitImageSet} from '../lib/catalogue-delivery';
 import {siteSignal} from '../lib/site-signals';
 import {useEffect,useRef,useState} from 'react';
 import {lookTotal,filterLooks,swapValue,quoteEstimate} from '../lib/shop-the-fit';
-import {readyBucket} from '../lib/fit-signals';
 import {priceAmount} from '../lib/catalogue';
 function money(amount,currency) {return (currency==='CAD'?'≈ ':'')+new Intl.NumberFormat('en-US',{style:'currency',currency}).format(amount);}
-function FitPhoto({item,width,height,priority,onReady}) {
+function FitPhoto({item,width,height,priority}) {
  const [failed,setFailed]=useState(false),[original,setOriginal]=useState(false);
- const image=useRef(null);
- useEffect(()=>{if(image.current?.complete&&image.current.naturalWidth>0)onReady?.();},[item.id,onReady]);
  const sizes=priority
   ? '(max-width: 640px) calc((100vw - 60px) * 0.66), (max-width: 900px) calc((100vw - 84px) * 0.66), (max-width: 1248px) calc((100vw - 84px) * 0.36), 430px'
   : '(max-width: 640px) calc((100vw - 60px) * 0.33), (max-width: 900px) calc((100vw - 84px) * 0.33), (max-width: 1248px) calc((100vw - 84px) * 0.18), 215px';
- return failed?<span className="fit-photo-fallback" style={{aspectRatio:`${width} / ${height}`}}>View photo at seller</span>:<img ref={image} src={fitImage(item.image,600,!original)} srcSet={original?undefined:fitImageSet(item.image)} sizes={sizes} alt={item.name} width={width} height={height} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onLoad={onReady} onError={()=>{if(!original&&fitImage(item.image)!==fitImage(item.image,600,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
+ return failed?<span className="fit-photo-fallback" style={{aspectRatio:`${width} / ${height}`}}>View photo at seller</span>:<img src={fitImage(item.image,600,!original)} srcSet={original?undefined:fitImageSet(item.image)} sizes={sizes} alt={item.name} width={width} height={height} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onError={()=>{if(!original&&fitImage(item.image)!==fitImage(item.image,600,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 function LookThumb({piece}) {
  const [failed,setFailed]=useState(false);
@@ -23,22 +20,21 @@ function DeliveryEstimate({subtotal,currency}) {
  const estimate=quoteEstimate(subtotal,shipping,extras);
  return <details className="fit-checklist"><summary>Add your delivery quote</summary><p>Enter your seller or agent’s combined delivery quote for all these pieces, plus the other checkout charges you know. Amounts must be in {currency}. No delivery price is assumed.</p><div className="fit-filters"><label>Delivery quote ({currency})<input inputMode="decimal" type="number" min="0" max="10000" step="0.01" value={shipping} onChange={e=>setShipping(e.target.value)}/></label><label>Other charges ({currency})<input inputMode="decimal" type="number" min="0" max="10000" step="0.01" value={extras} onChange={e=>setExtras(e.target.value)}/></label></div><p role="status">{estimate===null?'Enter both amounts, including 0 only if you have confirmed no charge.':`Your estimate: ${money(estimate,currency)} ${currency}. Based on the item subtotal and your entered quotes; unquoted charges may still apply.`}</p><p>Your amounts stay on this page and aren’t sent to Insights.</p></details>;
 }
-function BuyingChecklist({look,onDemand,signal}) {
+function BuyingChecklist({look,onDemand}) {
  const [checked,setChecked]=useState({});
- return <details className="fit-checklist" onToggle={e=>{if(e.currentTarget.open)signal('checklist');}}><summary>Before you buy this look</summary>
+ return <details className="fit-checklist"><summary>Before you buy this look</summary>
   <p>Open each listing and confirm its size chart, color or style, current price and availability. These checks stay in this visit.</p>
   <ol>{look.pieces.map((piece,index)=><li key={piece.id}><label><input type="checkbox" checked={!!checked[piece.id]} disabled={!piece.item} onChange={e=>setChecked({...checked,[piece.id]:e.target.checked})}/> <span>{index+1}. {piece.role}{!piece.item?' · Unavailable':''}</span></label>{piece.item&&<a href={piece.item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(piece.id,'click')}>Check {piece.item.name}</a>}</li>)}</ol>
   <p>Choose your seller options separately for each item. Check shipping, agent fees and any other checkout charges before paying. Saving the look keeps the selected products together.</p>
  </details>;
 }
-export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview,onBrowseIntent,collect,measureReady,onReadyMeasured,directVisit,rateDate}) {
+export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview,onBrowseIntent,collect,rateDate}) {
  const [message,setMessage]=useState(null),[filters,setFilters]=useState({occasion:'',layers:'',budget:''});
- const heading=useRef(null),started=useRef(null),readyTime=useRef(null),readySent=useRef(false);
+ const heading=useRef(null);
  const look=selectedLook||looks[0];
  const fitId=look?.id;
  const choices=filterLooks(looks,filters,currency,rate);
  const signal=(action,id)=>siteSignal({type:'fit',fit:fitId,action,...(id?{id}:{})});
- useEffect(()=>{started.current=directVisit?0:performance.now();},[directVisit]);
  useEffect(()=>{
   if(!collect||!fitId||!heading.current)return;
   let timer,visible=false;
@@ -47,29 +43,21 @@ export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSa
   observer.observe(heading.current);document.addEventListener('visibilitychange',observe);
   return()=>{observer.disconnect();clearTimeout(timer);document.removeEventListener('visibilitychange',observe);};
  },[collect,fitId,look?.swap,choices.length]);
- // This measures the first outfit photo being ready after hydration, not LCP.
- // Only coarse timing bands reach storage; no raw timing or personal data.
- function photoReady(){
-  if(!measureReady)return;
-  if(readyTime.current===null)readyTime.current=Math.max(0,performance.now()-(started.current||0));
-  if(collect&&!readySent.current&&document.visibilityState==='visible'){readySent.current=true;onReadyMeasured?.();siteSignal({type:'fit',fit:fitId,action:'ready',bucket:readyBucket(readyTime.current)});}
- }
- useEffect(()=>{if(readyTime.current!==null)photoReady();},[collect]);
  if(!look)return null;
  const matches=choices.some(option=>option.id===look.id);
  const total=lookTotal(look.pieces,currency,rate),usdTotal=lookTotal(look.pieces,'USD',rate);
  const allSaved=look.complete&&look.pieces.every(({id})=>wishlistSet.has(id));
- function choose(id){setMessage(null);siteSignal({type:'fit',fit:id,action:'select'});onSelect(id);}
+ function choose(id){setMessage(null);onSelect(id);}
  function filter(key,value){
   const next={...filters,[key]:value};setFilters(next);
   const filtered=filterLooks(looks,next,currency,rate);
   if(filtered.length&&!filtered.some(option=>option.id===look.id))choose(filtered[0].id);
  }
- function swap(slot,id){setFilters({...filters,budget:''});setMessage(null);signal('swap',id);onSelect(look.id,swapValue(look,slot,id));}
+ function swap(slot,id){setFilters({...filters,budget:''});setMessage(null);onSelect(look.id,swapValue(look,slot,id));}
  function save(){
   if(!look.complete)return;
   const result=onSave(look.pieces.map(p=>p.id));
-  if(result.status!=='full')signal('save');
+  if(result.status==='saved')signal('save');
   setMessage({lookId:look.id,text:result.status==='full'?'Saved is full. Remove a few items, then save this look.':result.status==='already'?'Every piece is already in Saved.':`${result.added.length} ${result.added.length===1?'piece added':'pieces added'} to Saved.`});
  }
  const permalink=`?audience=${audience}&view=fits&fit=${look.id}${look.swap?'&swap='+encodeURIComponent(look.swap):''}#shop-the-fit`;
@@ -82,19 +70,19 @@ export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSa
   {!matches&&<p className="fit-price-note">Your current look is outside these filters. Choose a matching look above or clear your filters.</p>}
   <div className="fit-layout" key={look.id+look.swap}>
    <div className={`fit-board${look.photoLayout?` fit-board-photo-led fit-board-${look.photoLayout}`:''}`} aria-label={`${look.title} outfit pieces`}>
-    {look.pieces.map(({item,role,imageWidth,imageHeight},index)=>item?<a ref={index===0?heading:undefined} className={`fit-photo fit-photo-${index}`} key={item.id} data-product-id={item.id} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={()=>onDemand(item.id,'click')}><FitPhoto item={item} width={imageWidth} height={imageHeight} priority={index===0} onReady={index===0?photoReady:undefined}/><span className="fit-photo-label">{String(index+1).padStart(2,'0')} / {role}</span></a>:<div ref={index===0?heading:undefined} key={index} className={`fit-photo fit-photo-${index}`}><span className="fit-photo-fallback" style={{aspectRatio:`${imageWidth} / ${imageHeight}`}}>{role} · Listing unavailable</span></div>)}
+    {look.pieces.map(({item,role,imageWidth,imageHeight},index)=>item?<a ref={index===0?heading:undefined} className={`fit-photo fit-photo-${index}`} key={item.id} data-product-id={item.id} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={()=>onDemand(item.id,'click')}><FitPhoto item={item} width={imageWidth} height={imageHeight} priority={index===0}/><span className="fit-photo-label">{String(index+1).padStart(2,'0')} / {role}</span></a>:<div ref={index===0?heading:undefined} key={index} className={`fit-photo fit-photo-${index}`}><span className="fit-photo-fallback" style={{aspectRatio:`${imageWidth} / ${imageHeight}`}}>{role} · Listing unavailable</span></div>)}
     <span className="fit-board-note">Individual product photos · Choose colors & sizes at the seller</span>
    </div>
    <div className="fit-details">
     <p className="fit-audience">{look.audience==='everyone'?'For everyone':look.audience==='men'?'For men':'For women'} · {look.occasion}</p>
     <h3>{look.title}</h3><p className="fit-description">{look.swap?`${look.silhouette}. You’ve selected an alternative below.`:look.description}</p>
     {!look.complete&&<p className="fit-unavailable" role="status">This look has an unavailable listing. Choose an offered alternative or browse another look. Seller stock and sizes still need checking.</p>}
-    <ol className="fit-pieces">{look.pieces.map((piece,index)=>{const {item,role}=piece;const amount=item?priceAmount(item,currency,rate):NaN;const base=piece.basePiece||piece;const options=[base,...(base.alternatives||[])];return <li key={index}><span className="fit-number">{String(index+1).padStart(2,'0')}</span>{item?<a href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}><span className="fit-role">{role}</span><span>{item.name}</span></a>:<span className="fit-missing"><span className="fit-role">{role}</span>Listing unavailable</span>}{item&&<button className="fit-preview" onClick={()=>{signal('preview',item.id);onPreview(item);}} aria-label={`Quick View ${item.name}`}>Quick View</button>}<span className="fit-piece-price">{Number.isFinite(amount)?money(amount,currency):'See price'}</span>{options.length>1&&<label className="fit-swap">Choose this piece<select value={piece.id} onChange={e=>swap(index,e.target.value)}>{options.map(option=><option key={option.id} value={option.id} disabled={!option.item}>{option.item?.name||'Original listing unavailable'}{option.id===base.id?' · Original':''}</option>)}</select></label>}</li>;})}</ol>
+    <ol className="fit-pieces">{look.pieces.map((piece,index)=>{const {item,role}=piece;const amount=item?priceAmount(item,currency,rate):NaN;const base=piece.basePiece||piece;const options=[base,...(base.alternatives||[])];return <li key={index}><span className="fit-number">{String(index+1).padStart(2,'0')}</span>{item?<a href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}><span className="fit-role">{role}</span><span>{item.name}</span></a>:<span className="fit-missing"><span className="fit-role">{role}</span>Listing unavailable</span>}{item&&<button className="fit-preview" onClick={()=>{onPreview(item);}} aria-label={`Quick View ${item.name}`}>Quick View</button>}<span className="fit-piece-price">{Number.isFinite(amount)?money(amount,currency):'See price'}</span>{options.length>1&&<label className="fit-swap">Choose this piece<select value={piece.id} onChange={e=>swap(index,e.target.value)}>{options.map(option=><option key={option.id} value={option.id} disabled={!option.item}>{option.item?.name||'Original listing unavailable'}{option.id===base.id?' · Original':''}</option>)}</select></label>}</li>;})}</ol>
     <div className="fit-total"><span>Item subtotal</span><strong>{total===null?'Check seller prices':`${money(total,currency)} ${currency}`}</strong></div>
     {currency==='CAD'&&usdTotal!==null&&<p className="fit-price-note">{money(usdTotal,'USD')} USD before conversion · Exchange rate dated {rateDate}</p>}
     <p className="fit-price-note">Item prices only. Shipping, agent fees, taxes and other checkout charges are extra. Each piece is purchased separately; confirm current prices and options at the seller.</p>
     {total!==null&&<DeliveryEstimate key={look.id+look.swap+currency} subtotal={total} currency={currency}/>}
-    <BuyingChecklist key={look.id+look.swap} look={look} onDemand={onDemand} signal={signal}/>
+    <BuyingChecklist key={look.id+look.swap} look={look} onDemand={onDemand}/>
     <button className="fit-save" type="button" onClick={save} disabled={!look.complete}>{!look.complete?'Complete this look before saving':allSaved?'✓ All pieces saved':'♡ Save the whole look'}</button>
     <a className="fit-permalink" href={permalink}>Link to this look</a>
     <p className="fit-feedback" role="status">{message?.lookId===look.id?message.text:''}</p>

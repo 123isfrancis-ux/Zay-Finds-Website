@@ -27,7 +27,8 @@ import { viewItems, categoriesFor, filterAndSort, catalogueFiltersFromQuery, pri
 const PAGE_SIZE = 24;
 
 const CURRENCIES = ['USD', 'CAD'];
-function record(name, data) { try { track(name, data); } catch {} }
+// Vercel covers page visits and affiliate signup intent; product activity lives in Insights.
+function record(name, data) { if(name !== 'signup_click') return; try { track(name, data); } catch {} }
 
 const WISHLIST_KEY = 'zay-wishlist-v1';
 const WISHLIST_MAX = 500;
@@ -110,7 +111,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
         flexDirection: 'column',
       }}
     >
-      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => { record('product_click', { product: item.id, category: item.category }); onDemand(item.id, 'click'); }} />}
+      {item.link && <a className="card-link" href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Shop ${item.name}`} onClick={() => { onDemand(item.id, 'click'); }} />}
       <button className="card-mobile-preview" type="button" aria-label={`Preview ${item.name}`} aria-haspopup="dialog" onClick={()=>onPreview(item)} />
       {/* Image */}
       <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', background: 'var(--cream)', overflow: 'hidden' }}>
@@ -208,7 +209,6 @@ export default function Home({initial = null}) {
   const [recent, setRecent] = useState([]);
   const [previewItem,setPreviewItem]=useState(null);
   const [catalogueRequested,setCatalogueRequested]=useState(false);
-  const fitLoadMeasured=useRef(false);
   const [view, setView] = useState(initial?.view || null);
   const [sortBy, setSortBy] = useState('trending');
   const [demand, setDemand] = useState(initial?.demand || {status:'disabled',scores:{},collect:false});
@@ -307,7 +307,6 @@ export default function Home({initial = null}) {
 
   // Stable identity, so memoized cards don't re-render when the parent does.
   const toggleWishlist = useCallback((id) => {
-    record('save_toggle', { product: id });
     setWishlist(prev => {
       const next = prev.includes(id)
         ? prev.filter(n => n !== id)
@@ -397,7 +396,6 @@ export default function Home({initial = null}) {
     if (result.status === 'saved') {
       setWishlist(result.ids);saveWishlist(result.ids);
       result.added.forEach(id=>onDemand(id,'save'));
-      if(fitView && selectedFit)record('fit_save', {fit: selectedFit.id, pieces: result.added.length});
     }
     return result;
   }
@@ -421,9 +419,9 @@ export default function Home({initial = null}) {
   const counts=usingFitPreview?{...computedCounts,...initial.fitCounts[audience]}:usingPreview?initial.counts:computedCounts;
   useEffect(() => {
     if (loading || error || !searching) return;
-    const timer = setTimeout(() => {record(filtered.length ? 'search_results' : 'search_empty', { scope: `${activeView}:${effectiveCategory || 'all'}`, results: filtered.length });if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim()});}, 1200);
+    const timer = setTimeout(() => {if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim(),scope:activeView==='all'&&!effectiveCategory&&!collection&&audience==='everyone'?'global':'filtered'});}, 1200);
     return () => clearTimeout(timer);
-  }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching]);
+  }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching, collection, audience]);
   function selectAudience(next) {
     if (next === audience) return;
     setAudience(next);
@@ -526,7 +524,7 @@ export default function Home({initial = null}) {
         <MobileBuyingHelp record={record}/>
         {backgroundError && initial?.preview && <div className="catalogue-message" role="status"><p>Your first finds are ready. The rest couldn’t load.</p><button type="button" className="control" onClick={()=>setAttempt(value=>value+1)}>Retry loading all finds</button></div>}
         {homeLoading && <HomeSkeleton/>}
-        {fitView && !loading && (!error || usingFitPreview) && <ShopTheFit key={audience} looks={looks} selectedLook={selectedFit} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={fitDemand} audience={audience} onPreview={openPreview} onBrowseIntent={requestCatalogue} collect={demand.collect} measureReady={!fitLoadMeasured.current} onReadyMeasured={()=>{fitLoadMeasured.current=true;}} directVisit={initial?.fitPreview} rateDate={exchangeRate.date}/>}
+        {fitView && !loading && (!error || usingFitPreview) && <ShopTheFit key={audience} looks={looks} selectedLook={selectedFit} onSelect={selectFit} wishlistSet={wishlistSet} onSave={saveWholeLook} onViewSaved={()=>selectView('saved')} currency={currency} rate={exchangeRate.usdToCad} onDemand={fitDemand} audience={audience} onPreview={openPreview} onBrowseIntent={requestCatalogue} collect={demand.collect} rateDate={exchangeRate.date}/>}
         {showHome && <HomeCollections sections={sections} audience={audience} renderCard={(item,index,sectionIndex)=><ItemCard item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={sectionIndex===0 && index<2}/>}/>}
         {fitView && loading && <p className="fit-route-message" role="status">Loading looks…</p>}
         {fitView && error && !usingFitPreview && <div className="fit-route-message" role="alert"><p>{error}</p><button className="control" onClick={()=>setAttempt(value=>value+1)}>Retry</button></div>}

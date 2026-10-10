@@ -5,7 +5,7 @@ const {createCollector, loadTrending} = require('../lib/demand-client');
 const {createTrendingHandler} = require('../lib/trending-api');
 const {createStore, RECORD_SCRIPT} = require('../lib/trending-store');
 const stamp = Date.parse('2026-10-05T12:00:00Z');
-const session = '12345678-1234-4123-8123-123456789abc';
+const session = '12345678-1234-4123-8123-123456789ab1';
 const item = id => ({id,image:'image',categoryOrder:{test:1}});
 const headers = {host:'shop.test',origin:'https://shop.test','content-type':'application/json','user-agent':'Mozilla'};
 async function call(handler, options = {}) {
@@ -37,21 +37,21 @@ test('stable ranking reserves discovery slots, preserves every item and never mu
   assert.deepEqual(rankTrending(input,{status:'learning'}),input);
   assert.deepEqual(rankTrending([item('unmeasured')],snapshot),[item('unmeasured')]);
 });
-test('daily browser deduplication survives another tab and rotates anonymous IDs',()=>{
+test('daily browser deduplication survives another tab and rotates anonymous IDs',async()=>{
   const memory=new Map(),sent=[];let now=stamp, generated=0;
   const storage={getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v)};
   const options={storage,randomUUID:()=>{generated++;return session;},send:b=>sent.push(b),now:()=>now};
-  const first=createCollector(options);first.add('a','view');first.add('a','view');first.add('a','save');first.add('a','save');first.flush();
+  const first=createCollector(options);first.add('a','view');first.add('a','view');first.add('a','save');first.add('a','save');await first.flush();
   assert.equal(sent[0].events.length,2);
-  const second=createCollector(options);second.add('a','click');second.flush();assert.equal(generated,1);
+  const second=createCollector(options);second.add('a','click');await second.flush();assert.equal(generated,1);
   assert.equal(sent[0].session,sent[1].session);
-  now+=86400000;second.add('a','view');second.flush();assert.equal(generated,2);
+  now+=86400000;second.add('a','view');await second.flush();assert.equal(generated,2);
 });
-test('collector bounds batches, drops old-day queues and survives blocked local storage',()=>{
+test('collector bounds batches, drops old-day queues and survives blocked local storage',async()=>{
   const sent=[];let now=stamp;
   const c=createCollector({storage:{getItem(){throw Error('blocked');}},randomUUID:()=>session,send:b=>sent.push(b),now:()=>now});
-  for(let i=0;i<70;i++)c.add('p'+i,'view');c.flush();assert.equal(sent[0].events.length,25);
-  now+=86400000;c.flush();assert.equal(sent.length,1);c.add('new','click');c.flush();assert.equal(sent[1].events.length,1);
+  for(let i=0;i<70;i++)c.add('p'+i,'view');await c.flush();assert.equal(sent[0].events.length,25);
+  now+=86400000;await c.flush();assert.equal(sent.length,1);c.add('new','click');await c.flush();assert.equal(sent[1].events.length,1);
 });
 test('API rejects bad origin, unknown products, oversized events and wrong methods before storage',async()=>{
   let writes=0;
@@ -125,4 +125,43 @@ test('adaptive evidence follows recent demand and rejects unsafe client scores',
  assert.ok(scores.a>scores.b);
  const data=await loadTrending(async()=>({ok:true,json:async()=>({version:1,status:'learning',adaptive:{scores:{good:.8,bad:-1,huge:9},low:['good','bad']}})}));
  assert.deepEqual(data.adaptive,{scores:{good:.8},low:['good']});
+});
+
+test('unsampled browsers keep clicks and saves but send no passive views',async()=>{
+ const sent=[],unsampled='12345678-1234-4123-8123-123456789ab0';
+ const c=createCollector({storage:{getItem:()=>null,setItem:()=>{}},randomUUID:()=>unsampled,send:b=>sent.push(b),now:()=>stamp});
+ c.add('a','view');c.add('a','click');c.add('a','save');await c.flush();
+ assert.deepEqual(sent[0].events,[{id:'a',type:'click'},{id:'a',type:'save'}]);
+ let requests=0;
+ const store=createStore({TRENDING_ENABLED:'1',KV_REST_API_URL:'https://sample.test',KV_REST_API_TOKEN:'test'},async()=>{requests++;return {ok:true,json:async()=>({result:1})};});
+ assert.equal(await store.record(unsampled,'ip',[{id:'a',type:'view'}]),true);assert.equal(requests,0);
+ await store.record(unsampled,'ip',[{id:'a',type:'click'}]);assert.equal(requests,1);
+});
+test('failed batches back off, retry exactly once at the next window, and persist only confirmed events',async()=>{
+ const memory=new Map(),sent=[];let time=stamp,fail=true;
+ const opts={storage:{getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v)},randomUUID:()=>session,now:()=>time,send:async b=>{sent.push(b);return {ok:!fail};}};
+ const c=createCollector(opts);c.add('a','click');await c.flush();await c.flush();assert.equal(sent.length,1);
+ assert.deepEqual(JSON.parse(memory.get('zay-demand-day')).seen,[]);
+ time+=60000;fail=false;await c.flush();assert.equal(sent.length,2);assert.deepEqual(sent[0],sent[1]);
+ const reloaded=createCollector(opts);reloaded.add('a','click');await reloaded.flush();assert.equal(sent.length,2);
+});
+test('failed snapshot reads cool down and recover after five minutes',async()=>{
+ let time=stamp,reads=0,fail=true;
+ const handler=createTrendingHandler({validIds:new Set(['a']),now:()=>time,getStore:()=>({snapshot:async()=>{reads++;if(fail)throw Error('offline');return {version:1,status:'learning',scores:{}};}})});
+ await call(handler);await call(handler);time+=299000;await call(handler);assert.equal(reads,1);
+ time+=1000;fail=false;assert.equal((await call(handler)).body.collect,true);assert.equal(reads,2);
+});
+test('store circuit breaker covers new store instances and separate read/write methods',async()=>{
+ let requests=0;const env={TRENDING_ENABLED:'1',KV_REST_API_URL:'https://breaker.test',KV_REST_API_TOKEN:'test'};
+ const fetcher=async()=>{requests++;throw Error('offline');};
+ await assert.rejects(()=>createStore(env,fetcher).record(session,'ip',[{id:'a',type:'click'}]));
+ await assert.rejects(()=>createStore(env,fetcher).dashboard());
+ await assert.rejects(()=>createStore(env,fetcher).signals(session,'ip',['image:a']));
+ assert.equal(requests,1);
+});
+test('ranking uses only matching sampled exposures and actions, never legacy or full-population clicks',async()=>{
+ const fields=['a:view',10000,'a:click',9000,'a:sample_view',100,'a:sample_click',10,'a:sample_save',2];
+ const store=createStore({TRENDING_ENABLED:'1',KV_REST_API_URL:'https://rates.test',KV_REST_API_TOKEN:'test'},async()=>({ok:true,json:async()=>Array.from({length:7},(_,i)=>({result:i===0?fields:[]}))}));
+ const result=await store.snapshot(new Set(['a']),stamp);
+ assert.equal(result.scores.a,makeSnapshot([{'a:view':100,'a:click':10,'a:save':2}],new Set(['a']),stamp).scores.a);
 });

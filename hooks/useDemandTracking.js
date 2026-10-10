@@ -4,13 +4,10 @@ export default function useDemandTracking(enabled, visibleItems) {
   const collector = useRef(null);
   useEffect(() => {
     if (!enabled || navigator.doNotTrack === '1' || navigator.globalPrivacyControl || !window.crypto?.randomUUID) return;
-    const send = body => {
-      const json = JSON.stringify(body);
-      try {
-        if (document.visibilityState === 'hidden' && navigator.sendBeacon?.('/api/trending', new Blob([json], {type:'application/json'}))) return;
-        void fetch('/api/trending', {method:'POST',headers:{'Content-Type':'application/json'},body:json,keepalive:true}).catch(() => {});
-      } catch {}
-    };
+    const send = body => fetch('/api/trending', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body), keepalive:true, signal:AbortSignal.timeout(5000),
+    });
     let storage;
     try { storage = window.localStorage; } catch { storage = { getItem:()=>null,setItem:()=>{} }; }
     const current = createCollector({storage, randomUUID:()=>window.crypto.randomUUID(), send});
