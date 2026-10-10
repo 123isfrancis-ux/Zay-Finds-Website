@@ -16,6 +16,7 @@ export default async function handler(req,res){
  const events=[];
  for(const event of body.events){
   // Older open tabs may still send retired diagnostic events. Acknowledge without storing.
+  if(event?.type==='search_empty'&&typeof event.query==='string'&&event.query.trim().length<3)continue;
   if(event?.type==='fit'&&['ready','select','preview','swap','checklist'].includes(event.action))continue;
   if(event?.type==='image_error'&&ids.has(event.id))events.push('image:'+event.id);else if(event?.type==='search_empty'&&typeof event.query==='string'&&event.query.length<=80)events.push('search:'+(event.scope==='global'?'global':event.scope==='filtered'?'filtered':'unknown')+':'+safeSearch(event.query,vocabulary));else {const key=fitSignalKey(event,ids);if(!key)return res.status(400).end();events.push(key);}}
  if(!events.length)return res.status(204).end();

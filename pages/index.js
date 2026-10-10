@@ -340,7 +340,7 @@ export default function Home({initial = null}) {
   const fitView = activeView === 'fits';
   const computedFiltered = useMemo(() => {
     const sheetOrder = new Map(items.map((item,index)=>[item.id,index]));
-    const orderedBase = collection && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
+    const orderedBase = collection && collection !== 'popular' && sortBy === 'default' ? [...base].sort((a,b)=>sheetOrder.get(a.id)-sheetOrder.get(b.id)) : base;
     const list = filterAndSort(orderedBase, simpleSaved ? '' : effectiveCategory, sortBy === 'trending' ? 'default' : sortBy, currency, exchangeRate.usdToCad);
     return sortBy === 'trending' && !simpleSaved && !collection ? rankRecommended(list, demand) : list;
   }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
@@ -409,7 +409,7 @@ export default function Home({initial = null}) {
     onDemand(id,event);
     if(event==='click'&&selectedFit?.pieces.some(piece=>piece.id===id))siteSignal({type:'fit',fit:selectedFit.id,action:'click',id});
   };
-  const collectionTitle = collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
+  const collectionTitle = collection === 'popular' ? 'Popular Picks' : collection === 'new' ? 'Just Added' : collection === 'budget' ? `Under $25 ${currency}` : collection === 'trending' ? 'Trending This Week' : '';
   const computedCounts = useMemo(() => ({
     week: audienceItems.filter(item => item.visibility === 'weekly').length,
     all: audienceItems.filter(item => item.visibility !== 'hidden').length,
@@ -418,10 +418,10 @@ export default function Home({initial = null}) {
   }), [audienceItems, wishlistSet]);
   const counts=usingFitPreview?{...computedCounts,...initial.fitCounts[audience]}:usingPreview?initial.counts:computedCounts;
   useEffect(() => {
-    if (loading || error || !searching) return;
-    const timer = setTimeout(() => {if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim(),scope:activeView==='all'&&!effectiveCategory&&!collection&&audience==='everyone'?'global':'filtered'});}, 1200);
+    if (loading || error || !complete || !searching || deferredSearch.trim().length < 3 || search !== deferredSearch) return;
+    const timer = setTimeout(() => {if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim(),scope:activeView==='all'&&!effectiveCategory&&!collection&&audience==='everyone'?'global':'filtered'});}, 1800);
     return () => clearTimeout(timer);
-  }, [deferredSearch, effectiveCategory, activeView, filtered.length, loading, error, searching, collection, audience]);
+  }, [search, deferredSearch, complete, effectiveCategory, activeView, filtered.length, loading, error, searching, collection, audience]);
   function selectAudience(next) {
     if (next === audience) return;
     setAudience(next);
@@ -545,7 +545,7 @@ export default function Home({initial = null}) {
             <p className="empty-symbol">✦</p>
             <h2>{searching ? 'No matching finds' : simpleSaved ? 'Save your favorite finds' : 'No finds here yet'}</h2>
             <p>{simpleSaved ? audience === 'everyone' ? 'Tap a heart on any product to keep it here.' : 'No saved finds in this selection. Choose Everyone to see all your saved items.' : searching ? broaderSearchCount ? 'Matching finds are available outside your current filters.' : 'Try fewer words, a brand, or a product type.' : 'Try another category or browse all finds.'}</p>
-            {searching && broaderSearchCount > 0 && <button className="control" type="button" onClick={searchAllFinds}>Search all finds ({broaderSearchCount})</button>}
+            {searching && (broaderSearchCount > 0 || effectiveCategory || collection || audience !== 'everyone' || activeView !== 'all') && <button className="control" type="button" onClick={searchAllFinds}>Search all finds{broaderSearchCount > 0 ? ` (${broaderSearchCount})` : ''}</button>}
             <button className="control" type="button" onClick={() => {
               setSearch('');
               if (searching) return;

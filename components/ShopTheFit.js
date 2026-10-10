@@ -81,12 +81,14 @@ export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSa
     <div className="fit-total"><span>Item subtotal</span><strong>{total===null?'Check seller prices':`${money(total,currency)} ${currency}`}</strong></div>
     {currency==='CAD'&&usdTotal!==null&&<p className="fit-price-note">{money(usdTotal,'USD')} USD before conversion · Exchange rate dated {rateDate}</p>}
     <p className="fit-price-note">Item prices only. Shipping, agent fees, taxes and other checkout charges are extra. Each piece is purchased separately; confirm current prices and options at the seller.</p>
-    {total!==null&&<DeliveryEstimate key={look.id+look.swap+currency} subtotal={total} currency={currency}/>}
-    <BuyingChecklist key={look.id+look.swap} look={look} onDemand={onDemand}/>
     <button className="fit-save" type="button" onClick={save} disabled={!look.complete}>{!look.complete?'Complete this look before saving':allSaved?'✓ All pieces saved':'♡ Save the whole look'}</button>
     <a className="fit-permalink" href={permalink}>Link to this look</a>
     <p className="fit-feedback" role="status">{message?.lookId===look.id?message.text:''}</p>
     {allSaved&&<button type="button" className="fit-view-saved" onClick={onViewSaved}>View Saved</button>}
+    <p className="fit-price-note">Save every selected piece to your Saved finds in one tap.</p>
+    {total!==null&&<DeliveryEstimate key={look.id+look.swap+currency} subtotal={total} currency={currency}/>}
+    <BuyingChecklist key={look.id+look.swap} look={look} onDemand={onDemand}/>
+
    </div>
   </div></>}
  </section>;
