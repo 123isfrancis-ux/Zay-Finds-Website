@@ -19,7 +19,7 @@ jobs:
   sync:
     if: (vars.SHEET_SYNC_ENABLED == 'true' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -70,7 +70,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           SYNC_SHA: ${{ steps.publish.outputs.sha }}
         run: |
-          for attempt in $(seq 1 60); do
+          for attempt in $(seq 1 180); do
             state=$(gh api "repos/$GITHUB_REPOSITORY/commits/$SYNC_SHA/status" --jq '[.statuses[] | select(.context == "Vercel – zway-finds-website")][0].state // "pending"')
             if [ "$state" = success ]; then
               echo 'Primary website deployment verified.' >> "$GITHUB_STEP_SUMMARY"
@@ -82,5 +82,5 @@ jobs:
             fi
             sleep 10
           done
-          echo 'Website deployment did not confirm within ten minutes; review Vercel.' >&2
+          echo 'Catalogue synced to GitHub, but website deployment did not confirm within thirty minutes; review Vercel.' >&2
           exit 1

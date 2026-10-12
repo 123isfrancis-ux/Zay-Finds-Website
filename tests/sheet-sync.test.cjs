@@ -51,3 +51,28 @@ test('source category ordering and new memberships preserve website category exc
  f.workbook.sheets.push({...structuredClone(main),properties:{sheetId:3,title:'Aritzia'}});
  assert.deepEqual(mergeSheet(f).catalogue.items[0].categories,['MAIN','Aritzia']);
 });
+
+test('unused EUR and GBP recalculations do not change catalogue or sync state',()=>{
+ const f=fixture(),row=product('Original',123);
+ row.push({formattedValue:'€12',effectiveValue:{numberValue:12}},{formattedValue:'£10',effectiveValue:{numberValue:10}});
+ f.workbook=workbook([row]);const r=mergeSheet(f);
+ assert.deepEqual(r.catalogue,f.catalogue);assert.deepEqual(r.state,f.state);
+});
+test('USD conversion estimates refresh daily without losing accumulated changes',()=>{
+ const f=fixture(),row=product('Original',123);row[3].effectiveValue.numberValue=14.5;
+ const first=mergeSheet({...f,workbook:workbook([row])});
+ assert.equal(first.catalogue.items[0].prices.USD,14.5);
+ row[3].effectiveValue.numberValue=14.6;
+ const held=mergeSheet({...f,...first,workbook:workbook([row])});
+ assert.deepEqual(held.catalogue,first.catalogue);assert.deepEqual(held.state,first.state);
+ const next=mergeSheet({...f,...held,workbook:workbook([row]),now:'2026-10-09T01:00:00Z'});
+ assert.equal(next.catalogue.items[0].prices.USD,14.6);
+});
+test('source price edits and USD-only listings bypass the daily conversion hold',()=>{
+ const f=fixture();f.state.usdRateDate=f.now.slice(0,10);
+ const changed=mergeSheet({...f,workbook:workbook([product('Original',123,150)])});
+ assert.equal(changed.catalogue.items[0].prices.CNY,150);assert.equal(changed.catalogue.items[0].prices.USD,21.43);
+ const row=product('Original',123);row[2]={};f.workbook=workbook([row]);f.state=baseline(f.workbook);f.state.usdRateDate=f.now.slice(0,10);
+ row[3].effectiveValue.numberValue=19;
+ assert.equal(mergeSheet(f).catalogue.items[0].prices.USD,19);
+});
