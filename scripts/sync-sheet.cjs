@@ -41,7 +41,7 @@ async function main(){
     if(fs.existsSync(path.join(root,'data/sheet-sync-state.json')))throw Error('Baseline already exists');
     fs.writeFileSync(path.join(root,'data/sheet-sync-state.json'),JSON.stringify(baseline(workbook))+'\n');return;
   }
-  const result=mergeSheet({catalogue:read('data/catalogue.json'),state:read('data/sheet-sync-state.json'),dates:read('data/product-added-at.json'),imageOverrides:read('data/sheet-sync-image-overrides.json'),workbook});
+  const result=mergeSheet({catalogue:read('data/catalogue.json'),state:read('data/sheet-sync-state.json'),dates:read('data/product-added-at.json'),imageOverrides:read('data/sheet-sync-image-overrides.json'),recoveredImages:read('data/weidian-images.json'),workbook});
   const oldById=new Map(read('data/catalogue.json').items.map(item=>[item.id,item]));
   const fields={},samples=[];
   for(const item of result.catalogue.items){

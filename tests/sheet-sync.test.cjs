@@ -76,3 +76,33 @@ test('source price edits and USD-only listings bypass the daily conversion hold'
  row[3].effectiveValue.numberValue=19;
  assert.equal(mergeSheet(f).catalogue.items[0].prices.USD,19);
 });
+
+const recovery=(id='456',image='https://si.geilicdn.com/verified.jpg')=>({image,source:`https://item2.kakobuy.com/item/details?url=${encodeURIComponent('https://weidian.com/item.html?itemID='+id)}`});
+function recoveryFixture(){const f=fixture(),row=product('Recovered',456);row[4]={};return {...f,workbook:workbook([product('Original',123),row]),recoveredImages:{456:recovery()},imageOverrides:{'stable-saved-id':'/manual.jpg'}};}
+test('exact listing recovery adds once, preserves raw baseline and existing manual corrections',()=>{
+ const f=recoveryFixture(),copy=structuredClone(f),r=mergeSheet(f);
+ assert.equal(r.changes.added,1);assert.equal(r.catalogue.items[1].image,f.recoveredImages[456].image);
+ assert.equal(r.state.products['weidian:456'].image,'');assert.deepEqual(r.imageOverrides,f.imageOverrides);
+ assert.deepEqual(r.catalogue.items[0],f.catalogue.items[0]);assert.deepEqual(f,copy);
+ const again=mergeSheet({...f,...r});assert.deepEqual(again.catalogue,r.catalogue);assert.deepEqual(again.state,r.state);assert.deepEqual(again.dates,r.dates);assert.equal(again.changes.added,0);
+});
+test('missing, invalid, wrong-host and mismatched recovery rejects without any input mutation',()=>{
+ for(const recoveredImages of [{},{789:recovery()},{456:recovery('789')},{456:recovery('456','http://si.geilicdn.com/a.jpg')},{456:recovery('456','https://si.geilicdn.com.evil.example/a.jpg')},{456:recovery('456','invalid')},{456:{image:'https://si.geilicdn.com/a.jpg'}},{456:recovery('456','https://user@si.geilicdn.com/a.jpg')}]){
+  const f={...recoveryFixture(),recoveredImages},copy=structuredClone(f);assert.throws(()=>mergeSheet(f),/photo/);assert.deepEqual(f,copy);
+ }
+});
+test('recovered photo never waives the positive-price requirement',()=>{
+ const f=recoveryFixture();f.workbook.sheets[0].data[0].rowData[1].values[2].effectiveValue.numberValue=0;f.workbook.sheets[0].data[0].rowData[1].values[3].effectiveValue.numberValue=0;
+ const copy=structuredClone(f);assert.throws(()=>mergeSheet(f),/positive price/);assert.deepEqual(f,copy);
+});
+test('recovery never affects existing or baseline-excluded products and sheet images take priority',()=>{
+ const f=fixture();f.recoveredImages={123:recovery('123')};assert.deepEqual(mergeSheet(f).catalogue,f.catalogue);
+ f.catalogue.items=[];assert.equal(mergeSheet(f).changes.added,0);
+ const g=recoveryFixture();g.workbook=workbook([product('Original',123),product('New',456)]);assert.equal(mergeSheet(g).catalogue.items[1].image,'https://example.com/456.jpg');
+});
+test('a later sheet IMAGE replaces the recovered photo through the normal explicit override',()=>{
+ const f=recoveryFixture(),r=mergeSheet(f),row=product('Recovered',456);row[4].userEnteredValue.formulaValue='=IMAGE("https://example.com/later.jpg")';
+ const later=mergeSheet({...f,...r,workbook:workbook([product('Original',123),row])}),item=later.catalogue.items[1];
+ assert.equal(item.image,'https://example.com/later.jpg');assert.equal(later.imageOverrides[item.id],item.image);assert.equal(later.state.products['weidian:456'].image,item.image);
+ assert.deepEqual(mergeSheet({...f,...later,workbook:workbook([product('Original',123),row])}).catalogue,later.catalogue);
+});
