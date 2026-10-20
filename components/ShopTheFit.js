@@ -1,3 +1,4 @@
+import ReliableImage from './ReliableImage';
 import {fitImage,fitImageSet} from '../lib/catalogue-delivery';
 import {siteSignal} from '../lib/site-signals';
 import {useEffect,useRef,useState} from 'react';
@@ -9,11 +10,11 @@ function FitPhoto({item,width,height,priority}) {
  const sizes=priority
   ? '(max-width: 640px) calc((100vw - 60px) * 0.66), (max-width: 900px) calc((100vw - 84px) * 0.66), (max-width: 1248px) calc((100vw - 84px) * 0.36), 430px'
   : '(max-width: 640px) calc((100vw - 60px) * 0.33), (max-width: 900px) calc((100vw - 84px) * 0.33), (max-width: 1248px) calc((100vw - 84px) * 0.18), 215px';
- return failed?<span className="fit-photo-fallback" style={{aspectRatio:`${width} / ${height}`}}>View photo at seller</span>:<img src={fitImage(item.image,600,!original)} srcSet={original?undefined:fitImageSet(item.image)} sizes={sizes} alt={item.name} width={width} height={height} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onError={()=>{if(!original&&fitImage(item.image)!==fitImage(item.image,600,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
+ return failed?<span className="fit-photo-fallback" style={{aspectRatio:`${width} / ${height}`}}>View photo at seller</span>:<ReliableImage src={fitImage(item.image,600,!original)} srcSet={original?undefined:fitImageSet(item.image)} sizes={sizes} alt={item.name} width={width} height={height} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onError={()=>{if(!original&&fitImage(item.image)!==fitImage(item.image,600,false)){setOriginal(true);return;}setFailed(true);siteSignal({type:'image_error',id:item.id});}}/>;
 }
 function LookThumb({piece}) {
  const [failed,setFailed]=useState(false);
- return piece?.item&&!failed?<img src={fitImage(piece.item.image,120)} alt="" width="72" height="72" loading="lazy" fetchPriority="low" onError={()=>setFailed(true)}/>:<span className="fit-thumb-empty" aria-hidden="true">—</span>;
+ return piece?.item&&!failed?<ReliableImage src={fitImage(piece.item.image,120)} alt="" width="72" height="72" loading="lazy" fetchPriority="low" onError={()=>setFailed(true)}/>:<span className="fit-thumb-empty" aria-hidden="true">—</span>;
 }
 function DeliveryEstimate({subtotal,currency}) {
  const [shipping,setShipping]=useState(''),[extras,setExtras]=useState('');
@@ -31,9 +32,12 @@ function BuyingChecklist({look,onDemand}) {
 export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSave,currency,rate,onDemand,audience,onViewSaved,onPreview,onBrowseIntent,collect,rateDate}) {
  const [message,setMessage]=useState(null),[filters,setFilters]=useState({occasion:'',layers:'',budget:''});
  const heading=useRef(null);
+ const [showMore,setShowMore]=useState(false);
  const look=selectedLook||looks[0];
  const fitId=look?.id;
- const choices=filterLooks(looks,filters,currency,rate);
+ const priorityLooks=['streetwear','airport-fit','smart-casual'];
+ const choices=filterLooks(looks,filters,currency,rate).slice().sort((a,b)=>(priorityLooks.includes(a.id)?priorityLooks.indexOf(a.id):3)-(priorityLooks.includes(b.id)?priorityLooks.indexOf(b.id):3));
+ const visibleChoices=showMore?choices:choices.filter((option,index)=>index<3||option.id===look?.id);
  const signal=(action,id)=>siteSignal({type:'fit',fit:fitId,action,...(id?{id}:{})});
  useEffect(()=>{
   if(!collect||!fitId||!heading.current)return;
@@ -65,7 +69,8 @@ export default function ShopTheFit({looks,selectedLook,onSelect,wishlistSet,onSa
   <div className="fit-heading"><div><p className="discovery-eyebrow">PUT IT TOGETHER</p><h2 id="fit-heading">Build A Fit</h2></div><div className="fit-heading-aside"><p>Curated looks. Make them yours.</p><a href={`?audience=${audience}&view=all#catalogue`} onMouseEnter={onBrowseIntent} onFocus={onBrowseIntent}>Browse all finds</a></div></div>
   <p className="fit-intro">Curated outfits, with selected swaps where available. Photos show separate pieces; confirm colors and sizes at the seller.</p>
   <div className="fit-filters"><label>Occasion<select value={filters.occasion} onChange={e=>filter('occasion',e.target.value)}><option value="">All occasions</option>{['Everyday','Travel','Evening','Active'].map(value=><option key={value}>{value}</option>)}</select></label><label>Layers<select value={filters.layers} onChange={e=>filter('layers',e.target.value)}><option value="">All looks</option><option>Light</option><option>Layered</option></select></label><label>Item subtotal<select value={filters.budget} onChange={e=>filter('budget',e.target.value)}><option value="">Any budget</option><option value="100">Up to $100 {currency}</option><option value="150">Up to $150 {currency}</option></select></label></div>
-  <div className="fit-picker" role="group" aria-label="Choose a look">{choices.map(option=><button key={option.id} type="button" aria-pressed={look.id===option.id} onClick={()=>choose(option.id)}><LookThumb piece={option.pieces[0]}/><span>{option.title}<small>{option.occasion}{!option.complete?' · Piece unavailable':''}</small></span></button>)}</div>
+  <div className="fit-picker" role="group" aria-label="Choose a look">{visibleChoices.map(option=><button key={option.id} type="button" aria-pressed={look.id===option.id} onClick={()=>choose(option.id)}><LookThumb piece={option.pieces[0]}/><span>{option.title}<small>{option.occasion}{!option.complete?' · Piece unavailable':''}</small></span></button>)}</div>
+  {choices.length>3&&<button className="control" type="button" aria-expanded={showMore} onClick={()=>setShowMore(!showMore)}>{showMore?'Fewer looks':'More looks'}</button>}
   {!choices.length?<div className="fit-empty" role="status"><p>No looks match these filters. Budgets use item prices before delivery and other charges.</p><button className="control" onClick={()=>setFilters({occasion:'',layers:'',budget:''})}>Show all looks</button></div>:<>
   {!matches&&<p className="fit-price-note">Your current look is outside these filters. Choose a matching look above or clear your filters.</p>}
   <div className="fit-layout" key={look.id+look.swap}>

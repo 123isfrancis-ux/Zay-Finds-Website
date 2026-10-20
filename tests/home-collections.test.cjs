@@ -47,10 +47,14 @@ test('addition ledger preserves dates and does not mark existing or renamed list
 });
 test('new product dates survive compact API and match the dated imports',()=>{
  const rows=require('../lib/regional-catalogue').items;
- assert.equal(rows.filter(i=>i.addedAt).length,254);
+ const dated=rows.filter(i=>i.addedAt);
+ assert.ok(dated.length>0);
+ const ledger=require('../data/product-added-at.json');
+ const {additionKey}=require('../lib/home-collections');
+ for(const item of dated){assert.ok(Number.isFinite(Date.parse(item.addedAt)));assert.equal(item.addedAt,ledger[additionKey(item)]);}
  const handler=require('../lib/regional-catalogue');let payload;
  handler({method:'GET',query:{compact:'1'}},{setHeader(){},status(){return this;},json(value){payload=value;}});
- assert.equal(payload.items.filter(i=>i.addedAt).length,254);
+ assert.deepEqual(payload.items.filter(i=>i.addedAt).map(i=>[i.id,i.addedAt]),dated.map(i=>[i.id,i.addedAt]));
 });
 
 test('Shop the Fit view survives shared links',()=>{
@@ -72,3 +76,14 @@ test('editorial Just Added picks are mixed, unique, scoped, and included in See 
   assert.ok(homeSections(scoped,{},'USD',1).find(s=>s.key==='new').items.every(i=>audienceFor(i)!==(audience==='men'?'women':'men')));
  }
 });
+
+ test('homepage Trending fills from products outside Popular Picks',()=>{
+ const ids=require('../data/popular-picks.json');
+ const rows=[...ids.map(id=>make(id)),...Array.from({length:15},(_,n)=>make('extra'+n))];
+ const scores=Object.fromEntries(rows.map((item,n)=>[item.id,100-n]));
+ const shelves=homeSections(rows,{status:'ready',scores},'USD',1);
+ const trending=shelves.find(s=>s.key==='trending');
+ assert.equal(trending.items.length,12);
+ assert.ok(trending.items.every(item=>!ids.includes(item.id)));
+ assert.deepEqual(collectionItems(rows,'popular').map(i=>i.id),ids);
+ });

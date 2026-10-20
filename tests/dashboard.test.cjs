@@ -7,7 +7,7 @@ test('dashboard fails closed without a strong configured password and exact auth
 test('reports aggregate real buckets, omit hidden listings and require enough views for low engagement',()=>{
  const items=[{id:'a',name:'A',image:'photo'},{id:'b',name:'B',image:''},{id:'hidden',visibility:'hidden'}];
  const data=report(items,[{'a:sample_view':40,'a:sample_click':1,'a:click':1,'b:sample_view':2,'b:save':1,'hidden:view':100}], [{'image:a':2,'search:nike shoes':3}],0);
- assert.deepEqual(data.totals,{views:42,clicks:1,saves:1});assert.equal(data.lowEngagement[0].id,'a');assert.equal(data.photoIssues.length,2);assert.deepEqual(data.searches,[{term:'nike shoes',count:3}]);assert.equal(report(items,[],[]).mostClicked.length,0);
+ assert.deepEqual(data.totals,{views:42,clicks:1,saves:1});assert.equal(data.lowEngagement.length,0);assert.equal(data.photoIssues.length,2);assert.deepEqual(data.searches,[{term:'nike shoes',count:3}]);assert.equal(report(items,[],[]).mostClicked.length,0);
 });
 test('search reporting does not retain arbitrary text or contact details',()=>{
  const vocabulary=new Set(['nike','shoes']);assert.equal(safeSearch('Nike shoes',vocabulary),'nike shoes');
@@ -31,4 +31,11 @@ test('dashboard API never reads or returns reports before authorization, includi
 test('dashboard rates use sampled clicks while totals retain all clicks and legacy views stay excluded',()=>{
  const data=report([{id:'a',name:'A'}],[{'a:view':9000,'a:sample_view':100,'a:sample_click':10,'a:click':500,'a:save':50}],[]);
  assert.deepEqual(data.totals,{views:100,clicks:500,saves:50});assert.equal(data.mostClicked[0].clickRate,.1);
+});
+
+test('review candidates need substantial exposure and exclude meaningful click or save activity',()=>{
+ const items=['review','small','clicks','saves','rate'].map(id=>({id}));
+ const bucket={};for(const {id}of items)Object.assign(bucket,{[id+':sample_view']:100,[id+':sample_click']:1});
+ bucket['small:sample_view']=99;bucket['clicks:click']=10;bucket['saves:save']=5;bucket['rate:sample_click']=2;
+ assert.deepEqual(report(items,[bucket],[]).lowEngagement.map(i=>i.id),['review']);
 });

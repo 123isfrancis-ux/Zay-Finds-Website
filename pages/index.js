@@ -1,3 +1,4 @@
+import ReliableImage from '../components/ReliableImage';
 import { useState, useEffect, useMemo, useCallback, useDeferredValue, useRef, memo } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
@@ -116,7 +117,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
       {/* Image */}
       <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', background: 'var(--cream)', overflow: 'hidden' }}>
         {item.image && !imgError ? (
-          <img
+          <ReliableImage
             className="card-img"
             src={loadPhoto?cardImage(item.image,!originalImage):undefined}
             alt={item.name}
@@ -346,9 +347,10 @@ export default function Home({initial = null}) {
   }, [items, base, effectiveCategory, sortBy, simpleSaved, currency, exchangeRate.usdToCad, demand, collection]);
   const filtered=useMemo(()=>usingPreview ? initial.visibleIds.map(id=>items.find(i=>i.id===id)).filter(Boolean) : computedFiltered,[usingPreview,initial,items,computedFiltered]);
   const total=usingPreview?initial.total:filtered.length;
-  const broaderSearchCount = useMemo(() => searching && complete && !filtered.length
-    ? viewItems(items, 'all', new Set(), deferredSearch).length : 0,
-    [searching, complete, filtered.length, items, deferredSearch]);
+  const broaderSearchItems = useMemo(() => searching && complete && !filtered.length && !simpleSaved && !fitView
+    ? viewItems(items, 'all', new Set(), deferredSearch) : [],
+    [searching, complete, filtered.length, items, deferredSearch, simpleSaved, fitView]);
+  const broaderSearchCount=broaderSearchItems.length;
   function searchAllFinds() {
     setView('all'); setCategory(''); setCollection(''); setAudience('everyone');
     try { localStorage.setItem('zay-audience', 'everyone'); } catch {}
@@ -419,9 +421,9 @@ export default function Home({initial = null}) {
   const counts=usingFitPreview?{...computedCounts,...initial.fitCounts[audience]}:usingPreview?initial.counts:computedCounts;
   useEffect(() => {
     if (loading || error || !complete || !searching || deferredSearch.trim().length < 3 || search !== deferredSearch) return;
-    const timer = setTimeout(() => {if(!filtered.length&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim(),scope:activeView==='all'&&!effectiveCategory&&!collection&&audience==='everyone'?'global':'filtered'});}, 1800);
+    const timer = setTimeout(() => {if(!filtered.length&&!broaderSearchCount&&activeView!=='saved'&&activeView!=='fits')siteSignal({type:'search_empty',query:deferredSearch.trim(),scope:activeView==='all'&&!effectiveCategory&&!collection&&audience==='everyone'?'global':'filtered'});}, 1800);
     return () => clearTimeout(timer);
-  }, [search, deferredSearch, complete, effectiveCategory, activeView, filtered.length, loading, error, searching, collection, audience]);
+  }, [search, deferredSearch, complete, effectiveCategory, activeView, filtered.length, broaderSearchCount, loading, error, searching, collection, audience]);
   function selectAudience(next) {
     if (next === audience) return;
     setAudience(next);
@@ -533,7 +535,7 @@ export default function Home({initial = null}) {
         {!homeLoading && !fitView && (!simpleSaved || loading || error) && <section id="catalogue" className="catalogue" aria-label={searching ? 'Search results' : activeView === 'saved' ? 'Saved finds' : activeView === 'week' ? 'This Week' : 'All Finds'} aria-busy={loading || search !== deferredSearch}>
           {showHome && <h2 className="full-catalogue-title">All Finds</h2>}
           {collectionTitle && <div className="collection-context"><p>{collectionTitle}{collection === 'budget' ? ' · Item prices before shipping' : ''}</p><button type="button" className="control" onClick={()=>selectView('all')}>Back to all finds</button></div>}
-          {!loading && !error && <div className="catalogue-summary"><p>{total.toLocaleString()} finds{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
+          {!loading && !error && <div className="catalogue-summary"><p>{broaderSearchCount ? `${broaderSearchCount} matches across all categories` : `${total.toLocaleString()} finds`}{audience !== 'everyone' ? ' · ' + (audience === 'men' ? 'Men' : 'Women') : ''}{effectiveCategory ? ' · ' + categories.find(c => c.value === effectiveCategory)?.label : ''}</p><p>{currency === 'CAD' ? `CAD estimates · Rate ${exchangeRate.date} · Shipping extra` : 'USD item prices · Shipping extra · Confirm at checkout'}</p></div>}
           {!loading && !error && !simpleSaved && sortBy === 'trending' && (!collection || collection === 'trending') && hasScopedTrends && <p className="trending-note">Popular with shoppers, with room for new discoveries.</p>}
           {searching && <h2 className="search-heading">Search results for “{deferredSearch.trim()}”</h2>}
           {loading ? <div className="product-grid" role="status" aria-label="Loading catalogue">
@@ -541,7 +543,7 @@ export default function Home({initial = null}) {
           </div> : error ? <div className="catalogue-message" role="alert">
             <h2>Catalogue unavailable</h2><p>{error}</p>
             <button className="control" type="button" onClick={() => setAttempt(value => value + 1)}>Retry</button>
-          </div> : filtered.length === 0 ? <div className="catalogue-message" role="status">
+          </div> : broaderSearchCount > 0 ? <section aria-label="Found in other categories"><h2>Found in other categories</h2><p>No matches in your current filters. Here are matching finds from the full catalogue.</p><div className="product-grid">{broaderSearchItems.slice(0,PAGE_SIZE).map((item,index)=><ItemCard key={item.id} item={item} wishlisted={wishlistSet.has(item.id)} onWishlist={toggleWishlist} currency={currency} usdToCad={exchangeRate.usdToCad} onDemand={onDemand} onPreview={openPreview} priority={index<4}/>)}</div><button className="control" type="button" onClick={searchAllFinds}>View all {broaderSearchCount} matches</button></section> : filtered.length === 0 ? <div className="catalogue-message" role="status">
             <p className="empty-symbol">✦</p>
             <h2>{searching ? 'No matching finds' : simpleSaved ? 'Save your favorite finds' : 'No finds here yet'}</h2>
             <p>{simpleSaved ? audience === 'everyone' ? 'Tap a heart on any product to keep it here.' : 'No saved finds in this selection. Choose Everyone to see all your saved items.' : searching ? broaderSearchCount ? 'Matching finds are available outside your current filters.' : 'Try fewer words, a brand, or a product type.' : 'Try another category or browse all finds.'}</p>
