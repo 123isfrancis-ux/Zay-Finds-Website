@@ -12,7 +12,7 @@ const {applyWatchOpening}=require('../lib/watch-opening');
 const list=filterAndSort(items.filter(i=>i.visibility!=='hidden'),'super clone watches','default');
 
 test('first 15 live cards follow spreadsheet rows, including three shared-link options',()=>{
- assert.equal(list.length,101);
+ assert.equal(list.length,102);
  assert.deepEqual(list.slice(0,15).map(i=>weidianId(i.link)),opening.map(r=>weidianId(r.link)));
  assert.equal(new Set(list.map(i=>i.id)).size,list.length);
  for(let n=0;n<15;n++){

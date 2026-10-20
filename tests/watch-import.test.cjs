@@ -23,7 +23,7 @@ test('48 new watches retain unique destination links, source rows, photos and st
 test('new watches are spread across the complete category and only three appear in the homepage preview',()=>{
  const newIds=new Set(batch.map(i=>i.id));
  const ordered=filterAndSort(items,'super clone watches','default');
- assert.equal(ordered.length,102);
+ assert.equal(ordered.length,103);
  assert.equal(ordered.filter(i=>newIds.has(i.id)).length,48);
  const homepage=homeSections(items,{},'USD',1).find(s=>s.key==='new').items;
  assert.equal(homepage.length,12);
