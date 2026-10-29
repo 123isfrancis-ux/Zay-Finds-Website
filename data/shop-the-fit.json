@@ -1,141 +1,117 @@
 [
   {
     "id": "streetwear",
-    "title": "Streetwear Outfit",
+    "title": "Washed Black Streetwear",
     "audience": "men",
-    "description": "A washed zip hoodie, distressed baggy denim, and chunky Rick Owens-style sneakers from the TikTok finds.",
+    "description": "A black Acne Studios hoodie, washed wide-leg denim and chunky black-and-white sneakers. Swap the hoodie for a lined bomber on colder days.",
     "pieces": [
       {
-        "id": "624966f5838e444a30233f5c",
+        "id": "e26a83aef6452dce03031a09",
         "role": "The hoodie",
-        "imageWidth": 600,
-        "imageHeight": 600
+        "imageWidth": 800,
+        "imageHeight": 799,
+        "alternatives": [
+          {
+            "id": "dd8debc77f7d395fb594d209",
+            "role": "The lined bomber",
+            "imageWidth": 400,
+            "imageHeight": 400
+          }
+        ]
       },
       {
-        "id": "d227aa75ef153fbb19319d8d",
-        "role": "The baggy jeans",
-        "imageWidth": 600,
-        "imageHeight": 600
+        "id": "f901ec0d13d22bbbf9927732",
+        "role": "The washed jeans",
+        "imageWidth": 400,
+        "imageHeight": 533
       },
       {
         "id": "a6eacda4b390e97d89a59001",
         "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 600,
-        "alternatives": [
-          {
-            "id": "4389b3753eb4c0eac4e5d88d",
-            "role": "The sneakers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "imageWidth": 400,
+        "imageHeight": 400
       }
     ],
     "photoLayout": "square-top",
     "occasion": "Everyday",
     "layers": "Layered",
-    "silhouette": "Oversized layers and wide denim"
+    "silhouette": "Relaxed black layers and wide denim"
   },
   {
     "id": "airport-fit",
-    "title": "Airport Fit",
+    "title": "Cold-Weather Travel",
     "audience": "men",
-    "description": "Relaxed layers for the journey and everything after.",
+    "description": "A black puffer, grey joggers and black Asics for an easy travel outfit. Choose the fleece swap for a lighter layer.",
     "pieces": [
       {
-        "id": "3bea8fea16442b56d8e183b6",
-        "role": "The hoodie",
-        "imageWidth": 600,
-        "imageHeight": 600,
+        "id": "d4897f50d2929452e85802b9",
+        "role": "The puffer",
+        "imageWidth": 400,
+        "imageHeight": 400,
         "alternatives": [
           {
-            "id": "624966f5838e444a30233f5c",
-            "role": "The hoodie",
-            "imageWidth": 600,
-            "imageHeight": 600
+            "id": "ea70bdd27e0600ef91d84a63",
+            "role": "The fleece",
+            "imageWidth": 400,
+            "imageHeight": 400
           }
         ]
       },
       {
         "id": "0538d997fb80eb2328dad6cf",
-        "role": "The sweats",
-        "imageWidth": 600,
-        "imageHeight": 800
+        "role": "The joggers",
+        "imageWidth": 1002,
+        "imageHeight": 1336
       },
       {
         "id": "a1850b0f61213e1546d003da",
         "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 400,
-        "alternatives": [
-          {
-            "id": "4389b3753eb4c0eac4e5d88d",
-            "role": "The sneakers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "imageWidth": 400,
+        "imageHeight": 267
       }
     ],
     "photoLayout": "square-top",
     "occasion": "Travel",
     "layers": "Layered",
-    "silhouette": "Relaxed layers and soft trousers"
+    "silhouette": "Padded outerwear and relaxed joggers"
   },
   {
     "id": "clean-everyday",
-    "title": "Clean Everyday",
+    "title": "Grey Knit & Denim",
     "audience": "men",
-    "description": "An easy tee, relaxed trousers, and a clean sneaker finish.",
+    "description": "A grey half-zip knit, washed blue wide-leg jeans and white sneakers. An easy everyday combination for cooler days.",
     "pieces": [
       {
-        "id": "abcc404d53f5219b757f2691",
-        "role": "The tee",
+        "id": "953b88bb6bb848968a2950ae",
+        "role": "The half-zip knit",
         "imageWidth": 400,
         "imageHeight": 400,
         "alternatives": [
           {
-            "id": "a028647d64d6e076f75a20da",
-            "role": "The polo",
-            "imageWidth": 600,
-            "imageHeight": 600
+            "id": "b2ee05da8665adbbb7c7d708",
+            "role": "The crew-neck knit",
+            "imageWidth": 400,
+            "imageHeight": 400
           }
         ]
       },
       {
-        "id": "39d5eba916a550c9e1fb0ff2",
-        "role": "The trousers",
-        "imageWidth": 600,
-        "imageHeight": 800,
-        "alternatives": [
-          {
-            "id": "d227aa75ef153fbb19319d8d",
-            "role": "The baggy jeans",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "id": "e85592bc417baf63bd3d1f97",
+        "role": "The blue jeans",
+        "imageWidth": 400,
+        "imageHeight": 400
       },
       {
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 600,
-        "alternatives": [
-          {
-            "id": "761bdff5f5d465c0a0436af4",
-            "role": "The loafers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "imageWidth": 400,
+        "imageHeight": 400
       }
     ],
-    "photoLayout": "portrait-top",
+    "photoLayout": "square-top",
     "occasion": "Everyday",
-    "layers": "Light",
-    "silhouette": "A simple top and relaxed trousers"
+    "layers": "Layered",
+    "silhouette": "Soft knitwear and relaxed blue denim"
   },
   {
     "id": "weekend-streetwear",
@@ -267,132 +243,116 @@
   },
   {
     "id": "going-out",
-    "title": "Going Out Fit",
+    "title": "After-Dark Layers",
     "audience": "men",
-    "description": "A velvet shirt, tailored trousers, and white sneakers for dinner and late plans.",
+    "description": "A black shearling-collar jacket, wide black trousers and loafers. Swap in the faux-leather jacket for a cleaner finish.",
     "pieces": [
       {
-        "id": "55630736cb55bcab03c3bf92",
-        "role": "The shirt",
-        "imageWidth": 600,
-        "imageHeight": 600
-      },
-      {
-        "id": "39d5eba916a550c9e1fb0ff2",
-        "role": "The trousers",
-        "imageWidth": 600,
-        "imageHeight": 800,
+        "id": "4482e86eafc442088eb313d0",
+        "role": "The collar jacket",
+        "imageWidth": 400,
+        "imageHeight": 400,
         "alternatives": [
           {
-            "id": "d227aa75ef153fbb19319d8d",
-            "role": "The baggy jeans",
-            "imageWidth": 600,
-            "imageHeight": 600
+            "id": "0ce9140d61925bab9faf35dd",
+            "role": "The faux-leather jacket",
+            "imageWidth": 400,
+            "imageHeight": 400
           }
         ]
       },
       {
-        "id": "4389b3753eb4c0eac4e5d88d",
-        "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 600,
-        "alternatives": [
-          {
-            "id": "761bdff5f5d465c0a0436af4",
-            "role": "The loafers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
-      }
-    ],
-    "photoLayout": "square-top",
-    "occasion": "Evening",
-    "layers": "Light",
-    "silhouette": "A velvet shirt and tailored trousers"
-  },
-  {
-    "id": "designer-fit",
-    "title": "Designer Fit",
-    "audience": "men",
-    "description": "A Prada shirt and Gucci loafers, grounded with simple tailored trousers.",
-    "pieces": [
-      {
-        "id": "9c4957219bfa2bacb73573fd",
-        "role": "The shirt",
-        "imageWidth": 600,
-        "imageHeight": 600
-      },
-      {
-        "id": "39d5eba916a550c9e1fb0ff2",
-        "role": "The trousers",
-        "imageWidth": 600,
-        "imageHeight": 800
+        "id": "7eee3836ed5dfdea0773b126",
+        "role": "The black trousers",
+        "imageWidth": 400,
+        "imageHeight": 400
       },
       {
         "id": "761bdff5f5d465c0a0436af4",
         "role": "The loafers",
-        "imageWidth": 600,
-        "imageHeight": 600,
-        "alternatives": [
-          {
-            "id": "4389b3753eb4c0eac4e5d88d",
-            "role": "The sneakers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "imageWidth": 400,
+        "imageHeight": 400
       }
     ],
     "photoLayout": "square-top",
     "occasion": "Evening",
-    "layers": "Light",
-    "silhouette": "A statement shirt and loafers"
+    "layers": "Layered",
+    "silhouette": "Dark outerwear and wide tailored trousers"
   },
   {
-    "id": "smart-casual",
-    "title": "Smart Casual Fit",
+    "id": "designer-fit",
+    "title": "Suede-Effect Weekend",
     "audience": "men",
-    "description": "A knit polo, tailored trousers, and clean white sneakers for an easy smart casual balance.",
+    "description": "A brown suede-effect trucker jacket, cream trousers and white sneakers. The cropped wool-coat swap keeps the same neutral palette.",
     "pieces": [
       {
-        "id": "a028647d64d6e076f75a20da",
-        "role": "The polo",
-        "imageWidth": 600,
-        "imageHeight": 600
-      },
-      {
-        "id": "39d5eba916a550c9e1fb0ff2",
-        "role": "The trousers",
-        "imageWidth": 600,
-        "imageHeight": 800,
+        "id": "00e9b546790709ffc8663a68",
+        "role": "The suede-effect jacket",
+        "imageWidth": 1440,
+        "imageHeight": 1440,
         "alternatives": [
           {
-            "id": "d227aa75ef153fbb19319d8d",
-            "role": "The baggy jeans",
-            "imageWidth": 600,
-            "imageHeight": 600
+            "id": "e51df79bec3e1f61a3676150",
+            "role": "The cropped wool coat",
+            "imageWidth": 400,
+            "imageHeight": 400
           }
         ]
+      },
+      {
+        "id": "07b867cfa0508e70847fb556",
+        "role": "The cream trousers",
+        "imageWidth": 400,
+        "imageHeight": 400
       },
       {
         "id": "4389b3753eb4c0eac4e5d88d",
         "role": "The sneakers",
-        "imageWidth": 600,
-        "imageHeight": 600,
-        "alternatives": [
-          {
-            "id": "761bdff5f5d465c0a0436af4",
-            "role": "The loafers",
-            "imageWidth": 600,
-            "imageHeight": 600
-          }
-        ]
+        "imageWidth": 400,
+        "imageHeight": 400
       }
     ],
     "photoLayout": "square-top",
     "occasion": "Everyday",
-    "layers": "Light",
-    "silhouette": "A knit polo and tailored trousers"
+    "layers": "Layered",
+    "silhouette": "Earth tones and relaxed straight lines"
+  },
+  {
+    "id": "smart-casual",
+    "title": "Neutral Knit Smart Casual",
+    "audience": "men",
+    "description": "A long-sleeve knit polo, olive-brown pleated trousers and black loafers. Swap the ribbed polo for a softer collared knit.",
+    "pieces": [
+      {
+        "id": "3bbc5f95f33571615346f26c",
+        "role": "The knit polo",
+        "imageWidth": 400,
+        "imageHeight": 400,
+        "alternatives": [
+          {
+            "id": "47a114d7cde2754e8b5465f8",
+            "role": "The collared knit",
+            "imageWidth": 400,
+            "imageHeight": 400
+          }
+        ]
+      },
+      {
+        "id": "cd38001fdec02155b1f44997",
+        "role": "The pleated trousers",
+        "imageWidth": 400,
+        "imageHeight": 400
+      },
+      {
+        "id": "761bdff5f5d465c0a0436af4",
+        "role": "The loafers",
+        "imageWidth": 400,
+        "imageHeight": 400
+      }
+    ],
+    "photoLayout": "square-top",
+    "occasion": "Everyday",
+    "layers": "Layered",
+    "silhouette": "Textured neutrals and pleated trousers"
   }
 ]

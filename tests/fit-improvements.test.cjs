@@ -15,34 +15,34 @@ test('all curated alternatives have verified catalogue products, audience and kn
 test('approved swaps preserve identities, original links and totals in direct snapshots',()=>{
  const preview=prepareInitialCatalogue(catalogue,[],{view:'fits'},{});
  const full=reviewedLooks(catalogue).find(l=>l.id==='clean-everyday');
- const alt=full.pieces[1].alternatives[0];
- const value='1:'+alt.id;
+ const alt=full.pieces[0].alternatives[0];
+ const value='0:'+alt.id;
  const look=applyLookSwaps(full,value);
- assert.equal(look.pieces[1].item.link,alt.item.link);
- assert.equal(look.pieces[1].id,alt.id);assert.equal(look.swap,value);
+ assert.equal(look.pieces[0].item.link,alt.item.link);
+ assert.equal(look.pieces[0].id,alt.id);assert.equal(look.swap,value);
  assert.equal(lookTotal(look.pieces,'USD',1.4),lookTotal(applyLookSwaps(reviewedLooks(preview.items).find(l=>l.id===full.id),value).pieces,'USD',1.4));
- assert.equal(swapValue(look,1,full.pieces[1].id),'');
- assert.equal(applyLookSwaps(full,'1:unknown').pieces[1].id,full.pieces[1].id);
- assert.equal(applyLookSwaps(full,['1:'+alt.id]).swap,'');
+ assert.equal(swapValue(look,0,full.pieces[0].id),'');
+ assert.equal(applyLookSwaps(full,'0:unknown').pieces[0].id,full.pieces[0].id);
+ assert.equal(applyLookSwaps(full,['0:'+alt.id]).swap,'');
 });
 test('unavailable originals retain look links, omit complete price, and only explicit approved choices restore completeness',()=>{
  const original=definitions.find(l=>l.id==='clean-everyday');
- const id=original.pieces[1].id;
+ const id=original.pieces[0].id;
  for(const patch of [{visibility:'hidden'},{image:null},{link:null},{audience:'women'}]){
   const rows=catalogue.map(item=>item.id===id?{...item,...patch}:item);
   const look=reviewedLooks(rows).find(l=>l.id===original.id);
-  assert.equal(look.complete,false);assert.equal(look.pieces[1].item,null);assert.equal(lookTotal(look.pieces,'USD',1.4),null);
-  const alt=look.pieces[1].alternatives[0];assert.ok(alt);
-  const restored=applyLookSwaps(look,'1:'+alt.id);assert.equal(restored.complete,true);
+  assert.equal(look.complete,false);assert.equal(look.pieces[0].item,null);assert.equal(lookTotal(look.pieces,'USD',1.4),null);
+  const alt=look.pieces[0].alternatives[0];assert.ok(alt);
+  const restored=applyLookSwaps(look,'0:'+alt.id);assert.equal(restored.complete,true);
   const snapshot=prepareInitialCatalogue(rows,[],{view:'fits',fit:original.id},{});
   assert.equal(reviewedLooks(snapshot.items).find(l=>l.id===original.id).complete,false);
  }
 });
 test('hidden alternatives and unreviewed shared-link swaps cannot become outfit pieces',()=>{
- const base=definitions.find(l=>l.id==='clean-everyday'),id=base.pieces[1].alternatives[0].id;
+ const base=definitions.find(l=>l.id==='clean-everyday'),id=base.pieces[0].alternatives[0].id;
  const look=reviewedLooks(catalogue.map(item=>item.id===id?{...item,visibility:'hidden'}:item)).find(l=>l.id===base.id);
- assert.equal(look.pieces[1].alternatives.length,0);
- assert.equal(applyLookSwaps(look,'1:'+id).pieces[1].id,base.pieces[1].id);
+ assert.equal(look.pieces[0].alternatives.length,0);
+ assert.equal(applyLookSwaps(look,'0:'+id).pieces[0].id,base.pieces[0].id);
 });
 test('budget filters use currency subtotal, never missing prices, and contexts differentiate looks',()=>{
  const looks=reviewedLooks(catalogue);

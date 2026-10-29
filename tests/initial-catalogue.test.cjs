@@ -38,7 +38,8 @@ for(const audience of ['everyone','men','women'])test(`direct ${audience} outfit
  const {availableLooks,reviewedLooks}=require('../lib/shop-the-fit');
  const p=prepareInitialCatalogue(catalogue.items,[],{view:'fits',audience,fit:audience==='women'?'night-out':'streetwear'},demand);
  assert.equal(p.fitPreview,true);assert.equal(p.preview,false);
- assert.equal(p.items.length,23);assert.ok(p.items.length<catalogue.items.length/100);
+ const expectedIds=new Set(require('../data/shop-the-fit.json').flatMap(l=>l.pieces.flatMap(p=>[p.id,...(p.alternatives||[]).map(a=>a.id)])));
+ assert.deepEqual(new Set(p.items.map(i=>i.id)),expectedIds);assert.ok(p.items.length<catalogue.items.length/100);
  for(const selection of ['everyone','men','women']){
   assert.deepEqual(availableLooks(restoreSearchFields(p.items),selection),availableLooks(catalogue.items,selection));
   assert.deepEqual(reviewedLooks(restoreSearchFields(p.items),selection),reviewedLooks(catalogue.items,selection));
