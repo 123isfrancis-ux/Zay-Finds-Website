@@ -1,7 +1,7 @@
 function QuickLinks({record}) { return (
     <div className="quick-links">
       <a className="signup-link" href="https://www.kakobuy.com/register?affcode=ZAYFINDS" target="_blank" rel="noopener noreferrer" onClick={() => record('signup_click', { placement: 'top' })}>$400 Coupon Bundle</a>
-      <a href="https://vt.tiktok.com/ZSx8afry8/" target="_blank" rel="noopener noreferrer" onClick={() => record('tutorial_click', {})}>Watch tutorial</a>
+      <a href="/how-to-buy" onClick={() => record('tutorial_click', {})}>Watch tutorial</a>
     </div>
 ); }
 function GuideContent() { return <>
