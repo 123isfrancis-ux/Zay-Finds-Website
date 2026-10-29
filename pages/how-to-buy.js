@@ -23,7 +23,7 @@ export default function HowToBuy() {
       <section className="tutorial-intro"><p className="tutorial-eyebrow">THE BUYING GUIDE</p><h1>Your first order.<br />Step by step.</h1><p>Watch the tutorial, then use the checklist below to get started.</p></section>
       <div className="tutorial-layout">
         <section className="tutorial-video" aria-label="Buying tutorial video">
-          <video controls playsInline preload="none" aria-label="Zay’s full buying tutorial">
+          <video controls playsInline preload="none" poster="/videos/buying-tutorial-poster.jpg" aria-label="Zay’s full buying tutorial">
             <source src="/videos/buying-tutorial.mp4" type="video/mp4" />
             Your browser does not support this video. <a href="/videos/buying-tutorial.mp4">Open the tutorial video</a>.
           </video>
