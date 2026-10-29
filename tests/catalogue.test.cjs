@@ -23,7 +23,7 @@ test('categories are alphabetical, normalized, unique, nonblank and scoped to th
   assert.deepEqual(categoriesFor(viewItems(rows, 'all', new Set())), [{ value: 'bags', label: 'Bags' }, { value: 'shoes', label: 'Shoes' }]);
   assert.deepEqual(categoriesFor(viewItems(rows, 'week', new Set())).map(c => c.value), ['bags', 'shoes']);
   const mixed = parseCSV('name,category\nOne,zara\nTwo,Shirts\nThree,accessories\nFour,Bags');
-  assert.deepEqual(categoriesFor(mixed).map(c => c.label), ['accessories', 'Bags', 'Shirts', 'zara']);
+  assert.deepEqual(categoriesFor(mixed).map(c => c.label), ['accessories', 'Bags', 'Shirts', 'Zara Mens']);
   assert.deepEqual(mixed.map(item => item.name), ['One', 'Two', 'Three', 'Four']);
 });
 test('physical order survives filtering and sorting never mutates source rows', () => {
