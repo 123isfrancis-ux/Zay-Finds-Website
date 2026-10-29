@@ -734,3 +734,20 @@ body { font-weight: 400; }
 
 .fit-picker {flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;}
 .fit-picker button {flex-shrink:0;}
+
+/* Keep the buying tutorial visible without opening a menu. */
+.social-links .tutorial-header-link { display:flex; gap:5px; width:auto; padding:8px 10px; white-space:nowrap; font-size:13px; font-weight:700; text-decoration:none; border:1px solid currentColor; }
+.tutorial-banner { display:flex; align-items:center; justify-content:space-between; gap:18px; max-width:1152px; margin:0 auto 16px; padding:18px 22px; border:1px solid var(--border); border-radius:12px; background:var(--ink); color:var(--on-ink); text-decoration:none; }
+.tutorial-banner strong { display:block; font-size:17px; line-height:1.4; }
+.tutorial-banner > span > span { display:block; font-size:13px; margin-top:4px; line-height:1.5; }
+.tutorial-banner-action { white-space:nowrap; font-weight:700; font-size:14px; }
+.tutorial-banner:focus-visible, .tutorial-header-link:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+@media(max-width:1200px) { .tutorial-banner { margin-left:24px; margin-right:24px; } }
+@media(max-width:640px) {
+  .header-actions { grid-template-columns:minmax(60px,1fr) auto; }
+  .social-links .tutorial-header-link { font-size:11px; padding:6px; gap:2px; }
+  .social-links .tutorial-header-link svg { width:16px; height:16px; }
+  .tutorial-banner { margin:0 12px 12px; padding:14px; gap:10px; flex-wrap:wrap; }
+  .tutorial-banner strong { font-size:15px; }
+  .tutorial-banner-action { font-size:13px; }
+}
