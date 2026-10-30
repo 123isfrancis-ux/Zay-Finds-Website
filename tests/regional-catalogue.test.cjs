@@ -26,7 +26,7 @@ test('Hoodies cleanup changes only that membership and preserves every product a
  const {deduplicateProducts}=require('../lib/deduplicate-products');
  const original=deduplicateProducts(require('../data/catalogue.json').items);
  const allowed=new Set(require('../data/hoodie-products.json'));
- assert.equal(res.data.items.length,original.length+3);
+ assert.equal(res.data.items.length,original.length+3+require('../data/womens-source-finds.json').length);
  for(const before of original){
   const after=res.data.items.find(i=>i.id===before.id);
   assert.deepEqual(after.categories.filter(c=>c!=='HOODIES'),before.categories.filter(c=>c!=='HOODIES'));
