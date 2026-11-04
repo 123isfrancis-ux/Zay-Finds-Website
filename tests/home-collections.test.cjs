@@ -87,3 +87,11 @@ test('editorial Just Added picks are mixed, unique, scoped, and included in See 
  assert.ok(trending.items.every(item=>!ids.includes(item.id)));
  assert.deepEqual(collectionItems(rows,'popular').map(i=>i.id),ids);
  });
+
+test('short Trending rows keep unique finds first and fill with qualifying Popular Picks',()=>{
+ const [popular]=require('../data/popular-picks.json');
+ const rows=[make(popular),make('new-trend'),make('unranked')];
+ const demand={status:'ready',scores:{[popular]:10,'new-trend':5}};
+ const trending=homeSections(rows,demand,'USD',1).find(section=>section.key==='trending');
+ assert.deepEqual(trending.items.map(item=>item.id),['new-trend',popular]);
+});
