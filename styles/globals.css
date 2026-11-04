@@ -269,6 +269,8 @@ body { font-weight: 400; }
 .intro h2 { font-size: clamp(52px, 6vw, 82px); line-height: .98; letter-spacing: -.025em; font-weight: 400; }
 .intro h2 em { font-style: normal; color: var(--muted); }
 .intro-copy { max-width: 410px; font-size: 14px; line-height: 1.65; margin-top: 20px; }
+.tiktok-note { max-width: 38ch; margin-top: 8px; font-size: 14px; line-height: 1.5; }
+.tiktok-note a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .intro-aside { display: flex; align-items: center; flex-direction: column; gap: 14px; }
 .intro-mark { width: 190px; height: 190px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: 50%; font: 130px Impact, sans-serif; transform: rotate(-8deg); }
 .intro-aside a { color: var(--ink); font-size: 12px; text-underline-offset: 4px; }

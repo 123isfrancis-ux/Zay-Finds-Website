@@ -491,6 +491,7 @@ export default function Home({initial = null}) {
 
         {!fitView && <section className="intro compact-intro" aria-label="Welcome">
           <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Build A Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p></div>
+          {activeView === 'all' && !effectiveCategory && !collection && <p className="tiktok-note">I took my rep videos off Instagram. I’m still posting them on TikTok.{' '}<a href="https://www.tiktok.com/@zayfindz" target="_blank" rel="noopener noreferrer">Follow @zayfindz on TikTok</a>.</p>}
         </section>}
         <a className="tutorial-banner" href="/how-to-buy" onClick={() => record('tutorial_click', { placement: 'homepage_banner' })}><span><strong>New here? Start with the buying tutorial.</strong><span>Watch Zay walk you through your first order.</span></span><span className="tutorial-banner-action">Watch tutorial →</span></a>
         <div className="desktop-buying-help"><BuyingGuide record={record} /></div>
