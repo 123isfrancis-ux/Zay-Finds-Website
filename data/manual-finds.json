@@ -1,0 +1,15 @@
+[
+  {
+    "id": "weidian-7893479597",
+    "name": "Lady Dio Bag",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893479597&affcode=ZAYFINDS",
+    "image": "/catalogue/lady-dio-bag.jpg",
+    "prices": {"CNY": 680.23, "USD": 110.47},
+    "price_usd": 110.47,
+    "category": "Women's Bags",
+    "categories": ["Women's Bags"],
+    "audience": "women",
+    "visibility": "catalog",
+    "excludeFromJustAdded": true
+  }
+]
