@@ -9,3 +9,12 @@ test('shared listings merge categories and retain first identity, price, affilia
  assert.equal(result.length,2);assert.equal(result[0].id,'a');assert.equal(result[0].link,first.link);assert.equal(result[0].prices.USD,10);
  assert.deepEqual(result[0].categories,['MAIN','Watches']);assert.equal(result[0].image,second.image);assert.doesNotMatch(searchableItems(result)[0]._search,/skeleton/);assert.deepEqual(first.categories,['MAIN']);
 });
+
+test('explicit photographed variants at one listing retain their separate cards',()=>{
+ const first={id:'a',name:'Time Off',link:'https://weidian.com/item.html?itemID=123',image:'/time-off.jpg',categories:['MAIN'],source:{variantKey:'Time Off'}};
+ const second={...first,id:'b',name:'Holiday',image:'/holiday.jpg',source:{variantKey:'Holiday'}};
+ const duplicate={...first,id:'c',categories:['ROOM DECOR']};
+ const result=deduplicateProducts([first,second,duplicate]);
+ assert.deepEqual(result.map(item=>[item.id,item.image]),[['a','/time-off.jpg'],['b','/holiday.jpg']]);
+ assert.deepEqual(result[0].categories,['MAIN','ROOM DECOR']);
+});
