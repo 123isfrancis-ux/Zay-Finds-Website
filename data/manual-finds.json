@@ -10,5 +10,16 @@
     "categories": ["Women's Bags"],
     "audience": "women",
     "visibility": "catalog"
+  },
+  {
+    "id": "weidian-7617207686",
+    "name": "Arch Jacket 1:1 Quality",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7617207686&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/wdseller901790209788-31bb0000018b70153ed70a813276_639_639.jpg?w=400&h=400&q=85",
+    "prices": {"CNY": 260, "USD": 42.23},
+    "price_usd": 42.23,
+    "category": "MAIN",
+    "categories": ["MAIN"],
+    "visibility": "catalog"
   }
 ]
