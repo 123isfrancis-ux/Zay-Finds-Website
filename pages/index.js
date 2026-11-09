@@ -473,7 +473,7 @@ export default function Home({initial = null}) {
       <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
         <header className="site-header">
           <div className="header-inner">
-            <a href="/" className="brand" aria-label="ZAY FINDS home">
+            <a href="/?view=all&audience=everyone" className="brand" aria-label="ZAY FINDS home">
               <h1>ZAY FINDS</h1>
               <p>THE FINDS. ALL IN ONE PLACE.</p>
             </a>
