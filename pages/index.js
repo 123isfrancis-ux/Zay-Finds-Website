@@ -473,10 +473,10 @@ export default function Home({initial = null}) {
       <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
         <header className="site-header">
           <div className="header-inner">
-            <div className="brand">
+            <a href="/" className="brand" aria-label="ZAY FINDS home">
               <h1>ZAY FINDS</h1>
               <p>THE FINDS. ALL IN ONE PLACE.</p>
-            </div>
+            </a>
             <div className="header-actions">
               <div className="audience-switch" role="group" aria-label="Shop for">
                 {['everyone', 'men', 'women'].map(value => <button key={value} type="button" aria-pressed={audience === value} onClick={() => selectAudience(value)}>{value === 'everyone' ? 'Everyone' : value === 'men' ? 'Men' : 'Women'}</button>)}
