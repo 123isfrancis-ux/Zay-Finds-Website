@@ -128,6 +128,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
             style={{
               position: 'absolute', inset: 0, width: '100%', height: '100%',
               objectFit: item.image?.startsWith('/owner-photos/') ? 'contain' : 'cover',
+              objectPosition: item.id === 'weidian-7893479597' ? 'center bottom' : undefined,
               background: item.image?.startsWith('/owner-photos/') ? '#fff' : undefined,
             }}
           />
