@@ -25,12 +25,20 @@ test('first 15 live cards follow spreadsheet rows, including three shared-link o
  assert.ok(!list.some(i=>weidianId(i.link)==='7626350689'));
 });
 
-test('recommendations and server preview retain the opening despite popularity scores',()=>{
+test('recommendations and server preview put personally bought watches first',()=>{
  const demand={status:'ready',seed:'test',adaptive:{scores:{[list[30].id]:1},low:[list[0].id]}};
+ const boughtCount=list.filter(i=>i.personallyBought).length;
+ const pinned=list.slice(0,15);
  for(const snapshot of [{},demand]){
-  assert.deepEqual(rankRecommended(list,snapshot).slice(0,15).map(i=>i.id),list.slice(0,15).map(i=>i.id));
+  const ranked=rankRecommended(list,snapshot);
+  assert.deepEqual(new Set(ranked.map(i=>i.id)),new Set(list.map(i=>i.id)));
+  assert.ok(ranked.slice(0,boughtCount).every(i=>i.personallyBought));
+  assert.ok(ranked.slice(boughtCount).every(i=>!i.personallyBought));
+  assert.deepEqual(ranked.filter(i=>pinned.includes(i)),[
+   ...pinned.filter(i=>i.personallyBought),...pinned.filter(i=>!i.personallyBought),
+  ]);
   const preview=prepareInitialCatalogue(items,[],{category:'super clone watches'},snapshot);
-  assert.deepEqual(preview.visibleIds.slice(0,15),list.slice(0,15).map(i=>i.id));
+  assert.deepEqual(preview.visibleIds,ranked.slice(0,24).map(i=>i.id));
  }
  const prices=filterAndSort(list,'super clone watches','price-asc').map(i=>i.prices.USD);
  assert.deepEqual(prices,[...prices].sort((a,b)=>a-b));
