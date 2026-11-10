@@ -30,7 +30,7 @@ export default function QuickView({item,items,relatedLoading,relatedError,onRetr
    <div className="quick-product"><div className="quick-photo"><Photo key={item.id} item={item}/></div><div className="quick-info">
     <p className="quick-category">{(item.categories||[item.category]).filter(c=>c&&c.toLowerCase()!=='main').join(' · ')}</p>
     <h2 id="quick-title">{item.name}</h2>
-    {item.personallyBought&&<p className="personally-bought">✓ Personally Bought</p>}
+    {item.personallyBought&&<p className="personally-bought">✓ Personally Reviewed</p>}
     {item.image?.startsWith('/owner-photos/')&&<p className="quick-note">Zay’s own photo</p>}
     <strong className="quick-price">{price}</strong><p className="quick-note">Item price only. Shipping and other checkout charges are extra. Confirm sizes, colors and current prices at the seller.</p>
     <div className="quick-actions"><button className="control" aria-pressed={saved} onClick={()=>{if(!saved)onDemand(item.id,'save');onWishlist(item.id);}}>{saved?'Saved · Remove':'Save find'}</button><a className="control quick-buy" href={item.link} target="_blank" rel="noopener noreferrer" onClick={()=>onDemand(item.id,'click')}>{item.link?.includes('kakobuy.com')?'View on Kakobuy':'View at seller'}</a></div>

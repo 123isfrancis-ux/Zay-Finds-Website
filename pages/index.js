@@ -168,7 +168,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
           <p className="product-name" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--ink)', lineHeight: 1.4, flex: 1 }}>
             {item.name}
           </p>
-          {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally Bought</span>}
+          {item.personallyBought && <span className="personally-bought"><span aria-hidden="true">✓</span> Personally Reviewed</span>}
           {item.category?.toLowerCase() !== 'main' && <Badge cat={item.category} />}
         </div>
 
@@ -491,7 +491,7 @@ export default function Home({initial = null}) {
         </header>
 
         {!fitView && <section className="intro compact-intro" aria-label="Welcome">
-          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Build A Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Bought.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p>
+          <div><h2>{effectiveCategory ? categories.find(c => c.value === effectiveCategory)?.label : collectionTitle || (fitView ? 'Build A Fit.' : activeView === 'saved' ? 'Your saved finds.' : activeView === 'bought' ? 'Personally Reviewed.' : audience === 'men' ? 'Finds for Men.' : audience === 'women' ? 'Finds for Women.' : 'Good finds. Great taste.')}</h2><p className="intro-copy">{effectiveCategory ? 'Explore the collection. Find your next favorite.' : 'Clothing, accessories & everyday finds curated by Zay.'}</p>
           {activeView === 'all' && !effectiveCategory && !collection && <p className="tiktok-note"><a href="https://www.tiktok.com/@zayfindz" target="_blank" rel="noopener noreferrer">Watch the latest rep finds on TikTok <span aria-hidden="true">↗</span></a></p>}
           </div>
         </section>}
@@ -505,7 +505,7 @@ export default function Home({initial = null}) {
             </div>}
             {!simpleSaved && !fitView && <MobileFilters categories={categories} category={effectiveCategory} sort={sortBy} recommendedLabel={collection === 'new' ? 'Newest first' : 'Recommended'} onApply={(nextCategory,nextSort)=>{if(nextCategory!==effectiveCategory)selectCategory(nextCategory);setSortBy(nextSort);}}/>}
             <nav className="shopping-tabs" aria-label="Shopping views">
-              {[['all', 'All Finds'], ['bought', 'Personally Bought'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
+              {[['all', 'All Finds'], ['bought', 'Personally Reviewed'], ['saved', 'Saved'], ['fits', 'Build A Fit']].map(([value, label]) =>
                 <button type="button" key={value} onMouseEnter={()=>{if(value!=='fits')requestCatalogue();}} onFocus={()=>{if(value!=='fits')requestCatalogue();}} aria-pressed={activeView === value} onClick={() => selectView(value)}>
                   {label} {value!=='fits' && !(value==='saved'&&usingFitPreview) && <span>({counts[value].toLocaleString()})</span>}
                 </button>
