@@ -9,6 +9,7 @@ test('both Lululemon tabs retain all source rows and verified product identities
   assert.equal(finds.reduce((sum, item) => sum + item.source.rows.length, 0), 160);
   for (const [category, count] of [['LULULEMON', 27], ['LULU HIGH-END', 132]]) {
     assert.equal(finds.filter(item => item.category === category).length, count);
+    assert.equal(items.filter(item => item.categories.includes(category)).length, count);
     assert.deepEqual(queue(category).pending, []);
   }
   for (const item of finds) {
