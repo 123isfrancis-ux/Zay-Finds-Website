@@ -7,7 +7,7 @@ const root = path.join(__dirname, '..');
 const read = name => JSON.parse(fs.readFileSync(path.join(root, name), 'utf8'));
 const save = (name, data) => { const target = path.join(root, name); fs.writeFileSync(target+'.tmp', JSON.stringify(data,null,2)+'\n'); fs.renameSync(target+'.tmp',target); };
 function queue(category) {
-  const items = deduplicateProducts(applyImages(read('data/catalogue.json').items, read('data/weidian-images.json')))
+  const items = deduplicateProducts(applyImages([...read('data/catalogue.json').items, ...read('data/lulu-source-finds.json')], read('data/weidian-images.json')))
     .filter(item => !category || item.categories.includes(category));
   return { total:items.length, withImages:items.filter(i=>i.image).length,
     pending:items.filter(i=>!i.image).map(i=>({id:weidianId(i.link),name:i.name,link:i.link})) };

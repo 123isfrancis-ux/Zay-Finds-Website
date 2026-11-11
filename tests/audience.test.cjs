@@ -33,7 +33,8 @@ test('audience scopes category availability and saved view without deleting save
  });
  test('reviewed Lululemon womens pieces remain in Women and Everyone',()=>{
   const {audienceFor}=require('../lib/audience');
-  const items=require('../lib/regional-catalogue').items.filter(i=>i.categories.includes('LULULEMON'));
+  const reviewedIds=new Set(require('../data/catalogue.json').items.filter(i=>i.categories.includes('LULULEMON')).map(i=>i.id));
+  const items=require('../lib/regional-catalogue').items.filter(i=>reviewedIds.has(i.id));
   assert.equal(items.length,27);
   assert.ok(items.every(i=>audienceFor(i)==='women'));
   assert.equal(audienceFor({name:'Lululemon Mens Joggers',categories:['LULULEMON']}),'men');

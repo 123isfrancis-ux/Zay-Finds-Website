@@ -1,0 +1,5250 @@
+[
+  {
+    "id": "637e238c9e83af4d66dcdd21",
+    "name": "Lululemon Long Tee",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879432793&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-51130000019888d51ca10a22d249_750_750.jpg",
+    "prices": {
+      "CNY": 120,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 4,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        4
+      ],
+      "productId": "7879432793",
+      "photoSource": "https://weidian.com/item.html?itemID=7879432793",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 0
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "aef98ec570bc6df72e22a0b7",
+    "name": "Lululemon Hoodie",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882514104&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-50160000019888d526770a231226_903_903.jpg",
+    "prices": {
+      "CNY": 260,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 5,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        5
+      ],
+      "productId": "7882514104",
+      "photoSource": "https://weidian.com/item.html?itemID=7882514104",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 1
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "34ff11ad4911d71c243b7844",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882484454&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-511b0000019888d5223b0a22d249_1200_1200.jpg",
+    "prices": {
+      "CNY": 142,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 6,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        6
+      ],
+      "productId": "7882484454",
+      "photoSource": "https://weidian.com/item.html?itemID=7882484454",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 2
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "9580a70fc5aa3665926d379c",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879458409&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4a800000019888d51f570a23b491_1066_1066.jpg",
+    "prices": {
+      "CNY": 240,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 7,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        7
+      ],
+      "productId": "7879458409",
+      "photoSource": "https://weidian.com/item.html?itemID=7879458409",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 3
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "04c7d4485810c46f64395e06",
+    "name": "Lululemon Tee",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882519958&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-50000000019888d51e2e0a231226_810_810.jpg",
+    "prices": {
+      "CNY": 94,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 8,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        8
+      ],
+      "productId": "7882519958",
+      "photoSource": "https://weidian.com/item.html?itemID=7882519958",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 4
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "fe48f1f117695a461501a7f0",
+    "name": "Lululemon Skirt",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879458407&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-62e80000019888d520cc0aa0c791_1080_1080.jpg",
+    "prices": {
+      "CNY": 174,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 9,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        9
+      ],
+      "productId": "7879458407",
+      "photoSource": "https://weidian.com/item.html?itemID=7879458407",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 5
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a7c10d2f32c09536d0891617",
+    "name": "Lululemon Dress",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879507747&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4ffa0000019888d51bf40a231226_1200_1200.jpg",
+    "prices": {
+      "CNY": 200,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 10,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        10
+      ],
+      "productId": "7879507747",
+      "photoSource": "https://weidian.com/item.html?itemID=7879507747",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 6
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "38b6c1b1968317ba67d48cab",
+    "name": "Lululemon Long Tee",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882427482&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4b5c0000019888d51bfc0a8133b0_900_900.jpg",
+    "prices": {
+      "CNY": 114,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 11,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        11
+      ],
+      "productId": "7882427482",
+      "photoSource": "https://weidian.com/item.html?itemID=7882427482",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 7
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "fa675dccf5f8f1ecb6013919",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882545624&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4a550000019888d521af0a8115c2_1199_1199.jpg",
+    "prices": {
+      "CNY": 142,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 12,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        12
+      ],
+      "productId": "7882545624",
+      "photoSource": "https://weidian.com/item.html?itemID=7882545624",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 8
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d7740a0e44eaa6235d7832ad",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879491951&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4a840000019888d520cc0a23b491_1066_1066.jpg",
+    "prices": {
+      "CNY": 174,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 13,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        13
+      ],
+      "productId": "7879491951",
+      "photoSource": "https://weidian.com/item.html?itemID=7879491951",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 9
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ecb09cdc5a798a25ee054cdb",
+    "name": "Lululemon Set",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882405224&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4c460000019888d521a20a23b4de_1200_1200.jpg",
+    "prices": {
+      "CNY": 364,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 14,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        14
+      ],
+      "productId": "7882405224",
+      "photoSource": "https://weidian.com/item.html?itemID=7882405224",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 10
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "c88234190579403bf1000d4d",
+    "name": "Lululemon Skirt",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882433246&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-51210000019888d522e80a22d249_1000_1000.jpg",
+    "prices": {
+      "CNY": 120,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 15,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        15
+      ],
+      "productId": "7882433246",
+      "photoSource": "https://weidian.com/item.html?itemID=7882433246",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 11
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "eebc6dcf42ab0d8baaf14c79",
+    "name": "Lululemon Shorts",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882271086&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-50080000019888d5234f0a231226_1170_1170.jpg.webp",
+    "prices": {
+      "CNY": 102,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 16,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        16,
+        23
+      ],
+      "productId": "7882271086",
+      "photoSource": "https://weidian.com/item.html?itemID=7882271086",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 12
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d06cdf4b73aaabd8b17fddee",
+    "name": "Lululemon Set",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879393583&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-51230000019888d523170a22d249_1280_1280.jpg",
+    "prices": {
+      "CNY": 202,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 17,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        17
+      ],
+      "productId": "7879393583",
+      "photoSource": "https://weidian.com/item.html?itemID=7879393583",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 13
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d679d08052701fac4f1652e2",
+    "name": "Lululemon Hoodie",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882486406&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-18e80000019888d51fcf0aa043f9_921_921.jpg",
+    "prices": {
+      "CNY": 262,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 18,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        18
+      ],
+      "productId": "7882486406",
+      "photoSource": "https://weidian.com/item.html?itemID=7882486406",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 14
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b713e6217991dd1c8f924ff9",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879444563&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-511f0000019888d522dd0a22d249_1141_1141.jpg",
+    "prices": {
+      "CNY": 122,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 19,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        19
+      ],
+      "productId": "7879444563",
+      "photoSource": "https://weidian.com/item.html?itemID=7879444563",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 15
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "445ded71a6eca54fa8cf5a6b",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879284879&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-62de0000019888d51eac0aa0c791_1197_1197.jpg",
+    "prices": {
+      "CNY": 162,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 20,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        20
+      ],
+      "productId": "7879284879",
+      "photoSource": "https://weidian.com/item.html?itemID=7879284879",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 16
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ac03e8ace4c27d7387b94ac0",
+    "name": "Lululemon Vest",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879497929&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-18f20000019888d523d60aa043f9_600_600.jpg",
+    "prices": {
+      "CNY": 114,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 21,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        21
+      ],
+      "productId": "7879497929",
+      "photoSource": "https://weidian.com/item.html?itemID=7879497929",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 17
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "758355baa6e9df2a1d80b6b5",
+    "name": "Lululemon Skirt",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882490398&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-51110000019888d51add0a22d249_1080_1080.jpg",
+    "prices": {
+      "CNY": 180,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 22,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        22
+      ],
+      "productId": "7882490398",
+      "photoSource": "https://weidian.com/item.html?itemID=7882490398",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 18
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d5976fb755195ba88d86968c",
+    "name": "Lululemon Set",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879377215&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem901940024420-3b3b0000019d22b90d2a0a20e273_1350_1800.jpg",
+    "prices": {
+      "CNY": 153,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 24,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        24
+      ],
+      "productId": "7879377215",
+      "photoSource": "https://weidian.com/item.html?itemID=7879377215",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 20
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "37fd1159f1e7b470157a4963",
+    "name": "Lululemon Hoodie",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879456445&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4a820000019888d5205b0a23b491_1081_1081.jpg",
+    "prices": {
+      "CNY": 264,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 25,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        25
+      ],
+      "productId": "7879456445",
+      "photoSource": "https://weidian.com/item.html?itemID=7879456445",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 21
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f04e66c63d91dafda013353e",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879413001&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-18ea0000019888d5208c0aa043f9_800_800.jpg",
+    "prices": {
+      "CNY": 142,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 26,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        26
+      ],
+      "productId": "7879413001",
+      "photoSource": "https://weidian.com/item.html?itemID=7879413001",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 22
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f7e8a56a065552f3d3832cfe",
+    "name": "Lululemon Pants",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879480105&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-50060000019888d520080a231226_1066_1066.jpg",
+    "prices": {
+      "CNY": 122,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 27,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        27
+      ],
+      "productId": "7879480105",
+      "photoSource": "https://weidian.com/item.html?itemID=7879480105",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 23
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "9defa9be289d2b9f44353a3c",
+    "name": "Lululemon Vest",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7879438669&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-4b6a0000019888d523ab0a8133b0_1066_1066.jpg",
+    "prices": {
+      "CNY": 114,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 28,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        28
+      ],
+      "productId": "7879438669",
+      "photoSource": "https://weidian.com/item.html?itemID=7879438669",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 24
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "6c8c0a742d84442d55a0438e",
+    "name": "Lululemon Vest",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882541632&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-18ec0000019888d520ad0aa043f9_900_900.jpg",
+    "prices": {
+      "CNY": 114,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 29,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        29
+      ],
+      "productId": "7882541632",
+      "photoSource": "https://weidian.com/item.html?itemID=7882541632",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 25
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b558536455b62536fa104140",
+    "name": "Lululemon Set",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882454848&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/open1615844877-252808396-500c0000019888d5241f0a231226_1199_1199.jpg",
+    "prices": {
+      "CNY": 202,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 30,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        30
+      ],
+      "productId": "7882454848",
+      "photoSource": "https://weidian.com/item.html?itemID=7882454848",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 26
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4c60d869a1ba992c818ac244",
+    "name": "Lululemon Set",
+    "link": "https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7882519942&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem901940024420-54440000019d22bdd8260a23111a_1350_1800.jpg",
+    "prices": {
+      "CNY": 153,
+      "USD": 21.64
+    },
+    "price_usd": 21.64,
+    "category": "LULULEMON",
+    "categories": [
+      "LULULEMON"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 382984926,
+      "row": 31,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULULEMON",
+      "rows": [
+        31
+      ],
+      "productId": "7882519942",
+      "photoSource": "https://weidian.com/item.html?itemID=7882519942",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lululemon": 27
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "6d037fc365852bae74577d3f",
+    "name": "Lululemon Slouchy Sling Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896750010&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0a1a000001a1bf07252d0a8133cc_1710_1256.jpg",
+    "prices": {
+      "CNY": 550,
+      "USD": 82.45444405
+    },
+    "price_usd": 82.45444405,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 4,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        4
+      ],
+      "productId": "7896750010",
+      "photoSource": "https://weidian.com/item.html?itemID=7896750010",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 0
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8154b90d65f411fe195a1a93",
+    "name": "Lululemon Define Nulu Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893737963&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0c4d000001a1bf15ad770a2396f4_810_838.jpg",
+    "prices": {
+      "CNY": 998,
+      "USD": 149.61733665800003
+    },
+    "price_usd": 149.61733665800003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 5,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        5
+      ],
+      "productId": "7893737963",
+      "photoSource": "https://weidian.com/item.html?itemID=7893737963",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 1
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "574381e7805dc9427188990b",
+    "name": "Lululemon Scuba Full-Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893736571&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-16e3000001a1bf246eca0a230115_412_482.jpg",
+    "prices": {
+      "CNY": 1335,
+      "USD": 200.13942328500002
+    },
+    "price_usd": 200.13942328500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 6,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        6
+      ],
+      "productId": "7893736571",
+      "photoSource": "https://weidian.com/item.html?itemID=7893736571",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 2
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4337b89967afa9d6943df355",
+    "name": "Lululemon Define Nulu Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896662518&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-208b000001a1bf2e17130a230115_212_290.jpg",
+    "prices": {
+      "CNY": 665,
+      "USD": 99.69491871500001
+    },
+    "price_usd": 99.69491871500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 7,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        7
+      ],
+      "productId": "7896662518",
+      "photoSource": "https://weidian.com/item.html?itemID=7896662518",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 3
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "54c6ed00186fe7001a9a696e",
+    "name": "Lululemon New Parent Backpack",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896804400&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-79d0000001a1bf32dd2a0a231316_2034_1024.jpg",
+    "prices": {
+      "CNY": 896,
+      "USD": 134.325785216
+    },
+    "price_usd": 134.325785216,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 8,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        8
+      ],
+      "productId": "7896804400",
+      "photoSource": "https://weidian.com/item.html?itemID=7896804400",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 4
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "fac23bb43a43d1302da6d68e",
+    "name": "Lululemon Define Nulu Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896694526&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2726000001a1bf3594c70a23057e_810_810.jpg",
+    "prices": {
+      "CNY": 981,
+      "USD": 147.06874475100003
+    },
+    "price_usd": 147.06874475100003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 9,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        9
+      ],
+      "productId": "7896694526",
+      "photoSource": "https://weidian.com/item.html?itemID=7896694526",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 5
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "12760fba43b64c6cbdf6d4de",
+    "name": "Lululemon Scuba Cropped Full-Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896831616&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7fa9000001a1bf3d4ee50a2304aa_910_864.jpg",
+    "prices": {
+      "CNY": 981,
+      "USD": 147.06874475100003
+    },
+    "price_usd": 147.06874475100003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 10,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        10
+      ],
+      "productId": "7896831616",
+      "photoSource": "https://weidian.com/item.html?itemID=7896831616",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 6
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "50830bbd82e4d4e1be7f71f7",
+    "name": "Lululemon Wunder Puff Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893645513&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4008000001a1bf49afba0a2396f4_853_853.jpg",
+    "prices": {
+      "CNY": 3153,
+      "USD": 472.68884016300007
+    },
+    "price_usd": 472.68884016300007,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 11,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        11
+      ],
+      "productId": "7893645513",
+      "photoSource": "https://weidian.com/item.html?itemID=7893645513",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 7
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b9aff4bbf7bd10124bdb0cc5",
+    "name": "Lululemon Pleated Tennis Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893717389&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3771000001a1bf4ffd510a2315ef_576_488.jpg.webp",
+    "prices": {
+      "CNY": 541,
+      "USD": 81.105189511
+    },
+    "price_usd": 81.105189511,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 12,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        12
+      ],
+      "productId": "7893717389",
+      "photoSource": "https://weidian.com/item.html?itemID=7893717389",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 8
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1ebca1879a797b9bba275b4a",
+    "name": "Lululemon Define Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893601269&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6859000001a1bf552f1c0a22d535_1088_1476.jpg",
+    "prices": {
+      "CNY": 730,
+      "USD": 109.43953483000001
+    },
+    "price_usd": 109.43953483000001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 13,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        13
+      ],
+      "productId": "7893601269",
+      "photoSource": "https://weidian.com/item.html?itemID=7893601269",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 9
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "871ebc1103916cf660b8b65a",
+    "name": "Lululemon Henley Long Sleeve Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896800556&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4de4000001a1bf58c6410a2396f4_814_800.jpg",
+    "prices": {
+      "CNY": 596,
+      "USD": 89.350633916
+    },
+    "price_usd": 89.350633916,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 14,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        14
+      ],
+      "productId": "7896800556",
+      "photoSource": "https://weidian.com/item.html?itemID=7896800556",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 10
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a0f203e77ca09ec51faab067",
+    "name": "Lululemon Flared Yoga Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896793294&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5f56000001a1bf5a7afa0a8132bd_710_870.jpg.webp",
+    "prices": {
+      "CNY": 1160,
+      "USD": 173.90391836
+    },
+    "price_usd": 173.90391836,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 15,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        15
+      ],
+      "productId": "7896793294",
+      "photoSource": "https://weidian.com/item.html?itemID=7896793294",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 11
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2ecad7d897a80e9ec62bb3e9",
+    "name": "Lululemon Mini Backpack",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893881599&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5e6f000001a1bf5d9fae0a8133cc_774_782.jpg",
+    "prices": {
+      "CNY": 681,
+      "USD": 102.093593451
+    },
+    "price_usd": 102.093593451,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 16,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        16
+      ],
+      "productId": "7893881599",
+      "photoSource": "https://weidian.com/item.html?itemID=7893881599",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 12
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "c23ddd546025032e5575b082",
+    "name": "Lululemon Hooded Puffer Vest",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896915738&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0a19000001a1bf647a740a21146b_690_714.jpg",
+    "prices": {
+      "CNY": 1961,
+      "USD": 293.987572331
+    },
+    "price_usd": 293.987572331,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 17,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        17
+      ],
+      "productId": "7896915738",
+      "photoSource": "https://weidian.com/item.html?itemID=7896915738",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 13
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "648eb9d462debd81eb45c871",
+    "name": "Lululemon Curved Shoulder Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893597387&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5fbd000001a1bf69933e0a23047e_1048_662.jpg",
+    "prices": {
+      "CNY": 581,
+      "USD": 87.10187635100002
+    },
+    "price_usd": 87.10187635100002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 18,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        18
+      ],
+      "productId": "7893597387",
+      "photoSource": "https://weidian.com/item.html?itemID=7893597387",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 14
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "9292c8cd23737319a9e4dd21",
+    "name": "Lululemon Printed Tote Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896928580&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4c30000001a1bfb0802b0a22d535_814_820.jpg",
+    "prices": {
+      "CNY": 518,
+      "USD": 77.65709457800001
+    },
+    "price_usd": 77.65709457800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 19,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        19
+      ],
+      "productId": "7896928580",
+      "photoSource": "https://weidian.com/item.html?itemID=7896928580",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 15
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "efc5e2a6ec809599c828a8bb",
+    "name": "Lululemon Zip-Up Training Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896991962&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-525a000001a1bfb47d1e0a811258_1178_1192.jpg",
+    "prices": {
+      "CNY": 955,
+      "USD": 143.170898305
+    },
+    "price_usd": 143.170898305,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 20,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        20
+      ],
+      "productId": "7896991962",
+      "photoSource": "https://weidian.com/item.html?itemID=7896991962",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 16
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "25cab9fe00752eb297e8f8e7",
+    "name": "Lululemon Cargo Track Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896917038&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5d65000001a1bfbd2feb0a811258_1044_1490.jpg",
+    "prices": {
+      "CNY": 531,
+      "USD": 79.60601780100001
+    },
+    "price_usd": 79.60601780100001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 21,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        21
+      ],
+      "productId": "7896917038",
+      "photoSource": "https://weidian.com/item.html?itemID=7896917038",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 17
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a5432daa3e13e2cdf6571c17",
+    "name": "Lululemon Swiftly Tech Short Sleeve Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893947021&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3421000001a1c01f42aa0a230115_868_845.jpg",
+    "prices": {
+      "CNY": 526,
+      "USD": 78.85643194600001
+    },
+    "price_usd": 78.85643194600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 22,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        22
+      ],
+      "productId": "7893947021",
+      "photoSource": "https://weidian.com/item.html?itemID=7893947021",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 18
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b65bbc515de761b4ea334d1a",
+    "name": "Lululemon Pleated Tennis Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897026730&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6260000001a1c028948f0a22d535_336_346.jpg",
+    "prices": {
+      "CNY": 398,
+      "USD": 59.667034058000006
+    },
+    "price_usd": 59.667034058000006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 23,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        23
+      ],
+      "productId": "7897026730",
+      "photoSource": "https://weidian.com/item.html?itemID=7897026730",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 19
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8dc4a6bdf16dd8e5ba4f1cee",
+    "name": "Lululemon Define Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897040690&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-47d8000001a1c02af9ee0a2396f4_1178_1434.jpg",
+    "prices": {
+      "CNY": 1335,
+      "USD": 200.13942328500002
+    },
+    "price_usd": 200.13942328500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 24,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        24
+      ],
+      "productId": "7897040690",
+      "photoSource": "https://weidian.com/item.html?itemID=7897040690",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 20
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2649a70f9eb4ce1692ad901c",
+    "name": "Lululemon Mini Tote Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894086243&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-285d000001a1c02ca6700a22d1a4_668_790.jpg",
+    "prices": {
+      "CNY": 581,
+      "USD": 87.10187635100002
+    },
+    "price_usd": 87.10187635100002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 25,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        25
+      ],
+      "productId": "7894086243",
+      "photoSource": "https://weidian.com/item.html?itemID=7894086243",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 21
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "90f3bb042124b064dbf1fe42",
+    "name": "Lululemon Wunderlust Backpack",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897096386&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4778000001a1c02f40130a210256_2258_1530.jpg.webp",
+    "prices": {
+      "CNY": 1167,
+      "USD": 174.95333855700002
+    },
+    "price_usd": 174.95333855700002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 26,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        26
+      ],
+      "productId": "7897096386",
+      "photoSource": "https://weidian.com/item.html?itemID=7897096386",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 22
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f5b39d5f884da3a0b4633f51",
+    "name": "Lululemon Crossbody Shoulder Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897030772&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4ccd000001a1c030ae870a81347d_774_820.jpg",
+    "prices": {
+      "CNY": 886,
+      "USD": 132.826613506
+    },
+    "price_usd": 132.826613506,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 27,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        27
+      ],
+      "productId": "7897030772",
+      "photoSource": "https://weidian.com/item.html?itemID=7897030772",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 23
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "5b145b4a035d8f9674517f96",
+    "name": "Lululemon Pleated Wide Leg Trousers",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897106536&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1ef0000001a1c032de360a2304aa_788_898.jpg.webp",
+    "prices": {
+      "CNY": 781,
+      "USD": 117.085310551
+    },
+    "price_usd": 117.085310551,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 28,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        28
+      ],
+      "productId": "7897106536",
+      "photoSource": "https://weidian.com/item.html?itemID=7897106536",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 24
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8da1e0351c626d67059b3eec",
+    "name": "Lululemon Water Bottle Crossbody Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894078379&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7327000001a1c03412c00a22d535_806_808.jpg",
+    "prices": {
+      "CNY": 416,
+      "USD": 62.36554313600001
+    },
+    "price_usd": 62.36554313600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 29,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        29
+      ],
+      "productId": "7894078379",
+      "photoSource": "https://weidian.com/item.html?itemID=7894078379",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 25
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "6b8b310fa1ff4fcffd328849",
+    "name": "Lululemon Logo Stripe Wide Leg Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893917367&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-766d000001a1c035e0440a22d535_844_920.jpg",
+    "prices": {
+      "CNY": 1329,
+      "USD": 199.23992025900003
+    },
+    "price_usd": 199.23992025900003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 30,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        30
+      ],
+      "productId": "7893917367",
+      "photoSource": "https://weidian.com/item.html?itemID=7893917367",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 26
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f9b19c42d01f801bcf896428",
+    "name": "Lululemon Repel Shell Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897028870&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-60c4000001a1c0379a570a23111a_770_812.jpg",
+    "prices": {
+      "CNY": 1844,
+      "USD": 276.447263324
+    },
+    "price_usd": 276.447263324,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 31,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        31
+      ],
+      "productId": "7897028870",
+      "photoSource": "https://weidian.com/item.html?itemID=7897028870",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 27
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "99be479dbcb8a2c4e790f98d",
+    "name": "Lululemon Define Cropped Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893917433&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5526000001a1c03e99d10a239646_260_252.jpg",
+    "prices": {
+      "CNY": 1058,
+      "USD": 158.61236691800002
+    },
+    "price_usd": 158.61236691800002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 32,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        32
+      ],
+      "productId": "7893917433",
+      "photoSource": "https://weidian.com/item.html?itemID=7893917433",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 28
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ff0a976e9201829f0770ec4e",
+    "name": "Lululemon Reusable Water Bottle",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894109887&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1997000001a1c047d2600a23041a_520_868.jpg",
+    "prices": {
+      "CNY": 318,
+      "USD": 47.67366037800001
+    },
+    "price_usd": 47.67366037800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 33,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        33
+      ],
+      "productId": "7894109887",
+      "photoSource": "https://weidian.com/item.html?itemID=7894109887",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 29
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b5a3a84418f7f4e172aa3021",
+    "name": "Lululemon Ribbed Racerback Tank Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896963460&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7770000001a1c0498f580a23047e_308_480.jpg",
+    "prices": {
+      "CNY": 563,
+      "USD": 84.40336727300001
+    },
+    "price_usd": 84.40336727300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 34,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        34
+      ],
+      "productId": "7896963460",
+      "photoSource": "https://weidian.com/item.html?itemID=7896963460",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 30
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f07ffd92ef5c64d795b283e1",
+    "name": "Lululemon Everywhere Belt Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897138536&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3ef5000001a1c04f29b70a20e284_1300_1034.jpg",
+    "prices": {
+      "CNY": 798,
+      "USD": 119.63390245800001
+    },
+    "price_usd": 119.63390245800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 35,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        35
+      ],
+      "productId": "7897138536",
+      "photoSource": "https://weidian.com/item.html?itemID=7897138536",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 31
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1e3357008083d2ccddc1618f",
+    "name": "Lululemon Full-Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894004963&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1171000001a1c0536ea90a8133cc_894_844.jpg",
+    "prices": {
+      "CNY": 952,
+      "USD": 142.721146792
+    },
+    "price_usd": 142.721146792,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 36,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        36
+      ],
+      "productId": "7894004963",
+      "photoSource": "https://weidian.com/item.html?itemID=7894004963",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 32
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1cda231f55b2965cefd677c2",
+    "name": "Lululemon Classic-Fit Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894022905&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2a78000001a1c0572ae60a811258_710_686.jpg",
+    "prices": {
+      "CNY": 423,
+      "USD": 63.41496333300001
+    },
+    "price_usd": 63.41496333300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 37,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        37
+      ],
+      "productId": "7894022905",
+      "photoSource": "https://weidian.com/item.html?itemID=7894022905",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 33
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "6a674044f0646c34242b937a",
+    "name": "Lululemon Scuba Half-Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894090645&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0eec000001a1c05c423b0a230115_926_880.jpg",
+    "prices": {
+      "CNY": 988,
+      "USD": 148.11816494800001
+    },
+    "price_usd": 148.11816494800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 38,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        38
+      ],
+      "productId": "7894090645",
+      "photoSource": "https://weidian.com/item.html?itemID=7894090645",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 34
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8cd2dc9957eac20435add807",
+    "name": "Lululemon Long Hooded Puffer Coat",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896993058&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1492000001a1c06041b20a210256_394_262.jpg",
+    "prices": {
+      "CNY": 4152,
+      "USD": 622.4560939920001
+    },
+    "price_usd": 622.4560939920001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 39,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        39
+      ],
+      "productId": "7896993058",
+      "photoSource": "https://weidian.com/item.html?itemID=7896993058",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 35
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "54d72b039fd0c7df19fc3082",
+    "name": "Lululemon Mini Canvas Tote Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897161682&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6ada000001a1c062a5aa0a2304aa_1150_1150.jpg",
+    "prices": {
+      "CNY": 463,
+      "USD": 69.41165017300001
+    },
+    "price_usd": 69.41165017300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 40,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        40
+      ],
+      "productId": "7897161682",
+      "photoSource": "https://weidian.com/item.html?itemID=7897161682",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 36
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "6e91233a018638ff619a0d02",
+    "name": "Lululemon Striped Slim Fit Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894080667&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7aa8000001a1c066f9ad0a231177_439_497.jpg",
+    "prices": {
+      "CNY": 478,
+      "USD": 71.660407738
+    },
+    "price_usd": 71.660407738,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 41,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        41
+      ],
+      "productId": "7894080667",
+      "photoSource": "https://weidian.com/item.html?itemID=7894080667",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 37
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "14136b0cced6b85a1379efdc",
+    "name": "Lululemon Swiftly Tech Long Sleeve Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893963341&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-445f000001a1c06901be0a2394a4_462_632.jpg",
+    "prices": {
+      "CNY": 596,
+      "USD": 89.350633916
+    },
+    "price_usd": 89.350633916,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 42,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        42
+      ],
+      "productId": "7893963341",
+      "photoSource": "https://weidian.com/item.html?itemID=7893963341",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 38
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b3ac85ada32be9139564b3b1",
+    "name": "Lululemon Scuba Cropped Half-Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894074697&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3062000001a1c06d18d10a2396f4_1044_1038.jpg",
+    "prices": {
+      "CNY": 931,
+      "USD": 139.57288620100002
+    },
+    "price_usd": 139.57288620100002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 43,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        43
+      ],
+      "productId": "7894074697",
+      "photoSource": "https://weidian.com/item.html?itemID=7894074697",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 39
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "3f16099496edce2743a6fa57",
+    "name": "Lululemon Cosmetic Case",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897064994&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7396000001a1c06eac470a20e284_800_808.jpg",
+    "prices": {
+      "CNY": 518,
+      "USD": 77.65709457800001
+    },
+    "price_usd": 77.65709457800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 44,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        44
+      ],
+      "productId": "7897064994",
+      "photoSource": "https://weidian.com/item.html?itemID=7897064994",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 40
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8994bc87fa837bd778d1640f",
+    "name": "Lululemon Hobo Shoulder Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897082892&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-782f000001a1c07184db0a20e284_1096_1096.jpg",
+    "prices": {
+      "CNY": 980,
+      "USD": 146.91882758000003
+    },
+    "price_usd": 146.91882758000003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 45,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        45
+      ],
+      "productId": "7897082892",
+      "photoSource": "https://weidian.com/item.html?itemID=7897082892",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 41
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "eb5864637b35cc31d50cfcd8",
+    "name": "Lululemon Waffle Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897039214&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3c62000001a1c073ec820a23038e_382_424.jpg",
+    "prices": {
+      "CNY": 531,
+      "USD": 79.60601780100001
+    },
+    "price_usd": 79.60601780100001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 46,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        46
+      ],
+      "productId": "7897039214",
+      "photoSource": "https://weidian.com/item.html?itemID=7897039214",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 42
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1c2f84b441f71a92c8137673",
+    "name": "Lululemon Button Polo Short Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896989258&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5f1c000001a1c076e5dc0a811258_800_804.jpg",
+    "prices": {
+      "CNY": 515,
+      "USD": 77.207343065
+    },
+    "price_usd": 77.207343065,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 47,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        47
+      ],
+      "productId": "7896989258",
+      "photoSource": "https://weidian.com/item.html?itemID=7896989258",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 43
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "44215458f9258f1ebc966336",
+    "name": "Lululemon Relaxed Fit Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897053128&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4535000001a1c07940860a23047e_834_808.jpg",
+    "prices": {
+      "CNY": 427,
+      "USD": 64.01463201700001
+    },
+    "price_usd": 64.01463201700001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 48,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        48
+      ],
+      "productId": "7897053128",
+      "photoSource": "https://weidian.com/item.html?itemID=7897053128",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 44
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "259c24b246d3745186aaccf1",
+    "name": "Lululemon Drawstring Flare Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897100886&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-045a000001a1c07b91850a207569_544_844.jpg",
+    "prices": {
+      "CNY": 831,
+      "USD": 124.58116910100001
+    },
+    "price_usd": 124.58116910100001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 49,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        49
+      ],
+      "productId": "7897100886",
+      "photoSource": "https://weidian.com/item.html?itemID=7897100886",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 45
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1e266683e1be16251430b915",
+    "name": "Lululemon Fitted Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893939331&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5b5c000001a1c07de04a0a8132bd_591_591.jpg",
+    "prices": {
+      "CNY": 800,
+      "USD": 119.93373680000002
+    },
+    "price_usd": 119.93373680000002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 50,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        50
+      ],
+      "productId": "7893939331",
+      "photoSource": "https://weidian.com/item.html?itemID=7893939331",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 46
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ed13ff44ede27e6d709fcf0c",
+    "name": "Lululemon High Waist Tennis Skort",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897081054&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5b16000001a1c0818cd90a23037f_824_798.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 51,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        51
+      ],
+      "productId": "7897081054",
+      "photoSource": "https://weidian.com/item.html?itemID=7897081054",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 47
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1e518df5b9dd2794687e3768",
+    "name": "Lululemon Zip Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893931549&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5321000001a1c085c9380a23057e_906_840.jpg",
+    "prices": {
+      "CNY": 996,
+      "USD": 149.317502316
+    },
+    "price_usd": 149.317502316,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 52,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        52
+      ],
+      "productId": "7893931549",
+      "photoSource": "https://weidian.com/item.html?itemID=7893931549",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 48
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "351f9b358f9181d99fd6348d",
+    "name": "Lululemon Reflective Hooded Running Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7896977578&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6a4a000001a1c08936ff0a8133cc_838_862.jpg",
+    "prices": {
+      "CNY": 2715,
+      "USD": 407.02511926500006
+    },
+    "price_usd": 407.02511926500006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 53,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        53
+      ],
+      "productId": "7896977578",
+      "photoSource": "https://weidian.com/item.html?itemID=7896977578",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 49
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "c04d4ccda8f085424e57c225",
+    "name": "Lululemon Phone Lanyard",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897017408&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-73a3000001a1c08cd0870a8132bd_466_504.jpg",
+    "prices": {
+      "CNY": 434,
+      "USD": 65.064052214
+    },
+    "price_usd": 65.064052214,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 54,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        54
+      ],
+      "productId": "7897017408",
+      "photoSource": "https://weidian.com/item.html?itemID=7897017408",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 50
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e730fae76150636fba3765b4",
+    "name": "Lululemon Cropped Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894113887&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-56c9000001a1c08e6e600a2102c5_406_420.jpg",
+    "prices": {
+      "CNY": 526,
+      "USD": 78.85643194600001
+    },
+    "price_usd": 78.85643194600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 55,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        55
+      ],
+      "productId": "7894113887",
+      "photoSource": "https://weidian.com/item.html?itemID=7894113887",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 51
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e390afc417d339515784673d",
+    "name": "Lululemon Backpack",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894102741&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-08e4000001a1c090993e0a22d535_1961_1024.jpg",
+    "prices": {
+      "CNY": 1073,
+      "USD": 160.86112448300003
+    },
+    "price_usd": 160.86112448300003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 56,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        56
+      ],
+      "productId": "7894102741",
+      "photoSource": "https://weidian.com/item.html?itemID=7894102741",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 52
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4efc567322f18eac52f75239",
+    "name": "Lululemon Boat Neck Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894039147&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1354000001a1c0921dae0a23041a_426_500.jpg",
+    "prices": {
+      "CNY": 640,
+      "USD": 95.94698944000001
+    },
+    "price_usd": 95.94698944000001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 57,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        57
+      ],
+      "productId": "7894039147",
+      "photoSource": "https://weidian.com/item.html?itemID=7894039147",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 53
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "53938234a7c91f3e396221b1",
+    "name": "Lululemon Full Zip Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897162188&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7da5000001a1c094817d0a8133cc_814_804.jpg",
+    "prices": {
+      "CNY": 888,
+      "USD": 133.12644784800003
+    },
+    "price_usd": 133.12644784800003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 58,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        58
+      ],
+      "productId": "7897162188",
+      "photoSource": "https://weidian.com/item.html?itemID=7897162188",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 54
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "00df471b5c31ce5d46d24c45",
+    "name": "Lululemon Pleated Tennis Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897043262&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-24d0000001a1c095e9560a21146b_874_954.jpg",
+    "prices": {
+      "CNY": 831,
+      "USD": 124.58116910100001
+    },
+    "price_usd": 124.58116910100001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 59,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        59
+      ],
+      "productId": "7897043262",
+      "photoSource": "https://weidian.com/item.html?itemID=7897043262",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 55
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "04f41bd96c65223ef5b25e87",
+    "name": "Lululemon Hobo Shoulder Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897109014&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6647000001a1c097e5550a239646_804_800.jpg",
+    "prices": {
+      "CNY": 1075,
+      "USD": 161.16095882500002
+    },
+    "price_usd": 161.16095882500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 60,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        60
+      ],
+      "productId": "7897109014",
+      "photoSource": "https://weidian.com/item.html?itemID=7897109014",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 56
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "bad9c3d81b5cb6d9471b4813",
+    "name": "Lululemon Bubble Skort",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897109018&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7520000001a1c099b1100a230115_839_681.jpg",
+    "prices": {
+      "CNY": 526,
+      "USD": 78.85643194600001
+    },
+    "price_usd": 78.85643194600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 61,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        61
+      ],
+      "productId": "7897109018",
+      "photoSource": "https://weidian.com/item.html?itemID=7897109018",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 57
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1f22bdb44e9fec62630afcd4",
+    "name": "Lululemon Pleated Tailored Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7893967587&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6dbc000001a1c09ae23f0a2315ef_580_484.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 62,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        62
+      ],
+      "productId": "7893967587",
+      "photoSource": "https://weidian.com/item.html?itemID=7893967587",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 58
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d4a571da485fa272d4de4a16",
+    "name": "Lululemon Wide Leg Sweatpants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897093116&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6dbe000001a1c09c01870a239646_650_784.jpg",
+    "prices": {
+      "CNY": 743,
+      "USD": 111.38845805300001
+    },
+    "price_usd": 111.38845805300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 63,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        63
+      ],
+      "productId": "7897093116",
+      "photoSource": "https://weidian.com/item.html?itemID=7897093116",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 59
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "15760d08d5f88bdd8daf919f",
+    "name": "Lululemon Long Sleeve Athletic Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897390500&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-490c000001a1c42aecbd0a23041a_408_448.jpg",
+    "prices": {
+      "CNY": 578,
+      "USD": 86.652124838
+    },
+    "price_usd": 86.652124838,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 64,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        64
+      ],
+      "productId": "7897390500",
+      "photoSource": "https://weidian.com/item.html?itemID=7897390500",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 60
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ace57f565825fce91d95f375",
+    "name": "Lululemon V Neck Short Sleeve T Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894336631&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-46c3000001a1c434e5330a2394a4_204_222.jpg",
+    "prices": {
+      "CNY": 518,
+      "USD": 77.65709457800001
+    },
+    "price_usd": 77.65709457800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 65,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        65
+      ],
+      "productId": "7894336631",
+      "photoSource": "https://weidian.com/item.html?itemID=7894336631",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 61
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "74a1057990c9e6cc5fab0a77",
+    "name": "Lululemon Cropped Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897489992&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-04c8000001a1c43ea4c60a231316_616_632.jpg",
+    "prices": {
+      "CNY": 1435,
+      "USD": 215.131140385
+    },
+    "price_usd": 215.131140385,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 66,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        66
+      ],
+      "productId": "7897489992",
+      "photoSource": "https://weidian.com/item.html?itemID=7897489992",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 62
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d91b60b04ee44753d4824be5",
+    "name": "Lululemon Hooded Puffer Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897509946&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-51e9000001a1c4411fdf0a2394a4_710_808.jpg",
+    "prices": {
+      "CNY": 1843,
+      "USD": 276.29734615300003
+    },
+    "price_usd": 276.29734615300003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 67,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        67
+      ],
+      "productId": "7897509946",
+      "photoSource": "https://weidian.com/item.html?itemID=7897509946",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 63
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e8173c0806107fa1ce069f52",
+    "name": "Lululemon Leopard Print Sling Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894495723&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-43ef000001a1c44791b10a23111a_804_804.jpg",
+    "prices": {
+      "CNY": 596,
+      "USD": 89.350633916
+    },
+    "price_usd": 89.350633916,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 68,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        68
+      ],
+      "productId": "7894495723",
+      "photoSource": "https://weidian.com/item.html?itemID=7894495723",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 64
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "bb4dfc61411c53c031e28e05",
+    "name": "Lululemon Henley Short Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897229416&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-52bc000001a1c44c56d30a2303ee_793_729.jpg",
+    "prices": {
+      "CNY": 396,
+      "USD": 59.36719971600001
+    },
+    "price_usd": 59.36719971600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 69,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        69
+      ],
+      "productId": "7897229416",
+      "photoSource": "https://weidian.com/item.html?itemID=7897229416",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 65
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4ab4a45e4f7ed0c57f439825",
+    "name": "Lululemon Zip Up Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897436432&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3667000001a1c44e55a70a20e273_880_882.jpg",
+    "prices": {
+      "CNY": 1600,
+      "USD": 239.86747360000004
+    },
+    "price_usd": 239.86747360000004,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 70,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        70
+      ],
+      "productId": "7897436432",
+      "photoSource": "https://weidian.com/item.html?itemID=7897436432",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 66
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "0af0982dd636bfb68fe1ad01",
+    "name": "Lululemon High Waist Biker Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894328871&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2405000001a1c44fecf00a22d1a4_804_806.jpg",
+    "prices": {
+      "CNY": 623,
+      "USD": 93.39839753300001
+    },
+    "price_usd": 93.39839753300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 71,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        71
+      ],
+      "productId": "7894328871",
+      "photoSource": "https://weidian.com/item.html?itemID=7894328871",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 67
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "73203ce1f891131667c0bd46",
+    "name": "Lululemon Logo Crew Sweatshirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897444388&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6db9000001a1c45178190a23041a_544_450.jpg",
+    "prices": {
+      "CNY": 665,
+      "USD": 99.69491871500001
+    },
+    "price_usd": 99.69491871500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 72,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        72
+      ],
+      "productId": "7897444388",
+      "photoSource": "https://weidian.com/item.html?itemID=7897444388",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 68
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b280a7d77f6d207ce9cef952",
+    "name": "Lululemon Half Zip Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894193441&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-493e000001a1c4537cab0a2396f4_1206_1322.jpg",
+    "prices": {
+      "CNY": 915,
+      "USD": 137.174211465
+    },
+    "price_usd": 137.174211465,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 73,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        73
+      ],
+      "productId": "7894193441",
+      "photoSource": "https://weidian.com/item.html?itemID=7894193441",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 69
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "5660f75acd0489244ee0ab95",
+    "name": "Lululemon Drawstring Backpack",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894473993&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5727000001a1c454cf260a8133cc_1080_1920.jpg",
+    "prices": {
+      "CNY": 875,
+      "USD": 131.17752462500002
+    },
+    "price_usd": 131.17752462500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 74,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        74
+      ],
+      "productId": "7894473993",
+      "photoSource": "https://weidian.com/item.html?itemID=7894473993",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 70
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "47e040509ea025bbb5c12029",
+    "name": "Lululemon Mini Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894354667&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3dc1000001a1c45900ba0a239646_450_582.jpg",
+    "prices": {
+      "CNY": 398,
+      "USD": 59.667034058000006
+    },
+    "price_usd": 59.667034058000006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 75,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        75
+      ],
+      "productId": "7894354667",
+      "photoSource": "https://weidian.com/item.html?itemID=7894354667",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 71
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "12bf4192336ca1fdbda88487",
+    "name": "Lululemon Hooded Puffer Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897410628&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4340000001a1c45e25310a239646_804_798.jpg",
+    "prices": {
+      "CNY": 3153,
+      "USD": 472.68884016300007
+    },
+    "price_usd": 472.68884016300007,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 76,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        76
+      ],
+      "productId": "7897410628",
+      "photoSource": "https://weidian.com/item.html?itemID=7897410628",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 72
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d3116d02703759a108a447e2",
+    "name": "Lululemon Hooded Puffer Coat",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894394491&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-524a000001a1c461459a0a230115_1178_1212.jpg",
+    "prices": {
+      "CNY": 1884,
+      "USD": 282.44395016400006
+    },
+    "price_usd": 282.44395016400006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 77,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        77
+      ],
+      "productId": "7894394491",
+      "photoSource": "https://weidian.com/item.html?itemID=7894394491",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 73
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "5468c7b84d29ae28ef56bf97",
+    "name": "Lululemon Zip Hooded Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897518204&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2aa0000001a1c464aa5b0a231316_822_850.jpg",
+    "prices": {
+      "CNY": 2352,
+      "USD": 352.605186192
+    },
+    "price_usd": 352.605186192,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 78,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        78
+      ],
+      "productId": "7897518204",
+      "photoSource": "https://weidian.com/item.html?itemID=7897518204",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 74
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "771e73451bde0d247d8adf17",
+    "name": "Lululemon High Waist Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897470516&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4b97000001a1c466f4130a20e2c5_809_753.jpg",
+    "prices": {
+      "CNY": 665,
+      "USD": 99.69491871500001
+    },
+    "price_usd": 99.69491871500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 79,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        79
+      ],
+      "productId": "7897470516",
+      "photoSource": "https://weidian.com/item.html?itemID=7897470516",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 75
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a02de5591979517dfc400cf2",
+    "name": "Lululemon Maxi Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897516246&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0480000001a1c4699d680a2103bd_766_854.jpg",
+    "prices": {
+      "CNY": 988,
+      "USD": 148.11816494800001
+    },
+    "price_usd": 148.11816494800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 80,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        80
+      ],
+      "productId": "7897516246",
+      "photoSource": "https://weidian.com/item.html?itemID=7897516246",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 76
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4307ddd24ea56e1c49319fcc",
+    "name": "Lululemon Long Sleeve Crop Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894367459&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-71cb000001a1c48c2ed20a2315ef_800_800.jpg",
+    "prices": {
+      "CNY": 578,
+      "USD": 86.652124838
+    },
+    "price_usd": 86.652124838,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 81,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        81
+      ],
+      "productId": "7894367459",
+      "photoSource": "https://weidian.com/item.html?itemID=7894367459",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 77
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "4f45df0a2aeda15cbb3edfc7",
+    "name": "Lululemon Long Sleeve Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894526069&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3f05000001a1c48ec9d60a207569_730_721.jpg",
+    "prices": {
+      "CNY": 610,
+      "USD": 91.44947431000001
+    },
+    "price_usd": 91.44947431000001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 82,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        82
+      ],
+      "productId": "7894526069",
+      "photoSource": "https://weidian.com/item.html?itemID=7894526069",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 78
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "fb456f080eb46db40e566aa2",
+    "name": "Lululemon Sports Bra",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897568416&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-461b000001a1c4909e510a20e284_788_776.jpg",
+    "prices": {
+      "CNY": 573,
+      "USD": 85.90253898300001
+    },
+    "price_usd": 85.90253898300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 83,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        83
+      ],
+      "productId": "7897568416",
+      "photoSource": "https://weidian.com/item.html?itemID=7897568416",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 79
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ddcfc9051ae856c5332c58b2",
+    "name": "lululemon Organic Cotton Baby Tee *Graphic",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897599628&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2624000001a1c4936f4a0a22d535_622_466.jpg",
+    "prices": {
+      "CNY": 374,
+      "USD": 56.06902195400001
+    },
+    "price_usd": 56.06902195400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 84,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        84
+      ],
+      "productId": "7897599628",
+      "photoSource": "https://weidian.com/item.html?itemID=7897599628",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 80
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "71ce26b10b881c5bc6184e5e",
+    "name": "lululemon Swiftly Tech Short‑Sleeve Shirt 2.0 *Print",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894484941&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-77f9000001a1c4951f380a20e2c5_1080_1920.jpg",
+    "prices": {
+      "CNY": 414,
+      "USD": 62.06570879400001
+    },
+    "price_usd": 62.06570879400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 85,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        85
+      ],
+      "productId": "7894484941",
+      "photoSource": "https://weidian.com/item.html?itemID=7894484941",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 81
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a8d56eb33b3eac6a0ed3df68",
+    "name": "lululemon Another Mile Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894403391&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-28f2000001a1c496e7b20a811258_804_804.jpg",
+    "prices": {
+      "CNY": 2300,
+      "USD": 344.80949330000004
+    },
+    "price_usd": 344.80949330000004,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 86,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        86
+      ],
+      "productId": "7894403391",
+      "photoSource": "https://weidian.com/item.html?itemID=7894403391",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 82
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "604520ce69edc4f0239ccc31",
+    "name": "lululemon Softstreme High‑Rise Wide‑Leg Pant",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894484995&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1bf2000001a1c498fde40a8132bd_800_800.jpg",
+    "prices": {
+      "CNY": 988,
+      "USD": 148.11816494800001
+    },
+    "price_usd": 148.11816494800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 87,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        87
+      ],
+      "productId": "7894484995",
+      "photoSource": "https://weidian.com/item.html?itemID=7894484995",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 83
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "bef93a3e6e3ad0dad0e18566",
+    "name": "lululemon Open‑Flat Small Toiletry Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894357555&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4f5e000001a1c49a0a9d0a20e284_800_800.jpg",
+    "prices": {
+      "CNY": 525,
+      "USD": 78.706514775
+    },
+    "price_usd": 78.706514775,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 88,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        88
+      ],
+      "productId": "7894357555",
+      "photoSource": "https://weidian.com/item.html?itemID=7894357555",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 84
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "bdbad426655af829334d9e51",
+    "name": "lululemon Big Cozy Ultra‑Oversized Hoodie",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897633990&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2298000001a1c4b480680a210256_946_1042.jpg",
+    "prices": {
+      "CNY": 487,
+      "USD": 73.009662277
+    },
+    "price_usd": 73.009662277,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 89,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        89
+      ],
+      "productId": "7897633990",
+      "photoSource": "https://weidian.com/item.html?itemID=7897633990",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 85
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "10cd85a8ed1067efea6d456e",
+    "name": "lululemon Relaxed‑Fit Boat‑Neck Short‑Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897571300&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2ba6000001a1c4baad970a230115_842_842.jpg",
+    "prices": {
+      "CNY": 541,
+      "USD": 81.105189511
+    },
+    "price_usd": 81.105189511,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 90,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        90
+      ],
+      "productId": "7897571300",
+      "photoSource": "https://weidian.com/item.html?itemID=7897571300",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 86
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "8f310c65c749966e0024a6e8",
+    "name": "lululemon Women’s Racerback Midi Dress",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894617991&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-32b0000001a1c4c077350a230115_778_740.jpg",
+    "prices": {
+      "CNY": 803,
+      "USD": 120.38348831300002
+    },
+    "price_usd": 120.38348831300002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 91,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        91
+      ],
+      "productId": "7894617991",
+      "photoSource": "https://weidian.com/item.html?itemID=7894617991",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 87
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "578f2dbc6c886665ea837fe1",
+    "name": "lululemon Lightweight High‑Rise Tennis Skirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894531371&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-38ec000001a1c4c1ac320a23038e_614_540.jpg",
+    "prices": {
+      "CNY": 526,
+      "USD": 78.85643194600001
+    },
+    "price_usd": 78.85643194600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 92,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        92
+      ],
+      "productId": "7894531371",
+      "photoSource": "https://weidian.com/item.html?itemID=7894531371",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 88
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a00b7fcb0d30421c0eb32cf0",
+    "name": "lululemon Scuba Mid‑Rise Wide‑Leg Pant *Velvet",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897697844&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5909000001a1c4c2e25d0a22d535_706_1002.jpg",
+    "prices": {
+      "CNY": 830,
+      "USD": 124.43125193000002
+    },
+    "price_usd": 124.43125193000002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 93,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        93
+      ],
+      "productId": "7897697844",
+      "photoSource": "https://weidian.com/item.html?itemID=7897697844",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 89
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "05212088b70256b5f42dbf63",
+    "name": "Lululemon Tennis Skort",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897680042&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4a9a000001a1c4c436570a8132bd_770_696.jpg",
+    "prices": {
+      "CNY": 795,
+      "USD": 119.18415094500001
+    },
+    "price_usd": 119.18415094500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 94,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        94
+      ],
+      "productId": "7897680042",
+      "photoSource": "https://weidian.com/item.html?itemID=7897680042",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 90
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d5810af03959ab48bbde9cfd",
+    "name": "Lululemon Racerback Tank Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894544619&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-09ad000001a1c4c58ac50a2304aa_808_804.jpg",
+    "prices": {
+      "CNY": 573,
+      "USD": 85.90253898300001
+    },
+    "price_usd": 85.90253898300001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 95,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        95
+      ],
+      "productId": "7894544619",
+      "photoSource": "https://weidian.com/item.html?itemID=7894544619",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 91
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "77d40727511584a3bf1c023e",
+    "name": "Lululemon Loose Jogger Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897608426&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-43e8000001a1c4ca3da40a2396f4_790_835.jpg",
+    "prices": {
+      "CNY": 620,
+      "USD": 92.94864602000001
+    },
+    "price_usd": 92.94864602000001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 96,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        96
+      ],
+      "productId": "7897608426",
+      "photoSource": "https://weidian.com/item.html?itemID=7897608426",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 92
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "c5ab0389439ffa909915ea1c",
+    "name": "Lululemon V-Neck Cropped Cami",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897561576&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-52c3000001a1c4cc7f910a8133cc_678_634.jpg",
+    "prices": {
+      "CNY": 389,
+      "USD": 58.317779519000005
+    },
+    "price_usd": 58.317779519000005,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 97,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        97
+      ],
+      "productId": "7897561576",
+      "photoSource": "https://weidian.com/item.html?itemID=7897561576",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 93
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "0f7aaea28522432aa329bd69",
+    "name": "Lululemon Wide Leg Trousers",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894644539&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5158000001a1c4d5570e0a2396f4_660_960.jpg",
+    "prices": {
+      "CNY": 831,
+      "USD": 124.58116910100001
+    },
+    "price_usd": 124.58116910100001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 98,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        98
+      ],
+      "productId": "7894644539",
+      "photoSource": "https://weidian.com/item.html?itemID=7894644539",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 94
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f77e67e146cb510f3528a4aa",
+    "name": "Lululemon Relaxed Fit Sweatpants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897594828&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5474000001a1c4d75a510a23047e_801_805.jpg",
+    "prices": {
+      "CNY": 716,
+      "USD": 107.340694436
+    },
+    "price_usd": 107.340694436,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 99,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        99
+      ],
+      "productId": "7897594828",
+      "photoSource": "https://weidian.com/item.html?itemID=7897594828",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 95
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2cf785b82924507209a80f6f",
+    "name": "Lululemon Oversized Short Sleeve T-Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897674386&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3293000001a1c4d810850a22d1a4_670_656.jpg",
+    "prices": {
+      "CNY": 398,
+      "USD": 59.667034058000006
+    },
+    "price_usd": 59.667034058000006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 100,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        100
+      ],
+      "productId": "7897674386",
+      "photoSource": "https://weidian.com/item.html?itemID=7897674386",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 96
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "d6d01472994ff64bfec584cd",
+    "name": "Lululemon Short Sleeve Athletic Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894638535&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5b7d000001a1c4dca0b70a23047e_1015_1021.jpg",
+    "prices": {
+      "CNY": 427,
+      "USD": 64.01463201700001
+    },
+    "price_usd": 64.01463201700001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 101,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        101
+      ],
+      "productId": "7894638535",
+      "photoSource": "https://weidian.com/item.html?itemID=7894638535",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 97
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "3157a4e4e5d6425682f5ec85",
+    "name": "Lululemon Full Zip Knit Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894580923&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5b26000001a1c4df97e70a81347d_748_736.jpg",
+    "prices": {
+      "CNY": 2096,
+      "USD": 314.226390416
+    },
+    "price_usd": 314.226390416,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 102,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        102
+      ],
+      "productId": "7894580923",
+      "photoSource": "https://weidian.com/item.html?itemID=7894580923",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 98
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2c7e6c2f33b47127f13978ef",
+    "name": "Lululemon High Waist Casual Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897744152&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-3607000001a1c4e0abfe0a20e7c7_598_520.jpg",
+    "prices": {
+      "CNY": 620,
+      "USD": 92.94864602000001
+    },
+    "price_usd": 92.94864602000001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 103,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        103
+      ],
+      "productId": "7897744152",
+      "photoSource": "https://weidian.com/item.html?itemID=7897744152",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 99
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "be20adf22eb1d2ce8bde01f3",
+    "name": "Lululemon Cropped Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897587296&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6d90000001a1c4e1d39c0a8133cc_474_544.jpg",
+    "prices": {
+      "CNY": 525,
+      "USD": 78.706514775
+    },
+    "price_usd": 78.706514775,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 104,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        104
+      ],
+      "productId": "7897587296",
+      "photoSource": "https://weidian.com/item.html?itemID=7897587296",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 100
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "46b3fa75109e64e42cef064c",
+    "name": "Lululemon Camo Leggings",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894757431&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4979000001a1c553e8ef0a8132b9_534_694.jpg",
+    "prices": {
+      "CNY": 665,
+      "USD": 99.69491871500001
+    },
+    "price_usd": 99.69491871500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 105,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        105
+      ],
+      "productId": "7894757431",
+      "photoSource": "https://weidian.com/item.html?itemID=7894757431",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 101
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f3135fbf161e0013b3bab1b7",
+    "name": "Lululemon Split Hem Wide Leg Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897930988&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-4f94000001a1c5581dc30a23b5a8_776_1182.jpg",
+    "prices": {
+      "CNY": 931,
+      "USD": 139.57288620100002
+    },
+    "price_usd": 139.57288620100002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 106,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        106
+      ],
+      "productId": "7897930988",
+      "photoSource": "https://weidian.com/item.html?itemID=7897930988",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 102
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "94a51d68d77bfd93c914e0a0",
+    "name": "Lululemon Wide Leg Knit Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897893070&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5152000001a1c55b17ef0a230573_810_918.jpg",
+    "prices": {
+      "CNY": 296,
+      "USD": 44.375482616000006
+    },
+    "price_usd": 44.375482616000006,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 107,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        107
+      ],
+      "productId": "7897893070",
+      "photoSource": "https://weidian.com/item.html?itemID=7897893070",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 103
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e7221c62e5d8c89c9025ecdf",
+    "name": "Lululemon High Waist Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894847109&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-5c27000001a1c5602df90a230175_824_761.jpg",
+    "prices": {
+      "CNY": 525,
+      "USD": 78.706514775
+    },
+    "price_usd": 78.706514775,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 108,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        108
+      ],
+      "productId": "7894847109",
+      "photoSource": "https://weidian.com/item.html?itemID=7894847109",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 104
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2c95926eb1d7c4ed4a176757",
+    "name": "Lululemon Everywhere Fleece Belt Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897999634&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-59de000001a1c562165e0a230573_1080_1920.jpg",
+    "prices": {
+      "CNY": 414,
+      "USD": 62.06570879400001
+    },
+    "price_usd": 62.06570879400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 109,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        109
+      ],
+      "productId": "7897999634",
+      "photoSource": "https://weidian.com/item.html?itemID=7897999634",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 105
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2c9fd4aef61e1d96176a98f1",
+    "name": "Lululemon Half Zip Sweatshirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894897071&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7a58000001a1c56321740a207569_640_660.jpg",
+    "prices": {
+      "CNY": 778,
+      "USD": 116.63555903800001
+    },
+    "price_usd": 116.63555903800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 110,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        110
+      ],
+      "productId": "7894897071",
+      "photoSource": "https://weidian.com/item.html?itemID=7894897071",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 106
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "636785818ff5f27f87d3f083",
+    "name": "Lululemon Fleece Shorts",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897925138&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-05cb000001a1c56443820aa10192_762_532.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 111,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        111
+      ],
+      "productId": "7897925138",
+      "photoSource": "https://weidian.com/item.html?itemID=7897925138",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 107
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "30ecac9778b360e8ae2756ea",
+    "name": "Lululemon Button Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894875153&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0dd2000001a1c56bcbed0aa1076c_635_629.jpg",
+    "prices": {
+      "CNY": 886,
+      "USD": 132.826613506
+    },
+    "price_usd": 132.826613506,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 112,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        112
+      ],
+      "productId": "7894875153",
+      "photoSource": "https://weidian.com/item.html?itemID=7894875153",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 108
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "11b5756ef86f3a84e1557198",
+    "name": "Lululemon Ruched Tote Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894837407&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-08c3000001a1c56ed22a0a20e284_740_758.jpg",
+    "prices": {
+      "CNY": 708,
+      "USD": 106.141357068
+    },
+    "price_usd": 106.141357068,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 113,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        113
+      ],
+      "productId": "7894837407",
+      "photoSource": "https://weidian.com/item.html?itemID=7894837407",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 109
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ca9f9cc3143b4b6f613031e5",
+    "name": "Lululemon Cropped Puffer Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897895212&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6ee9000001a1c570879e0aa104af_720_710.jpg",
+    "prices": {
+      "CNY": 3673,
+      "USD": 550.645769083
+    },
+    "price_usd": 550.645769083,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 114,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        114
+      ],
+      "productId": "7897895212",
+      "photoSource": "https://weidian.com/item.html?itemID=7897895212",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 110
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f10388db22a52fe8d6b72c1b",
+    "name": "Lululemon Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7898013714&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-725f000001a1c5732d440a23914a_672_670.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 115,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        115
+      ],
+      "productId": "7898013714",
+      "photoSource": "https://weidian.com/item.html?itemID=7898013714",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 111
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "09b8e73f4f54f46795769b22",
+    "name": "Lululemon Half Zip Hooded Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894883139&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-72ad000001a1c574b0030a230175_768_690.jpg",
+    "prices": {
+      "CNY": 319,
+      "USD": 47.82357754900001
+    },
+    "price_usd": 47.82357754900001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 116,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        116
+      ],
+      "productId": "7894883139",
+      "photoSource": "https://weidian.com/item.html?itemID=7894883139",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 112
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "fc47015938215c80e014e5f3",
+    "name": "Lululemon Sports Bra",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897941204&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-721e000001a1c5764e110a23b5a8_843_768.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 117,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        117
+      ],
+      "productId": "7897941204",
+      "photoSource": "https://weidian.com/item.html?itemID=7897941204",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 113
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "af636968912abaa0372e36b3",
+    "name": "Lululemon Short Sleeve T Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7898023666&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7267000001a1c577cd1b0a81347d_728_785.jpg",
+    "prices": {
+      "CNY": 356,
+      "USD": 53.37051287600001
+    },
+    "price_usd": 53.37051287600001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 118,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        118
+      ],
+      "productId": "7898023666",
+      "photoSource": "https://weidian.com/item.html?itemID=7898023666",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 114
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "ca2df5c982f3ec3443dd3ac6",
+    "name": "Lululemon Flared Yoga Pants",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894931925&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-12d7000001a1c5791cdb0a20e2c5_744_976.jpg",
+    "prices": {
+      "CNY": 896,
+      "USD": 134.325785216
+    },
+    "price_usd": 134.325785216,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 119,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        119
+      ],
+      "productId": "7894931925",
+      "photoSource": "https://weidian.com/item.html?itemID=7894931925",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 115
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "3503c5e65488db7eeb1ad4a6",
+    "name": "Lululemon Short Sleeve T Shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894835395&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-6fe2000001a1c57ac2310a23038e_635_594.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 120,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        120
+      ],
+      "productId": "7894835395",
+      "photoSource": "https://weidian.com/item.html?itemID=7894835395",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 116
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "b591d998dc6b5e4f2df0cae9",
+    "name": "Lululemon Cosmetic Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894821467&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-25b4000001a1c580a02f0aa10192_1080_1920.jpg",
+    "prices": {
+      "CNY": 381,
+      "USD": 57.118442151
+    },
+    "price_usd": 57.118442151,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 121,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        121
+      ],
+      "productId": "7894821467",
+      "photoSource": "https://weidian.com/item.html?itemID=7894821467",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 117
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "a7d2502593415c2eb059ecc0",
+    "name": "Lululemon Fitted Zip Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894985705&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0cf0000001a1c58372340a2103bd_808_808.jpg",
+    "prices": {
+      "CNY": 2084,
+      "USD": 312.42738436400003
+    },
+    "price_usd": 312.42738436400003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 122,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        122
+      ],
+      "productId": "7894985705",
+      "photoSource": "https://weidian.com/item.html?itemID=7894985705",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 118
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "1dd3ac6c1bea4332e303de29",
+    "name": "Lululemon Cropped Leggings",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7898045652&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-067f000001a1c584f6910a2393e8_810_792.jpg",
+    "prices": {
+      "CNY": 989,
+      "USD": 148.268082119
+    },
+    "price_usd": 148.268082119,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 123,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        123
+      ],
+      "productId": "7898045652",
+      "photoSource": "https://weidian.com/item.html?itemID=7898045652",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 119
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "2942d2e251ad01d4bd818d50",
+    "name": "Lululemon Gradient Hooded Define Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894843403&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-033a000001a1c586591f0a81347d_874_868.jpg",
+    "prices": {
+      "CNY": 1135,
+      "USD": 170.15598908500002
+    },
+    "price_usd": 170.15598908500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 124,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        124
+      ],
+      "productId": "7894843403",
+      "photoSource": "https://weidian.com/item.html?itemID=7894843403",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 120
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "3938c8a2c2058922cb93670a",
+    "name": "Canada Goose Crossbody Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897958286&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-7937000001a1c5871ca30a20e672_1080_1920.jpg",
+    "prices": {
+      "CNY": 575,
+      "USD": 86.20237332500001
+    },
+    "price_usd": 86.20237332500001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 125,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        125
+      ],
+      "productId": "7897958286",
+      "photoSource": "https://weidian.com/item.html?itemID=7897958286",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 121
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "88d57791ca7bd572df205ea9",
+    "name": "Lululemon Cropped Windbreaker Jacket",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897983990&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-13d0000001a1c5880c570a210256_748_724.jpg",
+    "prices": {
+      "CNY": 998,
+      "USD": 149.61733665800003
+    },
+    "price_usd": 149.61733665800003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 126,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        126
+      ],
+      "productId": "7897983990",
+      "photoSource": "https://weidian.com/item.html?itemID=7897983990",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 122
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "0f32f619fbaefd4633f62d11",
+    "name": "Lululemon High Waist Tennis Skort",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894938019&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-034d000001a1c5894b0f0a2102c5_804_804.jpg",
+    "prices": {
+      "CNY": 474,
+      "USD": 71.06073905400001
+    },
+    "price_usd": 71.06073905400001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 127,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        127
+      ],
+      "productId": "7894938019",
+      "photoSource": "https://weidian.com/item.html?itemID=7894938019",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 123
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e1b9ce32c5f4ac43b84f1e5c",
+    "name": "Lululemon Half Zip Long Sleeve Top",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897995968&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-2959000001a1c58ca52b0a207569_750_709.jpg",
+    "prices": {
+      "CNY": 980,
+      "USD": 146.91882758000003
+    },
+    "price_usd": 146.91882758000003,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 128,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        128
+      ],
+      "productId": "7897995968",
+      "photoSource": "https://weidian.com/item.html?itemID=7897995968",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 124
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "e416562a4e8fc5b7e539a6dd",
+    "name": "Lululemon Wide Leg Knit Pant",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894855541&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-10af000001a1c58ddf0d0aa10469_820_960.jpg",
+    "prices": {
+      "CNY": 1160,
+      "USD": 173.90391836
+    },
+    "price_usd": 173.90391836,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 129,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        129
+      ],
+      "productId": "7894855541",
+      "photoSource": "https://weidian.com/item.html?itemID=7894855541",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 125
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "7dc5ea5a8f405fad7a5d3a3b",
+    "name": "Lululemon Short Sleeve Workout T-shirt",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897982092&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-0312000001a1c58fbba40a230417_864_760.jpg",
+    "prices": {
+      "CNY": 886,
+      "USD": 132.826613506
+    },
+    "price_usd": 132.826613506,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 130,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        130
+      ],
+      "productId": "7897982092",
+      "photoSource": "https://weidian.com/item.html?itemID=7897982092",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 126
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "64a186d7078500525f04b8c4",
+    "name": "Lululemon Quilted Shoulder Bag",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7894891391&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-15fd000001a1c59197750a23914a_725_716.jpg",
+    "prices": {
+      "CNY": 1335,
+      "USD": 200.13942328500002
+    },
+    "price_usd": 200.13942328500002,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 131,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        131
+      ],
+      "productId": "7894891391",
+      "photoSource": "https://weidian.com/item.html?itemID=7894891391",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 127
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "0b070229956a62102f288b59",
+    "name": "Lululemon Loose Cargo Pant",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897913422&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-1bfa000001a1c592a18f0a22d1a4_768_865.jpg",
+    "prices": {
+      "CNY": 758,
+      "USD": 113.63721561800001
+    },
+    "price_usd": 113.63721561800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 132,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        132
+      ],
+      "productId": "7897913422",
+      "photoSource": "https://weidian.com/item.html?itemID=7897913422",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 128
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "23acb849092d79262961a092",
+    "name": "Lululemon Sleeveless Polo Tennis Dress",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897964340&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-11b8000001a1c59440c00a2301b4_769_788.jpg",
+    "prices": {
+      "CNY": 988,
+      "USD": 148.11816494800001
+    },
+    "price_usd": 148.11816494800001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 133,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        133
+      ],
+      "productId": "7897964340",
+      "photoSource": "https://weidian.com/item.html?itemID=7897964340",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 129
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "eccfc7f8796ed9b07d413334",
+    "name": "Lululemon Long Puffer Coat",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7897869466&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-29c5000001a1c59555eb0a2396f4_703_700.jpg",
+    "prices": {
+      "CNY": 4152,
+      "USD": 622.4560939920001
+    },
+    "price_usd": 622.4560939920001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 134,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        134
+      ],
+      "productId": "7897869466",
+      "photoSource": "https://weidian.com/item.html?itemID=7897869466",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 130
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  },
+  {
+    "id": "f3542c3787234343b1c0fdf4",
+    "name": "Lululemon Down Long Coat",
+    "link": "https://www.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7898007998&affcode=ZAYFINDS",
+    "image": "https://si.geilicdn.com/pcitem166112792-260a000001a1c596bae60a210256_624_686.jpg",
+    "prices": {
+      "CNY": 4152,
+      "USD": 622.4560939920001
+    },
+    "price_usd": 622.4560939920001,
+    "category": "LULU HIGH-END",
+    "categories": [
+      "LULU HIGH-END"
+    ],
+    "visibility": "catalog",
+    "source": {
+      "sheetId": 24373228,
+      "row": 135,
+      "spreadsheetId": "1ISOjOe2mWaPv1ko9OfpEc40M1VwHvYtOebb86HrImQY",
+      "tab": "LULU HIGH-END",
+      "rows": [
+        135
+      ],
+      "productId": "7898007998",
+      "photoSource": "https://weidian.com/item.html?itemID=7898007998",
+      "photoCheckedAt": "2026-11-11"
+    },
+    "categoryOrder": {
+      "lulu high-end": 131
+    },
+    "personallyBought": false,
+    "excludeFromJustAdded": true
+  }
+]
