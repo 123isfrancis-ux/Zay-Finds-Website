@@ -194,6 +194,7 @@ const ItemCard = memo(function ItemCard({ item, wishlisted, onWishlist, currency
 
 export default function Home({initial = null}) {
   const router = useRouter();
+  const [rotationSeed] = useState(()=>initial?.rotationSeed || new Date().toISOString().slice(0,10));
   const [items, setItems] = useState(()=>restoreSearchFields(initial?.items || []));
   const [collectionOrder, setCollectionOrder] = useState(initial?.collections || []);
   const [complete, setComplete] = useState(false);
@@ -365,7 +366,7 @@ export default function Home({initial = null}) {
   const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
   const homeLoading=loading && activeView==='all' && !category && !collection && !search.trim();
   const showHome = !loading && !error && activeView === 'all' && !effectiveCategory && !collection && !search.trim() && sortBy === 'trending';
-  const computedSections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad), [audienceItems, demand, currency, exchangeRate.usdToCad]);
+  const computedSections = useMemo(() => homeSections(audienceItems, demand, currency, exchangeRate.usdToCad, rotationSeed), [audienceItems, demand, currency, exchangeRate.usdToCad, rotationSeed]);
   const sections=useMemo(()=>usingPreview?initial.sections.map(({ids,...section})=>({...section,items:ids.map(id=>items.find(i=>i.id===id)).filter(Boolean)})):computedSections,[usingPreview,initial,items,computedSections]);
   const looks = useMemo(() => reviewedLooks(items, audience), [items, audience]);
   const requestedFit = Array.isArray(router.query.fit) ? router.query.fit[0] : router.query.fit;

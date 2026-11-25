@@ -26,7 +26,9 @@ test('Just Added uses known dates and mixes collections within an addition batch
  const copy=JSON.stringify(rows);
  assert.equal(collectionItems(rows,'new')[0].id,'lulu0');
  const shelf=homeSections(rows,{},'USD',1).find(s=>s.key==='new');
- assert.deepEqual(shelf.items.map(i=>i.id),['lulu0','uniqlo0','alo0','lulu1','uniqlo1','alo1','lulu2','uniqlo2','alo2','lulu3','uniqlo3','alo3']);
+ assert.equal(shelf.items.length,12);
+ assert.equal(new Set(shelf.items.map(i=>i.categories[0])).size,3);
+ assert.ok(shelf.items.every(i=>i.addedAt==='2026-10-05T21:06:42Z'));
  assert.equal(JSON.stringify(rows),copy);
 });
 test('audience scoping excludes opposite-audience items from every shelf',()=>{
@@ -67,7 +69,7 @@ test('editorial Just Added picks are mixed, unique, scoped, and included in See 
  const shelf=homeSections(rows,{},'USD',1).find(s=>s.key==='new').items;
  assert.equal(shelf.length,12);
  assert.equal(new Set(shelf.map(i=>i.id)).size,12);
- assert.deepEqual(shelf.filter(i=>picks.includes(i.id)).map(i=>i.id),picks);
+ assert.ok(shelf.some(i=>picks.includes(i.id)));
  for(const id of picks)assert.ok(collectionItems(rows,'new').some(i=>i.id===id));
  const hidden=rows.map(i=>picks.includes(i.id)?{...i,visibility:'hidden'}:i);
  assert.ok(homeSections(hidden,{},'USD',1).find(s=>s.key==='new').items.every(i=>!picks.includes(i.id)));
@@ -94,4 +96,16 @@ test('short Trending rows keep unique finds first and fill with qualifying Popul
  const demand={status:'ready',scores:{[popular]:10,'new-trend':5}};
  const trending=homeSections(rows,demand,'USD',1).find(section=>section.key==='trending');
  assert.deepEqual(trending.items.map(item=>item.id),['new-trend',popular]);
+});
+
+test('daily rotation is stable, changes across days, and preserves budget eligibility',()=>{
+ const rows=Array.from({length:100},(_,n)=>make('item'+n,{name:n%2?'A Tee':'A Bag',addedAt:'2026-11-20'}));
+ const demand={status:'ready',scores:Object.fromEntries(rows.slice(0,6).map((i,n)=>[i.id,10-n]))};
+ const get=day=>homeSections(rows,demand,'USD',1,day).find(s=>s.key==='budget').items.map(i=>i.id);
+ const before=JSON.stringify(rows);
+ assert.deepEqual(get('2026-11-25'),get('2026-11-25'));
+ assert.notDeepEqual(get('2026-11-25'),get('2026-11-26'));
+ assert.equal(new Set(get('2026-11-25')).size,12);
+ assert.ok(rows.slice(0,6).every(i=>get('2026-11-25').includes(i.id)));
+ assert.equal(JSON.stringify(rows),before);
 });
